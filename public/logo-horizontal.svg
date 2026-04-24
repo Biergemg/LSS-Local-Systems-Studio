@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 80" width="260" height="80" fill="none">
+  <title>LSS Horizontal Lockup</title>
+  <g transform="translate(0 16) scale(0.6)">
+    <path d="M 4 28 L 4 4 L 28 4" stroke="#FFFFFF" stroke-width="5" stroke-linecap="square"/>
+    <path d="M 52 4 L 76 4 L 76 28" stroke="#FFFFFF" stroke-width="5" stroke-linecap="square"/>
+    <path d="M 4 52 L 4 76 L 28 76" stroke="#FFFFFF" stroke-width="5" stroke-linecap="square"/>
+    <path d="M 52 76 L 76 76 L 76 52" stroke="#FFFFFF" stroke-width="5" stroke-linecap="square"/>
+    <line x1="4" y1="38" x2="60" y2="38" stroke="#00FF88" stroke-width="6" stroke-linecap="square"/>
+    <line x1="60" y1="38" x2="60" y2="60" stroke="#00FF88" stroke-width="6" stroke-linecap="square"/>
+  </g>
+  <text x="66" y="39" font-family="Noto Sans, Arial, Helvetica, sans-serif" font-weight="700" font-size="32" fill="#FFFFFF">LSS</text>
+  <text x="67" y="55" font-family="Noto Sans, Arial, Helvetica, sans-serif" font-weight="400" font-size="9" fill="#FFFFFF">LOCAL SYSTEMS STUDIO</text>
+  <line x1="67" y1="63" x2="136" y2="63" stroke="#00FF88" stroke-width="2"/>
+</svg>

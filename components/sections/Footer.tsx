@@ -1,0 +1,3 @@
+import Logo from '@/components/ui/Logo';
+import { CONTACT } from '@/data/content';
+export default function Footer(){return <footer style={{background:'var(--surface-base)',borderTop:'1px solid var(--border)',padding:'40px 0'}}><div className="container footer-inner" style={{display:'flex',alignItems:'center',justifyContent:'space-between',gap:32}}><Logo muted/><p className="t-label" style={{color:'var(--fg3)'}}>© {new Date().getFullYear()} Local Systems Studio.</p><div style={{display:'flex',gap:24,flexWrap:'wrap'}}><a className="t-label" href={`mailto:${CONTACT.email}`} style={{color:'var(--fg2)'}}>Contacto</a><a className="t-label" href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer" style={{color:'var(--fg2)'}}>WhatsApp</a></div></div></footer>}
