@@ -75,7 +75,7 @@ export default function ComparisonSection() {
                     width: '35%',
                   }}
                 >
-                  AGENCIA TRADICIONAL
+                  DISEÑO WEB TRADICIONAL
                 </th>
                 <th
                   style={{
@@ -90,7 +90,7 @@ export default function ComparisonSection() {
                     width: '35%',
                   }}
                 >
-                  LSS
+                  SISTEMA WEB DE CAPTACIÓN LOCAL
                 </th>
               </tr>
             </thead>

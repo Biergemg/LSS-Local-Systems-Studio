@@ -1,5 +1,4 @@
 import WhatsAppFloat from '@/components/ui/WhatsAppFloat';
-import FaqAccordion from '@/components/ui/FaqAccordion';
 import CTASection from '@/components/sections/CTASection';
 import ComparisonSection from '@/components/sections/ComparisonSection';
 import Footer from '@/components/sections/Footer';
@@ -19,7 +18,6 @@ export default function Page() {
         <SystemSection />
         <ComparisonSection />
         <ResultsSection />
-        <FaqAccordion />
         <CTASection />
       </main>
       <Footer />

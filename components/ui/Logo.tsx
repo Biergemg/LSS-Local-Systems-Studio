@@ -1,6 +1,7 @@
 interface LogoProps {
   size?: number;
   showText?: boolean;
+  muted?: boolean;
 }
 
 export default function Logo({ size = 32, showText = true }: LogoProps) {
