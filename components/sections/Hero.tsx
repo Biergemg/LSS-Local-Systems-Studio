@@ -1,3 +1,5 @@
+'use client';
+
 import { HERO, HERO_STATS, CONTACT } from '@/data/content';
 
 export default function Hero() {
