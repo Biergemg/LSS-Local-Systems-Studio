@@ -19,6 +19,7 @@ export default function SystemSection() {
       >
         {/* Header */}
         <div
+          className="header-grid"
           style={{
             display: 'grid',
             gridTemplateColumns: '1fr 1fr',
@@ -53,6 +54,7 @@ export default function SystemSection() {
 
         {/* Steps grid */}
         <div
+          className="steps-grid"
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(4, 1fr)',

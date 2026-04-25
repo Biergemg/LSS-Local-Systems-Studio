@@ -40,6 +40,7 @@ export default function ResultsSection() {
 
         {/* Case studies grid */}
         <div
+          className="cases-grid"
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(3, 1fr)',

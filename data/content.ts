@@ -74,11 +74,11 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
   { feature: 'Competencia', agency: 'Por precio',                       lss: 'Por valor comercial generado' },
 ];
 
-export const RESULTS_SECTION = { eyebrow: 'Medición', title: 'Qué se\nmide.', note: 'Los resultados públicos se agregan solo cuando existan cifras verificadas por cliente. Sin métricas infladas.' };
+export const RESULTS_SECTION = { eyebrow: 'Así medimos', title: 'Sin métricas\ninfladas.', note: 'Cuando existan cifras verificadas por cliente, se agregan aquí. Antes de eso, nada.' };
 export const CASE_STUDIES: CaseStudy[] = [
-  { client: 'Origen del contacto', sector: 'Captación', metric: '01', description: 'Qué canal produce conversaciones reales y qué canal solo produce actividad superficial.', timeframe: 'Trazabilidad' },
-  { client: 'Calidad del prospecto', sector: 'Calificación', metric: '02', description: 'Qué contactos tienen intención, urgencia y encaje con la oferta del negocio.', timeframe: 'Criterios' },
-  { client: 'Avance a cierre', sector: 'Seguimiento', metric: '03', description: 'Dónde se cae la conversación comercial y qué ajuste permite avanzar al siguiente paso.', timeframe: 'Optimización' },
+  { client: 'Trazabilidad', sector: 'Captación', metric: '01', description: 'Qué canal genera conversaciones reales: búsqueda, recomendación o redes. Sin contar visitas que no convierten.', timeframe: 'Origen del contacto' },
+  { client: 'Calificación', sector: 'Criterio', metric: '02', description: 'Qué contactos tienen intención, urgencia y encaje con la oferta. No todos los mensajes son prospectos.', timeframe: 'Calidad del prospecto' },
+  { client: 'Optimización', sector: 'Cierre', metric: '03', description: 'Dónde se cae la conversación comercial y qué cambio en la estructura o el copy mejora el siguiente paso.', timeframe: 'Avance a cierre' },
 ];
 
 export const CTA_SECTION = {

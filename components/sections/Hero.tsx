@@ -145,6 +145,7 @@ export default function Hero() {
 
         {/* Stats */}
         <div
+          className="stats-grid"
           style={{
             borderTop: '1px solid var(--border)',
             paddingTop: '40px',
@@ -174,12 +175,6 @@ export default function Hero() {
           ))}
         </div>
 
-        <p
-          className="t-label"
-          style={{ color: 'var(--fg3)', marginTop: '16px' }}
-        >
-          * datos de referencia interna — se actualizarán con cifras reales
-        </p>
       </div>
 
       <style>{`
