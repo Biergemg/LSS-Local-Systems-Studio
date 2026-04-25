@@ -1,87 +1,295 @@
 'use client';
 
-import { useMemo, useState } from 'react';
-import { CONTACT, CTA_SECTION } from '@/data/content';
-
-type FormState = {
-  name: string;
-  business: string;
-  sector: string;
-  challenge: string;
-};
-
-const initialForm: FormState = { name: '', business: '', sector: '', challenge: '' };
+import { useState } from 'react';
+import { CTA_SECTION, CONTACT } from '@/data/content';
+import FaqAccordion from '@/components/ui/FaqAccordion';
+import { FAQ_ITEMS } from '@/data/content';
 
 export default function CTASection() {
-  const [form, setForm] = useState<FormState>(initialForm);
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [form, setForm] = useState({ name: '', business: '', sector: '', email: '' });
 
-  const whatsappHref = useMemo(() => {
-    const message = [
-      'Quiero agendar un diagnóstico con LSS.',
-      form.name ? `Nombre: ${form.name}` : '',
-      form.business ? `Negocio: ${form.business}` : '',
-      form.sector ? `Sector: ${form.sector}` : '',
-      form.challenge ? `Principal problema: ${form.challenge}` : '',
-    ].filter(Boolean).join('\n');
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    await new Promise((r) => setTimeout(r, 800));
+    setLoading(false);
+    setSubmitted(true);
+  };
 
-    return `https://wa.me/528333263389?text=${encodeURIComponent(message)}`;
-  }, [form]);
+  const inputStyle: React.CSSProperties = {
+    display: 'block',
+    width: '100%',
+    padding: '14px 16px',
+    backgroundColor: 'var(--surface-inset)',
+    border: '1px solid var(--border)',
+    color: 'var(--fg)',
+    fontFamily: 'var(--font-primary)',
+    fontSize: 'var(--text-base)',
+    fontWeight: 400,
+    outline: 'none',
+    borderRadius: 0,
+    transition: 'border-color 0.15s ease',
+  };
+
+  const labelStyle: React.CSSProperties = {
+    display: 'block',
+    fontFamily: 'var(--font-primary)',
+    fontSize: 'var(--text-xs)',
+    fontWeight: 500,
+    color: 'var(--fg2)',
+    letterSpacing: 'var(--tracking-widest)',
+    textTransform: 'uppercase',
+    marginBottom: '8px',
+  };
 
   return (
-    <section id="contacto" className="section-pad" style={{ background: 'var(--surface-raised)', borderTop: '1px solid var(--border)', padding: '96px 0' }}>
-      <div className="container cta-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 96, alignItems: 'start' }}>
-        <div>
-          <p className="t-label" style={{ color: 'var(--accent)', marginBottom: 16 }}>{CTA_SECTION.eyebrow}</p>
-          <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(36px,5vw,var(--text-3xl))', fontWeight: 700, letterSpacing: 'var(--tracking-wider)', textTransform: 'uppercase', color: 'var(--fg)', lineHeight: 1.05, marginBottom: 24, whiteSpace: 'pre-line' }}>{CTA_SECTION.title}</h2>
-          <p className="t-body" style={{ color: 'var(--fg2)', marginBottom: 48 }}>{CTA_SECTION.body}</p>
-          <a className="btn btn-primary" href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer" style={{ marginBottom: 40 }}>Agendar por WhatsApp</a>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 16, borderTop: '1px solid var(--border)', paddingTop: 40 }}>
-            {CTA_SECTION.details.map(([key, value]) => (
-              <div key={key} style={{ display: 'flex', justifyContent: 'space-between', gap: 24, fontFamily: 'var(--font-primary)', fontSize: 'var(--text-base)' }}>
-                <span className="t-label" style={{ color: 'var(--fg3)' }}>{key}</span>
-                <span style={{ color: 'var(--fg)' }}>{value}</span>
+    <>
+      <section
+        id="contacto"
+        style={{
+          backgroundColor: 'var(--surface-raised)',
+          borderTop: '1px solid var(--border)',
+          padding: '96px 0',
+        }}
+      >
+        <div
+          style={{
+            maxWidth: 'var(--max-w)',
+            margin: '0 auto',
+            padding: '0 24px',
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
+            gap: '80px',
+            alignItems: 'start',
+          }}
+        >
+          {/* Left: info */}
+          <div>
+            <p className="t-label" style={{ color: 'var(--accent)', marginBottom: '16px' }}>
+              {CTA_SECTION.eyebrow}
+            </p>
+            <h2
+              style={{
+                fontFamily: 'var(--font-display)',
+                fontSize: 'clamp(28px, 4vw, var(--text-2xl))',
+                fontWeight: 700,
+                textTransform: 'uppercase',
+                letterSpacing: 'var(--tracking-wider)',
+                lineHeight: 1.2,
+                color: 'var(--fg)',
+                marginBottom: '24px',
+                whiteSpace: 'pre-line',
+              }}
+            >
+              {CTA_SECTION.title}
+            </h2>
+            <p className="t-body" style={{ color: 'var(--fg2)', marginBottom: '40px' }}>
+              {CTA_SECTION.description}
+            </p>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              {CTA_SECTION.callDetails.map((detail) => (
+                <div
+                  key={detail}
+                  style={{ display: 'flex', alignItems: 'center', gap: '12px' }}
+                >
+                  <span
+                    style={{
+                      width: '6px',
+                      height: '6px',
+                      backgroundColor: 'var(--accent)',
+                      flexShrink: 0,
+                    }}
+                    aria-hidden="true"
+                  />
+                  <span className="t-body-sm" style={{ color: 'var(--fg2)' }}>
+                    {detail}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            <div style={{ marginTop: '40px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              <a
+                href={CONTACT.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="t-label"
+                style={{ color: 'var(--accent)' }}
+              >
+                WhatsApp → {CONTACT.phone}
+              </a>
+              <a
+                href={`mailto:${CONTACT.email}`}
+                className="t-label"
+                style={{ color: 'var(--fg2)' }}
+              >
+                {CONTACT.email}
+              </a>
+            </div>
+          </div>
+
+          {/* Right: form or success */}
+          <div>
+            {submitted ? (
+              <div
+                style={{
+                  border: '1px solid var(--border)',
+                  padding: '48px 32px',
+                  textAlign: 'center',
+                }}
+              >
+                <div
+                  style={{
+                    fontFamily: 'var(--font-display)',
+                    fontSize: 'var(--text-2xl)',
+                    fontWeight: 700,
+                    color: 'var(--accent)',
+                    marginBottom: '16px',
+                  }}
+                >
+                  RECIBIDO.
+                </div>
+                <p className="t-body" style={{ color: 'var(--fg2)' }}>
+                  Revisaremos tu mensaje y te contactamos en menos de 24 horas para coordinar el diagnóstico.
+                </p>
               </div>
-            ))}
+            ) : (
+              <form onSubmit={handleSubmit} noValidate>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+                  <div>
+                    <label htmlFor="name" style={labelStyle}>Nombre</label>
+                    <input
+                      id="name"
+                      type="text"
+                      required
+                      value={form.name}
+                      onChange={(e) => setForm({ ...form, name: e.target.value })}
+                      style={inputStyle}
+                      onFocus={(e) => (e.target.style.borderColor = 'var(--accent)')}
+                      onBlur={(e) => (e.target.style.borderColor = 'var(--border)')}
+                      placeholder="Tu nombre completo"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="business" style={labelStyle}>Negocio</label>
+                    <input
+                      id="business"
+                      type="text"
+                      required
+                      value={form.business}
+                      onChange={(e) => setForm({ ...form, business: e.target.value })}
+                      style={inputStyle}
+                      onFocus={(e) => (e.target.style.borderColor = 'var(--accent)')}
+                      onBlur={(e) => (e.target.style.borderColor = 'var(--border)')}
+                      placeholder="Nombre de tu negocio"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="sector" style={labelStyle}>Sector</label>
+                    <input
+                      id="sector"
+                      type="text"
+                      required
+                      value={form.sector}
+                      onChange={(e) => setForm({ ...form, sector: e.target.value })}
+                      style={inputStyle}
+                      onFocus={(e) => (e.target.style.borderColor = 'var(--accent)')}
+                      onBlur={(e) => (e.target.style.borderColor = 'var(--border)')}
+                      placeholder="Ej: clínica dental, despacho jurídico..."
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" style={labelStyle}>Email</label>
+                    <input
+                      id="email"
+                      type="email"
+                      required
+                      value={form.email}
+                      onChange={(e) => setForm({ ...form, email: e.target.value })}
+                      style={inputStyle}
+                      onFocus={(e) => (e.target.style.borderColor = 'var(--accent)')}
+                      onBlur={(e) => (e.target.style.borderColor = 'var(--border)')}
+                      placeholder="tu@email.com"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    style={{
+                      padding: '16px 32px',
+                      backgroundColor: loading ? 'var(--fg3)' : 'var(--accent)',
+                      color: '#000',
+                      fontFamily: 'var(--font-primary)',
+                      fontSize: 'var(--text-xs)',
+                      fontWeight: 700,
+                      letterSpacing: 'var(--tracking-widest)',
+                      textTransform: 'uppercase',
+                      border: 'none',
+                      borderRadius: 0,
+                      cursor: loading ? 'not-allowed' : 'pointer',
+                      transition: 'background-color 0.15s ease',
+                      width: '100%',
+                    }}
+                  >
+                    {loading ? 'ENVIANDO...' : 'AGENDAR DIAGNÓSTICO GRATUITO'}
+                  </button>
+                </div>
+              </form>
+            )}
           </div>
         </div>
+      </section>
 
-        <div>
-          {submitted ? (
-            <div style={{ background: 'var(--surface-base)', border: '1px solid var(--accent)', padding: 40, textAlign: 'center' }}>
-              <div className="t-label" style={{ color: 'var(--accent)', marginBottom: 16 }}>{CTA_SECTION.successEyebrow}</div>
-              <div className="t-h3" style={{ marginBottom: 12 }}>{CTA_SECTION.successTitle}</div>
-              <p className="t-body-sm">{CTA_SECTION.successBody}</p>
-              <a className="btn btn-primary" style={{ marginTop: 24 }} href={whatsappHref} target="_blank" rel="noopener noreferrer">Continuar en WhatsApp</a>
-            </div>
-          ) : (
-            <form
-              onSubmit={(event) => {
-                event.preventDefault();
-                setSubmitted(true);
-                window.open(whatsappHref, '_blank', 'noopener,noreferrer');
+      {/* FAQ */}
+      <section
+        id="faq"
+        style={{
+          backgroundColor: 'var(--surface-base)',
+          borderTop: '1px solid var(--border)',
+          padding: '96px 0',
+        }}
+      >
+        <div
+          style={{
+            maxWidth: 'var(--max-w)',
+            margin: '0 auto',
+            padding: '0 24px',
+            display: 'grid',
+            gridTemplateColumns: '1fr 2fr',
+            gap: '80px',
+            alignItems: 'start',
+          }}
+        >
+          <div>
+            <p className="t-label" style={{ color: 'var(--accent)', marginBottom: '16px' }}>
+              FAQ
+            </p>
+            <h2
+              style={{
+                fontFamily: 'var(--font-display)',
+                fontSize: 'clamp(24px, 3vw, var(--text-xl))',
+                fontWeight: 700,
+                textTransform: 'uppercase',
+                letterSpacing: 'var(--tracking-wider)',
+                lineHeight: 1.2,
+                color: 'var(--fg)',
               }}
-              style={{ display: 'grid', gap: 20 }}
             >
-              {[
-                ['name', 'Nombre', 'Tu nombre', 'text'],
-                ['business', 'Negocio', 'Nombre de tu negocio', 'text'],
-                ['sector', 'Sector', 'Ej. Salud, legal, construcción', 'text'],
-              ].map(([name, label, placeholder, type]) => (
-                <label key={name} style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-                  <span className="t-label" style={{ color: 'var(--fg2)' }}>{label}</span>
-                  <input required name={name} type={type} placeholder={placeholder} value={form[name as keyof FormState]} onChange={(event) => setForm({ ...form, [name]: event.target.value })} style={{ background: 'var(--surface-inset)', border: '1px solid var(--border)', color: 'var(--fg)', padding: '14px 16px', outline: 'none', width: '100%', minHeight: 48 }} />
-                </label>
-              ))}
-              <label style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-                <span className="t-label" style={{ color: 'var(--fg2)' }}>Principal fricción</span>
-                <textarea required name="challenge" placeholder="Ej. Llegan contactos, pero pocos son clientes reales" value={form.challenge} onChange={(event) => setForm({ ...form, challenge: event.target.value })} rows={4} style={{ background: 'var(--surface-inset)', border: '1px solid var(--border)', color: 'var(--fg)', padding: '14px 16px', outline: 'none', width: '100%', resize: 'vertical' }} />
-              </label>
-              <button className="btn btn-primary" type="submit" style={{ width: '100%', marginTop: 8 }}>{CTA_SECTION.submit}</button>
-            </form>
-          )}
+              PREGUNTAS FRECUENTES
+            </h2>
+          </div>
+          <FaqAccordion items={FAQ_ITEMS} />
         </div>
-      </div>
-    </section>
+
+        <style>{`
+          @media (max-width: 768px) {
+            #faq .faq-grid { grid-template-columns: 1fr !important; }
+          }
+        `}</style>
+      </section>
+    </>
   );
 }

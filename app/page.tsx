@@ -10,5 +10,20 @@ import ResultsSection from '@/components/sections/ResultsSection';
 import SystemSection from '@/components/sections/SystemSection';
 
 export default function Page() {
-  return <><Nav /><main><Hero /><ProblemSection /><SystemSection /><ComparisonSection /><ResultsSection /><FaqAccordion /><CTASection /></main><Footer /><WhatsAppFloat /></>;
+  return (
+    <>
+      <Nav />
+      <main>
+        <Hero />
+        <ProblemSection />
+        <SystemSection />
+        <ComparisonSection />
+        <ResultsSection />
+        <FaqAccordion />
+        <CTASection />
+      </main>
+      <Footer />
+      <WhatsAppFloat />
+    </>
+  );
 }
