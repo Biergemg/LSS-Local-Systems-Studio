@@ -24,15 +24,14 @@ export const NAV_LINKS: NavLink[] = [
 ];
 
 export const HERO = {
-  eyebrow: 'Esto no es una página bonita. Es un sistema de captación local.',
+  eyebrow: 'Esto no es una página bonita.',
   headline: 'Encontrado.\nEntendido.\nContactado.',
-  body: 'LSS construye sistemas web de captación local para que tu negocio convierta búsquedas, visitas y recomendaciones en contactos medibles.',
+  body: 'Tu negocio necesita ser encontrado, entendido y contactado. Eso es lo que construimos para que conviertas búsquedas, visitas y recomendaciones en contactos medibles.',
   ctaPrimary: 'Agendar diagnóstico de captación',
   ctaSecondary: 'Ver el método',
 };
 
 export const HERO_STATS: HeroStat[] = [
-  { value: 'CEC', label: 'Claridad, Evidencia y Contacto' },
   { value: '03', label: 'Pilares del método' },
   { value: '30\'', label: 'Duración del diagnóstico' },
   { value: '15', label: 'Preguntas del diagnóstico de captación' },
