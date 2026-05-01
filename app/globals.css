@@ -167,6 +167,28 @@ img, svg {
   letter-spacing: var(--tracking-widest);
 }
 
+/* Layout utilities */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ============================================================
+   RESPONSIVE — Mobile
+   ============================================================ */
+@media (max-width: 640px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  /* Section vertical padding */
+  .section-pad {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+  }
+}
+
 /* Focus visible */
 :focus-visible {
   outline: 2px solid var(--accent);

@@ -4,6 +4,7 @@ export default function ResultsSection() {
   return (
     <section
       id="resultados"
+      className="section-pad"
       style={{
         backgroundColor: 'var(--surface-base)',
         borderTop: '1px solid var(--border)',
@@ -104,15 +105,20 @@ export default function ResultsSection() {
 
       <style>{`
         @media (max-width: 1024px) {
-          #resultados .results-header { grid-template-columns: 1fr !important; }
+          #resultados .results-header { grid-template-columns: 1fr !important; gap: 16px !important; margin-bottom: 40px !important; }
         }
         @media (max-width: 768px) {
           #resultados .results-row {
-            grid-template-columns: 48px 1fr !important;
-            grid-template-rows: auto auto;
+            grid-template-columns: 40px 1fr !important;
+            gap: 16px !important;
+            padding: 28px 0 !important;
+          }
+          #resultados .results-row > div:nth-child(2) {
+            grid-column: 2;
           }
           #resultados .results-row > p:last-child {
-            grid-column: 2 / -1;
+            grid-column: 1 / -1;
+            padding-top: 8px;
           }
         }
       `}</style>

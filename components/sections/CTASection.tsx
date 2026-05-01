@@ -48,6 +48,7 @@ export default function CTASection() {
     <>
       <section
         id="contacto"
+        className="section-pad"
         style={{
           backgroundColor: 'var(--surface-raised)',
           borderTop: '1px solid var(--border)',
@@ -247,6 +248,7 @@ export default function CTASection() {
       {/* FAQ */}
       <section
         id="faq"
+        className="section-pad"
         style={{
           backgroundColor: 'var(--surface-base)',
           borderTop: '1px solid var(--border)',

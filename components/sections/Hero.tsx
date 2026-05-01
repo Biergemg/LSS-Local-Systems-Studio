@@ -205,6 +205,9 @@ export default function Hero() {
       </div>
 
       <style>{`
+        @media (max-width: 768px) {
+          #hero > div { padding: 48px 16px 48px !important; }
+        }
         @media (max-width: 640px) {
           #hero .cec-pillars { flex-direction: column !important; border-left: none !important; }
           #hero .cec-pillars > div { border-right: none !important; border-bottom: 1px solid var(--border); padding: 10px 0 !important; }

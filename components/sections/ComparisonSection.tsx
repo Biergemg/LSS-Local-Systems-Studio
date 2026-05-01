@@ -4,6 +4,7 @@ export default function ComparisonSection() {
   return (
     <section
       id="proceso"
+      className="section-pad"
       style={{
         backgroundColor: 'var(--surface-raised)',
         borderTop: '1px solid var(--border)',

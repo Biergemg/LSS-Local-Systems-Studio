@@ -4,6 +4,7 @@ export default function SystemSection() {
   return (
     <section
       id="sistema"
+      className="section-pad"
       style={{
         backgroundColor: 'var(--surface-base)',
         borderTop: '1px solid var(--border)',
@@ -19,7 +20,7 @@ export default function SystemSection() {
       >
         {/* Header */}
         <div
-          className="header-grid"
+          className="sistema-header"
           style={{
             display: 'grid',
             gridTemplateColumns: '1fr 1fr',
@@ -58,20 +59,18 @@ export default function SystemSection() {
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(4, 1fr)',
-            gap: '0',
             borderTop: '1px solid var(--border)',
           }}
         >
           {SYSTEM_STEPS.map((step, index) => (
             <div
               key={step.number}
+              className="step-card"
               style={{
                 padding: '40px 32px',
                 borderRight: index < SYSTEM_STEPS.length - 1 ? '1px solid var(--border)' : 'none',
-                position: 'relative',
               }}
             >
-              {/* Number */}
               <div
                 style={{
                   fontFamily: 'var(--font-display)',
@@ -85,11 +84,7 @@ export default function SystemSection() {
               >
                 {step.number}
               </div>
-
-              <h3
-                className="t-h3"
-                style={{ color: 'var(--fg)', marginBottom: '16px' }}
-              >
+              <h3 className="t-h3" style={{ color: 'var(--fg)', marginBottom: '16px' }}>
                 {step.title}
               </h3>
               <p className="t-body-sm" style={{ color: 'var(--fg2)' }}>
@@ -102,11 +97,16 @@ export default function SystemSection() {
 
       <style>{`
         @media (max-width: 1024px) {
+          #sistema .sistema-header { grid-template-columns: 1fr !important; gap: 24px !important; margin-bottom: 48px !important; }
           #sistema .steps-grid { grid-template-columns: repeat(2, 1fr) !important; }
-          #sistema .header-grid { grid-template-columns: 1fr !important; }
+          #sistema .step-card { border-right: none !important; border-bottom: 1px solid var(--border); }
+          #sistema .step-card:nth-child(odd) { border-right: 1px solid var(--border) !important; }
         }
-        @media (max-width: 768px) {
+        @media (max-width: 640px) {
           #sistema .steps-grid { grid-template-columns: 1fr !important; }
+          #sistema .step-card { border-right: none !important; }
+          #sistema .step-card:nth-child(odd) { border-right: none !important; }
+          #sistema .step-card { padding: 28px 0 !important; }
         }
       `}</style>
     </section>
