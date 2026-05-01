@@ -1,6 +1,6 @@
 'use client';
 
-import { HERO, HERO_STATS, CONTACT } from '@/data/content';
+import { HERO, CONTACT } from '@/data/content';
 
 export default function Hero() {
   return (
@@ -58,13 +58,13 @@ export default function Hero() {
         <h1
           style={{
             fontFamily: 'var(--font-display)',
-            fontSize: 'clamp(48px, 8vw, var(--text-4xl))',
+            fontSize: 'clamp(56px, 9vw, 104px)',
             fontWeight: 700,
             textTransform: 'uppercase',
             letterSpacing: 'var(--tracking-wider)',
-            lineHeight: 1,
+            lineHeight: 0.95,
             color: 'var(--fg)',
-            marginBottom: '40px',
+            marginBottom: '48px',
             whiteSpace: 'pre-line',
           }}
         >
@@ -143,43 +143,71 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Stats */}
+        {/* CEC method marker */}
         <div
-          className="stats-grid"
           style={{
             borderTop: '1px solid var(--border)',
-            paddingTop: '40px',
-            display: 'grid',
-            gridTemplateColumns: 'repeat(4, 1fr)',
-            gap: '32px',
+            paddingTop: '32px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0',
+            flexWrap: 'wrap',
+            rowGap: '16px',
           }}
         >
-          {HERO_STATS.map((stat) => (
-            <div key={stat.label}>
+          <span
+            style={{
+              fontFamily: 'var(--font-display)',
+              fontSize: 'var(--text-xs)',
+              fontWeight: 700,
+              color: 'var(--accent)',
+              letterSpacing: 'var(--tracking-widest)',
+              textTransform: 'uppercase',
+              marginRight: '20px',
+            }}
+          >
+            MÉTODO CEC
+          </span>
+          <div className="cec-pillars" style={{ display: 'flex', gap: '0', borderLeft: '1px solid var(--border)' }}>
+            {['Claridad', 'Evidencia', 'Contacto'].map((pillar, i) => (
               <div
+                key={pillar}
                 style={{
-                  fontFamily: 'var(--font-display)',
-                  fontSize: 'clamp(28px, 4vw, var(--text-2xl))',
-                  fontWeight: 700,
-                  color: 'var(--fg)',
-                  letterSpacing: 'var(--tracking-tight)',
-                  marginBottom: '4px',
+                  padding: '8px 24px',
+                  borderRight: '1px solid var(--border)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '10px',
                 }}
               >
-                {stat.value}
+                <span
+                  style={{
+                    fontFamily: 'var(--font-primary)',
+                    fontSize: 'var(--text-xs)',
+                    fontWeight: 300,
+                    color: 'var(--fg3)',
+                    letterSpacing: '0',
+                  }}
+                >
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <span
+                  className="t-label"
+                  style={{ color: 'var(--fg2)' }}
+                >
+                  {pillar}
+                </span>
               </div>
-              <div className="t-label" style={{ color: 'var(--fg2)' }}>
-                {stat.label}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
       </div>
 
       <style>{`
-        @media (max-width: 768px) {
-          #hero .stats-grid { grid-template-columns: repeat(2, 1fr) !important; }
+        @media (max-width: 640px) {
+          #hero .cec-pillars { flex-direction: column !important; border-left: none !important; }
+          #hero .cec-pillars > div { border-right: none !important; border-bottom: 1px solid var(--border); padding: 10px 0 !important; }
         }
       `}</style>
     </section>

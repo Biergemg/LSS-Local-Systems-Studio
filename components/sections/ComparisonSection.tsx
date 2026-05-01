@@ -46,7 +46,12 @@ export default function ComparisonSection() {
           >
             {/* Header */}
             <thead>
-              <tr style={{ backgroundColor: 'var(--accent)' }}>
+              <tr
+                style={{
+                  backgroundColor: 'var(--surface-inset)',
+                  borderBottom: '2px solid var(--accent)',
+                }}
+              >
                 <th
                   style={{
                     padding: '16px 24px',
@@ -54,7 +59,7 @@ export default function ComparisonSection() {
                     fontFamily: 'var(--font-primary)',
                     fontSize: 'var(--text-xs)',
                     fontWeight: 700,
-                    color: '#000',
+                    color: 'var(--fg2)',
                     letterSpacing: 'var(--tracking-widest)',
                     textTransform: 'uppercase',
                     width: '30%',
@@ -69,7 +74,7 @@ export default function ComparisonSection() {
                     fontFamily: 'var(--font-primary)',
                     fontSize: 'var(--text-xs)',
                     fontWeight: 700,
-                    color: '#000',
+                    color: 'var(--fg2)',
                     letterSpacing: 'var(--tracking-widest)',
                     textTransform: 'uppercase',
                     width: '35%',
@@ -84,7 +89,7 @@ export default function ComparisonSection() {
                     fontFamily: 'var(--font-primary)',
                     fontSize: 'var(--text-xs)',
                     fontWeight: 700,
-                    color: '#000',
+                    color: 'var(--accent)',
                     letterSpacing: 'var(--tracking-widest)',
                     textTransform: 'uppercase',
                     width: '35%',

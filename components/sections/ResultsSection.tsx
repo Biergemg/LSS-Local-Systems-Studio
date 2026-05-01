@@ -17,100 +17,103 @@ export default function ResultsSection() {
           padding: '0 24px',
         }}
       >
-        {/* Header */}
-        <div style={{ marginBottom: '64px' }}>
-          <p className="t-label" style={{ color: 'var(--accent)', marginBottom: '16px' }}>
-            {RESULTS_SECTION.eyebrow}
-          </p>
-          <h2
-            style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(32px, 5vw, var(--text-3xl))',
-              fontWeight: 700,
-              textTransform: 'uppercase',
-              letterSpacing: 'var(--tracking-wider)',
-              lineHeight: 1,
-              color: 'var(--fg)',
-              whiteSpace: 'pre-line',
-            }}
-          >
-            {RESULTS_SECTION.title}
-          </h2>
-        </div>
-
-        {/* Case studies grid */}
+        {/* Header — split layout */}
         <div
-          className="cases-grid"
+          className="results-header"
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '0',
-            borderTop: '1px solid var(--border)',
-            borderLeft: '1px solid var(--border)',
+            gridTemplateColumns: '1fr 1fr',
+            gap: '48px',
+            alignItems: 'end',
+            marginBottom: '64px',
           }}
         >
+          <div>
+            <p className="t-label" style={{ color: 'var(--accent)', marginBottom: '16px' }}>
+              {RESULTS_SECTION.eyebrow}
+            </p>
+            <h2
+              style={{
+                fontFamily: 'var(--font-display)',
+                fontSize: 'clamp(32px, 5vw, var(--text-3xl))',
+                fontWeight: 700,
+                textTransform: 'uppercase',
+                letterSpacing: 'var(--tracking-wider)',
+                lineHeight: 1,
+                color: 'var(--fg)',
+                whiteSpace: 'pre-line',
+              }}
+            >
+              {RESULTS_SECTION.title}
+            </h2>
+          </div>
+          <p
+            className="t-label"
+            style={{ color: 'var(--fg3)', alignSelf: 'end' }}
+          >
+            {RESULTS_SECTION.note}
+          </p>
+        </div>
+
+        {/* Methodology list — horizontal rows, not card grid */}
+        <div style={{ borderTop: '1px solid var(--border)' }}>
           {CASE_STUDIES.map((study) => (
             <div
               key={study.client}
+              className="results-row"
               style={{
-                padding: '48px 32px',
-                borderRight: '1px solid var(--border)',
+                display: 'grid',
+                gridTemplateColumns: '64px 200px 1fr',
+                gap: '40px',
+                padding: '40px 0',
                 borderBottom: '1px solid var(--border)',
+                alignItems: 'start',
               }}
             >
-              <div
-                style={{
-                  fontFamily: 'var(--font-display)',
-                  fontSize: 'clamp(40px, 6vw, var(--text-2xl))',
-                  fontWeight: 700,
-                  color: 'var(--accent)',
-                  letterSpacing: 'var(--tracking-tight)',
-                  lineHeight: 1,
-                  marginBottom: '16px',
-                }}
+              <span
+                className="t-mono"
+                style={{ paddingTop: 3 }}
               >
-                {study.metric}
-              </div>
-              <p
-                className="t-body"
-                style={{ color: 'var(--fg)', marginBottom: '24px' }}
-              >
-                {study.description}
-              </p>
-              <div
-                style={{
-                  borderTop: '1px solid var(--border)',
-                  paddingTop: '16px',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: '4px',
-                }}
-              >
-                <span className="t-body-sm" style={{ color: 'var(--fg2)' }}>
+                {study.metric.padStart(2, '0')}
+              </span>
+              <div>
+                <p
+                  style={{
+                    fontFamily: 'var(--font-primary)',
+                    fontSize: 'var(--text-base)',
+                    fontWeight: 700,
+                    color: 'var(--fg)',
+                    letterSpacing: 'var(--tracking-wide)',
+                    textTransform: 'uppercase',
+                    marginBottom: '6px',
+                  }}
+                >
                   {study.client}
-                </span>
+                </p>
                 <span className="t-label" style={{ color: 'var(--fg3)' }}>
                   {study.timeframe}
                 </span>
               </div>
+              <p className="t-body-sm" style={{ color: 'var(--fg2)', maxWidth: '560px' }}>
+                {study.description}
+              </p>
             </div>
           ))}
         </div>
-
-        <p
-          className="t-label"
-          style={{ color: 'var(--fg3)', marginTop: '24px' }}
-        >
-          {RESULTS_SECTION.note}
-        </p>
       </div>
 
       <style>{`
         @media (max-width: 1024px) {
-          #resultados .cases-grid { grid-template-columns: repeat(2, 1fr) !important; }
+          #resultados .results-header { grid-template-columns: 1fr !important; }
         }
         @media (max-width: 768px) {
-          #resultados .cases-grid { grid-template-columns: 1fr !important; }
+          #resultados .results-row {
+            grid-template-columns: 48px 1fr !important;
+            grid-template-rows: auto auto;
+          }
+          #resultados .results-row > p:last-child {
+            grid-column: 2 / -1;
+          }
         }
       `}</style>
     </section>

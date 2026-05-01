@@ -75,27 +75,16 @@ export default function SystemSection() {
               <div
                 style={{
                   fontFamily: 'var(--font-display)',
-                  fontSize: 'var(--text-5xl)',
+                  fontSize: 'clamp(64px, 8vw, var(--text-5xl))',
                   fontWeight: 700,
                   color: 'var(--fg3)',
                   lineHeight: 1,
-                  marginBottom: '32px',
+                  marginBottom: '40px',
                   letterSpacing: 'var(--tracking-tight)',
                 }}
               >
                 {step.number}
               </div>
-
-              {/* Green flow line */}
-              <div
-                style={{
-                  width: '32px',
-                  height: '2px',
-                  backgroundColor: 'var(--accent)',
-                  marginBottom: '24px',
-                }}
-                aria-hidden="true"
-              />
 
               <h3
                 className="t-h3"

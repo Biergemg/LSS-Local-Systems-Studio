@@ -55,6 +55,7 @@ export default function CTASection() {
         }}
       >
         <div
+          className="cta-grid"
           style={{
             maxWidth: 'var(--max-w)',
             margin: '0 auto',
@@ -253,6 +254,7 @@ export default function CTASection() {
         }}
       >
         <div
+          className="faq-grid"
           style={{
             maxWidth: 'var(--max-w)',
             margin: '0 auto',
@@ -286,7 +288,8 @@ export default function CTASection() {
 
         <style>{`
           @media (max-width: 768px) {
-            #faq .faq-grid { grid-template-columns: 1fr !important; }
+            #contacto .cta-grid { grid-template-columns: 1fr !important; gap: 48px !important; }
+            #faq .faq-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
           }
         `}</style>
       </section>
