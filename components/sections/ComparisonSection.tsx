@@ -96,7 +96,7 @@ export default function ComparisonSection() {
                     width: '35%',
                   }}
                 >
-                  SISTEMA WEB DE CAPTACIÓN LOCAL
+                  SISTEMA DE CAPTACIÓN LOCAL
                 </th>
               </tr>
             </thead>
