@@ -4,8 +4,8 @@ export const SITE = {
   name: 'LSS — Local Systems Studio',
   shortName: 'LSS',
   url: 'https://localsystemsstudio.com',
-  title: 'Sistema Web de Captación Local en México | LSS',
-  description: 'LSS construye sistemas web de captación local para que tu negocio sea encontrado, entendido y contactado. Método CEC: Claridad, Evidencia y Contacto.',
+  title: 'Sistema Integral de Captación Local en México | LSS',
+  description: 'LSS instala sistemas integrales para que tu negocio sea encontrado, entendido y contactado. Método CEC: Claridad, Evidencia y Contacto.',
 };
 
 export const CONTACT: ContactInfo = {
@@ -26,7 +26,7 @@ export const NAV_LINKS: NavLink[] = [
 export const HERO = {
   eyebrow: 'Esto no es una página bonita.',
   headline: 'Encontrado.\nEntendido.\nContactado.',
-  body: 'Tu negocio necesita ser encontrado, entendido y contactado. Eso es lo que construimos con un sistema de captación local para convertir búsquedas, visitas y recomendaciones en contactos medibles.',
+  body: 'Tu negocio necesita más que presencia. Construimos e instalamos un sistema integral de captación local: un entorno completo con sitio, canales de contacto directos, agendamiento y medición, entregado operando para convertir el interés en conversaciones reales sin fricción.',
   ctaPrimary: 'Agendar diagnóstico gratuito',
   ctaSecondary: 'Ver el método',
 };
@@ -40,80 +40,86 @@ export const HERO_STATS: HeroStat[] = [
 export const PROBLEM_SECTION = {
   eyebrow: 'El problema real',
   title: 'No falta\npresencia.\nFalta\ncaptación.',
-  description: 'Cuando un cliente potencial te encuentra en Google, redes, recomendación o sitio web y no entiende qué ofreces, no percibe confianza o no encuentra cómo contactarte, esa oportunidad se pierde en silencio.',
+  description: 'La pérdida silenciosa de oportunidades. Cuando un cliente potencial te busca, llega a tu negocio y no entiende tu oferta, no percibe confianza o no encuentra un canal rápido para hablar contigo, simplemente se va con otro.',
 };
 
 export const PROBLEM_ITEMS: ProblemItem[] = [
-  { title: 'No te encuentran cuando ya están buscando', description: 'El cliente tiene intención, pero tu negocio no aparece donde busca o no genera suficiente confianza para que haga clic.' },
-  { title: 'No entienden rápido qué ofreces', description: 'El visitante llega y en segundos no entiende qué vendes, para quién es o en qué zona atiendes. Se va con otro.' },
-  { title: 'No perciben suficiente confianza', description: 'Sin evidencia real —reseñas, fotos, proceso, credenciales— el interés se convierte en duda y el prospecto busca a otro proveedor.' },
-  { title: 'No pueden contactarte fácilmente', description: 'WhatsApp escondido, formulario largo, botones que no funcionan en celular: cada fricción reduce la probabilidad de contacto.' },
+  { title: 'No te encuentran cuando ya están buscando', description: 'El cliente tiene intención, pero tu negocio no aparece donde busca o su presentación no genera suficiente peso para recibir el clic.' },
+  { title: 'No entienden rápido qué ofreces', description: 'El visitante entra y en segundos no le queda claro qué vendes, para quién es o qué zonas cubres. Ante la confusión, abandona.' },
+  { title: 'No perciben suficiente confianza', description: 'Sin elementos que validen tu trabajo —fotos, credenciales, proceso claro—, el interés inicial se convierte en duda y la decisión se frena.' },
+  { title: 'No pueden contactarte fácilmente', description: 'WhatsApp escondido, formularios complejos, falta de agenda. Cada fricción en el proceso es un contacto menos y un mensaje que nunca llega.' },
 ];
 
 export const SYSTEM_SECTION = {
   eyebrow: 'Método CEC',
   title: 'Cómo\nfunciona',
-  description: 'Claridad, Evidencia y Contacto. Tres pilares aplicados después de un diagnóstico inicial para convertir el interés de un visitante en una conversación comercial real.',
+  description: 'Claridad, Evidencia y Contacto. No es teoría. Son tres pilares que llevamos a una implementación real del sistema, no solo explicación del método, para transformar visitas en contactos cualificados.',
 };
 
 export const SYSTEM_STEPS: SystemStep[] = [
-  { number: '01', title: 'Diagnóstico', description: 'Analizamos si tu negocio está perdiendo oportunidades por falta de claridad en la oferta, evidencia de confianza o fricción en el contacto.' },
-  { number: '02', title: 'Claridad', description: 'Ordenamos tu mensaje para que el visitante entienda en segundos qué vendes, para quién, en qué zona y qué debe hacer ahora.' },
-  { number: '03', title: 'Evidencia', description: 'Construimos los elementos de confianza: proceso visible, reseñas, fotos, credenciales y casos que eliminan la duda antes del contacto.' },
-  { number: '04', title: 'Contacto', description: 'Facilitamos la acción: WhatsApp visible, llamada clickeable, formulario corto y CTA claro que funciona en celular y escritorio.' },
+  { number: '01', title: 'Diagnóstico', description: 'Evaluamos la situación actual de tu negocio para detectar puntos de fuga: dónde falta claridad comercial, dónde hace falta evidencia y qué fricciones frenan el contacto.' },
+  { number: '02', title: 'Claridad', description: 'Estructuramos el mensaje de tu oferta. El visitante debe entender al instante qué resuelves, para quién trabajas y exactamente qué paso debe dar a continuación.' },
+  { number: '03', title: 'Evidencia', description: 'Integramos los elementos que construyen confianza antes del primer mensaje: procesos visibles, resultados, credenciales e información que elimina dudas.' },
+  { number: '04', title: 'Contacto', description: 'Instalamos y conectamos la infraestructura de comunicación: WhatsApp directo, formularios precisos, calendario de citas y rutas claras para hablar contigo. Todo medible.' },
 ];
 
-export const COMPARISON_SECTION = { eyebrow: 'Página web vs sistema de captación local', title: 'No es lo\nmismo.' };
+export const COMPARISON_SECTION = { eyebrow: 'Página web vs sistema integral', title: 'No es lo\nmismo.' };
 export const COMPARISON_ROWS: ComparisonRow[] = [
-  { feature: 'Enfoque',     agency: 'Verse bien y ser moderno',        lss: 'Generar contactos medibles' },
-  { feature: 'Entrega',     agency: 'Una página terminada',             lss: 'Una estructura comercial orientada a captación' },
-  { feature: 'Lenguaje',    agency: 'Diseño, UX, responsivo',           lss: 'Clientes, citas, llamadas y cotizaciones' },
-  { feature: 'Medición',    agency: 'No mide acciones clave',           lss: 'Mide clics a WhatsApp, llamadas y formularios' },
-  { feature: 'Modelo',      agency: 'Proyecto de un solo pago',         lss: 'Sistema que se mantiene y mejora con el tiempo' },
-  { feature: 'Competencia', agency: 'Por precio',                       lss: 'Por valor comercial generado' },
+  { feature: 'Enfoque',     agency: 'Estética y apariencia visual',        lss: 'Generar conversaciones y contactos medibles' },
+  { feature: 'Entrega',     agency: 'Archivos y un sitio publicado',             lss: 'Sistema comercial conectado y operando' },
+  { feature: 'Lenguaje',    agency: 'Colores, animaciones, UX',           lss: 'Clientes, prospectos, citas y cotizaciones' },
+  { feature: 'Medición',    agency: 'Visitas generales (vanidad)',           lss: 'Clics a WhatsApp, formularios y agendas confirmadas' },
+  { feature: 'Modelo',      agency: 'Entrega única y estática',         lss: 'Operación continua, soporte y mejora' },
+  { feature: 'Competencia', agency: 'Por precio más bajo',                       lss: 'Por infraestructura y claridad comercial' },
 ];
 
-export const RESULTS_SECTION = { eyebrow: 'Así medimos', title: 'Sin métricas\ninfladas.', note: 'Estamos en etapa de lanzamiento. Cuando existan cifras verificadas por cliente, se agregarán aquí. Antes de eso, nada inflado.' };
+export const RESULTS_SECTION = { eyebrow: 'Así medimos', title: 'Sin métricas\ninfladas.', note: 'Estamos en etapa de lanzamiento. Cuando existan cifras verificadas por cliente, se agregarán aquí. Solo medimos acciones que impactan el negocio.' };
 export const CASE_STUDIES: CaseStudy[] = [
-  { client: 'Trazabilidad', sector: 'Captación', metric: '01', description: 'Qué canal genera conversaciones reales: búsqueda, recomendación o redes. Sin contar visitas que no convierten.', timeframe: 'Origen del contacto' },
-  { client: 'Calificación', sector: 'Criterio', metric: '02', description: 'Qué contactos tienen intención, urgencia y encaje con la oferta. No todos los mensajes son prospectos.', timeframe: 'Calidad del prospecto' },
-  { client: 'Optimización', sector: 'Cierre', metric: '03', description: 'Dónde se cae la conversación comercial y qué cambio en la estructura o el copy mejora el siguiente paso.', timeframe: 'Avance a cierre' },
+  { client: 'Trazabilidad', sector: 'Captación', metric: '01', description: 'Identificamos qué canal genera contactos reales. No nos interesan las visitas vacías, sino saber de dónde viene el prospecto que inicia una conversación.', timeframe: 'Origen de la conversación' },
+  { client: 'Calificación', sector: 'Criterio', metric: '02', description: 'Medimos qué porcentaje de contactos llega con urgencia y encaje real con tu oferta. Esto permite ajustar el mensaje para atraer a la persona correcta.', timeframe: 'Filtro de intención' },
+  { client: 'Optimización', sector: 'Cierre', metric: '03', description: 'Observamos dónde se detiene el flujo comercial para realizar ajustes precisos en la estructura o en los canales de contacto, mejorando continuamente el sistema.', timeframe: 'Decisiones basadas en datos' },
 ];
 
 export const CTA_SECTION = {
   eyebrow: 'Diagnóstico de Captación Local',
-  title: 'Revisemos\nsi estás\nperdiendo\noportunidades.',
-  description: 'Diagnóstico gratuito de 30 minutos. Analizamos si tu negocio está perdiendo contactos por falta de claridad en la oferta, evidencia de confianza o fricción en el proceso de contacto.',
+  title: 'Evaluación\ncomercial\nestructurada.',
+  description: 'Diagnóstico inicial de 30 minutos. Un filtro técnico para entender tu situación actual y detectar si estás perdiendo oportunidades por falta de infraestructura, claridad o evidencia.',
   callDetails: [
-    '30 minutos de diagnóstico',
+    '30 minutos de evaluación',
     'Sin costo',
     'Canal: WhatsApp',
-    'Salida: recomendación — landing, sitio, mejora de Google Business Profile o sistema de captación mensual',
+    'Salida: recomendación técnica — puede ser una landing, el sistema integral, o simplemente la indicación de no construir nada todavía.',
   ],
-  submit: 'Iniciar diagnóstico de captación →',
+  submit: 'Agendar diagnóstico →',
   successEyebrow: '● Diagnóstico recibido',
   successTitle: 'Te contactamos',
   successBody: 'Revisaremos tu información y te escribimos para coordinar el diagnóstico de captación. Si WhatsApp no abrió, usa el botón de abajo.',
 };
 
 export const FAQ_ITEMS: FaqItem[] = [
-  { question: '¿LSS hace páginas web?', answer: 'Sí, pero no como producto aislado. Construimos landing pages o sitios dentro de un sistema de captación local: claridad en la oferta, evidencia de confianza, contacto directo y medición de acciones clave.' },
-  { question: '¿Qué necesito antes de empezar?', answer: 'Nombre del negocio, servicios principales, zona donde atiendes, WhatsApp activo, logo si tienes, fotos o evidencia disponible, y acceso o autorización para revisar tu Google Business Profile.' },
-  { question: '¿Garantizan clientes o primer lugar en Google?', answer: 'No. Sería una promesa falsa. LSS no garantiza ventas ni posiciones en Google. Construimos un sistema para capturar, ordenar y medir contactos desde tu presencia digital. Las ventas dependen también de tu oferta, respuesta, precio, reputación y seguimiento.' },
-  { question: '¿Por qué el diagnóstico es por WhatsApp?', answer: 'Porque ahí ocurre gran parte de la venta local. Revisamos cómo llega un contacto, qué tan fácil es responder, qué información falta y dónde se puede perder la oportunidad.' },
+  { question: '¿LSS hace páginas web?', answer: 'No. Construimos e instalamos sistemas integrales de captación. Una página web es solo la parte visual; nosotros entregamos un sistema instalado y funcionando (sitio, conexión a WhatsApp, formularios, agenda y medición).' },
+  { question: '¿Qué incluye realmente el sistema?', answer: 'El alcance completo necesario para operar: el sitio enfocado en captación, conexión de WhatsApp, formularios cortos, sistema de agendamiento de citas, estructuración de las rutas de contacto, panel de medición, soporte estructurado y la puesta en marcha inicial.' },
+  { question: '¿Garantizan clientes o primer lugar en Google?', answer: 'No. Desconfía de quien prometa clientes garantizados o posiciones mágicas. Garantizamos una estructura técnica y comercial diseñada para captar, medir y facilitar el contacto con el prospecto que te está buscando.' },
+  { question: '¿Por qué existe una mensualidad?', answer: 'El sistema no es un archivo estático. Requiere servidores, mantenimiento técnico, monitoreo de la medición, gestión de las herramientas conectadas (como agendamiento) y soporte técnico continuo para asegurar que siempre esté operativo.' },
+  { question: '¿Cuánto tarda la implementación?', answer: 'Depende de la información disponible y el estado actual de tu negocio, pero la instalación inicial del sistema suele tomar entre 2 y 4 semanas una vez entregada la información requerida.' },
+  { question: '¿Qué necesito antes de empezar?', answer: 'Claridad en lo que vendes. Te pediremos información básica de tu oferta, imágenes reales de tu trabajo o negocio, credenciales de tus perfiles actuales y disposición para el diagnóstico inicial.' },
+  { question: '¿Y si ya tengo página o Google Business Profile?', answer: 'El diagnóstico nos dirá si tu estructura actual funciona o si presenta puntos de fuga. Si ya tienes elementos valiosos, los integramos y conectamos al nuevo sistema para que todo opere bajo la misma medición.' },
+  { question: '¿Qué pasa si algo no queda funcionando?', answer: 'El sistema se entrega funcionando conforme al alcance aprobado: sitio publicado, canales de contacto activos, medición básica operando y estructura lista para recibir contactos. Si algo de ese alcance no queda operativo, se corrige hasta dejarlo funcionando.' },
 ];
 
 export const DELIVERABLES_SECTION = {
   eyebrow: 'Qué instalamos',
-  title: 'Un sistema simple para que tu negocio capture y mida contactos reales.',
+  title: 'Un sistema instalado y funcionando, listo para capturar contactos.',
   items: [
-    'Landing o sitio enfocado en captación.',
-    'WhatsApp visible y directo.',
-    'Formulario corto.',
-    'Estructura para Google Business Profile.',
-    'Medición de clics, llamadas y formularios.',
-    'Portal del cliente.',
-    'Reporte mensual.',
-    'Soporte por tickets.',
+    'Sitio o landing comercial estructurado para captación.',
+    'WhatsApp corporativo conectado y visible.',
+    'Formulario de contacto directo y sin fricción.',
+    'Calendario integrado para agendamiento de citas.',
+    'Rutas de atención para clasificar el tipo de contacto.',
+    'Medición activa de clics, llamadas, mensajes y citas.',
+    'Base inicial de automatización para respuestas rápidas.',
+    'Portal de cliente para seguimiento de tu proyecto.',
+    'Soporte estructurado para asegurar la continuidad.',
+    'Operación inicial y puesta en marcha del sistema.',
   ],
 };
