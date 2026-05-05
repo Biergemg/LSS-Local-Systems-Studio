@@ -26,7 +26,7 @@ export const NAV_LINKS: NavLink[] = [
 export const HERO = {
   eyebrow: 'Esto no es una página bonita.',
   headline: 'Encontrado.\nEntendido.\nContactado.',
-  body: 'Tu negocio necesita más que presencia. Construimos e instalamos un sistema integral de captación local: un entorno completo con sitio, canales de contacto directos, agendamiento y medición, entregado operando para convertir el interés en conversaciones reales sin fricción.',
+  body: 'Tu negocio necesita más que presencia. Construimos e instalamos un sistema integral de captación local: un entorno completo con sitio, canales de contacto directos, agendamiento y medición, entregado listo para convertir interés en conversaciones reales, sin fricción.',
   ctaPrimary: 'Agendar diagnóstico gratuito',
   ctaSecondary: 'Ver el método',
 };
@@ -53,14 +53,14 @@ export const PROBLEM_ITEMS: ProblemItem[] = [
 export const SYSTEM_SECTION = {
   eyebrow: 'Método CEC',
   title: 'Cómo\nfunciona',
-  description: 'Claridad, Evidencia y Contacto. No es teoría. Son tres pilares que llevamos a una implementación real del sistema, no solo explicación del método, para transformar visitas en contactos cualificados.',
+  description: 'Claridad, Evidencia y Contacto. No es teoría. Son tres pilares que llevamos a una implementación real del sistema, no solo explicación del método, para facilitar que una visita interesada avance hacia un contacto real.',
 };
 
 export const SYSTEM_STEPS: SystemStep[] = [
   { number: '01', title: 'Diagnóstico', description: 'Evaluamos la situación actual de tu negocio para detectar puntos de fuga: dónde falta claridad comercial, dónde hace falta evidencia y qué fricciones frenan el contacto.' },
   { number: '02', title: 'Claridad', description: 'Estructuramos el mensaje de tu oferta. El visitante debe entender al instante qué resuelves, para quién trabajas y exactamente qué paso debe dar a continuación.' },
   { number: '03', title: 'Evidencia', description: 'Integramos los elementos que construyen confianza antes del primer mensaje: procesos visibles, resultados, credenciales e información que elimina dudas.' },
-  { number: '04', title: 'Contacto', description: 'Instalamos y conectamos la infraestructura de comunicación: WhatsApp directo, formularios precisos, calendario de citas y rutas claras para hablar contigo. Todo medible.' },
+  { number: '04', title: 'Contacto', description: 'Dejamos conectados los canales de contacto: WhatsApp directo, formularios precisos, calendario de citas y rutas claras para hablar contigo. Todo medible.' },
 ];
 
 export const COMPARISON_SECTION = { eyebrow: 'Página web vs sistema integral', title: 'No es lo\nmismo.' };
@@ -83,7 +83,7 @@ export const CASE_STUDIES: CaseStudy[] = [
 export const CTA_SECTION = {
   eyebrow: 'Diagnóstico de Captación Local',
   title: 'Evaluación\ncomercial\nestructurada.',
-  description: 'Diagnóstico inicial de 30 minutos. Un filtro técnico para entender tu situación actual y detectar si estás perdiendo oportunidades por falta de infraestructura, claridad o evidencia.',
+  description: 'Diagnóstico inicial de 30 minutos. Una revisión práctica para entender tu situación actual y detectar si estás perdiendo oportunidades por falta de infraestructura, claridad o evidencia.',
   callDetails: [
     '30 minutos de evaluación',
     'Sin costo',
@@ -100,7 +100,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   { question: '¿LSS hace páginas web?', answer: 'No. Construimos e instalamos sistemas integrales de captación. Una página web es solo la parte visual; nosotros entregamos un sistema instalado y funcionando (sitio, conexión a WhatsApp, formularios, agenda y medición).' },
   { question: '¿Qué incluye realmente el sistema?', answer: 'El alcance completo necesario para operar: el sitio enfocado en captación, conexión de WhatsApp, formularios cortos, sistema de agendamiento de citas, estructuración de las rutas de contacto, panel de medición, soporte estructurado y la puesta en marcha inicial.' },
   { question: '¿Garantizan clientes o primer lugar en Google?', answer: 'No. Desconfía de quien prometa clientes garantizados o posiciones mágicas. Garantizamos una estructura técnica y comercial diseñada para captar, medir y facilitar el contacto con el prospecto que te está buscando.' },
-  { question: '¿Por qué existe una mensualidad?', answer: 'El sistema no es un archivo estático. Requiere servidores, mantenimiento técnico, monitoreo de la medición, gestión de las herramientas conectadas (como agendamiento) y soporte técnico continuo para asegurar que siempre esté operativo.' },
+  { question: '¿Qué pasa después de publicar el sistema?', answer: 'Después de la implementación puedes dejarlo como sistema instalado o continuar con operación activa: soporte, ajustes, revisión de contactos, medición y mejoras. La recomendación depende del diagnóstico y del tipo de negocio.' },
   { question: '¿Cuánto tarda la implementación?', answer: 'Depende de la información disponible y el estado actual de tu negocio, pero la instalación inicial del sistema suele tomar entre 2 y 4 semanas una vez entregada la información requerida.' },
   { question: '¿Qué necesito antes de empezar?', answer: 'Claridad en lo que vendes. Te pediremos información básica de tu oferta, imágenes reales de tu trabajo o negocio, credenciales de tus perfiles actuales y disposición para el diagnóstico inicial.' },
   { question: '¿Y si ya tengo página o Google Business Profile?', answer: 'El diagnóstico nos dirá si tu estructura actual funciona o si presenta puntos de fuga. Si ya tienes elementos valiosos, los integramos y conectamos al nuevo sistema para que todo opere bajo la misma medición.' },
@@ -112,7 +112,7 @@ export const DELIVERABLES_SECTION = {
   title: 'Un sistema instalado y funcionando, listo para capturar contactos.',
   items: [
     'Sitio o landing comercial estructurado para captación.',
-    'WhatsApp corporativo conectado y visible.',
+    'WhatsApp del negocio conectado y visible.',
     'Formulario de contacto directo y sin fricción.',
     'Calendario integrado para agendamiento de citas.',
     'Rutas de atención para clasificar el tipo de contacto.',
