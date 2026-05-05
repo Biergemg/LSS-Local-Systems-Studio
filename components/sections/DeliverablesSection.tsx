@@ -9,13 +9,7 @@ export default function DeliverablesSection() {
         padding: '96px 0',
       }}
     >
-      <div
-        style={{
-          maxWidth: 'var(--max-w)',
-          margin: '0 auto',
-          padding: '0 24px',
-        }}
-      >
+      <div className="container">
         <p className="t-label" style={{ color: 'var(--accent)', marginBottom: '16px' }}>
           {DELIVERABLES_SECTION.eyebrow}
         </p>

@@ -11,13 +11,7 @@ export default function ResultsSection() {
         padding: '96px 0',
       }}
     >
-      <div
-        style={{
-          maxWidth: 'var(--max-w)',
-          margin: '0 auto',
-          padding: '0 24px',
-        }}
-      >
+      <div className="container">
         {/* Header — split layout */}
         <div
           className="results-header"

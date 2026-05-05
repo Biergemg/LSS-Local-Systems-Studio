@@ -11,13 +11,7 @@ export default function ComparisonSection() {
         padding: '96px 0',
       }}
     >
-      <div
-        style={{
-          maxWidth: 'var(--max-w)',
-          margin: '0 auto',
-          padding: '0 24px',
-        }}
-      >
+      <div className="container">
         <p className="t-label" style={{ color: 'var(--accent)', marginBottom: '16px' }}>
           {COMPARISON_SECTION.eyebrow}
         </p>

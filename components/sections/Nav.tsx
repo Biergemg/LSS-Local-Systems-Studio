@@ -32,10 +32,8 @@ export default function Nav() {
       aria-label="Navegación principal"
     >
       <div
+        className="container"
         style={{
-          maxWidth: 'var(--max-w)',
-          margin: '0 auto',
-          padding: '0 24px',
           width: '100%',
           display: 'flex',
           alignItems: 'center',

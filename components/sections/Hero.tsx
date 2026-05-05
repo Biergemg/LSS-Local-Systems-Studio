@@ -34,12 +34,12 @@ export default function Hero() {
       />
 
       <div
+        className="container hero-content"
         style={{
           position: 'relative',
           zIndex: 1,
-          maxWidth: 'var(--max-w)',
-          margin: '0 auto',
-          padding: '80px 24px 64px',
+          paddingTop: '80px',
+          paddingBottom: '64px',
           width: '100%',
         }}
       >
@@ -206,7 +206,7 @@ export default function Hero() {
 
       <style>{`
         @media (max-width: 768px) {
-          #hero > div { padding: 48px 16px 48px !important; }
+          #hero .hero-content { padding-top: 48px !important; padding-bottom: 48px !important; }
         }
         @media (max-width: 640px) {
           #hero .cec-pillars { flex-direction: column !important; border-left: none !important; }

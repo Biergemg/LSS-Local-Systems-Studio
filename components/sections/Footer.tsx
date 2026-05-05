@@ -11,13 +11,7 @@ export default function Footer() {
         borderTop: '1px solid var(--border)',
       }}
     >
-      <div
-        style={{
-          maxWidth: 'var(--max-w)',
-          margin: '0 auto',
-          padding: '0 24px',
-        }}
-      >
+      <div className="container">
         {/* Main footer row */}
         <div
           className="footer-inner"

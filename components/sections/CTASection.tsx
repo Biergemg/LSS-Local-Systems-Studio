@@ -56,11 +56,8 @@ export default function CTASection() {
         }}
       >
         <div
-          className="cta-grid"
+          className="container cta-grid"
           style={{
-            maxWidth: 'var(--max-w)',
-            margin: '0 auto',
-            padding: '0 24px',
             display: 'grid',
             gridTemplateColumns: '1fr 1fr',
             gap: '80px',
@@ -256,11 +253,8 @@ export default function CTASection() {
         }}
       >
         <div
-          className="faq-grid"
+          className="container faq-grid"
           style={{
-            maxWidth: 'var(--max-w)',
-            margin: '0 auto',
-            padding: '0 24px',
             display: 'grid',
             gridTemplateColumns: '1fr 2fr',
             gap: '80px',
