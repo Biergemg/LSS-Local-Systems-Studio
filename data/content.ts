@@ -83,12 +83,12 @@ export const CASE_STUDIES: CaseStudy[] = [
 export const CTA_SECTION = {
   eyebrow: 'Diagnóstico de Captación Local',
   title: 'Evaluación\ncomercial\nestructurada.',
-  description: 'Diagnóstico inicial de 30 minutos. Una revisión práctica para entender tu situación actual y detectar si estás perdiendo oportunidades por falta de infraestructura, claridad o evidencia.',
+  description: 'Diagnóstico inicial de 30 minutos. Una revisión práctica para entender tu situación actual y detectar si estás perdiendo oportunidades por falta de estructura, claridad o evidencia.',
   callDetails: [
     '30 minutos de evaluación',
     'Sin costo',
     'Canal: WhatsApp',
-    'Salida: recomendación técnica — puede ser una landing, el sistema integral, o simplemente la indicación de no construir nada todavía.',
+    'Salida: recomendación clara — puede ser una landing, el sistema integral, o simplemente la indicación de no construir nada todavía.',
   ],
   submit: 'Agendar diagnóstico →',
   successEyebrow: '● Diagnóstico recibido',
