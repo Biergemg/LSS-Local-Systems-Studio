@@ -56,9 +56,10 @@ export default function Hero() {
 
         {/* Main headline */}
         <h1
+          className="hero-headline"
           style={{
             fontFamily: 'var(--font-display)',
-            fontSize: 'clamp(56px, 9vw, 104px)',
+            fontSize: 'clamp(36px, 10vw, 104px)',
             fontWeight: 700,
             textTransform: 'uppercase',
             letterSpacing: 'var(--tracking-wider)',
@@ -66,6 +67,7 @@ export default function Hero() {
             color: 'var(--fg)',
             marginBottom: '48px',
             whiteSpace: 'pre-line',
+            wordBreak: 'break-word',
           }}
         >
           {HERO.headline}
@@ -207,6 +209,7 @@ export default function Hero() {
       <style>{`
         @media (max-width: 768px) {
           #hero .hero-content { padding-top: 48px !important; padding-bottom: 48px !important; }
+          #hero .hero-headline { margin-bottom: 32px !important; }
         }
         @media (max-width: 640px) {
           #hero .cec-pillars { flex-direction: column !important; border-left: none !important; }
