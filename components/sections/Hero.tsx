@@ -1,221 +1,40 @@
-'use client';
-
-import { HERO, CONTACT } from '@/data/content';
+import { HERO, DOSSIER, CONTACT } from '@/data/content';
 
 export default function Hero() {
   return (
-    <section
-      id="hero"
-      style={{
-        position: 'relative',
-        minHeight: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        backgroundColor: 'var(--surface-base)',
-        paddingTop: 'var(--nav-h)',
-        overflow: 'hidden',
-      }}
-    >
-      {/* Grid overlay */}
-      <div
-        aria-hidden="true"
-        style={{
-          position: 'absolute',
-          inset: 0,
-          backgroundImage: `
-            linear-gradient(var(--border) 1px, transparent 1px),
-            linear-gradient(90deg, var(--border) 1px, transparent 1px)
-          `,
-          backgroundSize: '64px 64px',
-          opacity: 0.18,
-          pointerEvents: 'none',
-        }}
-      />
-
-      <div
-        className="container hero-content"
-        style={{
-          position: 'relative',
-          zIndex: 1,
-          paddingTop: '80px',
-          paddingBottom: '64px',
-          width: '100%',
-        }}
-      >
-        {/* Eyebrow */}
-        <p
-          className="t-label"
-          style={{
-            color: 'var(--accent)',
-            marginBottom: '32px',
-          }}
-        >
-          {HERO.eyebrow}
-        </p>
-
-        {/* Main headline */}
-        <h1
-          className="hero-headline"
-          style={{
-            fontFamily: 'var(--font-display)',
-            fontSize: 'clamp(34px, 7.5vw, 92px)',
-            fontWeight: 700,
-            textTransform: 'uppercase',
-            letterSpacing: 'var(--tracking-wider)',
-            lineHeight: 0.95,
-            color: 'var(--fg)',
-            marginBottom: '48px',
-            whiteSpace: 'pre-line',
-            wordBreak: 'break-word',
-          }}
-        >
-          {HERO.headline}
-        </h1>
-
-        {/* Body */}
-        <p
-          className="t-body"
-          style={{
-            color: 'var(--fg2)',
-            maxWidth: '560px',
-            marginBottom: '48px',
-          }}
-        >
-          {HERO.body}
-        </p>
-
-        {/* CTAs */}
-        <div
-          style={{
-            display: 'flex',
-            gap: '16px',
-            flexWrap: 'wrap',
-            marginBottom: '80px',
-          }}
-        >
-          <a
-            href={CONTACT.whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: 'inline-block',
-              padding: '16px 32px',
-              backgroundColor: 'var(--accent)',
-              color: '#000',
-              fontFamily: 'var(--font-primary)',
-              fontSize: 'var(--text-xs)',
-              fontWeight: 700,
-              letterSpacing: 'var(--tracking-widest)',
-              textTransform: 'uppercase',
-              textDecoration: 'none',
-              transition: 'background-color 0.15s ease',
-            }}
-            onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = 'var(--accent-dim)')}
-            onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'var(--accent)')}
-          >
-            {HERO.ctaPrimary}
-          </a>
-          <a
-            href="#sistema"
-            style={{
-              display: 'inline-block',
-              padding: '16px 32px',
-              backgroundColor: 'transparent',
-              color: 'var(--fg)',
-              border: '1px solid var(--fg)',
-              fontFamily: 'var(--font-primary)',
-              fontSize: 'var(--text-xs)',
-              fontWeight: 500,
-              letterSpacing: 'var(--tracking-widest)',
-              textTransform: 'uppercase',
-              textDecoration: 'none',
-              transition: 'border-color 0.15s ease, color 0.15s ease',
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = 'var(--accent)';
-              e.currentTarget.style.color = 'var(--accent)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = 'var(--fg)';
-              e.currentTarget.style.color = 'var(--fg)';
-            }}
-          >
-            {HERO.ctaSecondary}
-          </a>
+    <section id="inicio" className="hero" aria-labelledby="h1">
+      <div className="container hero-grid">
+        <div>
+          <p className="eyebrow">{HERO.eyebrow}</p>
+          <h1 id="h1" className="h1">{HERO.headline}</h1>
+          <p className="lede">{HERO.body}</p>
+          <div className="hero-actions">
+            <a className="btn btn-primary" href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer">
+              {HERO.ctaPrimary}
+            </a>
+            <a className="link-arrow" href="#prueba">{HERO.ctaSecondary} →</a>
+          </div>
+          <p className="small hero-note">{HERO.micro}</p>
+          <p className="proof-line">{HERO.proof}</p>
         </div>
 
-        {/* CEC method marker */}
-        <div
-          style={{
-            borderTop: '1px solid var(--border)',
-            paddingTop: '32px',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '0',
-            flexWrap: 'wrap',
-            rowGap: '16px',
-          }}
-        >
-          <span
-            style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: 'var(--text-xs)',
-              fontWeight: 700,
-              color: 'var(--accent)',
-              letterSpacing: 'var(--tracking-widest)',
-              textTransform: 'uppercase',
-              marginRight: '20px',
-            }}
-          >
-            MÉTODO CEC
-          </span>
-          <div className="cec-pillars" style={{ display: 'flex', gap: '0', borderLeft: '1px solid var(--border)' }}>
-            {['Claridad', 'Evidencia', 'Contacto'].map((pillar, i) => (
-              <div
-                key={pillar}
-                style={{
-                  padding: '8px 24px',
-                  borderRight: '1px solid var(--border)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '10px',
-                }}
-              >
-                <span
-                  style={{
-                    fontFamily: 'var(--font-primary)',
-                    fontSize: 'var(--text-xs)',
-                    fontWeight: 300,
-                    color: 'var(--fg3)',
-                    letterSpacing: '0',
-                  }}
-                >
-                  {String(i + 1).padStart(2, '0')}
-                </span>
-                <span
-                  className="t-label"
-                  style={{ color: 'var(--fg2)' }}
-                >
-                  {pillar}
-                </span>
+        <aside className="dossier rise rise-3" aria-label={DOSSIER.title}>
+          <span className="dossier-tag">{DOSSIER.tag}</span>
+          <p className="h3" style={{ marginTop: 14, marginBottom: 6 }}>{DOSSIER.title}</p>
+          <div role="list">
+            {DOSSIER.lenses.map((l) => (
+              <div className="lens" role="listitem" key={l.n}>
+                <span className="lens-n" aria-hidden="true">{l.n}</span>
+                <div>
+                  <p className="lens-q">{l.q}</p>
+                  <p className="lens-a">{l.a}</p>
+                </div>
               </div>
             ))}
           </div>
-        </div>
-
+          <p className="small" style={{ marginTop: 8 }}>{DOSSIER.note}</p>
+        </aside>
       </div>
-
-      <style>{`
-        @media (max-width: 768px) {
-          #hero .hero-content { padding-top: 48px !important; padding-bottom: 48px !important; }
-          #hero .hero-headline { margin-bottom: 32px !important; }
-        }
-        @media (max-width: 640px) {
-          #hero .cec-pillars { flex-direction: column !important; border-left: none !important; }
-          #hero .cec-pillars > div { border-right: none !important; border-bottom: 1px solid var(--border); padding: 10px 0 !important; }
-        }
-      `}</style>
     </section>
   );
 }

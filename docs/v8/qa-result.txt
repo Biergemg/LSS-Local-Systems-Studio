@@ -1,0 +1,49 @@
+﻿PASS  sin scroll horizontal a 320px  (scrollWidth 320)
+PASS  consola limpia a 320px
+PASS  objetivos táctiles >=44px a 320px
+PASS  sin scroll horizontal a 390px  (scrollWidth 390)
+PASS  consola limpia a 390px
+PASS  objetivos táctiles >=44px a 390px
+PASS  sin scroll horizontal a 768px  (scrollWidth 768)
+PASS  consola limpia a 768px
+PASS  objetivos táctiles >=44px a 768px
+PASS  sin scroll horizontal a 1440px  (scrollWidth 1440)
+PASS  consola limpia a 1440px
+PASS  objetivos táctiles >=44px a 1440px
+PASS  anclas internas existen
+PASS  enlaces WhatsApp con número correcto y texto  (8 enlaces)
+PASS  mailto correcto
+  externo https://www.instagram.com/lsslocalsystemsstudio 200
+  externo https://www.facebook.com/lsslocalsystemsstudio 200
+PASS  target=_blank con noopener
+PASS  PPV: la vista usa los datos escritos
+PASS  PPV: alternar antes/después cambia la vista
+PASS  PPV: el enlace de WhatsApp lleva los datos escritos
+PASS  PPV: Enter no envía nada (sin POST)
+PASS  menú móvil abre con teclado
+PASS  Escape cierra el menú y devuelve el foco
+PASS  FAQ se expande
+PASS  primer Tab = enlace «Saltar al contenido»
+PASS  reduced-motion desactiva animaciones  (none)
+PASS  axe WCAG 2.2 AA a 390px
+PASS  axe WCAG 2.2 AA a 1440px
+{
+ "title": "LSS | Web, Google y contacto para negocios de servicios",
+ "tl": 55,
+ "desc": "Que quien te encuentre entienda por qué tu trabajo vale lo que cobras. Revisamos tu negocio como lo vería un cliente nuevo: tres observaciones sin costo.",
+ "dl": 153,
+ "canon": "https://www.lsslocalsystemsstudio.com/",
+ "h1": 1,
+ "lang": "es-MX",
+ "og": "https://www.lsslocalsystemsstudio.com/og-image.png",
+ "ldTypes": [
+  "ProfessionalService",
+  "WebSite",
+  "FAQPage"
+ ]
+}
+PASS  SEO básico: 1 H1, title<=60, desc<=160, canonical, lang
+PASS  FAQPage coincide con FAQ visible  (9/9)
+PASS  JSON-LD sin datos no verificables
+
+QA: TODO PASS

@@ -1,23 +1,28 @@
 import WhatsAppFloat from '@/components/ui/WhatsAppFloat';
+import BeliefSection from '@/components/sections/BeliefSection';
 import CTASection from '@/components/sections/CTASection';
-import DeliverablesSection from '@/components/sections/DeliverablesSection';
+import EvidenceSection from '@/components/sections/EvidenceSection';
+import ExpectationsSection from '@/components/sections/ExpectationsSection';
 import Footer from '@/components/sections/Footer';
 import Hero from '@/components/sections/Hero';
 import Nav from '@/components/sections/Nav';
-import ProblemSection from '@/components/sections/ProblemSection';
-import ResultsSection from '@/components/sections/ResultsSection';
-import SystemSection from '@/components/sections/SystemSection';
+import OfferSection from '@/components/sections/OfferSection';
+import PpvSection from '@/components/sections/PpvSection';
+import ProcessSection from '@/components/sections/ProcessSection';
 
 export default function Page() {
   return (
     <>
+      <a className="skip-link" href="#contenido">Saltar al contenido</a>
       <Nav />
-      <main>
+      <main id="contenido">
         <Hero />
-        <DeliverablesSection />
-        <ResultsSection />
-        <SystemSection />
-        <ProblemSection />
+        <BeliefSection />
+        <PpvSection />
+        <OfferSection />
+        <ProcessSection />
+        <EvidenceSection />
+        <ExpectationsSection />
         <CTASection />
       </main>
       <Footer />

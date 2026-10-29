@@ -1,36 +1,33 @@
-import { CONTACT, FAQ_ITEMS, SITE } from '@/data/content';
+import { CONTACT, FAQ_ITEMS, SITE, SOCIALS } from '@/data/content';
 
-export const localBusinessSchema = {
+/* Solo datos verificables: sin horario, dirección postal, valoraciones ni precios no aprobados. */
+const ORG_ID = `${SITE.url}/#organization`;
+
+export const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'LSS — Local Systems Studio',
-  description: 'LSS diseña sitios web y presencia local para negocios de servicios, con información en Google y canales de contacto verificados. Método CEC.',
+  '@id': ORG_ID,
+  name: SITE.name,
+  alternateName: 'LSS',
+  description:
+    'Sitios web, presencia en Google y recorridos de contacto comprobables para negocios de servicios.',
   url: SITE.url,
+  logo: `${SITE.url}/logo.png`,
+  image: `${SITE.url}/og-image.png`,
   telephone: CONTACT.phone,
   email: CONTACT.email,
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: CONTACT.location,
-    addressCountry: 'MX',
-  },
-  areaServed: 'México',
-  sameAs: [],
-  openingHoursSpecification: [
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      opens: '09:00',
-      closes: '18:00',
-    },
-  ],
+  areaServed: { '@type': 'Country', name: 'México' },
+  sameAs: SOCIALS.map((s) => s.href),
 };
 
 export const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
+  '@id': `${SITE.url}/#website`,
   name: SITE.name,
   url: SITE.url,
-  description: SITE.description,
+  inLanguage: 'es-MX',
+  publisher: { '@id': ORG_ID },
 };
 
 export const faqSchema = {
@@ -39,9 +36,6 @@ export const faqSchema = {
   mainEntity: FAQ_ITEMS.map((item) => ({
     '@type': 'Question',
     name: item.question,
-    acceptedAnswer: {
-      '@type': 'Answer',
-      text: item.answer,
-    },
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
   })),
 };

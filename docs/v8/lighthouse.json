@@ -1,0 +1,26 @@
+{
+ "mobile": {
+  "performance": 95,
+  "accessibility": 100,
+  "bestPractices": 100,
+  "seo": 100,
+  "LCP": "2.7 s",
+  "CLS": "0",
+  "TBT": "120 ms",
+  "FCP": "1.1 s",
+  "version": "12.8.2",
+  "date": "2026-10-29T14:50:35.142Z"
+ },
+ "desktop": {
+  "performance": 100,
+  "accessibility": 100,
+  "bestPractices": 100,
+  "seo": 100,
+  "LCP": "0.6 s",
+  "CLS": "0",
+  "TBT": "0 ms",
+  "FCP": "0.3 s",
+  "version": "12.8.2",
+  "date": "2026-10-29T14:50:44.699Z"
+ }
+}

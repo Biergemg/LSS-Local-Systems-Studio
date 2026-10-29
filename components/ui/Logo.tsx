@@ -1,3 +1,4 @@
+import Link from 'next/link';
 interface LogoProps {
   size?: number;
   showText?: boolean;
@@ -6,9 +7,9 @@ interface LogoProps {
 
 export default function Logo({ size = 32, showText = true }: LogoProps) {
   return (
-    <a
+    <Link
       href="/"
-      style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}
+      style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none', minHeight: 44 }}
       aria-label="LSS — Local Systems Studio"
     >
       <svg
@@ -89,6 +90,6 @@ export default function Logo({ size = 32, showText = true }: LogoProps) {
           </span>
         </div>
       )}
-    </a>
+    </Link>
   );
 }

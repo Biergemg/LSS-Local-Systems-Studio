@@ -3,38 +3,38 @@ import Script from 'next/script';
 import { Inter_Tight, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import { SITE } from '@/data/content';
-import { faqSchema, localBusinessSchema, websiteSchema } from '@/lib/schema';
+import { faqSchema, organizationSchema, websiteSchema } from '@/lib/schema';
 
 const interTight = Inter_Tight({ 
   subsets: ['latin'], 
   variable: '--font-inter-tight', 
-  weight: ['300','400','500','700'], 
+  weight: ['400','500','700'], 
   display: 'swap' 
 });
 
 const spaceGrotesk = Space_Grotesk({ 
   subsets: ['latin'], 
   variable: '--font-space-grotesk', 
-  weight: ['500','700'], 
+  weight: ['700'], 
   display: 'swap' 
 });
 
-const siteUrl = 'https://www.lsslocalsystemsstudio.com';
-const siteTitle = 'LSS Local Systems Studio';
-const siteDescription = 'El primer contacto no empieza con un hola. Sitios web y presencia local que explican tu negocio y facilitan que te escriban.';
-const ogImage = 'https://www.lsslocalsystemsstudio.com/og-image.png';
+const siteUrl = SITE.url;
+const siteTitle = SITE.title;
+const siteDescription = SITE.description;
+const ogImage = `${SITE.url}/og-image.png`;
 const metaPixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: SITE.title,
   description: SITE.description,
-  alternates: { canonical: siteUrl },
+  alternates: { canonical: '/' },
   robots: { index: true, follow: true },
   openGraph: {
     type: 'website',
     locale: 'es_MX',
-    url: siteUrl,
+    url: '/',
     siteName: siteTitle,
     title: siteTitle,
     description: siteDescription,
@@ -54,7 +54,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body className="min-h-full flex flex-col">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify([localBusinessSchema, websiteSchema, faqSchema]) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify([organizationSchema, websiteSchema, faqSchema]) }}
         />
         {metaPixelId ? (
           <>

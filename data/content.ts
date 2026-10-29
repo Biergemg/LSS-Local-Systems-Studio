@@ -1,125 +1,207 @@
-import type { CaseStudy, ComparisonRow, ContactInfo, FaqItem, NavLink, ProblemItem, SystemStep } from '@/types';
+import type { ContactInfo, FaqItem, NavLink } from '@/types';
+
+/* Copy canónico V6 (2026-10-29), refinado con V8. Sin precios, garantías contractuales, casos ni cifras:
+   esos elementos no están aprobados para publicación (matriz H de la oferta V6). */
 
 export const SITE = {
   name: 'LSS — Local Systems Studio',
   shortName: 'LSS',
-  url: 'https://lsslocalsystemsstudio.com',
-  title: 'LSS | Sitios web, presencia en Google y contacto para negocios',
-  description: 'Una web que explica bien tu negocio, información local cuidada y formas de contacto probadas. Descubre qué mejorar con una revisión CEC de LSS.',
+  url: 'https://www.lsslocalsystemsstudio.com',
+  title: 'LSS | Web, Google y contacto para negocios de servicios',
+  description:
+    'Que quien te encuentre entienda por qué tu trabajo vale lo que cobras. Revisamos tu negocio como lo vería un cliente nuevo: tres observaciones sin costo.',
 };
+
+const WA_NUMBER = '528333263389';
+export const WA_DEFAULT_TEXT =
+  'Hola, quiero revisar la primera impresión de mi negocio. Nombre: ___ | Ciudad: ___ | Servicio que quiero destacar: ___ | Web o perfil de Google (si lo tengo): ___';
+
+export function waLink(text: string = WA_DEFAULT_TEXT): string {
+  return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`;
+}
 
 export const CONTACT: ContactInfo = {
   whatsapp: '+52 833 326 3389',
-  whatsappUrl: 'https://wa.me/528333263389?text=' + encodeURIComponent('Hola, quiero una revisión CEC de mi negocio. Negocio: ___ | Ciudad: ___ | Servicio principal: ___'),
+  whatsappUrl: waLink(),
   email: 'contacto@lsslocalsystemsstudio.com',
   location: 'México / remoto',
   phone: '+52 833 326 3389',
 };
 
-export const NAV_LINKS: NavLink[] = [
-  { href: '#problema', label: 'La decisión' },
-  { href: '#sistema', label: 'El método' },
-  { href: '#proceso', label: 'Qué cambia' },
-  { href: '#contacto', label: 'Tu revisión' },
+export const SOCIALS = [
+  { label: 'Instagram', href: 'https://www.instagram.com/lsslocalsystemsstudio' },
+  { label: 'Facebook', href: 'https://www.facebook.com/lsslocalsystemsstudio' },
 ];
+
+export const NAV_LINKS: NavLink[] = [
+  { href: '#cambio', label: 'Qué cambiaríamos' },
+  { href: '#prueba', label: 'La prueba' },
+  { href: '#oferta', label: 'Qué recibes' },
+  { href: '#proceso', label: 'Cómo se entrega' },
+  { href: '#preguntas', label: 'Preguntas' },
+];
+
+export const NAV_CTA = 'Revisar mi negocio';
 
 export const HERO = {
-  eyebrow: 'SITIOS WEB Y PRESENCIA LOCAL PARA NEGOCIOS DE SERVICIOS',
-  headline: 'EL PRIMER\nCONTACTO NO\nEMPIEZA CON\nUN «HOLA».',
-  body: 'Empieza cuando alguien busca tu negocio y decide si vale la pena escribirte. Diseñamos ese recorrido: tus servicios bien explicados, información clara en Google y una forma directa de contactarte. Lo publicamos y comprobamos contigo.',
-  ctaPrimary: 'Revisar mi negocio',
-  ctaSecondary: 'Ver cómo funciona',
+  eyebrow: 'Para negocios de servicios que venden por cita o cotización',
+  headline: 'Que quien te encuentre entienda por qué tu trabajo vale lo que cobras.',
+  body: 'Quizá hoy te conocen por recomendaciones, Instagram o Google. Pero cuando alguien aún no sabe quién eres, necesita ver qué haces, qué respaldo tienes y cómo pedirte información. Ordenamos esa primera impresión: una web clara, tus datos correctos en Google y una forma directa de contactarte.',
+  proof: 'Primero vemos tu negocio como lo vería un cliente nuevo y te mostramos qué mejorar. Después instalamos y comprobamos lo acordado.',
+  ctaPrimary: 'Quiero ver qué cambiarían en mi negocio',
+  ctaSecondary: 'Ver cómo comprueban la entrega',
+  micro: 'Comenzamos con tres observaciones concretas, sin costo. La muestra visual personalizada se prepara para proyectos que encajan con nuestro servicio.',
 };
 
-export const PROBLEM_SECTION = {
-  eyebrow: 'La decisión ocurre antes del mensaje',
-  title: 'ANTES DE\nESCRIBIRTE,\nTE EVALÚAN.',
-  description: 'Quien busca un servicio quiere resolver cuatro preguntas: qué haces, si trabajas en su zona, por qué confiar en ti y cómo pedir información. Todo eso debe ser fácil de encontrar.',
-};
-
-export const PROBLEM_ITEMS: ProblemItem[] = [
-  { title: '¿HACES JUSTO LO QUE NECESITO?', description: 'Tus servicios, especialidades y zona de atención aparecen con palabras que entiende quien está buscando.' },
-  { title: '¿POR QUÉ CONTIGO?', description: 'Fotos reales, experiencia, proceso de trabajo y datos útiles. Razones concretas para considerarte.' },
-  { title: '¿DÓNDE PUEDO VER MÁS?', description: 'Tu sitio y tu información en Google cuentan la misma historia, sin datos contradictorios ni enlaces perdidos.' },
-  { title: '¿CÓMO TE PIDO INFORMACIÓN?', description: 'Un botón visible, el número correcto y un formulario probado hasta comprobar la recepción.' },
-];
-
-export const SYSTEM_SECTION = {
-  eyebrow: 'Método CEC — Claridad, Evidencia, Contacto',
-  title: 'DEL NEGOCIO\nAL PRIMER\nMENSAJE.',
-  description: 'CEC es el orden de trabajo: lo que una persona necesita entender, lo que necesita comprobar y el camino que sigue para hablar contigo.',
-};
-
-export const SYSTEM_STEPS: SystemStep[] = [
-  { number: '01', title: 'Miramos lo que hay', description: 'Revisamos tu sitio, tu ficha de Google y cómo te escribiría alguien que todavía no te conoce.' },
-  { number: '02', title: 'Elegimos qué mostrar', description: 'Ordenamos servicios, cobertura, preguntas frecuentes e información que realmente respalda tu trabajo.' },
-  { number: '03', title: 'Lo ponemos en línea', description: 'Creamos el sitio y trabajamos la información local. Conectamos WhatsApp, teléfono y el formulario.' },
-  { number: '04', title: 'Hacemos la prueba', description: 'Abrimos la web en un celular y comprobamos enlaces, contacto, accesos y funciones incluidas en el proyecto.' },
-];
-
-export const COMPARISON_SECTION = {
-  eyebrow: 'Qué cambia al contratar una solución completa',
-  title: 'UNA WEB AISLADA\nO UN RECORRIDO\nBIEN RESUELTO.',
-};
-
-export const COMPARISON_ROWS: ComparisonRow[] = [
-  { feature: 'Mensaje', agency: 'Una página con información del negocio', lss: 'Servicios ordenados alrededor de las preguntas del cliente' },
-  { feature: 'Confianza', agency: 'Fotos y textos sin una secuencia definida', lss: 'Información, imágenes reales y criterios claros para elegirte' },
-  { feature: 'Google', agency: 'Perfil y sitio tratados por separado', lss: 'Revisión de coherencia entre ambos, con cambios autorizados' },
-  { feature: 'Contacto', agency: 'Un botón o formulario publicado', lss: 'Rutas comprobadas hasta su destino real' },
-  { feature: 'Entrega', agency: 'Publicación y archivos', lss: 'Pruebas, accesos, fechas de renovación y guía de uso' },
-  { feature: 'Continuidad', agency: 'Servicios técnicos contratados por separado', lss: 'Infraestructura y condiciones de continuidad definidas desde la propuesta' },
-];
-
-export const DELIVERABLES_SECTION = {
-  eyebrow: 'LSS CEC — El alcance que puedes revisar',
-  title: 'Detrás de una web clara hay decisiones, trabajo y pruebas. Éstas son las piezas de la instalación integral propuesta; el presupuesto define su alcance exacto.',
-  items: [
-    'Que se entienda lo que vendes: servicios, especialidades y zona de atención en un sitio cómodo de leer desde el celular.',
-    'Que se note tu trabajo: imágenes y datos reales, un mensaje comercial claro y razones concretas para considerarte.',
-    'Que te encuentren con información coherente: revisión de tu ficha en Google y cambios autorizados.',
-    'Que tu sitio tenga una base correcta: SEO técnico, estructura, enlaces y configuración inicial de búsqueda.',
-    'Que contactarte sea sencillo: WhatsApp, teléfono y formulario probados con el destinatario correcto.',
-    'Que puedas revisar las interacciones: Search Console y Analytics cuando haya acceso autorizado y configuración comprobada.',
-    'Que tengas una dirección propia: dominio estándar y hosting gestionado por 12 meses, cuando se incluyan en la propuesta.',
-    'Que escribas desde tu negocio: una cuenta de correo corporativo real y conexión HTTPS según el alcance contratado.',
-    'Que veas lo entregado: pruebas en móvil, comprobación de formularios y checklist de aceptación.',
-    'Que sepas qué es tuyo: accesos, fechas y condiciones de renovación, y explicación clara de la entrega.',
+export const DOSSIER = {
+  tag: 'Ejemplo conceptual',
+  title: 'Lo que revisa un desconocido en su primera visita',
+  lenses: [
+    { n: '1', q: 'Lo que encuentra', a: '¿Aparece tu negocio con información coherente en la web y en Google?' },
+    { n: '2', q: 'Lo que entiende', a: '¿Sabe qué haces, para quién y en qué zona, sin buscar de más?' },
+    { n: '3', q: 'Cómo puede escribirte', a: '¿Hay un botón que lleva al número correcto y a alguien que responde?' },
   ],
+  note: 'Así se organizan las tres observaciones de tu revisión. No muestra resultados de ningún negocio.',
 };
 
-export const RESULTS_SECTION = {
-  eyebrow: 'La prueba está en la entrega',
-  title: 'NO BASTA\nCON DECIR\n«YA QUEDÓ».',
-  note: 'Antes de cerrar el proyecto revisamos contigo lo que efectivamente quedó instalado. Una prueba de contacto no se presenta como una venta.',
+export const BELIEF = {
+  eyebrow: 'Cuando alguien te busca',
+  title: 'Ya te recomendaron. Ahora toca que puedan comprobar por qué.',
+  body: 'Una recomendación abre la puerta. Después la persona revisa tu trabajo, compara opciones y busca respuestas: ¿hace exactamente lo que necesito?, ¿trabaja en mi zona?, ¿puedo confiar?, ¿cómo cotizo? Si todo está repartido entre publicaciones, perfiles y mensajes antiguos, tiene que averiguarlo por su cuenta.',
+  scenes: [
+    { channel: 'En Instagram', text: 'ven tus novedades. En tu web encuentran tus servicios ordenados, tu cobertura y cómo trabajas.' },
+    { channel: 'En Google', text: 'verifican dónde estás, tu información y las reseñas que realmente tienes.' },
+    { channel: 'En WhatsApp', text: 'te preguntan lo que necesitan, sin tener que adivinar a qué número escribir.' },
+  ],
+  closing: 'La idea es que las tres piezas cuenten la misma historia.',
 };
 
-export const CASE_STUDIES: CaseStudy[] = [
-  { client: 'Lo que encuentra', sector: 'Visibilidad', metric: '01', description: 'Comprobamos que la web abra, que el contenido correcto esté publicado y que los enlaces a tu información local correspondan a tu negocio.', timeframe: 'Revisión pública' },
-  { client: 'Lo que entiende', sector: 'Claridad', metric: '02', description: 'Revisamos desde un celular que los servicios, la ubicación y la información importante se lean sin buscar de más.', timeframe: 'Revisión móvil' },
-  { client: 'Lo que te llega', sector: 'Contacto', metric: '03', description: 'Hacemos pruebas de WhatsApp, teléfono y formulario según el alcance. Te mostramos el recorrido y la recepción verificable.', timeframe: 'Prueba de recepción' },
-];
+export const PPV = {
+  eyebrow: 'La Prueba de la Primera Visita',
+  title: 'Abre tu negocio como si nunca hubieras oído hablar de él.',
+  body: 'Eso es lo primero que hacemos. Entramos como lo haría alguien que busca tu servicio por primera vez. Anotamos tres puntos que dificultan entenderlo, confiar o contactar. Te enseñamos las capturas y qué cambiaríamos.',
+  sample: 'Si vemos un proyecto que vale la pena construir, preparamos una primera dirección visual con tu marca y te explicamos el recorrido que proponemos. Así ves el enfoque antes de contratar la instalación.',
+  precision: 'La revisión inicial muestra oportunidades, no promete tráfico ni reemplaza una auditoría completa. La vista personalizada se ofrece cuando el proyecto encaja y existe disponibilidad.',
+  demoTitle: 'Pruébalo con tu negocio',
+  demoIntro: 'Escribe tres datos y mira cómo se ordenaría la primera impresión. Todo ocurre en tu pantalla: no se envía nada.',
+  fields: {
+    name: { label: 'Nombre del negocio', placeholder: 'Ej. Taller Mendoza', hint: 'Solo se usa en esta demostración.' },
+    city: { label: 'Ciudad', placeholder: 'Ej. Tampico' },
+    service: { label: 'Servicio que quieres destacar', placeholder: 'Ej. instalación de cocinas integrales' },
+  },
+  toggle: { before: 'Primera impresión dispersa', after: 'Primera impresión ordenada' },
+  notice: 'Demostración conceptual: ilustra el método con los datos que escribes. No es una revisión real de tu negocio ni un resultado.',
+  waLead: 'Esto es lo que enviarías por WhatsApp. No se manda nada hasta que lo mandes tú.',
+  cta: 'Quiero mi primera revisión',
+};
+
+export const QUESTIONS = {
+  eyebrow: 'Una presentación que respalde tu trabajo',
+  title: 'Tu cliente debería poder responder cuatro preguntas antes de escribirte.',
+  items: [
+    { q: '¿Hacen lo que necesito?', a: 'Servicios explicados con las palabras que usa quien los busca.' },
+    { q: '¿Por qué confiar?', a: 'Fotos, experiencia, procesos y credenciales reales: solo las que el negocio puede demostrar.' },
+    { q: '¿Me pueden atender?', a: 'Ubicación, cobertura, horarios y datos coherentes entre web y Google, según autorizaciones.' },
+    { q: '¿Cómo pido precio?', a: 'Un botón y un mensaje que llegan a quien responde.' },
+  ],
+  closing: 'No hace falta fingir una empresa más grande. Hace falta mostrar mejor la que ya existe.',
+};
+
+export const OFFER = {
+  eyebrow: 'LSS Presencia Resuelta',
+  title: 'De la idea a una presencia publicada y comprobada.',
+  intro: 'Reunimos en un solo proyecto lo que normalmente termina repartido entre diseño, textos, información en Google y enlaces de contacto. Tú apruebas el mensaje y la evidencia. LSS ejecuta y documenta lo contratado.',
+  groups: [
+    { title: 'Que se entienda tu servicio', text: 'Una web móvil con explicación útil, preguntas frecuentes y propuesta de valor fiel a tu trabajo.' },
+    { title: 'Que haya razones para confiar', text: 'Fotografías y pruebas auténticas, información local coherente y criterios verificables.' },
+    { title: 'Que puedan pedirte información', text: 'WhatsApp, teléfono y el formulario incluido —cuando esté contratado y probado— conectados al destino correcto.' },
+    { title: 'Que no pierdas control', text: 'Cuentas, fechas, accesos, propiedad del dominio y condiciones de renovación claras.' },
+  ],
+  detailsSummary: 'Ver el detalle técnico del alcance',
+  details: 'Hasta cinco páginas, revisión autorizada de un Perfil de Empresa de Google, SEO técnico inicial, integración de contacto, checklist y entrega documentada, conforme a la propuesta. Alojamiento, dominio y correo empresarial solo cuando estén expresamente incluidos.',
+  existing: {
+    title: 'Si tu web ya funciona, la conservamos.',
+    text: 'Hay negocios que necesitan un sitio nuevo y otros que necesitan ordenar servicios, corregir datos de Google o reparar cómo llegan los mensajes. Primero distinguimos una cosa de la otra. La propuesta se construye alrededor del cambio que merece la inversión, no alrededor de sustituir por sustituir.',
+    seal: 'También te diremos si hoy no hace falta reconstruir.',
+  },
+  cta: 'Ver si este servicio encaja con mi negocio',
+};
+
+export const PROCESS = {
+  eyebrow: 'Un proceso que puedes revisar',
+  title: 'Sabes qué estamos haciendo y qué recibes al final.',
+  steps: [
+    { title: 'Miramos tu negocio de frente', text: 'Reunión breve, servicio a destacar, evidencias y tres prioridades de la Primera Visita.' },
+    { title: 'Te enseñamos la dirección', text: 'Para proyectos calificados, una muestra visual y un recorrido propuesto; después presupuesto y calendario.' },
+    { title: 'Lo construimos con tus datos', text: 'Mensaje, web, Google y enlaces, dentro del alcance firmado y los permisos autorizados.' },
+    { title: 'Lo abrimos desde un teléfono', text: 'Comprobamos qué se muestra, qué enlace se pulsa y si el contacto llega al destino pactado.' },
+    { title: 'Te damos control', text: 'Resumen, acceso, renovaciones, entrega y seguimiento correctivo definido.' },
+  ],
+  note: 'Las fechas concretas comienzan cuando tenemos los materiales, accesos y aprobaciones que el proyecto necesita.',
+};
+
+export const EVIDENCE = {
+  eyebrow: 'La prueba se hace en tu negocio',
+  title: 'Antes de decir «quedó listo», lo abrimos contigo.',
+  body: 'Vemos cómo se lee en el celular. Probamos el número de WhatsApp y las rutas de contacto contratadas. Revisamos los enlaces, la información y quién tiene acceso. Si una función que debíamos entregar falla, no se da por aprobada.',
+  items: [
+    { title: 'Captura en móvil, con fecha', text: 'Cómo se ve y se lee tu web en un teléfono real.' },
+    { title: 'Contacto de prueba recibido', text: 'El mensaje llega al destino pactado; los datos personales se ocultan.' },
+    { title: 'Lista de publicación', text: 'Enlaces, información y accesos revisados uno por uno.' },
+    { title: 'Titularidad y renovaciones', text: 'Quién es dueño de cada cuenta y cuándo vence cada servicio.' },
+    { title: 'Estado de las propiedades de Google', text: 'Qué quedó conectado, con qué permisos y qué sigue pendiente.' },
+  ],
+  badge: 'Se muestra solo con prueba real de cada proyecto',
+  note: 'Aún no publicamos casos de clientes. Cuando haya uno con permiso de su titular, aparecerá aquí con sus pruebas, no con cifras de ventas.',
+  cta: 'Conocer las pruebas de entrega',
+};
+
+export const EXPECTATIONS = {
+  eyebrow: 'Presupuesto y continuidad',
+  title: 'Una propuesta completa. Un presupuesto claro antes de empezar.',
+  body: 'El precio depende de los servicios que realmente hay que construir o corregir. Después de revisar tu negocio recibes una propuesta con alcance, fechas, inversión total, forma de pago y condiciones de continuidad. Nada aparece después como un «extra obligatorio» que no se haya explicado.',
+  sub: 'Si necesitas únicamente una mejora puntual, la cotizamos por separado. La instalación integral tiene un alcance definido.',
+  compareTitle: 'Si comparas con una web más económica, compara el mismo alcance',
+  compareIntro: 'Una web económica puede ser suficiente si solo necesitas poner tu información en Internet. Esto es lo que añade este servicio:',
+  compare: [
+    { f: 'Mensaje', lo: 'Información del negocio publicada en una página.', hi: 'Servicios ordenados alrededor de las preguntas del cliente.' },
+    { f: 'Google', lo: 'Perfil y sitio por separado.', hi: 'Revisión de coherencia entre ambos, con cambios autorizados.' },
+    { f: 'Contacto', lo: 'Un botón o formulario publicado.', hi: 'Rutas comprobadas hasta su destino real.' },
+    { f: 'Entrega', lo: 'Publicación y archivos.', hi: 'Pruebas, accesos, fechas de renovación y guía de uso.' },
+  ],
+  lo: 'Web económica',
+  hi: 'Presencia Resuelta',
+  continuityTitle: 'Lo que viene después también queda por escrito.',
+  continuity: 'Desde la propuesta sabes quién administra el dominio, el alojamiento y el correo, qué servicios vencen y cuáles puedes mantener por tu cuenta. Si quieres que sigamos revisando contenido, presencia local y funcionamiento de los contactos, hay un plan mensual independiente del trabajo de instalación.',
+  continuityMicro: 'Ninguna suscripción sustituye tu titularidad sobre las cuentas y activos definidos en el contrato. Los servicios de terceros pueden tener licencias y reglas propias.',
+};
 
 export const CTA_SECTION = {
-  eyebrow: 'Tu revisión CEC',
-  title: 'MIREMOS\nTU NEGOCIO.',
-  description: 'Dinos cómo se llama tu negocio, dónde trabajas y qué servicio quieres destacar. Revisaremos tres puntos de tu presencia actual: qué encuentra una persona, qué entiende y cómo puede escribirte.',
-  callDetails: [
-    'Una revisión inicial con tres observaciones concretas.',
-    'Sobre tu negocio real, no una presentación genérica.',
+  eyebrow: 'Empecemos por lo que ya tienes',
+  title: 'Enséñanos tu negocio. Te diremos qué mejoraríamos primero.',
+  description: 'Cuéntanos el nombre de tu empresa, en qué ciudad trabajas y qué servicio te interesa destacar. Revisaremos cómo se entiende hoy y te compartiremos tres observaciones concretas. Si la solución vale la pena, te mostraremos el siguiente paso.',
+  list: [
+    'Tres observaciones concretas sobre tu negocio real, no una presentación genérica.',
     'Sin costo para conocer por dónde conviene empezar.',
-    'La conversación comienza por WhatsApp.',
+    'No necesitas llamada: la conversación comienza y sigue por WhatsApp.',
   ],
-  submit: 'Pedir revisión CEC',
+  submit: 'Quiero mis tres observaciones',
+  micro: 'WhatsApp abre una conversación con LSS. No agenda ni envía un formulario automáticamente; respondemos personalmente.',
 };
 
 export const FAQ_ITEMS: FaqItem[] = [
-  { question: '¿Qué hace exactamente LSS?', answer: 'Diseñamos y publicamos sitios web para negocios de servicios, organizamos la información que aparece en Google y conectamos canales de contacto. Cada instalación incluye un alcance y pruebas definidos por escrito.' },
-  { question: '¿Qué incluye la propuesta integral?', answer: 'Según el alcance acordado: sitio, estructura comercial, SEO técnico, trabajo autorizado sobre Google, WhatsApp y formulario. También podemos incluir durante el primer año dominio estándar, hosting gestionado, HTTPS y una cuenta de correo empresarial. Todo se desglosa en la cotización.' },
-  { question: '¿Ya tengo sitio web. Tengo que cambiarlo?', answer: 'No necesariamente. Lo revisamos antes de recomendar una reconstrucción. Si conviene conservarlo, el proyecto puede centrarse en lo que realmente necesita mejorar.' },
-  { question: '¿El dominio y las cuentas quedan a mi nombre?', answer: 'La titularidad, los accesos y la forma de transferir cada activo se establecen en la propuesta y el contrato. Nuestro modelo busca que el cliente conserve el control de sus activos.' },
-  { question: '¿Qué se paga después del primer año?', answer: 'Los costos de renovación del dominio, alojamiento y correo se detallan antes de contratar. El mantenimiento comercial o SEO continuo se cotiza por separado; no se presupone que lo necesites.' },
-  { question: '¿Cómo compruebo que está funcionando?', answer: 'Revisamos el sitio desde móvil, probamos los enlaces y los canales de contacto, y documentamos las configuraciones y accesos previstos. El saldo y la aceptación se rigen por las pruebas definidas en el contrato.' },
-  { question: '¿Cuánto tiempo toma?', answer: 'Depende del sitio, los materiales y las autorizaciones que ya tengas. El calendario se define en la propuesta después de revisar tu negocio, con entregables y fechas acordadas.' },
-  { question: '¿Qué pasa si no me conviene este servicio?', answer: 'La revisión puede concluir que solo hace falta corregir algo puntual o conservar el sitio actual. Recibirás una recomendación basada en lo que observemos, sin obligación de contratar un proyecto completo.' },
+  { question: 'Ya tengo Instagram y WhatsApp. ¿Para qué una web?', answer: 'Son buenos canales para mantener relación y responder. Una web ordena servicios, zonas, proceso, preguntas y evidencias en un lugar que un desconocido pueda consultar sin buscar entre publicaciones. La necesidad concreta se determina en la revisión.' },
+  { question: '¿Me garantizan clientes nuevos?', answer: 'Nadie puede asegurar cuántas personas buscarán un servicio o decidirán contratarlo. Sí se pacta y comprueba que la presentación y los canales de contacto incluidos funcionan.' },
+  { question: '¿Qué pasa si ya tengo una web?', answer: 'La revisamos antes de recomendar sustituirla. Si la mejor inversión es conservarla y corregir tres cosas, eso es lo que diremos.' },
+  { question: '¿Qué pasa si no tengo fotos profesionales?', answer: 'Revisamos lo que sí tienes y diseñamos sin inventar instalaciones, resultados ni testimonios. Si conviene fotografiar el negocio, se cotiza aparte.' },
+  { question: '¿Mi dominio y mi información quedan a mi nombre?', answer: 'El dominio y las cuentas que deban pertenecer a tu empresa se configuran con ese titular; las licencias y derechos sobre código y diseño se explican en la propuesta y el contrato.' },
+  { question: '¿Cuánto costará mantenerlo?', answer: 'Antes de contratar conocerás los costos de proveedores, las fechas de renovación y los servicios de mantenimiento que son opcionales. No agregamos una mensualidad para ocultar costos.' },
+  { question: '¿Cuánto tarda?', answer: 'Depende del sitio, los materiales y las aprobaciones. La propuesta incluye calendario y qué necesitas entregar; no prometemos una fecha universal sin revisar el proyecto.' },
+  { question: '¿Qué tendría que hacer yo?', answer: 'Confirmar información del negocio, compartir materiales propios, delegar accesos en las plataformas que correspondan y aprobar contenido. El trabajo técnico y las pruebas quedan a cargo de LSS dentro del alcance.' },
+  { question: '¿Es gratis que lo revisen?', answer: 'La revisión inicial de tres observaciones no tiene costo. Si encontramos encaje, podemos mostrarte una dirección visual breve; esa muestra está sujeta a calificación y disponibilidad.' },
 ];
+
+export const FOOTER = {
+  blurb: 'LSS — Local Systems Studio. Sitios web, presencia en Google y recorridos de contacto comprobables para negocios de servicios.',
+  trust: 'Trabajamos con información auténtica y permisos del titular. Las funciones y proveedores se definen por escrito en cada proyecto.',
+};

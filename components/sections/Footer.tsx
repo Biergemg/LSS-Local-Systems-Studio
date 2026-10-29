@@ -1,97 +1,30 @@
-'use client';
-
 import Logo from '@/components/ui/Logo';
-import { CONTACT } from '@/data/content';
-
-const socialLinks = [
-  { label: 'Instagram', href: 'https://www.instagram.com/lsslocalsystemsstudio' },
-  { label: 'Facebook', href: 'https://www.facebook.com/lsslocalsystemsstudio' },
-];
+import { CONTACT, FOOTER, SOCIALS } from '@/data/content';
 
 export default function Footer() {
   return (
-    <footer
-      style={{
-        background: 'var(--surface-base)',
-        borderTop: '1px solid var(--border)',
-      }}
-    >
-      <div className="container">
-        {/* Main footer row */}
-        <div
-          className="footer-inner"
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            gap: '32px',
-            padding: '40px 0 32px',
-          }}
-        >
-          <Logo muted />
-
-          <div style={{ display: 'flex', gap: '32px', flexWrap: 'wrap', alignItems: 'center' }}>
-            <a
-              className="t-label"
-              href={`mailto:${CONTACT.email}`}
-              style={{ color: 'var(--fg2)', transition: 'color 0.15s ease' }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--fg)')}
-              onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--fg2)')}
-            >
-              {CONTACT.email}
-            </a>
-            <a
-              className="t-label"
-              href={CONTACT.whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: 'var(--fg2)', transition: 'color 0.15s ease' }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--accent)')}
-              onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--fg2)')}
-            >
-              WhatsApp
-            </a>
-            {socialLinks.map((social) => (
-              <a
-                key={social.href}
-                className="t-label"
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: 'var(--fg2)', transition: 'color 0.15s ease' }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--accent)')}
-                onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--fg2)')}
-              >
-                {social.label}
-              </a>
-            ))}
-          </div>
+    <footer className="footer">
+      <div className="container footer-grid">
+        <div>
+          <Logo />
+          <p style={{ marginTop: 16, maxWidth: '44ch' }}>{FOOTER.blurb}</p>
+          <p className="small" style={{ marginTop: 10, maxWidth: '44ch' }}>{FOOTER.trust}</p>
         </div>
-
-        {/* Bottom strip */}
-        <div
-          style={{
-            borderTop: '1px solid var(--border)',
-            padding: '16px 0',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-          }}
-        >
-          <p className="t-label" style={{ color: 'var(--fg3)' }}>
-            © {new Date().getFullYear()} Local Systems Studio
-          </p>
-          <p className="t-label" style={{ color: 'var(--fg3)' }}>
-            {CONTACT.location}
-          </p>
+        <div>
+          <p className="eyebrow">Contacto</p>
+          <a href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer">WhatsApp {CONTACT.whatsapp}</a><br />
+          <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
+        </div>
+        <div>
+          <p className="eyebrow">Redes</p>
+          {SOCIALS.map((s) => (
+            <span key={s.href} style={{ display: 'block' }}>
+              <a href={s.href} target="_blank" rel="noopener noreferrer">{s.label}</a>
+            </span>
+          ))}
+          <p className="small" style={{ marginTop: 14 }}>© {new Date().getFullYear()} Local Systems Studio</p>
         </div>
       </div>
-
-      <style>{`
-        @media (max-width: 640px) {
-          .footer-inner { flex-direction: column !important; align-items: flex-start !important; }
-        }
-      `}</style>
     </footer>
   );
 }
