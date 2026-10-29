@@ -1,6 +1,5 @@
 import WhatsAppFloat from '@/components/ui/WhatsAppFloat';
 import CTASection from '@/components/sections/CTASection';
-import ComparisonSection from '@/components/sections/ComparisonSection';
 import DeliverablesSection from '@/components/sections/DeliverablesSection';
 import Footer from '@/components/sections/Footer';
 import Hero from '@/components/sections/Hero';
@@ -15,11 +14,10 @@ export default function Page() {
       <Nav />
       <main>
         <Hero />
-        <ProblemSection />
-        <SystemSection />
-        <ComparisonSection />
         <DeliverablesSection />
         <ResultsSection />
+        <SystemSection />
+        <ProblemSection />
         <CTASection />
       </main>
       <Footer />

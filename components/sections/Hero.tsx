@@ -59,7 +59,7 @@ export default function Hero() {
           className="hero-headline"
           style={{
             fontFamily: 'var(--font-display)',
-            fontSize: 'clamp(36px, 10vw, 104px)',
+            fontSize: 'clamp(34px, 7.5vw, 92px)',
             fontWeight: 700,
             textTransform: 'uppercase',
             letterSpacing: 'var(--tracking-wider)',

@@ -1,125 +1,125 @@
-import type { CaseStudy, ComparisonRow, ContactInfo, FaqItem, HeroStat, NavLink, ProblemItem, SystemStep } from '@/types';
+import type { CaseStudy, ComparisonRow, ContactInfo, FaqItem, NavLink, ProblemItem, SystemStep } from '@/types';
 
 export const SITE = {
   name: 'LSS — Local Systems Studio',
   shortName: 'LSS',
   url: 'https://lsslocalsystemsstudio.com',
-  title: 'Sistema Integral de Captación Local en México | LSS',
-  description: 'LSS instala sistemas integrales para que tu negocio sea encontrado, entendido y contactado. Método CEC: Claridad, Evidencia y Contacto.',
+  title: 'LSS | Sitios web, presencia en Google y contacto para negocios',
+  description: 'Una web que explica bien tu negocio, información local cuidada y formas de contacto probadas. Descubre qué mejorar con una revisión CEC de LSS.',
 };
 
 export const CONTACT: ContactInfo = {
   whatsapp: '+52 833 326 3389',
-  whatsappUrl: 'https://wa.me/528333263389?text=Quiero%20agendar%20un%20diagn%C3%B3stico%20de%20captaci%C3%B3n%20con%20LSS',
+  whatsappUrl: 'https://wa.me/528333263389?text=' + encodeURIComponent('Hola, quiero una revisión CEC de mi negocio. Negocio: ___ | Ciudad: ___ | Servicio principal: ___'),
   email: 'contacto@lsslocalsystemsstudio.com',
   location: 'México / remoto',
   phone: '+52 833 326 3389',
 };
 
 export const NAV_LINKS: NavLink[] = [
-  { href: '#problema', label: 'Problema' },
-  { href: '#sistema', label: 'Sistema' },
-  { href: '#proceso', label: 'Proceso' },
-  { href: '#contacto', label: 'Contacto' },
+  { href: '#problema', label: 'La decisión' },
+  { href: '#sistema', label: 'El método' },
+  { href: '#proceso', label: 'Qué cambia' },
+  { href: '#contacto', label: 'Tu revisión' },
 ];
 
 export const HERO = {
-  eyebrow: 'Esto no es una página bonita.',
-  headline: 'Encontrado.\nEntendido.\nContactado.',
-  body: 'Tu negocio necesita más que presencia. Construimos e instalamos un sistema integral de captación local: un entorno completo con sitio, canales de contacto directos, agendamiento y medición, entregado listo para convertir interés en conversaciones reales, sin fricción.',
-  ctaPrimary: 'Agendar diagnóstico gratuito',
-  ctaSecondary: 'Ver el método',
+  eyebrow: 'SITIOS WEB Y PRESENCIA LOCAL PARA NEGOCIOS DE SERVICIOS',
+  headline: 'EL PRIMER\nCONTACTO NO\nEMPIEZA CON\nUN «HOLA».',
+  body: 'Empieza cuando alguien busca tu negocio y decide si vale la pena escribirte. Diseñamos ese recorrido: tus servicios bien explicados, información clara en Google y una forma directa de contactarte. Lo publicamos y comprobamos contigo.',
+  ctaPrimary: 'Revisar mi negocio',
+  ctaSecondary: 'Ver cómo funciona',
 };
 
-export const HERO_STATS: HeroStat[] = [
-  { value: '03', label: 'Pilares del método' },
-  { value: '30\'', label: 'Duración del diagnóstico' },
-  { value: '15', label: 'Preguntas del diagnóstico de captación' },
-];
-
 export const PROBLEM_SECTION = {
-  eyebrow: 'El problema real',
-  title: 'No falta\npresencia.\nFalta\ncaptación.',
-  description: 'La pérdida silenciosa de oportunidades. Cuando un cliente potencial te busca, llega a tu negocio y no entiende tu oferta, no percibe confianza o no encuentra un canal rápido para hablar contigo, simplemente se va con otro.',
+  eyebrow: 'La decisión ocurre antes del mensaje',
+  title: 'ANTES DE\nESCRIBIRTE,\nTE EVALÚAN.',
+  description: 'Quien busca un servicio quiere resolver cuatro preguntas: qué haces, si trabajas en su zona, por qué confiar en ti y cómo pedir información. Todo eso debe ser fácil de encontrar.',
 };
 
 export const PROBLEM_ITEMS: ProblemItem[] = [
-  { title: 'No te encuentran cuando ya están buscando', description: 'El cliente tiene intención, pero tu negocio no aparece donde busca o su presentación no genera suficiente peso para recibir el clic.' },
-  { title: 'No entienden rápido qué ofreces', description: 'El visitante entra y en segundos no le queda claro qué vendes, para quién es o qué zonas cubres. Ante la confusión, abandona.' },
-  { title: 'No perciben suficiente confianza', description: 'Sin elementos que validen tu trabajo —fotos, credenciales, proceso claro—, el interés inicial se convierte en duda y la decisión se frena.' },
-  { title: 'No pueden contactarte fácilmente', description: 'WhatsApp escondido, formularios complejos, falta de agenda. Cada fricción en el proceso es un contacto menos y un mensaje que nunca llega.' },
+  { title: '¿HACES JUSTO LO QUE NECESITO?', description: 'Tus servicios, especialidades y zona de atención aparecen con palabras que entiende quien está buscando.' },
+  { title: '¿POR QUÉ CONTIGO?', description: 'Fotos reales, experiencia, proceso de trabajo y datos útiles. Razones concretas para considerarte.' },
+  { title: '¿DÓNDE PUEDO VER MÁS?', description: 'Tu sitio y tu información en Google cuentan la misma historia, sin datos contradictorios ni enlaces perdidos.' },
+  { title: '¿CÓMO TE PIDO INFORMACIÓN?', description: 'Un botón visible, el número correcto y un formulario probado hasta comprobar la recepción.' },
 ];
 
 export const SYSTEM_SECTION = {
-  eyebrow: 'Método CEC',
-  title: 'Cómo\nfunciona',
-  description: 'Claridad, Evidencia y Contacto. No es teoría. Son tres pilares que llevamos a una implementación real del sistema, no solo explicación del método, para facilitar que una visita interesada avance hacia un contacto real.',
+  eyebrow: 'Método CEC — Claridad, Evidencia, Contacto',
+  title: 'DEL NEGOCIO\nAL PRIMER\nMENSAJE.',
+  description: 'CEC es el orden de trabajo: lo que una persona necesita entender, lo que necesita comprobar y el camino que sigue para hablar contigo.',
 };
 
 export const SYSTEM_STEPS: SystemStep[] = [
-  { number: '01', title: 'Diagnóstico', description: 'Evaluamos la situación actual de tu negocio para detectar puntos de fuga: dónde falta claridad comercial, dónde hace falta evidencia y qué fricciones frenan el contacto.' },
-  { number: '02', title: 'Claridad', description: 'Estructuramos el mensaje de tu oferta. El visitante debe entender al instante qué resuelves, para quién trabajas y exactamente qué paso debe dar a continuación.' },
-  { number: '03', title: 'Evidencia', description: 'Integramos los elementos que construyen confianza antes del primer mensaje: procesos visibles, resultados, credenciales e información que elimina dudas.' },
-  { number: '04', title: 'Contacto', description: 'Dejamos conectados los canales de contacto: WhatsApp directo, formularios precisos, calendario de citas y rutas claras para hablar contigo. Todo medible.' },
+  { number: '01', title: 'Miramos lo que hay', description: 'Revisamos tu sitio, tu ficha de Google y cómo te escribiría alguien que todavía no te conoce.' },
+  { number: '02', title: 'Elegimos qué mostrar', description: 'Ordenamos servicios, cobertura, preguntas frecuentes e información que realmente respalda tu trabajo.' },
+  { number: '03', title: 'Lo ponemos en línea', description: 'Creamos el sitio y trabajamos la información local. Conectamos WhatsApp, teléfono y el formulario.' },
+  { number: '04', title: 'Hacemos la prueba', description: 'Abrimos la web en un celular y comprobamos enlaces, contacto, accesos y funciones incluidas en el proyecto.' },
 ];
 
-export const COMPARISON_SECTION = { eyebrow: 'Página web vs sistema integral', title: 'No es lo\nmismo.' };
-export const COMPARISON_ROWS: ComparisonRow[] = [
-  { feature: 'Enfoque',     agency: 'Estética y apariencia visual',        lss: 'Generar conversaciones y contactos medibles' },
-  { feature: 'Entrega',     agency: 'Archivos y un sitio publicado',             lss: 'Sistema comercial conectado y operando' },
-  { feature: 'Lenguaje',    agency: 'Colores, animaciones, UX',           lss: 'Clientes, prospectos, citas y cotizaciones' },
-  { feature: 'Medición',    agency: 'Visitas generales (vanidad)',           lss: 'Clics a WhatsApp, formularios y agendas confirmadas' },
-  { feature: 'Modelo',      agency: 'Entrega única y estática',         lss: 'Operación continua, soporte y mejora' },
-  { feature: 'Competencia', agency: 'Por precio más bajo',                       lss: 'Por infraestructura y claridad comercial' },
-];
-
-export const RESULTS_SECTION = { eyebrow: 'Así medimos', title: 'Sin métricas\ninfladas.', note: 'Estamos en etapa de lanzamiento. Cuando existan cifras verificadas por cliente, se agregarán aquí. Solo medimos acciones que impactan el negocio.' };
-export const CASE_STUDIES: CaseStudy[] = [
-  { client: 'Trazabilidad', sector: 'Captación', metric: '01', description: 'Identificamos qué canal genera contactos reales. No nos interesan las visitas vacías, sino saber de dónde viene el prospecto que inicia una conversación.', timeframe: 'Origen de la conversación' },
-  { client: 'Calificación', sector: 'Criterio', metric: '02', description: 'Medimos qué porcentaje de contactos llega con urgencia y encaje real con tu oferta. Esto permite ajustar el mensaje para atraer a la persona correcta.', timeframe: 'Filtro de intención' },
-  { client: 'Optimización', sector: 'Cierre', metric: '03', description: 'Observamos dónde se detiene el flujo comercial para realizar ajustes precisos en la estructura o en los canales de contacto, mejorando continuamente el sistema.', timeframe: 'Decisiones basadas en datos' },
-];
-
-export const CTA_SECTION = {
-  eyebrow: 'Diagnóstico de Captación Local',
-  title: 'Evaluación\ncomercial\nestructurada.',
-  description: 'Diagnóstico inicial de 30 minutos. Una revisión práctica para entender tu situación actual y detectar si estás perdiendo oportunidades por falta de estructura, claridad o evidencia.',
-  callDetails: [
-    '30 minutos de evaluación',
-    'Sin costo',
-    'Canal: WhatsApp',
-    'Salida: recomendación clara — puede ser una landing, el sistema integral, o simplemente la indicación de no construir nada todavía.',
-  ],
-  submit: 'Agendar diagnóstico →',
-  successEyebrow: '● Diagnóstico recibido',
-  successTitle: 'Te contactamos',
-  successBody: 'Revisaremos tu información y te escribimos para coordinar el diagnóstico de captación. Si WhatsApp no abrió, usa el botón de abajo.',
+export const COMPARISON_SECTION = {
+  eyebrow: 'Qué cambia al contratar una solución completa',
+  title: 'UNA WEB AISLADA\nO UN RECORRIDO\nBIEN RESUELTO.',
 };
 
-export const FAQ_ITEMS: FaqItem[] = [
-  { question: '¿LSS hace páginas web?', answer: 'No. Construimos e instalamos sistemas integrales de captación. Una página web es solo la parte visual; nosotros entregamos un sistema instalado y funcionando (sitio, conexión a WhatsApp, formularios, agenda y medición).' },
-  { question: '¿Qué incluye realmente el sistema?', answer: 'El alcance completo necesario para operar: el sitio enfocado en captación, conexión de WhatsApp, formularios cortos, sistema de agendamiento de citas, estructuración de las rutas de contacto, panel de medición, soporte estructurado y la puesta en marcha inicial.' },
-  { question: '¿Garantizan clientes o primer lugar en Google?', answer: 'No. Desconfía de quien prometa clientes garantizados o posiciones mágicas. Garantizamos una estructura técnica y comercial diseñada para captar, medir y facilitar el contacto con el prospecto que te está buscando.' },
-  { question: '¿Qué pasa después de publicar el sistema?', answer: 'Después de la implementación puedes dejarlo como sistema instalado o continuar con operación activa: soporte, ajustes, revisión de contactos, medición y mejoras. La recomendación depende del diagnóstico y del tipo de negocio.' },
-  { question: '¿Cuánto tarda la implementación?', answer: 'Depende de la información disponible y el estado actual de tu negocio, pero la instalación inicial del sistema suele tomar entre 2 y 4 semanas una vez entregada la información requerida.' },
-  { question: '¿Qué necesito antes de empezar?', answer: 'Claridad en lo que vendes. Te pediremos información básica de tu oferta, imágenes reales de tu trabajo o negocio, credenciales de tus perfiles actuales y disposición para el diagnóstico inicial.' },
-  { question: '¿Y si ya tengo página o Google Business Profile?', answer: 'El diagnóstico nos dirá si tu estructura actual funciona o si presenta puntos de fuga. Si ya tienes elementos valiosos, los integramos y conectamos al nuevo sistema para que todo opere bajo la misma medición.' },
-  { question: '¿Qué pasa si algo no queda funcionando?', answer: 'El sistema se entrega funcionando conforme al alcance aprobado: sitio publicado, canales de contacto activos, medición básica operando y estructura lista para recibir contactos. Si algo de ese alcance no queda operativo, se corrige hasta dejarlo funcionando.' },
+export const COMPARISON_ROWS: ComparisonRow[] = [
+  { feature: 'Mensaje', agency: 'Una página con información del negocio', lss: 'Servicios ordenados alrededor de las preguntas del cliente' },
+  { feature: 'Confianza', agency: 'Fotos y textos sin una secuencia definida', lss: 'Información, imágenes reales y criterios claros para elegirte' },
+  { feature: 'Google', agency: 'Perfil y sitio tratados por separado', lss: 'Revisión de coherencia entre ambos, con cambios autorizados' },
+  { feature: 'Contacto', agency: 'Un botón o formulario publicado', lss: 'Rutas comprobadas hasta su destino real' },
+  { feature: 'Entrega', agency: 'Publicación y archivos', lss: 'Pruebas, accesos, fechas de renovación y guía de uso' },
+  { feature: 'Continuidad', agency: 'Servicios técnicos contratados por separado', lss: 'Infraestructura y condiciones de continuidad definidas desde la propuesta' },
 ];
 
 export const DELIVERABLES_SECTION = {
-  eyebrow: 'Qué instalamos',
-  title: 'Un sistema instalado y funcionando, listo para capturar contactos.',
+  eyebrow: 'LSS CEC — El alcance que puedes revisar',
+  title: 'Detrás de una web clara hay decisiones, trabajo y pruebas. Éstas son las piezas de la instalación integral propuesta; el presupuesto define su alcance exacto.',
   items: [
-    'Sitio o landing comercial estructurado para captación.',
-    'WhatsApp del negocio conectado y visible.',
-    'Formulario de contacto directo y sin fricción.',
-    'Calendario integrado para agendamiento de citas.',
-    'Rutas de atención para clasificar el tipo de contacto.',
-    'Medición activa de clics, llamadas, mensajes y citas.',
-    'Base inicial de automatización para respuestas rápidas.',
-    'Portal de cliente para seguimiento de tu proyecto.',
-    'Soporte estructurado para asegurar la continuidad.',
-    'Operación inicial y puesta en marcha del sistema.',
+    'Que se entienda lo que vendes: servicios, especialidades y zona de atención en un sitio cómodo de leer desde el celular.',
+    'Que se note tu trabajo: imágenes y datos reales, un mensaje comercial claro y razones concretas para considerarte.',
+    'Que te encuentren con información coherente: revisión de tu ficha en Google y cambios autorizados.',
+    'Que tu sitio tenga una base correcta: SEO técnico, estructura, enlaces y configuración inicial de búsqueda.',
+    'Que contactarte sea sencillo: WhatsApp, teléfono y formulario probados con el destinatario correcto.',
+    'Que puedas revisar las interacciones: Search Console y Analytics cuando haya acceso autorizado y configuración comprobada.',
+    'Que tengas una dirección propia: dominio estándar y hosting gestionado por 12 meses, cuando se incluyan en la propuesta.',
+    'Que escribas desde tu negocio: una cuenta de correo corporativo real y conexión HTTPS según el alcance contratado.',
+    'Que veas lo entregado: pruebas en móvil, comprobación de formularios y checklist de aceptación.',
+    'Que sepas qué es tuyo: accesos, fechas y condiciones de renovación, y explicación clara de la entrega.',
   ],
 };
+
+export const RESULTS_SECTION = {
+  eyebrow: 'La prueba está en la entrega',
+  title: 'NO BASTA\nCON DECIR\n«YA QUEDÓ».',
+  note: 'Antes de cerrar el proyecto revisamos contigo lo que efectivamente quedó instalado. Una prueba de contacto no se presenta como una venta.',
+};
+
+export const CASE_STUDIES: CaseStudy[] = [
+  { client: 'Lo que encuentra', sector: 'Visibilidad', metric: '01', description: 'Comprobamos que la web abra, que el contenido correcto esté publicado y que los enlaces a tu información local correspondan a tu negocio.', timeframe: 'Revisión pública' },
+  { client: 'Lo que entiende', sector: 'Claridad', metric: '02', description: 'Revisamos desde un celular que los servicios, la ubicación y la información importante se lean sin buscar de más.', timeframe: 'Revisión móvil' },
+  { client: 'Lo que te llega', sector: 'Contacto', metric: '03', description: 'Hacemos pruebas de WhatsApp, teléfono y formulario según el alcance. Te mostramos el recorrido y la recepción verificable.', timeframe: 'Prueba de recepción' },
+];
+
+export const CTA_SECTION = {
+  eyebrow: 'Tu revisión CEC',
+  title: 'MIREMOS\nTU NEGOCIO.',
+  description: 'Dinos cómo se llama tu negocio, dónde trabajas y qué servicio quieres destacar. Revisaremos tres puntos de tu presencia actual: qué encuentra una persona, qué entiende y cómo puede escribirte.',
+  callDetails: [
+    'Una revisión inicial con tres observaciones concretas.',
+    'Sobre tu negocio real, no una presentación genérica.',
+    'Sin costo para conocer por dónde conviene empezar.',
+    'La conversación comienza por WhatsApp.',
+  ],
+  submit: 'Pedir revisión CEC',
+};
+
+export const FAQ_ITEMS: FaqItem[] = [
+  { question: '¿Qué hace exactamente LSS?', answer: 'Diseñamos y publicamos sitios web para negocios de servicios, organizamos la información que aparece en Google y conectamos canales de contacto. Cada instalación incluye un alcance y pruebas definidos por escrito.' },
+  { question: '¿Qué incluye la propuesta integral?', answer: 'Según el alcance acordado: sitio, estructura comercial, SEO técnico, trabajo autorizado sobre Google, WhatsApp y formulario. También podemos incluir durante el primer año dominio estándar, hosting gestionado, HTTPS y una cuenta de correo empresarial. Todo se desglosa en la cotización.' },
+  { question: '¿Ya tengo sitio web. Tengo que cambiarlo?', answer: 'No necesariamente. Lo revisamos antes de recomendar una reconstrucción. Si conviene conservarlo, el proyecto puede centrarse en lo que realmente necesita mejorar.' },
+  { question: '¿El dominio y las cuentas quedan a mi nombre?', answer: 'La titularidad, los accesos y la forma de transferir cada activo se establecen en la propuesta y el contrato. Nuestro modelo busca que el cliente conserve el control de sus activos.' },
+  { question: '¿Qué se paga después del primer año?', answer: 'Los costos de renovación del dominio, alojamiento y correo se detallan antes de contratar. El mantenimiento comercial o SEO continuo se cotiza por separado; no se presupone que lo necesites.' },
+  { question: '¿Cómo compruebo que está funcionando?', answer: 'Revisamos el sitio desde móvil, probamos los enlaces y los canales de contacto, y documentamos las configuraciones y accesos previstos. El saldo y la aceptación se rigen por las pruebas definidas en el contrato.' },
+  { question: '¿Cuánto tiempo toma?', answer: 'Depende del sitio, los materiales y las autorizaciones que ya tengas. El calendario se define en la propuesta después de revisar tu negocio, con entregables y fechas acordadas.' },
+  { question: '¿Qué pasa si no me conviene este servicio?', answer: 'La revisión puede concluir que solo hace falta corregir algo puntual o conservar el sitio actual. Recibirás una recomendación basada en lo que observemos, sin obligación de contratar un proyecto completo.' },
+];

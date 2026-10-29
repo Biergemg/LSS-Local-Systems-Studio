@@ -4,7 +4,7 @@ export const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
   name: 'LSS — Local Systems Studio',
-  description: 'LSS construye sistemas web de captación local para que tu negocio sea encontrado, entendido y contactado. Método CEC: Claridad, Evidencia y Contacto.',
+  description: 'LSS diseña sitios web y presencia local para negocios de servicios, con información en Google y canales de contacto verificados. Método CEC.',
   url: SITE.url,
   telephone: CONTACT.phone,
   email: CONTACT.email,

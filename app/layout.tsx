@@ -21,7 +21,7 @@ const spaceGrotesk = Space_Grotesk({
 
 const siteUrl = 'https://www.lsslocalsystemsstudio.com';
 const siteTitle = 'LSS Local Systems Studio';
-const siteDescription = 'Sistema integral de captación local. Encontrado. Entendido. Contactado.';
+const siteDescription = 'El primer contacto no empieza con un hola. Sitios web y presencia local que explican tu negocio y facilitan que te escriban.';
 const ogImage = 'https://www.lsslocalsystemsstudio.com/og-image.png';
 const metaPixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID;
 

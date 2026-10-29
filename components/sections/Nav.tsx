@@ -91,7 +91,7 @@ export default function Nav() {
             onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = 'var(--accent-dim)')}
             onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'var(--accent)')}
           >
-            DIAGNÓSTICO
+            REVISIÓN CEC
           </a>
         </div>
 
@@ -168,7 +168,7 @@ export default function Nav() {
               textAlign: 'center',
             }}
           >
-            DIAGNÓSTICO
+            REVISIÓN CEC
           </a>
         </div>
       )}

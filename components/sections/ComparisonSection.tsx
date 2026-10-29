@@ -75,7 +75,7 @@ export default function ComparisonSection() {
                     width: '35%',
                   }}
                 >
-                  DISEÑO WEB TRADICIONAL
+                  CONTRATAR PIEZAS SUELTAS
                 </th>
                 <th
                   style={{
@@ -90,7 +90,7 @@ export default function ComparisonSection() {
                     width: '35%',
                   }}
                 >
-                  SISTEMA DE CAPTACIÓN LOCAL
+                  CON LSS CEC
                 </th>
               </tr>
             </thead>
