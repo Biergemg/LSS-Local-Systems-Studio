@@ -11,14 +11,26 @@ export default function ExpectationsSection() {
           </div>
           <div className="reveal">
             <p className="lede">{E.body}</p>
-            <p className="muted" style={{ marginTop: 14 }}>{E.sub}</p>
           </div>
+        </div>
+
+        <div className="drivers reveal">
+          <h3 className="h2">{E.driversTitle}</h3>
+          <ul>
+            {E.drivers.map((d) => (<li key={d}>{d}</li>))}
+          </ul>
+          <p className="drivers-note">{E.driversNote}</p>
         </div>
 
         <div className="compare-wrap">
           <h3 className="h2">{E.compareTitle}</h3>
           <p className="muted" style={{ maxWidth: '62ch' }}>{E.compareIntro}</p>
           <div className="compare" role="table" aria-label={E.compareTitle}>
+            <div className="compare-row compare-head" role="row">
+              <div role="columnheader">{E.criterion}</div>
+              <div role="columnheader">{E.lo}</div>
+              <div role="columnheader">{E.hi}</div>
+            </div>
             {E.compare.map((r) => (
               <div className="compare-row reveal" role="row" key={r.f}>
                 <div className="lab" role="rowheader">{r.f}</div>

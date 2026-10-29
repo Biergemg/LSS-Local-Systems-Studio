@@ -1,0 +1,13 @@
+import { chromium } from 'playwright';
+const b = await chromium.launch({ channel: 'chrome' });
+const c = await b.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2 });
+const p = await c.newPage();
+const cdp = await c.newCDPSession(p);
+await cdp.send('Emulation.setCPUThrottlingRate', { rate: 4 });
+await cdp.send('Network.enable');
+await cdp.send('Network.emulateNetworkConditions', { offline: false, latency: 150, downloadThroughput: 1.6 * 1024 * 1024 / 8, uploadThroughput: 750 * 1024 / 8 });
+await p.addInitScript(() => { window.__e = []; new PerformanceObserver((l) => l.getEntries().forEach((e) => window.__e.push([e.entryType, e.name || '', Math.round(e.startTime), e.element ? e.element.tagName + '.' + (e.element.className?.baseVal ?? e.element.className) : '', e.size || 0]))).observe({ type: 'largest-contentful-paint', buffered: true }); new PerformanceObserver((l) => l.getEntries().forEach((e) => window.__e.push([e.entryType, e.name, Math.round(e.startTime)]))).observe({ type: 'paint', buffered: true }); });
+await p.goto('http://localhost:3200', { waitUntil: 'load' });
+await p.waitForTimeout(4000);
+console.log(JSON.stringify(await p.evaluate(() => window.__e)));
+await b.close();

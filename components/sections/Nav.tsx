@@ -7,6 +7,24 @@ import { NAV_LINKS, NAV_CTA, CONTACT } from '@/data/content';
 export default function Nav() {
   const [open, setOpen] = useState(false);
   const toggleRef = useRef<HTMLButtonElement>(null);
+  const [active, setActive] = useState('');
+
+  useEffect(() => {
+    const els = Array.from(document.querySelectorAll('main > section'));
+    const hrefs = NAV_LINKS.map((l) => l.href);
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((en) => {
+          if (!en.isIntersecting) return;
+          const h = '#' + en.target.id;
+          setActive(hrefs.includes(h) ? h : '');
+        });
+      },
+      { rootMargin: '-45% 0px -50% 0px' },
+    );
+    els.forEach((e) => io.observe(e));
+    return () => io.disconnect();
+  }, []);
 
   useEffect(() => {
     if (!open) return;
@@ -26,7 +44,7 @@ export default function Nav() {
         <Logo />
         <div className="nav-links">
           {NAV_LINKS.map((l) => (
-            <a key={l.href} href={l.href}>{l.label}</a>
+            <a key={l.href} href={l.href} aria-current={active === l.href ? 'location' : undefined}>{l.label}</a>
           ))}
           <a className="btn btn-primary" style={{ minHeight: 44, padding: '10px 18px' }} href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer">
             {NAV_CTA}

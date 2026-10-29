@@ -1,0 +1,71 @@
+﻿PASS  las revelaciones por scroll terminan en estado final 320 
+PASS  sin scroll horizontal 320 scrollWidth=320
+PASS  consola limpia 320 
+PASS  objetivos táctiles >=44px 320 
+PASS  marca decorativa sin tapar texto 320 
+PASS  las revelaciones por scroll terminan en estado final 390 
+PASS  sin scroll horizontal 390 scrollWidth=390
+PASS  consola limpia 390 
+PASS  objetivos táctiles >=44px 390 
+PASS  marca decorativa sin tapar texto 390 
+PASS  las revelaciones por scroll terminan en estado final 768 
+PASS  sin scroll horizontal 768 scrollWidth=768
+PASS  consola limpia 768 
+PASS  objetivos táctiles >=44px 768 
+PASS  marca decorativa sin tapar texto 768 
+PASS  las revelaciones por scroll terminan en estado final 1440 
+PASS  sin scroll horizontal 1440 scrollWidth=1440
+PASS  consola limpia 1440 
+PASS  objetivos táctiles >=44px 1440 
+PASS  marca decorativa sin tapar texto 1440 
+PASS  enlaces WhatsApp con número correcto n=8
+PASS  anclas internas existen 
+PASS  mailto correcto 
+PASS  Instagram y Facebook presentes 
+PASS  target=_blank con noopener 
+PASS  ruta /privacidad 200
+PASS  ruta /terminos 200
+PASS  ruta /robots.txt 200
+PASS  ruta /sitemap.xml 200
+PASS  SEO básico {"title":55,"desc":138,"h1":1}
+PASS  JSON-LD válido y sin datos inventados ProfessionalService,WebSite,FAQPage
+PASS  FAQ visibles = FAQ en JSON-LD (10) visibles=10 jsonld=10
+PASS  lenguaje remoto presente en #inicio 
+PASS  lenguaje remoto presente en #prueba 
+PASS  lenguaje remoto presente en #preguntas 
+PASS  lenguaje remoto presente en #contacto 
+PASS  se aclara «otra ciudad / otro país» 
+PASS  terminología: siempre «Primera Visita Digital» 
+PASS  sin lectura de visita física 
+PASS  sin frases prohibidas, precios, testimonios ni marcas ficticias 
+PASS  máximo 2 familias tipográficas (texto visible) Inter Tight | Space Grotesk
+PASS  máximo 2 familias de fuentes web cargadas Inter Tight | Space Grotesk
+PASS  ningún texto HTML visible menor de 13 px 
+PASS  identidad: cero radios, degradados y sombras (incl. pseudo-elementos) radius=0 gradients=0 pseudo/sombras=0
+PASS  sin marcadores de posición ni valores rotos en el texto 
+PASS  jerarquía de encabezados sin saltos 1223332333332333332233322
+PASS  densidad editorial: palabras en <main> <= 1250 (antes 1389) palabras=1242
+PASS  estructura: 9 secciones sin duplicados secciones=9
+PASS  imagen OG responde y mide 1200x630 200 51218B 1200x630
+PASS  barra WhatsApp se retira ante cada CTA propio ctas=5 visibles=0
+PASS  el foco de teclado no queda tapado por la barra 
+PASS  escritorio: CTA de WhatsApp fijo en el menú, sin flotante 
+PASS  móvil: CTA del hero en la primera pantalla y sin barra duplicada {"ctaVisible":true,"bar":0,"figVisible":176.25}
+PASS  móvil: el diagrama asoma en la primera pantalla (>=120 px) visible=176px
+PASS  escritorio: la navegación marca la sección activa 
+PASS  primer Tab = saltar al contenido 
+PASS  menú móvil abre con teclado 
+PASS  menú móvil: 5 enlaces + CTA; cierra al navegar n=6
+PASS  Escape cierra y devuelve el foco 
+PASS  FAQ expande 
+PASS  reduced-motion: contenido en estado final 
+PASS  reduced-motion: diagrama sin animación 
+PASS  reduced-motion: cero animaciones en ejecución en toda la página activas=0
+PASS  axe WCAG 2.2 AA / 390 
+PASS  axe WCAG 2.2 AA / 1440 
+PASS  axe WCAG 2.2 AA /privacidad 390 
+PASS  axe WCAG 2.2 AA /privacidad 1440 
+PASS  axe WCAG 2.2 AA /terminos 390 
+PASS  axe WCAG 2.2 AA /terminos 1440 
+
+TOTAL 69 PASS / 0 FAIL

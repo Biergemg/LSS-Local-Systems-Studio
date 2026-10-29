@@ -102,3 +102,6 @@ G0 PASS · G1 PASS · G2 PARCIAL (territorios y 3 keyframes, sin 2 referencias r
 
 ## 8. Limitaciones
 No hay páginas de privacidad/términos (el copy V6 las menciona); LCP móvil lab 2.7 s; sin auditoría de 3 competidores; sin pruebas en iOS/Android reales; demo PPV es conceptual; funcionalidades del sitio anterior ver `V8_DELIVERY_NOTES` en el informe final.
+
+---
+**Actualización 2026-10-29 (V9.2):** la suite `qa3.mjs` (54 pruebas) tenía criterios laxos (p. ej. «máximo 2 familias» con condición `<= 3`). Se sustituye por `qa-scripts/qa4.mjs` (69 pruebas, resultado en `qa4-result.txt`). Detalle de criterios corregidos: `AUDITORIA_FINAL_V9_2.md` §2.

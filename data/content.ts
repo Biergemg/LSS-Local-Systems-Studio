@@ -45,31 +45,26 @@ export const NAV_LINKS: NavLink[] = [
 export const NAV_CTA = 'Revisar mi negocio';
 
 export const HERO = {
-  eyebrow: 'Para negocios de servicios que venden por cita o cotización',
+  eyebrow: 'Negocios de servicios que venden por cita o cotización',
   headline: 'Que quien te encuentre entienda por qué tu trabajo vale lo que cobras.',
   body: 'Ordenamos tu primera impresión: una web clara, tus datos correctos en Google y una forma directa de escribirte. Trabajamos a distancia, estés en otra ciudad o en otro país.',
-  proof: 'Primero revisamos tu presencia digital, a distancia, como la vería un cliente nuevo. Después instalamos y comprobamos lo acordado.',
-  ctaPrimary: 'Quiero ver qué cambiarían en mi negocio',
+  ctaPrimary: 'Quiero mi Primera Visita Digital',
   ctaSecondary: 'Ver cómo comprobamos la entrega',
   micro: 'Revisión a distancia, sin costo: tres observaciones concretas. Se abre WhatsApp con tu mensaje listo.',
   schematic: {
-    label: 'Primera Visita Digital, a distancia',
-    lines: [
-      { n: '01', t: 'Lo que encuentra', d: 'Web y Google cuentan lo mismo.' },
-      { n: '02', t: 'Lo que entiende', d: 'Servicio, zona y forma de trabajo.' },
-      { n: '03', t: 'Cómo te escribe', d: 'Un botón al número correcto.' },
-    ],
+    label: 'Primera Visita Digital',
+    desc: 'Recorrido de un cliente nuevo: lo que encuentra, lo que entiende y cómo te escribe.',
   },
 };
 
 export const BELIEF = {
   eyebrow: 'Cuando alguien te busca',
   title: 'Ya te recomendaron. Ahora toca que puedan comprobar por qué.',
-  body: 'Una recomendación abre la puerta. Después la persona revisa tu trabajo, compara opciones y busca respuestas: ¿hace lo que necesito?, ¿trabaja en mi zona?, ¿puedo confiar?, ¿cómo cotizo? Si todo está repartido entre publicaciones, perfiles y mensajes antiguos, tiene que averiguarlo por su cuenta.',
+  body: 'Una recomendación abre la puerta; después la persona compara y busca respuestas. Si todo está repartido entre publicaciones, perfiles y mensajes antiguos, tiene que averiguarlo por su cuenta.',
   channels: [
-    { n: '01', name: 'Instagram', text: 'Ven tus novedades. En tu web encuentran tus servicios ordenados, tu cobertura y cómo trabajas.' },
-    { n: '02', name: 'Google', text: 'Verifican dónde estás, tu información y las reseñas que realmente tienes.' },
-    { n: '03', name: 'WhatsApp', text: 'Te preguntan lo que necesitan, sin tener que adivinar a qué número escribir.' },
+    { n: '01', name: 'En Instagram', lead: 'Ven tus novedades.', text: 'En tu web encuentran tus servicios ordenados, tu cobertura y cómo trabajas.' },
+    { n: '02', name: 'En Google', lead: 'Verifican dónde estás.', text: 'Revisan tu información y las reseñas que realmente tienes.' },
+    { n: '03', name: 'En WhatsApp', lead: 'Te preguntan lo que necesitan.', text: 'Sin tener que adivinar a qué número escribir.' },
   ],
   closing: 'Tres piezas que cuentan la misma historia.',
 };
@@ -77,55 +72,45 @@ export const BELIEF = {
 export const PPV = {
   eyebrow: 'La Primera Visita Digital',
   title: 'Abre tu negocio como si nunca hubieras oído hablar de él.',
-  body: 'Es lo primero que hacemos, y se hace a distancia. Observamos tu presencia digital como lo haría alguien que busca tu servicio por primera vez, anotamos tres puntos que dificultan entenderlo, confiar o contactar, y te enseñamos las capturas y qué cambiaríamos. Funciona igual si estás en otra ciudad o en otro país.',
-  remote: 'No hace falta que vayamos a tu local: todo parte de lo que tu negocio muestra en Internet.',
+  body: 'Es lo primero que hacemos, y se hace a distancia: observamos tu presencia digital como la vería quien te busca por primera vez, anotamos tres puntos que dificultan entenderte, confiar o contactarte, y te mostramos las capturas y qué cambiaríamos.',
+  remote: 'No hace falta que vayamos a tu local: todo parte de lo que tu negocio muestra en Internet, estés en otra ciudad o en otro país.',
   steps: [
     { n: '01', t: 'Lo que la persona encuentra', d: 'Qué aparece al buscarte y si web, Google y redes coinciden.' },
     { n: '02', t: 'Lo que entiende', d: 'Si en segundos sabe qué haces, para quién y dónde.' },
     { n: '03', t: 'Cómo puede escribirte', d: 'Si el botón lleva al número correcto y a quien responde.' },
   ],
-  sample: 'Si vemos un proyecto que vale la pena construir, preparamos una primera dirección visual con tu marca y te explicamos el recorrido que proponemos. Así ves el enfoque antes de contratar la instalación.',
-  precision: 'La revisión inicial señala oportunidades; la muestra visual se ofrece cuando el proyecto encaja y hay disponibilidad.',
-  cta: 'Quiero mi primera revisión',
-};
-
-export const QUESTIONS = {
-  eyebrow: 'Una presentación que respalde tu trabajo',
-  title: 'Tu cliente debería poder responder cuatro preguntas antes de escribirte.',
-  items: [
-    { q: '¿Hacen lo que necesito?', a: 'Servicios explicados con las palabras que usa quien los busca.' },
-    { q: '¿Por qué confiar?', a: 'Fotos, experiencia, procesos y credenciales reales: las que el negocio puede demostrar.' },
-    { q: '¿Me pueden atender?', a: 'Ubicación, cobertura, horarios y datos coherentes entre web y Google.' },
-    { q: '¿Cómo pido precio?', a: 'Un botón y un mensaje que llegan a quien responde.' },
-  ],
-  closing: 'No hace falta fingir una empresa más grande. Hace falta mostrar mejor la que ya existe.',
+  sample: 'Si el proyecto encaja y hay disponibilidad, preparamos una primera dirección visual con tu marca para que veas el enfoque antes de contratar.',
+  cta: 'Quiero mi Primera Visita Digital',
+  docTitle: 'Tres observaciones',
+  docTag: 'Formato',
+  docFields: ['Qué se ve', 'Captura con fecha', 'Qué cambiaríamos'],
 };
 
 export const OFFER = {
   eyebrow: 'LSS Presencia Resuelta',
-  title: 'De la idea a una presencia publicada y comprobada.',
-  intro: 'Reunimos en un solo proyecto lo que normalmente termina repartido entre diseño, textos, información en Google y enlaces de contacto. Tú apruebas el mensaje y la evidencia. LSS ejecuta y documenta lo contratado.',
+  title: 'Tu cliente debería poder responder cuatro preguntas antes de escribirte.',
+  intro: 'Presencia Resuelta reúne en un solo proyecto lo que suele quedar repartido entre diseño, textos, Google y contacto. Tú apruebas el mensaje y la evidencia; LSS ejecuta y documenta.',
   groups: [
-    { n: '01', title: 'Que se entienda tu servicio', text: 'Una web móvil con explicación útil, preguntas frecuentes y una propuesta de valor fiel a tu trabajo.' },
-    { n: '02', title: 'Que haya razones para confiar', text: 'Fotografías y pruebas auténticas, información local coherente y criterios verificables.' },
-    { n: '03', title: 'Que puedan pedirte información', text: 'WhatsApp, teléfono y el formulario incluido, cuando esté contratado y probado, conectados al destino correcto.' },
-    { n: '04', title: 'Que conserves el control', text: 'Cuentas, fechas, accesos, propiedad del dominio y condiciones de renovación, por escrito.' },
+    { n: '01', title: '¿Hacen lo que necesito?', text: 'Servicios explicados con las palabras de quien los busca, en una web móvil con preguntas frecuentes.' },
+    { n: '02', title: '¿Por qué confiar?', text: 'Fotografías, experiencia y credenciales auténticas, con datos coherentes entre web y Google.' },
+    { n: '03', title: '¿Cómo pido precio?', text: 'WhatsApp, teléfono y el formulario contratado, probados y conectados a quien responde.' },
+    { n: '04', title: '¿Quién tiene el control?', text: 'Cuentas, fechas, accesos, propiedad del dominio y condiciones de renovación, por escrito.' },
   ],
+  closing: 'No hace falta fingir una empresa más grande. Hace falta mostrar mejor la que ya existe.',
   detailsSummary: 'Ver el detalle técnico del alcance',
   details: 'Hasta cinco páginas, revisión autorizada de un Perfil de Empresa de Google, SEO técnico inicial, integración de contacto, checklist y entrega documentada, conforme a la propuesta. Alojamiento, dominio y correo empresarial se incluyen cuando la propuesta lo indica.',
   existing: {
     title: 'Si tu web ya funciona, la conservamos.',
-    text: 'Hay negocios que necesitan un sitio nuevo y otros que necesitan ordenar servicios, corregir datos de Google o reparar cómo llegan los mensajes. Primero distinguimos una cosa de la otra: la propuesta se construye alrededor del cambio que merece la inversión.',
-    seal: 'También te decimos si hoy no hace falta reconstruir.',
+    text: 'Hay negocios que necesitan un sitio nuevo y otros que solo necesitan ordenar servicios, corregir Google o reparar cómo llegan los mensajes. Primero distinguimos una cosa de la otra.',
   },
-  cta: 'Ver si este servicio encaja con mi negocio',
+  cta: 'Ver si encaja con mi negocio',
 };
 
 export const PROCESS = {
   eyebrow: 'Un proceso que puedes revisar',
   title: 'Sabes qué estamos haciendo y qué recibes al final.',
   steps: [
-    { title: 'Revisamos tu negocio a distancia', text: 'Conversación breve en línea, servicio a destacar, evidencias y las tres prioridades de la Primera Visita Digital.' },
+    { title: 'Revisamos tu negocio a distancia', text: 'Conversación breve en línea y las tres prioridades de la Primera Visita Digital.' },
     { title: 'Te enseñamos la dirección', text: 'Para proyectos que encajan, una muestra visual y un recorrido propuesto; después presupuesto y calendario.' },
     { title: 'Lo construimos con tus datos', text: 'Mensaje, web, Google y enlaces, dentro del alcance firmado y los permisos autorizados.' },
     { title: 'Lo abrimos desde un teléfono', text: 'Comprobamos qué se muestra, qué enlace se pulsa y si el contacto llega al destino pactado.' },
@@ -136,8 +121,8 @@ export const PROCESS = {
 
 export const EVIDENCE = {
   eyebrow: 'La prueba se hace contigo, en línea',
-  title: 'Antes de decir «quedó listo», lo abrimos contigo.',
-  body: 'Lo revisamos juntos a distancia. Vemos cómo se lee en el celular. Probamos el número de WhatsApp y las rutas de contacto contratadas. Revisamos los enlaces, la información y quién tiene acceso. Una función incluida que no pasa la prueba no se da por entregada.',
+  title: 'Antes de decir “quedó listo”, lo abrimos contigo.',
+  body: 'Lo revisamos juntos a distancia: cómo se lee en el celular, el número de WhatsApp, las rutas de contacto contratadas, los enlaces y quién tiene acceso. Una función incluida que no pasa la prueba no se da por entregada.',
   docTitle: 'Acta de entrega',
   docTag: 'Formato',
   docRows: [
@@ -148,16 +133,35 @@ export const EVIDENCE = {
     { t: 'Propiedades de Google', d: 'Qué quedó conectado, con qué permisos y qué sigue pendiente.' },
   ],
   docNote: 'Cada casilla se completa con la prueba real de tu proyecto.',
-  cta: 'Conocer las pruebas de entrega',
+  measuredTitle: 'Medición de esta página',
+  measuredMeta: 'Medido el 29 de octubre de 2026 en la versión de revisión con Lighthouse 12.8.2 (móvil, simulado; mediana de 5 corridas) y axe-core con WCAG 2.2 AA.',
+  measured: [
+    { k: 'Accesibilidad', v: '100' },
+    { k: 'Buenas prácticas', v: '100' },
+    { k: 'SEO', v: '100' },
+    { k: 'Rendimiento (móvil, laboratorio)', v: '93' },
+    { k: 'Cambio de diseño (CLS)', v: '0' },
+    { k: 'Errores WCAG 2.2 AA', v: '0' },
+  ],
+  measuredNote: 'Se vuelve a medir al publicar.',
+  cta: 'Quiero mi Primera Visita Digital',
 };
 
 export const EXPECTATIONS = {
   eyebrow: 'Presupuesto y continuidad',
   title: 'Una propuesta completa. Un presupuesto claro antes de empezar.',
-  body: 'El precio depende de lo que realmente hay que construir o corregir. Después de revisar tu negocio recibes una propuesta con alcance, fechas, inversión total, forma de pago y condiciones de continuidad. Nada aparece después como un «extra obligatorio» que no se haya explicado.',
-  sub: 'Si necesitas únicamente una mejora puntual, la cotizamos por separado. La instalación integral tiene un alcance definido.',
+  body: 'El precio depende de lo que hay que construir o corregir. La propuesta incluye alcance, fechas, inversión total, forma de pago y continuidad. Nada aparece después como un “extra obligatorio” sin explicar.',
+  driversTitle: 'Lo que mueve el costo',
+  drivers: [
+    'Cuántas páginas y servicios hay que explicar.',
+    'Si tu perfil de Google existe, hay que corregirlo o reclamarlo.',
+    'Qué material propio tienes: fotos, textos y credenciales.',
+    'Qué rutas de contacto se contratan y se prueban.',
+    'Si sumas el plan mensual de seguimiento.',
+  ],
+  driversNote: 'La propuesta con calendario e inversión total llega después de la Primera Visita Digital.',
   compareTitle: 'Si comparas con una web más económica, compara el mismo alcance.',
-  compareIntro: 'Una web económica puede bastar si solo necesitas poner tu información en Internet. Esto es lo que añade Presencia Resuelta:',
+  compareIntro: 'Una web económica puede bastar si solo necesitas publicar tu información. Esto añade Presencia Resuelta:',
   compare: [
     { f: 'Mensaje', lo: 'Información publicada en una página.', hi: 'Servicios ordenados alrededor de las preguntas del cliente.' },
     { f: 'Google', lo: 'Perfil y sitio por separado.', hi: 'Coherencia entre ambos, con cambios autorizados.' },
@@ -166,15 +170,16 @@ export const EXPECTATIONS = {
   ],
   lo: 'Web económica',
   hi: 'Presencia Resuelta',
+  criterion: 'Qué se compara',
   continuityTitle: 'Lo que viene después también queda por escrito.',
-  continuity: 'Desde la propuesta sabes quién administra el dominio, el alojamiento y el correo, qué servicios vencen y cuáles puedes mantener por tu cuenta. Si quieres que sigamos revisando contenido, presencia local y funcionamiento de los contactos, hay un plan mensual independiente del trabajo de instalación.',
-  continuityMicro: 'Ninguna suscripción sustituye tu titularidad sobre las cuentas y activos definidos en el contrato. Los servicios de terceros pueden tener licencias y reglas propias.',
+  continuity: 'Desde la propuesta sabes quién administra dominio, alojamiento y correo, qué servicios vencen y cuáles puedes mantener tú. Si quieres seguimiento continuo de contenido, presencia local y contactos, hay un plan mensual independiente de la instalación.',
+  continuityMicro: 'Ninguna suscripción sustituye tu titularidad sobre las cuentas y activos definidos en el contrato.',
 };
 
 export const CTA_SECTION = {
   eyebrow: 'Empecemos por lo que ya tienes',
   title: 'Enséñanos tu negocio. Te diremos qué mejoraríamos primero.',
-  description: 'Cuéntanos el nombre de tu empresa, en qué ciudad trabajas y qué servicio te interesa destacar. Revisamos a distancia cómo se entiende hoy y te compartimos tres observaciones concretas, desde cualquier ciudad o país.',
+  description: 'Cuéntanos el nombre de tu empresa, tu ciudad y el servicio que quieres destacar. Revisamos a distancia cómo se entiende hoy y te compartimos tres observaciones concretas, desde cualquier ciudad o país.',
   submit: 'Quiero mis tres observaciones',
   micro: 'WhatsApp abre una conversación con LSS; respondemos personalmente.',
 };

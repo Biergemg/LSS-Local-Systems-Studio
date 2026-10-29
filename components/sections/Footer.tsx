@@ -23,8 +23,8 @@ export default function Footer() {
               <a href={s.href} target="_blank" rel="noopener noreferrer">{s.label}</a>
             </span>
           ))}
-          <span style={{ display: 'block' }}><Link href="/privacidad">Aviso de privacidad</Link></span>
-          <span style={{ display: 'block' }}><Link href="/terminos">Términos de uso</Link></span>
+          <span style={{ display: 'block' }}><Link href="/privacidad" prefetch={false}>Aviso de privacidad</Link></span>
+          <span style={{ display: 'block' }}><Link href="/terminos" prefetch={false}>Términos de uso</Link></span>
           <p className="small" style={{ marginTop: 14 }}>© {new Date().getFullYear()} Local Systems Studio</p>
         </div>
       </div>

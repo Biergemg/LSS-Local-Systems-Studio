@@ -1,0 +1,6 @@
+{"perf":94,"lcp":2.68,"fcp":0.92,"tbt":161,"cls":0,"bd":"undefined=NaNms","el":"<h1 id=\"h1\" class=\"h1\">"}
+{"perf":94,"lcp":2.79,"fcp":0.91,"tbt":151,"cls":0,"bd":"undefined=NaNms","el":"<h1 id=\"h1\" class=\"h1\">"}
+{"perf":96,"lcp":2.7,"fcp":0.91,"tbt":93,"cls":0,"bd":"undefined=NaNms","el":"<h1 id=\"h1\" class=\"h1\">"}
+{"perf":93,"lcp":2.7,"fcp":0.91,"tbt":194,"cls":0,"bd":"undefined=NaNms","el":"<h1 id=\"h1\" class=\"h1\">"}
+{"perf":96,"lcp":2.7,"fcp":0.91,"tbt":87,"cls":0,"bd":"undefined=NaNms","el":"<h1 id=\"h1\" class=\"h1\">"}
+MEDIANA perf 94 LCP 2.7 FCP 0.91 TBT 151

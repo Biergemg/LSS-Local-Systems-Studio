@@ -16,7 +16,7 @@ export default function BeliefSection() {
           {BELIEF.channels.map((c) => (
             <li className="channel reveal" key={c.n}>
               <span className="idx">{c.n}</span>
-              <b className="channel-name">{c.name}</b>
+              <div><span className="ch-name">{c.name}</span><b className="ch-lead">{c.lead}</b></div>
               <p>{c.text}</p>
             </li>
           ))}

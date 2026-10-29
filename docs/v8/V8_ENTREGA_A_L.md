@@ -23,3 +23,6 @@
 | schema / schema-markup | Invocada; JSON-LD verificable y coincidente con el contenido visible |
 | impeccable | `critique` completo (A subagente independiente + B detector) — `IMPECCABLE_CRITIQUE.md`; escaneo de URL no ejecutado |
 | 21st.dev | **BLOCKED** (OAuth del titular pendiente) |
+
+---
+**Actualización 2026-10-29 (V9.2):** el estado de gates y las matrices de esta entrega quedan **superadas** por `AUDITORIA_FINAL_V9_2.md` (matriz de las seis skills con PASS/FAIL/BLOCKED, 69 pruebas con criterios corregidos, dos críticas independientes, LCP con mediciones reproducibles). V8 **no** se declara completo.

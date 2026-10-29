@@ -3,7 +3,7 @@ import Corners from '@/components/ui/Corners';
 
 export default function OfferSection() {
   return (
-    <section id="oferta" className="section offer" aria-labelledby="offer-h">
+    <section id="oferta" className="section on-paper offer" aria-labelledby="offer-h">
       <div className="container">
         <div className="head-2">
           <div>
@@ -23,6 +23,8 @@ export default function OfferSection() {
           ))}
         </ol>
 
+        <p className="statement reveal"><span className="node" aria-hidden="true" />{OFFER.closing}</p>
+
         <details className="disclose">
           <summary>{OFFER.detailsSummary}</summary>
           <p className="inner">{OFFER.details}</p>
@@ -32,7 +34,6 @@ export default function OfferSection() {
           <Corners />
           <h3 className="h2">{OFFER.existing.title}</h3>
           <p>{OFFER.existing.text}</p>
-          <p className="seal">{OFFER.existing.seal}</p>
         </div>
 
         <p className="cta-row" data-hide-wa>
