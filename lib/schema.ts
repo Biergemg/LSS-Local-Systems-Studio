@@ -10,7 +10,7 @@ export const organizationSchema = {
   name: SITE.name,
   alternateName: 'LSS',
   description:
-    'Sitios web, presencia en Google y recorridos de contacto comprobables para negocios de servicios.',
+    'Sitios web, presencia en Google y recorridos de contacto comprobables para negocios de servicios. Servicio a distancia.',
   url: SITE.url,
   logo: `${SITE.url}/logo.png`,
   image: `${SITE.url}/og-image.png`,

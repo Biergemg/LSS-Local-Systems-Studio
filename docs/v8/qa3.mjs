@@ -51,7 +51,14 @@ for (const [w, h] of [[320, 720], [390, 844], [768, 1024], [1440, 900]]) {
     try { const arr = JSON.parse(meta.ld[0]); types = arr.map((x) => x['@type']); ldOk = types.includes('ProfessionalService') && types.includes('WebSite') && types.includes('FAQPage') && !JSON.stringify(arr).match(/openingHours|aggregateRating|streetAddress|priceRange/); } catch { ldOk = false; }
     log(ldOk, 'JSON-LD válido y sin datos inventados', types.join(','));
     const faqVisible = await p.evaluate(() => document.querySelectorAll('.faq details').length);
-    log(faqVisible === 9, 'FAQ visibles = FAQ en JSON-LD', `visibles=${faqVisible}`);
+    const ldFaq = (() => { try { return JSON.parse(meta.ld[0]).find((x) => x['@type'] === 'FAQPage').mainEntity.length; } catch { return -1; } })();
+    log(faqVisible === ldFaq && faqVisible === 10, 'FAQ visibles = FAQ en JSON-LD (10)', `visibles=${faqVisible} jsonld=${ldFaq}`);
+    const sec = await p.evaluate(() => Object.fromEntries(['inicio', 'prueba', 'proceso', 'entrega', 'preguntas', 'contacto'].map((id) => [id, (document.getElementById(id)?.innerText || '').toLowerCase()])));
+    for (const id of ['inicio', 'prueba', 'preguntas', 'contacto']) log(/a distancia/.test(sec[id]) , `lenguaje remoto presente en #${id}`);
+    log(/otra ciudad|otro país|cualquier ciudad/.test(sec.inicio + sec.prueba + sec.preguntas + sec.contacto), 'se aclara «otra ciudad / otro país»');
+    const full = await p.evaluate(() => document.body.innerText);
+    log(/primera visita digital/i.test(full) && !/primera visita(?! digital)/i.test(full.replace(/la primera visita digital/gi, 'PVD')), 'terminología: siempre «Primera Visita Digital»');
+    log(!/visita (f[ií]sica|presencial|al local|a tu local)|ir(emos)? (a|al) (tu )?(local|negocio)|miramos tu negocio de frente/i.test(full.replace(/no tienen que ir[^.]*\./gi, '').replace(/no hace falta que vayamos a tu local[^.]*\./gi, '')), 'sin lectura de visita física');
     const txt = await p.evaluate(() => document.body.innerText);
     const banned = [/todavía no tenemos/i, /no contamos con/i, /no podemos garantizar/i, /esto es solo/i, /no hacemos/i, /no somos/i, /aún no publicamos/i, /nadie puede/i, /lleva(mos)? tu (negocio|presencia) al siguiente nivel/i, /no es solo una/i, /transformamos tu presencia/i, /soluciones innovadoras/i, /sin fricci[oó]n/i, /resultados garantizados/i, /nos encargamos de todo/i, /\$\s?\d/, /testimonio/i, /Casa Arroyo|Atelier|Pigmento/i];
     const hit = banned.filter((r) => r.test(txt)).map(String);

@@ -10,12 +10,12 @@ export const SITE = {
   url: 'https://www.lsslocalsystemsstudio.com',
   title: 'LSS | Web, Google y contacto para negocios de servicios',
   description:
-    'Vemos tu negocio como lo vería un cliente nuevo y te damos tres observaciones concretas, sin costo. Web, Google y contacto directo por WhatsApp.',
+    'Revisamos a distancia cómo te ve un cliente nuevo y te damos tres observaciones concretas, sin costo. Web, Google y contacto por WhatsApp.',
 };
 
 const WA_NUMBER = '528333263389';
 export const WA_DEFAULT_TEXT =
-  'Hola, quiero revisar la primera impresión de mi negocio. Nombre: ___ | Ciudad: ___ | Servicio que quiero destacar: ___ | Web o perfil de Google (si lo tengo): ___';
+  'Hola, quiero la Primera Visita Digital de mi negocio. Nombre: ___ | Ciudad: ___ | Servicio que quiero destacar: ___ | Web o perfil de Google (si lo tengo): ___';
 
 export function waLink(text: string = WA_DEFAULT_TEXT): string {
   return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`;
@@ -47,13 +47,13 @@ export const NAV_CTA = 'Revisar mi negocio';
 export const HERO = {
   eyebrow: 'Para negocios de servicios que venden por cita o cotización',
   headline: 'Que quien te encuentre entienda por qué tu trabajo vale lo que cobras.',
-  body: 'Ordenamos tu primera impresión: una web clara, tus datos correctos en Google y una forma directa de escribirte.',
-  proof: 'Primero vemos tu negocio como lo vería un cliente nuevo. Después instalamos y comprobamos lo acordado.',
+  body: 'Ordenamos tu primera impresión: una web clara, tus datos correctos en Google y una forma directa de escribirte. Trabajamos a distancia, estés en otra ciudad o en otro país.',
+  proof: 'Primero revisamos tu presencia digital, a distancia, como la vería un cliente nuevo. Después instalamos y comprobamos lo acordado.',
   ctaPrimary: 'Quiero ver qué cambiarían en mi negocio',
   ctaSecondary: 'Ver cómo comprobamos la entrega',
-  micro: 'Se abre WhatsApp con tu mensaje listo. Tres observaciones concretas, sin costo.',
+  micro: 'Revisión a distancia, sin costo: tres observaciones concretas. Se abre WhatsApp con tu mensaje listo.',
   schematic: {
-    label: 'Recorrido de la primera visita',
+    label: 'Primera Visita Digital, a distancia',
     lines: [
       { n: '01', t: 'Lo que encuentra', d: 'Web y Google cuentan lo mismo.' },
       { n: '02', t: 'Lo que entiende', d: 'Servicio, zona y forma de trabajo.' },
@@ -75,9 +75,10 @@ export const BELIEF = {
 };
 
 export const PPV = {
-  eyebrow: 'La Prueba de la Primera Visita',
+  eyebrow: 'La Primera Visita Digital',
   title: 'Abre tu negocio como si nunca hubieras oído hablar de él.',
-  body: 'Es lo primero que hacemos. Entramos como lo haría alguien que busca tu servicio por primera vez, anotamos tres puntos que dificultan entenderlo, confiar o contactar, y te enseñamos las capturas y qué cambiaríamos.',
+  body: 'Es lo primero que hacemos, y se hace a distancia. Observamos tu presencia digital como lo haría alguien que busca tu servicio por primera vez, anotamos tres puntos que dificultan entenderlo, confiar o contactar, y te enseñamos las capturas y qué cambiaríamos. Funciona igual si estás en otra ciudad o en otro país.',
+  remote: 'No hace falta que vayamos a tu local: todo parte de lo que tu negocio muestra en Internet.',
   steps: [
     { n: '01', t: 'Lo que la persona encuentra', d: 'Qué aparece al buscarte y si web, Google y redes coinciden.' },
     { n: '02', t: 'Lo que entiende', d: 'Si en segundos sabe qué haces, para quién y dónde.' },
@@ -124,7 +125,7 @@ export const PROCESS = {
   eyebrow: 'Un proceso que puedes revisar',
   title: 'Sabes qué estamos haciendo y qué recibes al final.',
   steps: [
-    { title: 'Miramos tu negocio de frente', text: 'Reunión breve, servicio a destacar, evidencias y las tres prioridades de la Primera Visita.' },
+    { title: 'Revisamos tu negocio a distancia', text: 'Conversación breve en línea, servicio a destacar, evidencias y las tres prioridades de la Primera Visita Digital.' },
     { title: 'Te enseñamos la dirección', text: 'Para proyectos que encajan, una muestra visual y un recorrido propuesto; después presupuesto y calendario.' },
     { title: 'Lo construimos con tus datos', text: 'Mensaje, web, Google y enlaces, dentro del alcance firmado y los permisos autorizados.' },
     { title: 'Lo abrimos desde un teléfono', text: 'Comprobamos qué se muestra, qué enlace se pulsa y si el contacto llega al destino pactado.' },
@@ -134,9 +135,9 @@ export const PROCESS = {
 };
 
 export const EVIDENCE = {
-  eyebrow: 'La prueba se hace en tu negocio',
+  eyebrow: 'La prueba se hace contigo, en línea',
   title: 'Antes de decir «quedó listo», lo abrimos contigo.',
-  body: 'Vemos cómo se lee en el celular. Probamos el número de WhatsApp y las rutas de contacto contratadas. Revisamos los enlaces, la información y quién tiene acceso. Una función incluida que no pasa la prueba no se da por entregada.',
+  body: 'Lo revisamos juntos a distancia. Vemos cómo se lee en el celular. Probamos el número de WhatsApp y las rutas de contacto contratadas. Revisamos los enlaces, la información y quién tiene acceso. Una función incluida que no pasa la prueba no se da por entregada.',
   docTitle: 'Acta de entrega',
   docTag: 'Formato',
   docRows: [
@@ -173,7 +174,7 @@ export const EXPECTATIONS = {
 export const CTA_SECTION = {
   eyebrow: 'Empecemos por lo que ya tienes',
   title: 'Enséñanos tu negocio. Te diremos qué mejoraríamos primero.',
-  description: 'Cuéntanos el nombre de tu empresa, en qué ciudad trabajas y qué servicio te interesa destacar. Revisamos cómo se entiende hoy y te compartimos tres observaciones concretas.',
+  description: 'Cuéntanos el nombre de tu empresa, en qué ciudad trabajas y qué servicio te interesa destacar. Revisamos a distancia cómo se entiende hoy y te compartimos tres observaciones concretas, desde cualquier ciudad o país.',
   submit: 'Quiero mis tres observaciones',
   micro: 'WhatsApp abre una conversación con LSS; respondemos personalmente.',
 };
@@ -181,6 +182,7 @@ export const CTA_SECTION = {
 export const FAQ_ITEMS: FaqItem[] = [
   { question: 'Ya tengo Instagram y WhatsApp. ¿Para qué una web?', answer: 'Son buenos canales para mantener la relación y responder. Una web ordena servicios, zonas, proceso, preguntas y pruebas en un lugar que un desconocido puede consultar sin buscar entre publicaciones. La necesidad concreta se determina en la revisión.' },
   { question: '¿Me garantizan clientes nuevos?', answer: 'Cuántas personas buscan un servicio y deciden contratarlo depende también de tu oferta, tu reputación y tu mercado. Lo que sí se pacta y se comprueba es que la presentación y los canales de contacto incluidos funcionen.' },
+  { question: '¿Tienen que ir a mi negocio? ¿Trabajan a distancia?', answer: 'No tienen que ir. La Primera Visita Digital y el proyecto completo pueden hacerse 100 % a distancia, a partir de tu presencia en Internet y de los materiales que compartas. Funciona igual si estás en otra ciudad o en otro país.' },
   { question: '¿Qué pasa si ya tengo una web?', answer: 'La revisamos antes de recomendar sustituirla. Si la mejor inversión es conservarla y corregir tres cosas, eso es lo que te decimos.' },
   { question: '¿Qué pasa si no tengo fotos profesionales?', answer: 'Revisamos lo que sí tienes y diseñamos con material auténtico. Si conviene fotografiar el negocio, se cotiza aparte.' },
   { question: '¿Mi dominio y mi información quedan a mi nombre?', answer: 'El dominio y las cuentas que deban pertenecer a tu empresa se configuran con ese titular. Las licencias y derechos sobre código y diseño se explican en la propuesta y el contrato.' },
@@ -191,6 +193,6 @@ export const FAQ_ITEMS: FaqItem[] = [
 ];
 
 export const FOOTER = {
-  blurb: 'LSS — Local Systems Studio. Sitios web, presencia en Google y recorridos de contacto comprobables para negocios de servicios.',
+  blurb: 'LSS — Local Systems Studio. Sitios web, presencia en Google y recorridos de contacto comprobables para negocios de servicios. Trabajamos a distancia.',
   trust: 'Trabajamos con información auténtica y permisos del titular. Las funciones y proveedores se definen por escrito en cada proyecto.',
 };

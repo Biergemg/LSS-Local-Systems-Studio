@@ -1,4 +1,4 @@
-PASS  sin scroll horizontal 320 scrollWidth=320
+﻿PASS  sin scroll horizontal 320 scrollWidth=320
 PASS  consola limpia 320 
 PASS  objetivos táctiles >=44px 320 
 PASS  marca decorativa sin tapar texto 320 
@@ -23,9 +23,16 @@ PASS  ruta /privacidad 200
 PASS  ruta /terminos 200
 PASS  ruta /robots.txt 200
 PASS  ruta /sitemap.xml 200
-PASS  SEO básico {"title":55,"desc":144,"h1":1}
+PASS  SEO básico {"title":55,"desc":138,"h1":1}
 PASS  JSON-LD válido y sin datos inventados ProfessionalService,WebSite,FAQPage
-PASS  FAQ visibles = FAQ en JSON-LD visibles=9
+PASS  FAQ visibles = FAQ en JSON-LD (10) visibles=10 jsonld=10
+PASS  lenguaje remoto presente en #inicio 
+PASS  lenguaje remoto presente en #prueba 
+PASS  lenguaje remoto presente en #preguntas 
+PASS  lenguaje remoto presente en #contacto 
+PASS  se aclara «otra ciudad / otro país» 
+PASS  terminología: siempre «Primera Visita Digital» 
+PASS  sin lectura de visita física 
 PASS  sin frases prohibidas, precios, testimonios ni marcas ficticias 
 PASS  máximo 2 familias tipográficas familias=3
 PASS  identidad: cero radios y cero degradados radius=0 gradients=0
@@ -46,4 +53,4 @@ PASS  axe WCAG 2.2 AA /privacidad 1440
 PASS  axe WCAG 2.2 AA /terminos 390 
 PASS  axe WCAG 2.2 AA /terminos 1440 
 
-TOTAL 47 PASS / 0 FAIL
+TOTAL 54 PASS / 0 FAIL

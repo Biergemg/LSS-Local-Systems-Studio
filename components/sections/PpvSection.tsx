@@ -9,6 +9,7 @@ export default function PpvSection() {
         <p className="eyebrow">{PPV.eyebrow}</p>
         <h2 id="ppv-h" className="mega reveal">{PPV.title}</h2>
         <p className="lede method-lede reveal">{PPV.body}</p>
+        <p className="remote-note reveal">{PPV.remote}</p>
         <ol className="lenses">
           {PPV.steps.map((s) => (
             <li className="lens reveal" key={s.n}>
