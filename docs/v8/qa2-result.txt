@@ -1,0 +1,48 @@
+﻿PASS  sin scroll horizontal 320 scrollWidth=320
+PASS  consola limpia 320 
+PASS  objetivos táctiles >=44px 320 
+PASS  sin scroll horizontal 390 scrollWidth=390
+PASS  consola limpia 390 
+PASS  objetivos táctiles >=44px 390 
+PASS  sin scroll horizontal 768 scrollWidth=768
+PASS  consola limpia 768 
+PASS  objetivos táctiles >=44px 768 
+PASS  sin scroll horizontal 1440 scrollWidth=1440
+PASS  consola limpia 1440 
+PASS  objetivos táctiles >=44px 1440 
+PASS  enlaces WhatsApp con número correcto n=8
+PASS  anclas internas existen 
+PASS  mailto correcto 
+PASS  Instagram y Facebook presentes https://www.instagram.com/lsslocalsystemsstudio https://www.facebook.com/lsslocalsystemsstudio
+PASS  target=_blank con noopener 
+PASS  ruta /privacidad 200
+PASS  ruta /terminos 200
+PASS  ruta /robots.txt 200
+PASS  ruta /sitemap.xml 200
+PASS  SEO básico {"title":55,"desc":152,"h1":1,"ld":1}
+PASS  sin fórmulas defensivas ni precios/garantías 
+PASS  demo incorpora nombre, ciudad y servicio 
+PASS  transición: capa «antes» se retira opacity=0
+PASS  dirección de arte noche #0b0b0b
+PASS  dirección de arte pigmento #f6e7da
+PASS  dirección de arte atelier #f3f0e8
+PASS  CTA de la demo lleva los datos a WhatsApp 
+PASS  Enter no navega ni envía 
+PASS  volver al punto de partida 
+PASS  barra WhatsApp se retira ante cada CTA propio de WhatsApp 
+PASS  el foco de teclado no queda tapado por la barra 
+PASS  escritorio: sin flotante; CTA de WhatsApp fijo en el menú 
+PASS  primer Tab = saltar al contenido 
+PASS  menú móvil abre con teclado 
+PASS  Escape cierra y devuelve el foco 
+PASS  FAQ expande 
+PASS  reduced-motion neutraliza transiciones 1e-05s
+PASS  reduced-motion: contenido en estado final legible 1
+PASS  axe WCAG 2.2 AA / 390 
+PASS  axe WCAG 2.2 AA / 1440 
+PASS  axe WCAG 2.2 AA /privacidad 390 
+PASS  axe WCAG 2.2 AA /privacidad 1440 
+PASS  axe WCAG 2.2 AA /terminos 390 
+PASS  axe WCAG 2.2 AA /terminos 1440 
+
+TOTAL 46 PASS / 0 FAIL

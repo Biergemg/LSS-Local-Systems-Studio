@@ -1,3 +1,23 @@
+# ART_DIRECTION — ronda 2 «Estudio editorial» (2026-10-29)
+
+Sustituye a la ronda 1 (abajo, histórico).
+
+**Cambio y justificación.** Se conserva la identidad LSS (tinta #0B0B0B, verde #00FF88, logotipo, Space Grotesk) y se eleva su expresión:
+1. Alternancia tinta/papel por capítulo: da ritmo y evita bloques oscuros monótonos.
+2. Instrument Serif itálica como voz editorial (numerales, citas, arte).
+3. Titulares a gran escala.
+4. Hero con composición de marca ficticia («Casa Arroyo», rotulada) en lugar de un panel de texto.
+5. La Prueba de la Primera Visita pasó de alternar textos a recomponer una web completa con 3 direcciones de arte (Atelier, Noche, Pigmento), transición circular y entrada escalonada; se ejecuta sola al llegar.
+6. Revelado por scroll y barra de progreso solo con `animation-timeline` (mejora progresiva; desactivado con reduced-motion).
+7. WhatsApp: barra inferior móvil que se retira ante otros CTA; sin flotante en escritorio (el menú lo lleva fijo).
+
+Recomendación aplicada de ui-ux-pro-max (`ui-ux-pro-max-search.txt`): patrón *Scroll-Triggered Storytelling* con indicador de progreso y estado final legible con reduced-motion.
+
+Recursos visuales: SVG generativo propio (`components/ui/BrandArt.tsx`); sin fotos de terceros.
+
+---
+## Ronda 1 (histórico)
+
 # ART_DIRECTION — LSS V6 sobre V8 (2026-10-29)
 
 Infraestructura elegida: **B (Next.js 16 / React 19 / Tailwind v4 existentes)**, evolucionando el diseño actual, sin reconstruir. Conversión primaria: **WhatsApp** (nombre, ciudad, servicio). Secundaria: leer «La prueba».

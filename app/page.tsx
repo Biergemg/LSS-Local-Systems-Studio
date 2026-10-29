@@ -14,6 +14,7 @@ export default function Page() {
   return (
     <>
       <a className="skip-link" href="#contenido">Saltar al contenido</a>
+      <div className="progress" aria-hidden="true" />
       <Nav />
       <main id="contenido">
         <Hero />

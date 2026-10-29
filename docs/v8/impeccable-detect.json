@@ -1,0 +1,11 @@
+﻿[
+  {
+    "antipattern": "overused-font",
+    "name": "Overused font",
+    "description": "Inter, Roboto, Fraunces, Geist, Plus Jakarta Sans, and Space Grotesk are used on so many sites they no longer feel distinctive. Each new wave of AI-generated UIs converges on the same handful of faces. Choose a face that gives your interface personality.",
+    "severity": "warning",
+    "file": "C:\\Users\\Bierge Ponce\\Desktop\\ALMACEN\\Proyectos\\Proyectos_nuevos\\Sitioos Web\\LSS\\lss-web-v8\\app\\globals.css",
+    "line": 194,
+    "snippet": "font-family: Arial"
+  }
+]

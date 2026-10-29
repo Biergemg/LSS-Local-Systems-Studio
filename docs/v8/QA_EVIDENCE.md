@@ -1,3 +1,27 @@
+# QA_EVIDENCE — ronda 2 (2026-10-29): dirección creativa premium
+
+Resultados reales (`qa2-result.txt`, `lighthouse.json`, `impeccable-detect.json`):
+
+- tsc 0 · eslint 0 · next build OK (6 rutas estáticas, incl. /privacidad y /terminos).
+- Batería Playwright (Chrome estable): **46 PASS / 0 FAIL**. Cubre: sin scroll horizontal a 320/390/768/1440; consola limpia; objetivos táctiles ≥44 px; 8 enlaces WhatsApp con el número correcto; anclas; mailto; redes; noopener; rutas 200; SEO (title 55, description 152, 1 H1); sin fórmulas defensivas ni precios/garantías en el texto visible; demo (datos reflejados, transición, 3 direcciones, enlace WhatsApp con datos, Enter sin envío, volver al punto de partida); barra WhatsApp retirada ante los CTA propios y sin tapar el foco de teclado; escritorio sin flotante; teclado/menú/Escape/FAQ; reduced-motion; axe WCAG 2.2 A/AA **0 violaciones** en /, /privacidad y /terminos a 390 y 1440.
+- Lighthouse 12.8.2 (lab simulado). Escritorio 100/100/100/100, LCP 0.6 s. **Móvil: Perf 92–94 según corrida, A11y 100, BP 100, SEO 100, CLS 0, TBT 90–120 ms, LCP 3.0 s — no cumple el objetivo ≤2.5 s en laboratorio.** Sin throttling el LCP es 0.3 s (`lhreal.mjs`). Un experimento con `font-display: optional` no lo mejoró y se revirtió. Datos de campo: N/D.
+- impeccable v3.8.0 `detect.mjs` sobre app/ y components/: 1 aviso (*overused-font*): Space Grotesk, tipografía de marca conservada a propósito; la línea `Arial` es el estado «antes» ficticio de la demo. El escaneo de URL renderizada no se ejecutó (requiere puppeteer, no instalado). La crítica visual `critique` de impeccable **no se ejecutó**.
+- ui-ux-pro-max: `search.py` ejecutado con éxito (Python 3.12), resultados en `ui-ux-pro-max-search.txt` (design-system, landing, ux, typography).
+- Referencias competitivas: `COMPETITIVE_REFERENCES.md` (3 URL con fecha; análisis a partir de texto).
+- Percepción premium: `PREMIUM_PERCEPTION_REVIEW.md` (autoevaluación, no independiente).
+
+## 21st.dev
+**BLOQUEADO.** Se abrió la URL OAuth en el navegador y 21st exige iniciar sesión (GitHub, Google o correo); esas credenciales no se ingresan en nombre del titular. Sin la sesión no hay herramientas de búsqueda, así que **no se importó ningún componente de 21st.dev**. La dirección de arte actual es propia (HTML/CSS/SVG). Plan gratuito: 2 obtenciones de código/día; no se consumen créditos.
+
+## Privacidad y términos
+`/privacidad` y `/terminos` existen como **borrador noindex** que afirma solo hechos verificables del sitio (sin formularios; demo local; WhatsApp externo; Pixel solo si se activa). Antes de publicar faltan: razón social/responsable, domicilio y revisión legal; no se inventaron.
+
+## Limitaciones
+LCP móvil en laboratorio 3.0 s; revisión visual del propio implementador; sin pruebas en iOS/Android reales; sin fotografía real ni casos; sin datos de campo; 21st.dev pendiente.
+
+---
+## Ronda 1 (histórico)
+
 # QA_EVIDENCE — 2026-10-29
 
 Entorno: worktree `lss-web-v8` (rama local `v8/private-landing`), `next build` + `next start -p 3200`. Navegador: Chrome estable del equipo vía Playwright. Lighthouse 12.8.2 (lab, simulado).

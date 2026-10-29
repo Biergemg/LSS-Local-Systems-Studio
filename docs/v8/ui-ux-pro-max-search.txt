@@ -1,0 +1,181 @@
+﻿## design-system
+╔═════════════════════════════════════════════════════════════════════════════════════════╗
+║  TARGET: LSS Studio - RECOMMENDED DESIGN SYSTEM                                         ║
+╚═════════════════════════════════════════════════════════════════════════════════════════╝
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+├─── PATTERN ─────────────────────────────────────────────────────────────────────────────┤
+│  Name: Scroll-Triggered Storytelling                                                    │
+│     Conversion: Keep the narrative understandable without scroll-driven effects. Use    │
+│     progress indicator. Mobile: simplify animations. Keep DOM reading order complete;   │
+│     disable parallax and scroll-scrub under reduced motion. Pause scroll animation      │
+│     when offscreen or hidden and render each chapter in its final readable state under  │
+│     reduced motion.                                                                     │
+│     CTA: End of each chapter (mini) + Final climax CTA                                  │
+│     Sections:                                                                           │
+│       1. Intro hook                                                                     │
+│       2. Chapter 1 (problem)                                                            │
+│       3. Chapter 2 (journey)                                                            │
+│       4. Chapter 3 (solution)                                                           │
+│       5. Climax CTA                                                                     │
+├─── STYLE ───────────────────────────────────────────────────────────────────────────────┤
+│  Name: Liquid Glass                                                                     │
+│     Mode Support: Light supported | Dark supported                                      │
+│     Keywords: dynamic material, optical glass, translucency, lensing, refraction,       │
+│     fluid morphing, system navigation                                                   │
+│     Best For: Apple-platform navigation, controls, and system-aligned app chrome        │
+│     Performance: cost:moderate|drivers:animation,blur | Accessibility:                  │
+│     risk:conditional|requires:contrast-text-4.5,keyboard,visible-focus,reduced-motion   │
+├─── COLORS ──────────────────────────────────────────────────────────────────────────────┤
+│     Primary:           #1C1917    (--color-primary)                                     │
+│     On Primary:        #FFFFFF    (--color-on-primary)                                  │
+│     Secondary:         #44403C    (--color-secondary)                                   │
+│     On Secondary:      #FFFFFF    (--color-on-secondary)                                │
+│     Accent/CTA:        #A16207    (--color-accent)                                      │
+│     On Accent/CTA:     #FFFFFF    (--color-on-accent)                                   │
+│     Background:        #FAFAF9    (--color-background)                                  │
+│     Foreground:        #0C0A09    (--color-foreground)                                  │
+│     Card:              #FFFFFF    (--color-card)                                        │
+│     Card Foreground:   #0C0A09    (--color-card-foreground)                             │
+│     Muted:             #E8ECF0    (--color-muted)                                       │
+│     Muted Foreground:  #475569    (--color-muted-foreground)                            │
+│     Border:            #D6D3D1    (--color-border)                                      │
+│     Destructive:       #DC2626    (--color-destructive)                                 │
+│     On Destructive:    #FFFFFF    (--color-on-destructive)                              │
+│     Ring:              #1C1917    (--color-ring)                                        │
+│     Notes: Premium black + gold accent [Accent adjusted from #CA8A04]                   │
+├─── TYPOGRAPHY ──────────────────────────────────────────────────────────────────────────┤
+│  Cormorant / Montserrat                                                                 │
+│     Mood: luxury, high-end, fashion, elegant, refined, premium                          │
+│     Best For: Fashion brands, luxury e-commerce, jewelry, high-end services             │
+│     Google Fonts:                                                                       │
+│     https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&family=Mon  │
+│     tserrat:wght@300;400;500;600;700&display=swap                                       │
+│     CSS Import: @import url('https://fonts.googleapis.com/css2?family=Cormorant:wgh...  │
+├─── KEY EFFECTS ─────────────────────────────────────────────────────────────────────────┤
+│     Lensing and refraction, adaptive translucency, and fluid morph transitions aligned  │
+│     to Apple platform behavior                                                          │
+├─── AVOID ───────────────────────────────────────────────────────────────────────────────┤
+│     Cheap visuals + Fast animations                                                     │
+├─── PRE-DELIVERY CHECKLIST ──────────────────────────────────────────────────────────────┤
+│     [ ] No emojis as icons (use SVG: Heroicons/Lucide)                                  │
+│     [ ] cursor-pointer on all clickable elements                                        │
+│     [ ] Hover states with smooth transitions (150-300ms)                                │
+│     [ ] Light mode: text contrast 4.5:1 minimum                                         │
+│     [ ] Focus states visible for keyboard nav                                           │
+│     [ ] prefers-reduced-motion respected                                                │
+│     [ ] Responsive: 375px, 768px, 1024px, 1440px                                        │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
+## landing
+## UI Pro Max Search Results
+**Domain:** landing | **Query:** hero cinematic scroll storytelling
+**Source:** landing.csv | **Found:** 3 results
+
+### Result 1
+- **Pattern ID:** scroll-triggered-storytelling
+- **Pattern Name:** Scroll-Triggered Storytelling
+- **Aliases:** Storytelling + Data|Storytelling + Feature-Rich|Storytelling + Hero-Centric|Storytelling-Driven|Storytelling-Driven + Feature-Rich|Storytelling-Driven + Hero|Storytelling-Driven + Hero-Centric
+- **Keywords:** storytelling, scroll, narrative, story, immersive
+- **Section Order:** Intro hook > Chapter 1 (problem) > Chapter 2 (journey) > Chapter 3 (solution) > Climax CTA
+- **Primary CTA Placement:** End of each chapter (mini) + Final climax CTA
+- **Color Strategy:** Progressive reveal. Each chapter has distinct color. Building intensity.
+- **Conversion Optimization:** Keep the narrative understandable without scroll-driven effects. Use progress indicator. Mobile: simplify animations. Keep DOM reading order complete; disable parallax and scroll-scrub under reduced motion. Pause scroll animation when offscreen or hidden and render each chapter in its final readable...
+
+### Result 2
+- **Pattern ID:** horizontal-scroll-journey
+- **Pattern Name:** Horizontal Scroll Journey
+- **Aliases:** 
+- **Keywords:** horizontal, scroll, journey, gallery, storytelling, panoramic, storytelling-driven
+- **Section Order:** Intro (Vertical) > The Journey (Horizontal Track) > Detail Reveal > Vertical Footer
+- **Primary CTA Placement:** Floating Sticky CTA or End of Horizontal Track
+- **Color Strategy:** Continuous palette transition. Chapter colors. Progress bar #000000.
+- **Conversion Optimization:** Immersive product discovery. High engagement. Keep navigation visible. Preserve a normal vertical navigation path and disable scroll-jacking under reduced motion. Pause effects when offscreen/hidden and render every chapter in its final vertical reading state under reduced motion.
+
+### Result 3
+- **Pattern ID:** hero-testimonials-cta
+- **Pattern Name:** Hero + Testimonials + CTA
+- **Aliases:** Conversion-Optimized + Social Proof|Feature-Rich + Social Proof|Feature-Rich Showcase + Social Proof|Hero-Centric + Social Proof|Minimal & Direct + Social Proof|Social Proof + Conversion|Social Proof + Feature-Rich|Social Proof-Focused|Social Proof-Focused + Conversion|Social Proof-Focused + Feature...
+- **Keywords:** hero, testimonials, social-proof, social-proof-focused, social proof focused, trust, reviews, cta, carousel accessibility, keyboard accessible carousel, pause auto rotation, reduced motion final state
+- **Section Order:** Hero > Problem statement > Solution overview > Testimonials carousel > CTA
+- **Primary CTA Placement:** Hero (sticky) + Post-testimonials
+- **Color Strategy:** Hero: Brand color. Testimonials: Light bg #F5F5F5. Quotes: Italic, muted color #666. CTA: Vibrant
+- **Conversion Optimization:** Social proof before CTA. Use a concise set of verified testimonials with photo, name, and role. CTA after social proof. Provide previous/next and pause controls; stop rotation on focus, hover, and reduced motion; announce slide position. Previous/next buttons and keyboard controls must expose every ...
+
+## ux
+## UI Pro Max Search Results
+**Domain:** ux | **Query:** before after transformation interactive
+**Source:** ux-guidelines.csv | **Found:** 3 results
+
+### Result 1
+- **Category:** Spatial UI
+- **Issue:** Gaze Hover
+- **Platform:** VisionOS
+- **Description:** Elements should respond to eye tracking before pinch
+- **Do:** Scale/highlight element on look
+- **Don't:** Static element until pinch
+- **Code Example Good:** hoverEffect()
+- **Code Example Bad:** onTap only
+- **Severity:** High
+
+### Result 2
+- **Category:** Interaction
+- **Issue:** Hover States
+- **Platform:** Web
+- **Description:** Visual feedback on interactive elements
+- **Do:** Change cursor and add subtle visual change
+- **Don't:** No hover feedback on clickable elements
+- **Code Example Good:** hover:bg-gray-100 cursor-pointer
+- **Code Example Bad:** No hover style
+- **Severity:** Medium
+
+### Result 3
+- **Category:** Forms
+- **Issue:** Input Affordance
+- **Platform:** All
+- **Description:** Inputs should look interactive
+- **Do:** Use distinct input styling
+- **Don't:** Inputs that look like plain text
+- **Code Example Good:** Border/background on inputs
+- **Code Example Bad:** Borderless inputs
+- **Severity:** Medium
+
+## typography
+## UI Pro Max Search Results
+**Domain:** typography | **Query:** editorial serif display elegant
+**Source:** typography.csv | **Found:** 3 results
+
+### Result 1
+- **Font Pairing Name:** Classic Elegant
+- **Category:** Serif + Sans
+- **Heading Font:** Playfair Display
+- **Body Font:** Inter
+- **Mood/Style Keywords:** elegant, luxury, sophisticated, timeless, premium, editorial
+- **Best For:** Luxury brands, fashion, spa, beauty, editorial, magazines, high-end e-commerce
+- **Google Fonts URL:** https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap
+- **CSS Import:** @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+- **Tailwind Config:** fontFamily: { serif: ['Playfair Display', 'serif'], sans: ['Inter', 'sans-serif'] }
+- **Notes:** High contrast between elegant heading and clean body. Perfect for luxury/premium.
+
+### Result 2
+- **Font Pairing Name:** Minimalist Monochrome Editorial
+- **Category:** Serif + Serif + Mono (Triple Stack)
+- **Heading Font:** Playfair Display
+- **Body Font:** Source Serif 4
+- **Mood/Style Keywords:** monochrome, editorial, austere, typographic, pocket manifesto, luxury, high contrast, brutalist mobile
+- **Best For:** Luxury fashion mobile apps, editorial publications, digital exhibitions, portfolio apps, high-contrast e-reader aesthetics
+- **Google Fonts URL:** https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300
+- **CSS Import:** @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&display=swap');
+- **Tailwind Config:** fontFamily: { display: ['Playfair Display', 'serif'], body: ['Source Serif 4', 'serif'], mono: ['JetBrains Mono', 'monospace'] }
+- **Notes:** Triple stack: Playfair Display 900 tracking-tighter leading-[0.9] for heroes (text-5xl–text-6xl breaks words graphically). Source Serif 4 300–600 for body legibility. JetBrains Mono 400–500 uppercase tracking-widest for tags/dates/labels. NO UI sans-serif — 100% serif/mono.
+
+### Result 3
+- **Font Pairing Name:** Editorial Classic
+- **Category:** Serif + Serif
+- **Heading Font:** Cormorant Garamond
+- **Body Font:** Libre Baskerville
+- **Mood/Style Keywords:** editorial, classic, literary, traditional, refined, bookish
+- **Best For:** Publishing, blogs, news sites, literary magazines, book covers
+- **Google Fonts URL:** https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap
+- **CSS Import:** @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
+- **Tailwind Config:** fontFamily: { heading: ['Cormorant Garamond', 'serif'], body: ['Libre Baskerville', 'serif'] }
+- **Notes:** All-serif pairing for traditional editorial feel.
+
