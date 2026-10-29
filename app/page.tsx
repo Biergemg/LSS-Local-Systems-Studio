@@ -9,6 +9,7 @@ import Nav from '@/components/sections/Nav';
 import OfferSection from '@/components/sections/OfferSection';
 import PpvSection from '@/components/sections/PpvSection';
 import ProcessSection from '@/components/sections/ProcessSection';
+import QuestionsSection from '@/components/sections/QuestionsSection';
 
 export default function Page() {
   return (
@@ -20,6 +21,7 @@ export default function Page() {
         <Hero />
         <BeliefSection />
         <PpvSection />
+        <QuestionsSection />
         <OfferSection />
         <ProcessSection />
         <EvidenceSection />

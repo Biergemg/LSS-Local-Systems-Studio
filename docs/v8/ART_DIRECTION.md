@@ -1,3 +1,36 @@
+# ART_DIRECTION — ronda 3 «Plano de registro» (2026-10-29) — DEFINITIVA
+
+Sustituye a las rondas 1 y 2 (abajo, históricas). Corrección estratégica del titular: la web de LSS es su propio proyecto premium; no hay demos, simuladores ni marcas ficticias.
+
+## Por qué cambió
+Las rondas 1–2 se alejaron del sistema de diseño real de LSS (`LSS Design System/README.md`): papel cálido, píldoras, brillos y serif no son LSS. LSS es «ingeniería, no agencia»: negro técnico, blanco estructural, verde señal solo como indicador, 90°/45°, cero curvas, cero degradados, cero sombras, diagramas como imagen.
+
+## Territorios (Fase 1)
+- **A — «Plano de registro» (elegido).** El logotipo (corchetes de encuadre + línea de señal) es el sistema: encuadres, numeración 01/02/03, diagramas de recorrido, filas y reglas de 1 px. Se deriva del insight del comprador: *«quiere comprobar, no que le prometan»*. Imagen = diagrama.
+- **B — «Fotografía de oficio».** Imagen de instalaciones y trabajos reales. Descartado por ahora: LSS no tiene material propio ni casos aprobados y no se simulan; queda como evolución cuando existan.
+
+## Firmas
+- **Visual:** encuadre de cuatro esquinas + línea de señal (geometría exacta del logotipo) a escala monumental y como marco.
+- **Funcional:** la propia estructura: recorrido numerado 01–03 (Primera Visita) que se traza en el hero y se repite en la metodología; «Acta de entrega» como formato de comprobación. No hay simuladores.
+
+## Sistema
+Tokens: `#0B0B0B`/`#111`, blanco, grises AA (`#B4B4B4` 9.6:1, `#8F8F8F` 5.9:1), verde `#00FF88`, papel frío neutro `#F1F1EE` (solo para ritmo en 4 capítulos). Tipografía: Space Grotesk 700 (display) + Inter Tight 400/700 (lectura); sin tercera familia. Cuadrícula de 8 px, reglas 1 px, radios 0.
+Ritmo: tinta → papel → tinta → papel → tinta → papel → tinta → papel → tinta. Hero, método y cierre usan escala mega; creencia, oferta y presupuesto usan composiciones distintas (filas, rejilla 7/5/5/7, tabla).
+Movimiento (CSS, un solo motor): trazado de la línea de señal en el hero (1.8 s, lineal), revelado por scroll y barra de progreso con `animation-timeline` (mejora progresiva), línea del proceso que se dibuja. `prefers-reduced-motion` → estado final inmediato (verificado).
+Recursos: ningún asset de terceros; SVG propio en `FlowMark.tsx`, `Mark.tsx`, `Corners.tsx`. Fotografía: ninguna (no existe material propio ni aprobado).
+
+## Keyframes reales (`docs/v8/screenshots/`)
+Hero: `v9-1440-hero.png`, `v9-390-hero.png` · Firma/método: `v9-1440-prueba.png`, `v9-390-prueba.png` · Cierre: `v9-1440-contacto.png`, `v9-390-contacto.png`. Resto de secciones: `v9-{390,1440}-*.png`. Comparación: `before-*` (web original), `v3-*` (ronda 2 con demo).
+
+## Descartado y retirado (historial en Git: `439badc`)
+Demo interactiva PPV (`PpvDemo`), marcas ficticias (Casa Arroyo), direcciones Atelier/Noche/Pigmento, ilustración generativa repetida (`BrandArt`), serif Instrument Serif, papel cálido, botones redondeados, brillos radiales, sombras. La Primera Visita queda como metodología explicada (3 observaciones), no como aplicación.
+
+## 21st.dev
+BLOQUEADO (ver QA_EVIDENCE). No se importó nada; la dirección es propia.
+
+---
+## Rondas 1–2 (históricas)
+
 # ART_DIRECTION — ronda 2 «Estudio editorial» (2026-10-29)
 
 Sustituye a la ronda 1 (abajo, histórico).

@@ -1,3 +1,38 @@
+# QA_EVIDENCE — ronda 3 (2026-10-29): «Plano de registro» — DEFINITIVA
+
+Pruebas automáticas ≠ aprobación humana de dirección creativa. Esta ronda **no** está aprobada para publicar.
+
+## Resultados reales (`qa3-result.txt`, `lighthouse.json`, `impeccable-detect.json`, `ui-ux-pro-max-search.txt`)
+- `tsc --noEmit` 0 · `eslint` 0 · `next build` OK (6 rutas estáticas: /, /privacidad, /terminos, robots, sitemap, _not-found).
+- **Playwright (Chrome estable): 47 PASS / 0 FAIL.** Cubre: sin scroll horizontal a 320/390/768/1440; consola limpia; objetivos táctiles ≥44 px; marca decorativa sin tapar texto; 8 enlaces WhatsApp al número correcto; anclas; mailto; Instagram/Facebook; `noopener`; rutas 200; SEO (title ≤60, description 120–160, 1 H1, canonical, OG); JSON-LD válido (ProfessionalService, WebSite, FAQPage; sin horario, dirección, valoraciones ni precio) y 9 FAQ visibles = 9 en JSON-LD; sin frases prohibidas, precios, testimonios ni marcas ficticias; máximo 2 familias tipográficas; **cero radios y cero degradados** (identidad); barra WhatsApp retirada ante cada CTA propio y sin tapar el foco; escritorio sin flotante (CTA fijo en el menú); teclado (saltar al contenido, menú móvil con 5 enlaces + CTA, Escape y foco, FAQ); reduced-motion (estado final, sin animación); **axe WCAG 2.2 A/AA: 0 violaciones** en /, /privacidad y /terminos a 390 y 1440.
+- **Lighthouse 12.8.2 (laboratorio simulado):** escritorio 100/100/100/100, LCP 0.6 s, CLS 0, TBT 0. **Móvil: Perf 96, A11y 100, BP 100, SEO 100, LCP 2.6 s (objetivo ≤2.5 s: NO alcanzado por 0.1 s), CLS 0, TBT 130 ms.** Sin throttling el LCP es 0.2 s (`lhreal.mjs`). Datos de campo: N/D. Experimentos descartados: `font-display: optional` (sin mejora), `experimental.inlineCss` (empeoró a Perf 86; revertido). Mejoró al eliminar la tercera familia tipográfica (3.0 → 2.6 s).
+- **impeccable v3.8.0:** `critique` ejecutado (Assessment A por subagente independiente + Assessment B detector) — ver `IMPECCABLE_CRITIQUE.md`. `detect.mjs` → 0 hallazgos. Escaneo de URL/overlay: no ejecutado (requiere puppeteer, no instalado).
+- **ui-ux-pro-max:** `search.py` ejecutado (Python 3.12, ruta completa) — `ui-ux-pro-max-search.txt`.
+- **seo-audit / schema / copywriting / cro:** aplicados (ver sección «Skills» en `V8_ENTREGA_A_L.md`); validados por las pruebas anteriores (metadatos, JSON-LD, frases prohibidas, secuencia V6).
+- Revisión visual independiente externa previa: `REVISION_INDEPENDIENTE_VISUAL_V3.md` (sobre la ronda 2; su hallazgo de «demo uniforme» quedó superado por la retirada de la demo).
+
+## Defectos encontrados y corregidos en esta ronda
+P1 foco de teclado tapado por la barra móvil (FAQ) → `scroll-margin-block`; P1 wireframe genérico (crítica A) → `FlowMark`; P1 ritmo monótono → filas/rejilla asimétrica/titulares ≤3 líneas; P1 CTA con etiquetas inconsistentes → barra = menú, microcopy explícito; P2 verde sobrecargado → señal; P2 marca decorativa tapando texto (390 y 1440) → marca en flujo en móvil, lateral sin solape en escritorio (prueba automática); P2 franja clara bajo el nav; P2 marco cortado; P2 `.display` pegado al párrafo (evidencia y cierre); P2 inlineCss empeora rendimiento → revertido.
+
+## 21st.dev — BLOQUEADO
+El MCP `plugin:21st:21st` sigue sin autenticar (solo expone `authenticate`/`complete_authentication`). Se abrió la URL OAuth; 21st pide iniciar sesión (GitHub/Google/correo) y esas credenciales no las ingresa el agente. **Acción concreta del titular:** iniciar sesión él mismo en la pestaña de Chrome abierta (o autorizar la URL que devuelve `authenticate`); si la redirección a `localhost` falla, pegar la URL completa de la barra de direcciones. Sin eso no hay búsqueda ni evaluación de componentes; **no se importó ni evaluó ningún componente y no se atribuye resultado alguno a 21st.dev.** Plan gratis: 2 obtenciones de código/día; sin créditos pagados.
+
+## Privacidad y términos
+`/privacidad` y `/terminos`: borradores `noindex` con hechos verificables (sin formularios, sin cookies propias, WhatsApp/Instagram/Facebook externos, Pixel solo si se activa). Faltan razón social/responsable, domicilio y revisión legal.
+
+## Limitaciones y bloqueos reales para publicar
+1. Aprobación humana de la dirección creativa y de la crítica independiente (28/40 antes de correcciones; sin segunda pasada).
+2. 21st.dev BLOQUEADO (acción del titular).
+3. LCP móvil de laboratorio 2.6 s (>2.5 s); sin datos de campo.
+4. Sin fotografía real ni casos aprobados (no se simulan).
+5. Privacidad/términos sin datos legales ni revisión.
+6. Sin pruebas en iOS/Android físicos; recepción real de WhatsApp no probada (no se envían mensajes).
+7. Precio, garantía y plan mensual no aprobados (fuera del contenido por decisión).
+8. Meta Pixel/analítica: solo si se configura y autoriza (variable de entorno; hoy inactiva).
+
+---
+## Rondas 1–2 (históricas)
+
 # QA_EVIDENCE — ronda 2 (2026-10-29): dirección creativa premium
 
 Resultados reales (`qa2-result.txt`, `lighthouse.json`, `impeccable-detect.json`):

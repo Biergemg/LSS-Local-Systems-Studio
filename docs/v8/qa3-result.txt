@@ -1,0 +1,49 @@
+PASS  sin scroll horizontal 320 scrollWidth=320
+PASS  consola limpia 320 
+PASS  objetivos táctiles >=44px 320 
+PASS  marca decorativa sin tapar texto 320 
+PASS  sin scroll horizontal 390 scrollWidth=390
+PASS  consola limpia 390 
+PASS  objetivos táctiles >=44px 390 
+PASS  marca decorativa sin tapar texto 390 
+PASS  sin scroll horizontal 768 scrollWidth=768
+PASS  consola limpia 768 
+PASS  objetivos táctiles >=44px 768 
+PASS  marca decorativa sin tapar texto 768 
+PASS  sin scroll horizontal 1440 scrollWidth=1440
+PASS  consola limpia 1440 
+PASS  objetivos táctiles >=44px 1440 
+PASS  marca decorativa sin tapar texto 1440 
+PASS  enlaces WhatsApp con número correcto n=8
+PASS  anclas internas existen 
+PASS  mailto correcto 
+PASS  Instagram y Facebook presentes 
+PASS  target=_blank con noopener 
+PASS  ruta /privacidad 200
+PASS  ruta /terminos 200
+PASS  ruta /robots.txt 200
+PASS  ruta /sitemap.xml 200
+PASS  SEO básico {"title":55,"desc":144,"h1":1}
+PASS  JSON-LD válido y sin datos inventados ProfessionalService,WebSite,FAQPage
+PASS  FAQ visibles = FAQ en JSON-LD visibles=9
+PASS  sin frases prohibidas, precios, testimonios ni marcas ficticias 
+PASS  máximo 2 familias tipográficas familias=3
+PASS  identidad: cero radios y cero degradados radius=0 gradients=0
+PASS  barra WhatsApp se retira ante cada CTA propio ctas=4 visibles=0
+PASS  el foco de teclado no queda tapado por la barra 
+PASS  escritorio: CTA de WhatsApp fijo en el menú, sin flotante 
+PASS  primer Tab = saltar al contenido 
+PASS  menú móvil abre con teclado 
+PASS  menú móvil: 5 enlaces + CTA; cierra al navegar n=6
+PASS  Escape cierra y devuelve el foco 
+PASS  FAQ expande 
+PASS  reduced-motion: contenido en estado final 
+PASS  reduced-motion: diagrama sin animación 
+PASS  axe WCAG 2.2 AA / 390 
+PASS  axe WCAG 2.2 AA / 1440 
+PASS  axe WCAG 2.2 AA /privacidad 390 
+PASS  axe WCAG 2.2 AA /privacidad 1440 
+PASS  axe WCAG 2.2 AA /terminos 390 
+PASS  axe WCAG 2.2 AA /terminos 1440 
+
+TOTAL 47 PASS / 0 FAIL

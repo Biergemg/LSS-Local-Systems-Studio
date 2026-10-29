@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
-import { Inter_Tight, Instrument_Serif, Space_Grotesk } from 'next/font/google';
+import { Inter_Tight, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import { SITE } from '@/data/content';
 import { faqSchema, organizationSchema, websiteSchema } from '@/lib/schema';
@@ -17,15 +17,6 @@ const spaceGrotesk = Space_Grotesk({
   variable: '--font-space-grotesk', 
   weight: ['700'], 
   display: 'swap' 
-});
-
-const instrumentSerif = Instrument_Serif({
-  subsets: ['latin'],
-  variable: '--font-instrument-serif',
-  weight: '400',
-  style: ['italic'],
-  preload: false,
-  display: 'swap'
 });
 
 const siteUrl = SITE.url;
@@ -59,7 +50,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="es-MX" className={`${interTight.variable} ${spaceGrotesk.variable} ${instrumentSerif.variable} h-full antialiased`}>
+    <html lang="es-MX" className={`${interTight.variable} ${spaceGrotesk.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <script
           type="application/ld+json"
