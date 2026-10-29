@@ -67,7 +67,7 @@ Leyenda: PASS = verificado con ejecución propia · PARCIAL = verificado en part
 | Filtro interno de 22 preguntas | PARCIAL | Ver `V8_ENTREGA_A_L.md`; las preguntas 1, 5, 13, 21, 22 pasan a «con evidencia» en esta ronda |
 
 ### 1.7 21st.dev (herramienta adicional del encargo)
-**BLOCKED.** Se volvió a llamar a `mcp__plugin_21st_21st__authenticate`: devuelve de nuevo la URL de autorización OAuth (Clerk) y solo expone `authenticate` y `complete_authentication`. No hay búsquedas, ni componentes recuperados, ni uso declarado.
+**ACTUALIZADO en V9.3: conectado por clave de API (plan gratuito).** Ver `21ST_ACTIVACION.md`. La V9.2 se construyó sin 21st; en V9.3 hubo conexión, investigación (búsquedas y get_inspiration) y 1 recuperación de código, con integración parcial de patrones (no de código). Lo que sigue describe el estado anterior (OAuth), ya superado:
 Paso exacto del titular: abrir la URL que devuelve `authenticate` en el navegador con la cuenta de 21st.dev y aceptar el permiso; si el navegador muestra error de conexión en `localhost:41954/callback`, copiar la URL completa de la barra de direcciones y pasarla a `complete_authentication`. Plan gratuito: 2 recuperaciones de código al día; no se contratan créditos.
 
 ## 2. Criterios de QA inconsistentes encontrados y corregidos
@@ -167,4 +167,4 @@ Conclusión: el elemento LCP es el texto del H1 y se pinta junto con el primer c
 
 ## 7. Estado
 - Versión privada: `http://localhost:3200` (`next start`). Capturas comparativas: `docs/v8/screenshots/compare/`.
-- **V8 no se declara completo.** Quedan abiertos: 21st.dev (autorización del titular), aprobación humana creativa, prueba del titular con 5 propietarios, dispositivos reales y recepción real en WhatsApp, validación pública del JSON-LD, datos legales de privacidad/términos, precio/garantía/fotografía/casos aprobados, LCP simulado 2.7 s.
+- **V8 no se declara completo.** Quedan abiertos: aprobación humana creativa, prueba del titular con 5 propietarios, dispositivos reales y recepción real en WhatsApp, validación pública del JSON-LD, datos legales de privacidad/términos, precio/garantía/fotografía/casos aprobados, LCP simulado 2.7 s.

@@ -1,0 +1,522 @@
+{
+ "hero": [
+  {
+   "q": "hero identity animation line drawing svg",
+   "results": [
+    {
+     "id": 4051,
+     "type": "component",
+     "name": "Hero Section",
+     "author": "reuno-ui",
+     "url": "https://21st.dev/@reuno-ui/components/hero-section",
+     "desc": "Hero component with sleek animation "
+    },
+    {
+     "id": 26183,
+     "type": "component",
+     "name": "Path Drawing Portfolio Hero",
+     "author": "httpsdesign-layercomja",
+     "url": "https://21st.dev/@httpsdesign-layercomja/components/path-drawing-portfolio-hero",
+     "desc": "Your name shouldn't just sit there. It draws itself as a living gradient stroke — a portfolio opener with signature motion. Preview live, pa"
+    },
+    {
+     "id": 5729,
+     "type": "component",
+     "name": "Hero Shader",
+     "author": "designali-in",
+     "url": "https://21st.dev/@designali-in/components/hero-shader",
+     "desc": "Discover the essence of creativity in our exquisite collection of top-tier abstract design assets. Each piece is a blend of beauty and utili"
+    }
+   ]
+  },
+  {
+   "q": "kinetic typography hero brutalist",
+   "results": [
+    {
+     "id": 9989,
+     "type": "component",
+     "name": "Hero Shutter Text",
+     "author": "daiwiikharihar",
+     "url": "https://21st.dev/@daiwiikharihar/components/hero-shutter-text",
+     "desc": "An immersive, cinematic text-animation component featuring high-impact \"shutter\" slicing effects, full-screen responsive typography, and sea"
+    },
+    {
+     "id": 5590,
+     "type": "component",
+     "name": "Animated Hero",
+     "author": "ravikatiyar162",
+     "url": "https://21st.dev/@ravikatiyar162/components/animated-hero",
+     "desc": "Bold hero section featuring a red gradient title and animated dot grid that dynamically follows cursor movement. Ideal for creative portfoli"
+    },
+    {
+     "id": 12200,
+     "type": "component",
+     "name": "PrismaHero",
+     "author": "rahil1202",
+     "url": "https://21st.dev/@rahil1202/components/prisma-hero",
+     "desc": "A full-screen cinematic hero section with a background video, animated word reveal, and minimal floating navbar—designed to highlight a crea"
+    }
+   ]
+  },
+  {
+   "q": "hero technical blueprint grid",
+   "results": [
+    {
+     "id": 27704,
+     "type": "component",
+     "name": "Hero Section with Animated Grid",
+     "author": "shadcnui-blocks",
+     "url": "https://21st.dev/@shadcnui-blocks/components/hero-07",
+     "desc": "A centered hero section with an announcement badge, headline, subtext, two call-to-action buttons, and an animated grid pattern background."
+    },
+    {
+     "id": 3202,
+     "type": "component",
+     "name": "Background Grid Beam",
+     "author": "minhxthanh",
+     "url": "https://21st.dev/@minhxthanh/components/background-grid-beam",
+     "desc": "Background Grid Beam "
+    },
+    {
+     "id": 5772,
+     "type": "component",
+     "name": "Grid Hero Animated",
+     "author": "minhxthanh",
+     "url": "https://21st.dev/@minhxthanh/components/grid-hero-animated",
+     "desc": "Grid Hero Animated"
+    }
+   ]
+  }
+ ],
+ "editorial": [
+  {
+   "q": "editorial layout numbered sections typography",
+   "results": [
+    {
+     "id": 37530,
+     "type": "component",
+     "name": "Editorial service list",
+     "author": "ibrandify",
+     "url": "https://21st.dev/@ibrandify/components/editorial-service-list",
+     "desc": "An editorial services accordion block featuring numbered offerings, subtle hover offset animations, and smooth expandable descriptions. Usef"
+    },
+    {
+     "id": 19075,
+     "type": "component",
+     "name": "Editorial Hero",
+     "author": "felipemenezes098",
+     "url": "https://21st.dev/@felipemenezes098/components/hero-05",
+     "desc": "An editorial hero section with a left tagline, right-aligned headline and copy, optional CTAs, and a full-width image below."
+    },
+    {
+     "id": 19077,
+     "type": "component",
+     "name": "Editorial Image Hero",
+     "author": "felipemenezes098",
+     "url": "https://21st.dev/@felipemenezes098/components/hero-07",
+     "desc": "A hero section with a full-width landscape image above and a top-aligned tagline paired with a right-aligned serif headline, description, an"
+    }
+   ]
+  },
+  {
+   "q": "swiss style grid layout",
+   "results": [
+    {
+     "id": 25300,
+     "type": "component",
+     "name": "Condition Grid",
+     "author": "uilayout.contact",
+     "url": "https://21st.dev/@uilayout.contact/components/conditiongrid",
+     "desc": "A responsive projects showcase grid with alternating column spans, animated cards, and overlaid title and link badges."
+    },
+    {
+     "id": 2425,
+     "type": "component",
+     "name": "Grid",
+     "author": "ephraimduncan",
+     "url": "https://21st.dev/@ephraimduncan/components/grid",
+     "desc": "A simple minimalistic grid"
+    },
+    {
+     "id": 6014,
+     "type": "component",
+     "name": "Cybernetic Bento Grid",
+     "author": "dhileepkumargm",
+     "url": "https://21st.dev/@dhileepkumargm/components/cybernetic-bento-grid",
+     "desc": "This is a modern and highly popular layout style for showcasing features, portfolio items, or key information. I've designed this one with a"
+    }
+   ]
+  },
+  {
+   "q": "large type manifesto section",
+   "results": [
+    {
+     "id": 26705,
+     "type": "component",
+     "name": "Worth Keeping CTA",
+     "author": "ziegfiroyt",
+     "url": "https://21st.dev/@ziegfiroyt/components/cta69",
+     "desc": "A full-bleed closing call-to-action section with a giant monochrome scrolling marquee behind a centered heading, badge, note and seal button"
+    },
+    {
+     "id": 33311,
+     "type": "component",
+     "name": "Hero Recursive Type",
+     "author": "nikolas-sapa",
+     "url": "https://21st.dev/@nikolas-sapa/components/hero-recursive-type",
+     "desc": "A giant wordmark hero rendered on canvas where each lit letterform cell is subdivided and filled with real readable filler text, so the head"
+    },
+    {
+     "id": 5156,
+     "type": "component",
+     "name": "Modern Hero Section",
+     "author": "ravikatiyar162",
+     "url": "https://21st.dev/@ravikatiyar162/components/modern-hero-section",
+     "desc": "Modern hero section featuring bold headline typography, AI-focused subtext, and a collage of rounded-corner images arranged in an overlappin"
+    }
+   ]
+  }
+ ],
+ "transitions": [
+  {
+   "q": "section transition scroll reveal clip path",
+   "results": [
+    {
+     "id": 18675,
+     "type": "component",
+     "name": "Scroll Reveal",
+     "author": "cnippet-dev",
+     "url": "https://21st.dev/@cnippet-dev/components/scroll-reveal",
+     "desc": "Elements animate into view when they enter the viewport. Supports any Motion variant, configurable thresholds, and a once-only mode."
+    },
+    {
+     "id": 18595,
+     "type": "component",
+     "name": "Vertical Cut Reveal",
+     "author": "cnippet-dev",
+     "url": "https://21st.dev/@cnippet-dev/components/vertical-cut-reveal",
+     "desc": "Animated text that reveals each character, word, or line with a vertical clip-path wipe and configurable stagger."
+    },
+    {
+     "id": 18654,
+     "type": "component",
+     "name": "Scroll Reveal",
+     "author": "cnippet-dev",
+     "url": "https://21st.dev/@cnippet-dev/components/scroll-reveal-2",
+     "desc": "A wrapper component that animates its children into view when they enter the viewport, with configurable Motion variants, thresholds, and a "
+    }
+   ]
+  },
+  {
+   "q": "scroll progress sticky section stack",
+   "results": [
+    {
+     "id": 18715,
+     "type": "component",
+     "name": "Scroll Progress",
+     "author": "cnippet-dev",
+     "url": "https://21st.dev/@cnippet-dev/components/scroll-progress",
+     "desc": "A spring-animated progress bar that tracks scroll position — works for the full page or a scrollable container element."
+    },
+    {
+     "id": 33309,
+     "type": "component",
+     "name": "Services Stack",
+     "author": "ivarunchaudhary",
+     "url": "https://21st.dev/@ivarunchaudhary/components/services-stack",
+     "desc": "Scroll-stacked services section: sticky full-height panels whose cards shrink and fade as the next one slides over, a cross-fading photo bac"
+    },
+    {
+     "id": 28517,
+     "type": "component",
+     "name": "Circular Scroll Progress",
+     "author": "reuno-ui",
+     "url": "https://21st.dev/@reuno-ui/components/skiper89",
+     "desc": "A draggable floating button that shows page scroll progress as a circular progress ring with an animated percentage counter."
+    }
+   ]
+  },
+  {
+   "q": "text reveal on scroll mask",
+   "results": [
+    {
+     "id": 19257,
+     "type": "component",
+     "name": "Text Reveal (Mask)",
+     "author": "soralabs",
+     "url": "https://21st.dev/@soralabs/components/text-reveal-mask",
+     "desc": "A scroll-triggered text reveal that masks and slides words up line-by-line, word-by-word, or character-by-character, with support for inline"
+    },
+    {
+     "id": 10757,
+     "type": "component",
+     "name": "SVG Mask Effect",
+     "author": "manuarora700",
+     "url": "https://21st.dev/@manuarora700/components/svg-mask-effect",
+     "desc": "A mask reveal effect — move the cursor to reveal hidden content beneath. Built with Framer Motion mask animations."
+    },
+    {
+     "id": 39591,
+     "type": "component",
+     "name": "Mask Reveal",
+     "author": "balick",
+     "url": "https://21st.dev/@balick/components/mask-reveal",
+     "desc": "An animated wrapper that uncovers an image or card using a clip-path mask that slides across it, with optional zoom-in settle and scroll-tri"
+    }
+   ]
+  }
+ ],
+ "offer": [
+  {
+   "q": "service offer deliverables list numbered",
+   "results": [
+    {
+     "id": 33903,
+     "type": "component",
+     "name": "Services List",
+     "author": "balick",
+     "url": "https://21st.dev/@balick/components/services-01",
+     "desc": "A numbered list section that presents a company's services with a starting price, key deliverables, and a link to learn more or get in touch"
+    },
+    {
+     "id": 37530,
+     "type": "component",
+     "name": "Editorial service list",
+     "author": "ibrandify",
+     "url": "https://21st.dev/@ibrandify/components/editorial-service-list",
+     "desc": "An editorial services accordion block featuring numbered offerings, subtle hover offset animations, and smooth expandable descriptions. Usef"
+    },
+    {
+     "id": 40127,
+     "type": "component",
+     "name": "Progress List",
+     "author": "sltowl",
+     "url": "https://21st.dev/@sltowl/components/progress-list",
+     "desc": "A vertical list of step items that shows completed, actively-in-progress (spinning), and pending states for things like setup wizards or onb"
+    }
+   ]
+  },
+  {
+   "q": "pricing comparison table minimal",
+   "results": [
+    {
+     "id": 21218,
+     "type": "component",
+     "name": "Feature Comparison Table",
+     "author": "olewandowski1",
+     "url": "https://21st.dev/@olewandowski1/components/comparison-3",
+     "desc": "A pricing plan comparison table that lays out three plans side by side with grouped feature sections, check/value cells, a sticky header and"
+    },
+    {
+     "id": 26827,
+     "type": "component",
+     "name": "Comparison Table",
+     "author": "mohammadshehadeh",
+     "url": "https://21st.dev/@mohammadshehadeh/components/comparison-02",
+     "desc": "Three-column feature matrix with a highlighted middle column, mixed tick and text cells, and a call to action in the footer row."
+    },
+    {
+     "id": 1541,
+     "type": "component",
+     "name": "Pricing Table",
+     "author": "kokonutd",
+     "url": "https://21st.dev/@kokonutd/components/pricing-table",
+     "desc": "A feature comparison pricing table component with animated pricing, interval switching, and plan selection. Features - Animated price transi"
+    }
+   ]
+  },
+  {
+   "q": "process steps timeline vertical",
+   "results": [
+    {
+     "id": 26902,
+     "type": "component",
+     "name": "Vertical How It Works Timeline",
+     "author": "ln-dev7",
+     "url": "https://21st.dev/@ln-dev7/components/how-it-works-02",
+     "desc": "A four-step vertical timeline section with a dashed connecting rail, numbered nodes and an icon per step, used to explain a product's onboar"
+    },
+    {
+     "id": 28381,
+     "type": "component",
+     "name": "Process Timeline",
+     "author": "shadcnui-blocks",
+     "url": "https://21st.dev/@shadcnui-blocks/components/timeline-05",
+     "desc": "A vertical timeline component that lists sequential process steps with a check icon marking completed stages and numbered circles for pendin"
+    },
+    {
+     "id": 19863,
+     "type": "component",
+     "name": "How It Works Timeline",
+     "author": "olewandowski1",
+     "url": "https://21st.dev/@olewandowski1/components/how-it-works-2",
+     "desc": "A vertical timeline that stacks numbered onboarding steps down the page, each with a bordered icon circle, a connecting line, a bold title, "
+    }
+   ]
+  }
+ ],
+ "micro": [
+  {
+   "q": "cta button arrow hover underline",
+   "results": [
+    {
+     "id": 3,
+     "type": "component",
+     "name": "Button Colorful with Hover Effect",
+     "author": "kokonutd",
+     "url": "https://21st.dev/@kokonutd/components/button-colorful",
+     "desc": ""
+    },
+    {
+     "id": 35186,
+     "type": "component",
+     "name": "Dash Button",
+     "author": "kevingirelli",
+     "url": "https://21st.dev/@kevingirelli/components/dash-button",
+     "desc": "A pill-shaped button that trades its solid fill for a marching dashed outline on hover and keyboard focus."
+    },
+    {
+     "id": 969,
+     "type": "component",
+     "name": "Interactive Hover Button",
+     "author": "dillionverma",
+     "url": "https://21st.dev/@dillionverma/components/interactive-hover-button",
+     "desc": "A visually engaging button component that responds to hover with dynamic transitions, adapting smoothly between light and dark modes for enh"
+    }
+   ]
+  },
+  {
+   "q": "magnetic button",
+   "results": [
+    {
+     "id": 1507,
+     "type": "component",
+     "name": "Magnetic Button",
+     "author": "bundui",
+     "url": "https://21st.dev/@bundui/components/magnetic-button",
+     "desc": "A Magnetic Button is a UI component designed to enhance user interaction. When a user's cursor or touch input approaches the button, it subt"
+    },
+    {
+     "id": 26725,
+     "type": "component",
+     "name": "Magnetic Button",
+     "author": "mohammadshehadeh",
+     "url": "https://21st.dev/@mohammadshehadeh/components/magnetic-button",
+     "desc": "Button that pulls toward the cursor and springs back on leave. Adjustable strength, asChild to wrap a link, respects reduced-motion."
+    },
+    {
+     "id": 649,
+     "type": "component",
+     "name": "Magnetic",
+     "author": "ibelick",
+     "url": "https://21st.dev/@ibelick/components/magnetic",
+     "desc": "A magnetic effect for elements that allows them to be attracted to the mouse cursor."
+    }
+   ]
+  },
+  {
+   "q": "animated link underline hover",
+   "results": [
+    {
+     "id": 15606,
+     "type": "component",
+     "name": "Animated Link",
+     "author": "ruixen.ui",
+     "url": "https://21st.dev/@ruixen.ui/components/animated-link",
+     "desc": "React animated link: Hover reveals an underline that wipes in from the left, the right, or grows from the center, while a diagonal arrow lif"
+    },
+    {
+     "id": 34934,
+     "type": "component",
+     "name": "Underline Link",
+     "author": "balick",
+     "url": "https://21st.dev/@balick/components/underline-link",
+     "desc": "A text link whose underline animates in on hover and keyboard focus, drawing from one side and following the text across line breaks."
+    },
+    {
+     "id": 24396,
+     "type": "component",
+     "name": "Animated Link",
+     "author": "saurabh-2607",
+     "url": "https://21st.dev/@saurabh-2607/components/animated-link",
+     "desc": "An interactive link component supporting 13 premium hover variants including custom clipping masks, SVG sine waves, and text marquee animati"
+    }
+   ]
+  }
+ ],
+ "inspiration": [
+  {
+   "id": 37530,
+   "type": "component",
+   "name": "Editorial service list",
+   "author": "ibrandify",
+   "url": "https://21st.dev/@ibrandify/components/editorial-service-list",
+   "conf": 0.53,
+   "desc": "An editorial services accordion block featuring numbered offerings, subtle hover offset animations, and smooth expandable descriptions. Usef"
+  },
+  {
+   "id": 38308,
+   "type": "component",
+   "name": "Agency Bento Grid",
+   "author": "abushaidislam7",
+   "url": "https://21st.dev/@abushaidislam7/components/agency-bento-grid",
+   "conf": 0.52,
+   "desc": ""
+  },
+  {
+   "id": 12815,
+   "type": "component",
+   "name": "Pixel Logo Grid",
+   "author": "smammar",
+   "url": "https://21st.dev/@smammar/components/pixel-logo-grid",
+   "conf": 0.51,
+   "desc": "A \"trusted by\" showcase with character. 14 brand logos arranged in a 5-column grid with a centered headline. Each card runs a canvas-driven "
+  },
+  {
+   "id": 26179,
+   "type": "component",
+   "name": "Grainient Images Section",
+   "author": "httpsdesign-layercomja",
+   "url": "https://21st.dev/@httpsdesign-layercomja/components/grainient-images-section",
+   "conf": 0.51,
+   "desc": "Stop flat image grids. Gradient tiles rush toward center on scroll, then the headline lands — a gallery with gravity. Preview live, paste in"
+  },
+  {
+   "id": 19077,
+   "type": "component",
+   "name": "Editorial Image Hero",
+   "author": "felipemenezes098",
+   "url": "https://21st.dev/@felipemenezes098/components/hero-07",
+   "conf": 0.5,
+   "desc": "A hero section with a full-width landscape image above and a top-aligned tagline paired with a right-aligned serif headline, description, an"
+  },
+  {
+   "id": 19074,
+   "type": "component",
+   "name": "Editorial Collage Hero",
+   "author": "felipemenezes098",
+   "url": "https://21st.dev/@felipemenezes098/components/hero-04",
+   "conf": 0.49,
+   "desc": "A two-column hero section with a serif headline, description, call-to-action buttons, and a layered collage of two overlapping images over a"
+  },
+  {
+   "id": 28152,
+   "type": "component",
+   "name": "Logo Grid Cloud",
+   "author": "olewandowski1",
+   "url": "https://21st.dev/@olewandowski1/components/logo-cloud-1",
+   "conf": 0.49,
+   "desc": "A bordered four-column grid of company wordmark logos under a \"trusted by\" eyebrow, used to showcase brand social proof on a landing page."
+  },
+  {
+   "id": 40234,
+   "type": "component",
+   "name": "Gradient Blinds CTA Banner",
+   "author": "dev.brijosh",
+   "url": "https://21st.dev/@dev.brijosh/components/final-cta-banner",
+   "conf": 0.49,
+   "desc": "Editorial final-call banner with WebGL gradient blinds; type and spacing scale with the card size"
+  }
+ ],
+ "usage": "Tier: free\nFree component-code retrievals: 2/2 remaining today.\nUpgrade for unlimited: https://21st.dev/pricing\n21st AI is off on this plan. The user can enable it at https://21st.dev/ai/enable?from=mcp. Do not retry generate. Use search and get_component, then build it with your coding agent.\nAI credits: 0 left; resets 2026-11-01T00:00:00.000Z."
+}
