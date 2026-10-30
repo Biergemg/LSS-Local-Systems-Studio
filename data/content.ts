@@ -21,6 +21,10 @@ export function waLink(text: string = WA_DEFAULT_TEXT): string {
   return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`;
 }
 
+export const EMAIL_CONTACT_URL = 'mailto:contacto@lsslocalsystemsstudio.com?subject=' +
+  encodeURIComponent('Primera Visita Digital — LSS') + '&body=' +
+  encodeURIComponent('Hola LSS, quiero solicitar la Primera Visita Digital.\n\nNombre: \nNegocio: \nCiudad: \nServicio principal: \nSitio web (si tengo): \n\nGracias.');
+
 export const CONTACT: ContactInfo = {
   whatsapp: '+52 833 326 3389',
   whatsappUrl: waLink(),

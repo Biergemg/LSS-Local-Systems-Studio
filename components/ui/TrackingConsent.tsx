@@ -36,6 +36,7 @@ function contactEvent(target: EventTarget | null): { name: string; params: Recor
     const href = el.getAttribute('href') ?? '';
     if (/^https:\/\/(wa\.me|api\.whatsapp\.com)\//.test(href)) return { name: 'whatsapp_click', params: { link_location: place } };
     if (href.startsWith('tel:')) return { name: 'phone_click', params: { link_location: place } };
+    if (href.startsWith('mailto:')) return { name: 'email_click', params: { link_location: place } };
     return null;
   }
   return { name: 'form_submit', params: { link_location: place, form_id: el.id || 'sin_id' } };
