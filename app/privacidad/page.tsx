@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import LegalPage from '@/components/ui/LegalPage';
 import { CONTACT } from '@/data/content';
+import { GA_ID } from '@/lib/analytics';
 
 export const metadata: Metadata = {
   title: 'Aviso de privacidad | LSS',
@@ -40,11 +41,17 @@ export default function PrivacyPage() {
 
       <h2 id="cookies">5. Cookies, analítica y tecnologías de terceros</h2>
       <p>El alojamiento y la seguridad pueden emplear identificadores técnicos necesarios para servir o proteger el sitio. Los enlaces a WhatsApp, Instagram o Facebook llevan a plataformas externas; su tratamiento se rige también por sus propios avisos.</p>
+      {GA_ID && (
+        <>
+          <p><strong>Medición con Google Analytics 4.</strong> Este sitio mide visitas con Google Analytics 4 (Google LLC y, para el Espacio Económico Europeo, Google Ireland Limited) <strong>solo si eliges «Permitir medición»</strong>. Antes de tu elección no se solicita ningún recurso de Google Analytics. Si lo permites, se instalan las cookies <code>_ga</code> y <code>_ga_</code> seguida del identificador de la propiedad (duración máxima de 2 años) y se registran las páginas que ves y, como eventos, los clics en enlaces de WhatsApp o teléfono y los envíos de formularios, junto con la sección de la página donde ocurrieron. No se envía a Google el contenido de tus mensajes, tu número de teléfono ni tu nombre. Un clic en WhatsApp no equivale a un mensaje recibido ni a un cliente.</p>
+          <p>Google puede recibir tu dirección IP y datos técnicos de tu dispositivo para prestar el servicio y procesarlos fuera de México. Desactivamos las señales de Google y la personalización de anuncios, y configuramos la conservación de los datos de eventos en 14 meses. Puedes cambiar o retirar tu decisión en cualquier momento desde <strong>«Preferencias de privacidad»</strong> en el pie de página; al retirarla se eliminan las cookies de Analytics de este sitio. Rechazar la medición no limita la navegación ni el contacto.</p>
+        </>
+      )}
       <p>Cuando el sitio tenga habilitada una herramienta publicitaria como Meta Pixel, se cargará únicamente después de tu elección afirmativa en el control de preferencias; rechazarla no impedirá navegar. Si no se habilita esta herramienta, no se presenta una autorización publicitaria ficticia. Puedes cambiar tu decisión desde el enlace <strong>«Preferencias de privacidad»</strong> del pie de página, cuando esté disponible.</p>
       <p>Las mediciones técnicas de desempeño realizadas por herramientas de desarrollo no son, por sí mismas, una autorización para instalar rastreadores publicitarios en tu navegador.</p>
 
       <h2>6. Proveedores, transferencias y operación internacional</h2>
-      <p>Para prestar el sitio y atender comunicaciones pueden intervenir proveedores de alojamiento y seguridad (como Vercel), servicios de correo y las plataformas a las que decidas escribirnos (como WhatsApp/Meta). Pueden procesar datos en otros países según su infraestructura y condiciones. Procuramos que su acceso sea limitado a la prestación correspondiente, mediante medidas y acuerdos aplicables.</p>
+      <p>Para prestar el sitio y atender comunicaciones pueden intervenir proveedores de alojamiento y seguridad (como Vercel), servicios de correo{GA_ID ? ', Google (Analytics, solo si lo permites)' : ''} y las plataformas a las que decidas escribirnos (como WhatsApp/Meta). Pueden procesar datos en otros países según su infraestructura y condiciones. Procuramos que su acceso sea limitado a la prestación correspondiente, mediante medidas y acuerdos aplicables.</p>
       <p>No comercializamos bases de datos personales. Cualquier comunicación a un tercero para finalidades propias distinta de la prestación de servicios o de los supuestos permitidos por ley requerirá la información y, cuando proceda, el consentimiento correspondiente. También podremos comunicar datos por obligación legal, petición de autoridad competente, defensa de derechos o ejecución de una relación contractual cuando lo permita la normativa aplicable.</p>
       <p>Si LSS trata datos por cuenta de un cliente, por ejemplo al gestionar su sitio, perfil o comunicaciones, los papeles de responsable y encargado, instrucciones, medidas de seguridad, subencargados, transferencias y devolución o eliminación de datos se establecerán en los documentos de ese proyecto. La información del cliente no se transforma automáticamente en una base de prospectos de LSS.</p>
 

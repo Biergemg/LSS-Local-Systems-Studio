@@ -4,6 +4,7 @@ import { Inter_Tight, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import { SITE } from '@/data/content';
 import { faqSchema, organizationSchema, websiteSchema } from '@/lib/schema';
+import { GA_ID, META_PIXEL_ID } from '@/lib/analytics';
 
 const interTight = Inter_Tight({ 
   subsets: ['latin'], 
@@ -23,8 +24,6 @@ const siteUrl = SITE.url;
 const siteTitle = SITE.title;
 const siteDescription = SITE.description;
 const ogImage = `${SITE.url}/og-image.png`;
-const configuredPixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID;
-const metaPixelId = configuredPixelId && /^\d{8,20}$/.test(configuredPixelId) ? configuredPixelId : undefined;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -57,7 +56,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify([organizationSchema, websiteSchema, faqSchema]) }}
         />
-        <TrackingConsent pixelId={metaPixelId} />
+        <TrackingConsent pixelId={META_PIXEL_ID} gaId={GA_ID} />
         {children}
       </body>
     </html>
