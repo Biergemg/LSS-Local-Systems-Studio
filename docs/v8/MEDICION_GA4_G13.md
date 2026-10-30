@@ -1,6 +1,6 @@
 ﻿# Medición GA4 de la landing — G13/G14
 
-**Estado 30-10-2026:** Google y propiedad GA4 creados, ID público real G-0DJ220E3ZL, código de consentimiento probado localmente. Publicación pendiente del gate final.
+**Estado 30-10-2026:** Google y propiedad GA4 creados, ID público real G-0DJ220E3ZL, código de consentimiento probado localmente. Publicada mediante GitHub main y Vercel Production (commit funcional 6c9b7ba). Consentimiento y transmisión real a Google verificados, informes GA4 aún sin filas de eventos procesados al cierre.
 
 ## Funcionamiento
 - ID público por defecto en lib/analytics.ts, con override de NEXT_PUBLIC_GA_MEASUREMENT_ID; GitHub main despliega Vercel automáticamente.

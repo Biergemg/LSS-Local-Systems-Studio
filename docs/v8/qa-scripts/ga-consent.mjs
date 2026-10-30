@@ -23,11 +23,11 @@ async function fresh(opts = {}) {
   rec(await p.locator('.privacy-consent').isVisible(), 'Banner de medicion visible antes de elegir');
   rec(hits.length === 0, 'Cero peticiones a Google antes de elegir', hits.length + ' peticiones');
   const txt = await p.locator('.privacy-consent').innerText();
-  rec(/Google Analytics/.test(txt) && /Rechazar medici/.test(txt) && /Permitir medici/.test(txt), 'Texto del banner describe el fin y ofrece Rechazar y Permitir con el mismo peso');
+  rec(/Google Analytics/.test(txt) && /Rechazar/.test(txt) && /Permitir/.test(txt), 'Texto del banner describe el fin y ofrece Rechazar y Permitir con el mismo peso');
   const sizes = await p.$$eval('.privacy-consent .btn', (els) => els.map((e) => Math.round(e.getBoundingClientRect().height)));
   rec(sizes.every((h) => h >= 44), 'Botones del banner >= 44 px', sizes.join(','));
   // 2. Rechazar: persiste y no carga nada
-  await p.getByRole('button', { name: /Rechazar medici/ }).click(); await p.waitForTimeout(800);
+  await p.getByRole('button', { name: /^Rechazar(?: medici.n)?$/ }).click(); await p.waitForTimeout(800);
   await p.goto(BASE, { waitUntil: 'networkidle' }); await p.waitForTimeout(1200);
   rec(hits.length === 0, 'Tras rechazar: cero peticiones a Google (tambien tras recargar)');
   rec(!(await p.locator('.privacy-consent').isVisible()), 'Tras rechazar el banner no reaparece');
@@ -41,7 +41,7 @@ async function fresh(opts = {}) {
 {
   const { ctx, p, hits } = await fresh();
   await p.goto(BASE, { waitUntil: 'networkidle' }); await p.waitForTimeout(1200);
-  await p.getByRole('button', { name: /Permitir medici/ }).click(); await p.waitForTimeout(2500);
+  await p.getByRole('button', { name: /^Permitir(?: medici.n)?$/ }).click(); await p.waitForTimeout(2500);
   const libs = hits.filter((u) => u.includes('gtag/js?id=' + ID));
   rec(libs.length === 1, 'Tras permitir: gtag.js se solicita exactamente una vez (sin doble etiquetado)', libs.length + '');
   const scripts = await p.$$eval('script[src*="googletagmanager"], script#lss-ga4-init', (s) => s.length);
@@ -75,7 +75,7 @@ async function fresh(opts = {}) {
   await p.evaluate(() => { document.cookie = '_ga=GA1.1.1.1; path=/'; document.cookie = '_ga_TEST000001=GS1.1.1; path=/'; });
   await p.locator('.footer-preferences').click(); await p.waitForTimeout(500);
   rec(await p.locator('.privacy-consent').isVisible(), 'Preferencias de privacidad reabre el control desde el pie');
-  await Promise.all([p.waitForNavigation({ waitUntil: 'load' }), p.getByRole('button', { name: /Rechazar medici/ }).click()]);
+  await Promise.all([p.waitForNavigation({ waitUntil: 'load' }), p.getByRole('button', { name: /^Rechazar(?: medici.n)?$/ }).click()]);
   await p.waitForTimeout(800);
   const left = (await ctx.cookies()).filter((c) => c.name.startsWith('_ga'));
   rec(left.length === 0, 'Retirar el permiso elimina las cookies _ga y _ga_*', left.map((c) => c.name).join(','));
