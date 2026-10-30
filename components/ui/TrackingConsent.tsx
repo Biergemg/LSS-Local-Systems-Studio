@@ -67,7 +67,21 @@ export default function TrackingConsent({ pixelId, gaId }: { pixelId?: string; g
     if (!gaId || choice !== 'yes') return;
     const send = (e: Event) => {
       const ev = contactEvent(e.target);
-      if (ev) (window as GaWindow).gtag?.('event', ev.name, ev.params);
+      if (!ev) return;
+      const ga = (window as GaWindow).gtag;
+      ga?.('event', ev.name, ev.params);
+      // This is an INTENT SIGNAL from opening a contact link, never a
+      // confirmed inquiry, qualified prospect, sale or submitted message.
+      const channels: Record<string, string> = {
+        whatsapp_click: 'whatsapp',
+        phone_click: 'phone',
+        email_click: 'email',
+      };
+      const channel = channels[ev.name];
+      if (channel) ga?.('event', 'contact_intent', {
+        contact_channel: channel,
+        link_location: ev.params.link_location,
+      });
     };
     document.addEventListener('click', send, true);
     document.addEventListener('submit', send, true);

@@ -43,11 +43,16 @@ try{
    new URLSearchParams(r.body).get('en')==='email_click'||r.body.includes('en=email_click'))
  check(Boolean(event),'GA4 email_click emitted after consent')
  check(Boolean(event)&&event.status>=200&&event.status<300,'Google accepted email_click transport')
+ const intent=hits.find(r=>new URL(r.url).searchParams.get('en')==='contact_intent' ||
+   new URLSearchParams(r.body).get('en')==='contact_intent'||r.body.includes('en=contact_intent'))
+ check(Boolean(intent),'contact_intent emitted for a consented email click')
+ check(Boolean(intent)&&intent.status>=200&&intent.status<300,'Google accepted contact_intent transport')
+ check(Boolean(intent)&&new URL(intent.url).searchParams.get('ep.contact_channel')==='email','Intent event declares email channel without PII')
  const body=event?event.url+'\n'+event.body:''
  check(Boolean(event)&&!/contacto@lsslocalsystemsstudio|mailto:|Primera%20Visita|Nombre:|Negocio:/i.test(body),
    'Email event does not contain address, subject or email template text')
  check(page.url().startsWith(BASE), 'Email QA intercept keeps test browser on LSS website')
- console.log('RESULT '+passed+'/7 PASS')
+ console.log('RESULT '+passed+'/10 PASS')
 }finally{
  await ctx.close()
  await browser.close()
