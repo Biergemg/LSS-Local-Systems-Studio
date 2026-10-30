@@ -1,8 +1,8 @@
-// Prueba funcional del flujo de consentimiento de GA4 (ID de PRUEBA, no real) con las peticiones a Google interceptadas:
+﻿// Prueba funcional del flujo de consentimiento de GA4 (ID publico real, transmisiones a Google interceptadas):
 // nada sale hacia Google. Valida la logica, NO es medicion real. Uso: node ga-consent.mjs [base]
 import { chromium } from 'playwright';
 const BASE = process.argv[2] ?? 'http://localhost:3201';
-const ID = 'G-TEST000001';
+const ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-0DJ220E3ZL';
 let fails = 0;
 const rec = (ok, name, info = '') => { if (!ok) fails++; console.log(`${ok ? 'PASS' : 'FAIL'}  ${name}${info ? '  (' + info + ')' : ''}`); };
 const b = await chromium.launch({ channel: 'chrome' });
@@ -42,7 +42,7 @@ async function fresh(opts = {}) {
   const { ctx, p, hits } = await fresh();
   await p.goto(BASE, { waitUntil: 'networkidle' }); await p.waitForTimeout(1200);
   await p.getByRole('button', { name: /Permitir medici/ }).click(); await p.waitForTimeout(2500);
-  const libs = hits.filter((u) => /gtag\/js\?id=G-TEST000001/.test(u));
+  const libs = hits.filter((u) => u.includes('gtag/js?id=' + ID));
   rec(libs.length === 1, 'Tras permitir: gtag.js se solicita exactamente una vez (sin doble etiquetado)', libs.length + '');
   const scripts = await p.$$eval('script[src*="googletagmanager"], script#lss-ga4-init', (s) => s.length);
   rec(scripts <= 2, 'Un solo bloque de init + una libreria en el DOM', String(scripts));
@@ -92,5 +92,5 @@ async function fresh(opts = {}) {
   await ctx.close();
 }
 await b.close();
-console.log(fails ? `\nRESULTADO: ${fails} FAIL` : '\nRESULTADO: TODO PASS (logica con ID de prueba e interceptacion; NO es medicion real)');
+console.log(fails ? `\nRESULTADO: ${fails} FAIL` : '\nRESULTADO: TODO PASS (logica aislada con peticiones interceptadas; ejecutar ga-real-transport.mjs para verificar trafico real)');
 process.exit(fails ? 1 : 0);

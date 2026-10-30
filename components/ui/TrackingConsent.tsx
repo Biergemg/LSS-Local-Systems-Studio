@@ -4,7 +4,9 @@ import Script from 'next/script';
 import { useEffect, useState, useSyncExternalStore } from 'react';
 
 type Choice = 'yes' | 'no' | null | 'pending';
-const STORAGE_KEY = 'lss-marketing-consent-v1';
+// Nueva autorización específica para la medición: un "sí" anterior a Meta no autoriza GA4.
+// Requerir una nueva decisión impide extender retrospectivamente un consentimiento.
+const STORAGE_KEY = 'lss-tracking-consent-v2';
 const COOKIE_DOMAIN = '.lsslocalsystemsstudio.com';
 
 type GaWindow = Window & { gtag?: (...args: unknown[]) => void; dataLayer?: unknown[] };

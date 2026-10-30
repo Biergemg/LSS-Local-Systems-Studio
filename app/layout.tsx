@@ -56,8 +56,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify([organizationSchema, websiteSchema, faqSchema]) }}
         />
-        <TrackingConsent pixelId={META_PIXEL_ID} gaId={GA_ID} />
         {children}
+        <TrackingConsent pixelId={META_PIXEL_ID} gaId={GA_ID} />
       </body>
     </html>
   );

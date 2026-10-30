@@ -1,0 +1,18 @@
+﻿import { chromium } from 'playwright';
+const BASE = process.env.QA_BASE || 'http://localhost:3201';
+const b = await chromium.launch({channel:'chrome'});
+const c = await b.newContext({viewport:{width:390,height:844}});
+await c.addInitScript(() => localStorage.setItem('lss-marketing-consent-v1','yes'));
+const hits=[];
+await c.route(/googletagmanager\.com|google-analytics\.com/, r => { hits.push(r.request().url()); r.fulfill({status:200,contentType:'application/javascript',body:'/* mocked */'});});
+const p=await c.newPage();
+await p.goto(BASE,{waitUntil:'networkidle'});
+await p.waitForTimeout(800);
+const oldConsentDoesNotAuthorize = hits.length===0 && await p.locator('.privacy-consent').isVisible();
+console.log('LEGACY_CONSENT_ISOLATION',oldConsentDoesNotAuthorize?'PASS':'FAIL');
+await p.getByRole('button',{name:/Rechazar medici/}).click();
+await p.reload({waitUntil:'networkidle'});
+const noLeak = hits.length===0 && (await c.cookies()).filter(x=>x.name.startsWith('_ga')).length===0;
+console.log('REJECT_PERSISTENCE',noLeak?'PASS':'FAIL');
+await c.close();await b.close();
+if(!oldConsentDoesNotAuthorize||!noLeak)process.exit(1);

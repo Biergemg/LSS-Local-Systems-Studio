@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <LegalPage title="Aviso de privacidad" updated="29 de octubre de 2026">
+    <LegalPage title="Aviso de privacidad" updated="30 de octubre de 2026">
       <p className="legal-intro">Este aviso explica cómo LSS — Local Systems Studio maneja información personal recibida mediante su sitio web, comunicaciones comerciales y proyectos de servicios digitales. Aplica a las personas que nos escriben, solicitan una revisión, piden una propuesta o mantienen una relación de servicio con nosotros.</p>
 
       <h2>1. Responsable y vías de contacto</h2>

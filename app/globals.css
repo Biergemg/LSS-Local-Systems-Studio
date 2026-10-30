@@ -406,7 +406,9 @@ details.disclose .inner { padding: 0 18px 20px; color: var(--paper-2); max-width
 .privacy-consent { position: fixed; z-index: 2100; left: 0; right: 0; bottom: 0; background: #0b0b0b; border-top: 3px solid var(--accent); color: white; padding: 20px max(20px, calc((100vw - 1152px)/2)); display: flex; align-items: center; justify-content: space-between; gap: 20px; }
 .privacy-consent strong { color: #fff; font-size: 17px; }
 .privacy-consent p { color: #dedede; max-width: 65ch; font-size: 15px; line-height: 1.5; margin-top: 6px; }
-.privacy-consent a { color: var(--accent); text-decoration: underline; }
+.privacy-consent a { color: var(--accent); text-decoration: underline; display: inline-flex; align-items: center; min-height: 44px; }
+/* La barra fija de WhatsApp nunca debe competir ni tapar el foco mientras se decide el consentimiento. */
+body:has(.privacy-consent) .wa-float { opacity: 0; pointer-events: none; transform: translateY(100%); }
 .privacy-consent-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; flex-shrink: 0; }
 .privacy-consent .btn { font-size: 14px; min-height: 44px; }
 .privacy-consent .btn-ghost { border: 1px solid #aaa; }
