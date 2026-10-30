@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Script from 'next/script';
+import TrackingConsent from '@/components/ui/TrackingConsent';
 import { Inter_Tight, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import { SITE } from '@/data/content';
@@ -23,7 +23,8 @@ const siteUrl = SITE.url;
 const siteTitle = SITE.title;
 const siteDescription = SITE.description;
 const ogImage = `${SITE.url}/og-image.png`;
-const metaPixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID;
+const configuredPixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID;
+const metaPixelId = configuredPixelId && /^\d{8,20}$/.test(configuredPixelId) ? configuredPixelId : undefined;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -56,24 +57,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify([organizationSchema, websiteSchema, faqSchema]) }}
         />
-        {metaPixelId ? (
-          <>
-            <Script id="meta-pixel" strategy="afterInteractive">
-              {`
-                !function(f,b,e,v,n,t,s)
-                {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-                n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-                if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-                n.queue=[];t=b.createElement(e);t.async=!0;
-                t.src=v;s=b.getElementsByTagName(e)[0];
-                s.parentNode.insertBefore(t,s)}(window, document,'script',
-                'https://connect.facebook.net/en_US/fbevents.js');
-                fbq('init', '${metaPixelId}');
-                fbq('track', 'PageView');
-              `}
-            </Script>
-          </>
-        ) : null}
+        <TrackingConsent pixelId={metaPixelId} />
         {children}
       </body>
     </html>

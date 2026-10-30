@@ -1,0 +1,42 @@
+[
+  {
+    "label": "fresh visitor shows explicit choices",
+    "ok": true,
+    "extra": ""
+  },
+  {
+    "label": "before consent no injected pixel",
+    "ok": true,
+    "extra": ""
+  },
+  {
+    "label": "rejection persisted",
+    "ok": true,
+    "extra": ""
+  },
+  {
+    "label": "consent recorded",
+    "ok": true,
+    "extra": ""
+  },
+  {
+    "label": "pixel injected after consent",
+    "ok": true,
+    "extra": "calls=1"
+  },
+  {
+    "label": "choice persists, banner hidden",
+    "ok": true,
+    "extra": ""
+  },
+  {
+    "label": "revocation persists",
+    "ok": true,
+    "extra": ""
+  },
+  {
+    "label": "pixel removed after revocation",
+    "ok": true,
+    "extra": ""
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "route": "/privacidad",
+    "width": 390,
+    "status": 200,
+    "title": "Aviso de privacidad",
+    "headings": 11,
+    "noOld": true,
+    "noPixel": true,
+    "rule": true,
+    "scroll": 390,
+    "axe": [],
+    "errors": [],
+    "ok": true
+  },
+  {
+    "route": "/terminos",
+    "width": 390,
+    "status": 200,
+    "title": "Términos de uso del sitio web",
+    "headings": 13,
+    "noOld": true,
+    "noPixel": true,
+    "rule": true,
+    "scroll": 390,
+    "axe": [],
+    "errors": [],
+    "ok": true
+  },
+  {
+    "route": "/privacidad",
+    "width": 1440,
+    "status": 200,
+    "title": "Aviso de privacidad",
+    "headings": 11,
+    "noOld": true,
+    "noPixel": true,
+    "rule": true,
+    "scroll": 1440,
+    "axe": [],
+    "errors": [],
+    "ok": true
+  },
+  {
+    "route": "/terminos",
+    "width": 1440,
+    "status": 200,
+    "title": "Términos de uso del sitio web",
+    "headings": 13,
+    "noOld": true,
+    "noPixel": true,
+    "rule": true,
+    "scroll": 1440,
+    "axe": [],
+    "errors": [],
+    "ok": true
+  }
+]
