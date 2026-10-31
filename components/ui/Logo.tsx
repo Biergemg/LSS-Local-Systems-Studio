@@ -10,7 +10,7 @@ export default function Logo({ size = 32, showText = true }: LogoProps) {
     <Link
       href="/"
       style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none', minHeight: 44 }}
-      aria-label="LSS — Local Systems Studio"
+      aria-label={showText ? undefined : 'LSS Local Systems Studio'}
     >
       <svg
         viewBox="0 0 80 80"
@@ -78,7 +78,7 @@ export default function Logo({ size = 32, showText = true }: LogoProps) {
           <span
             style={{
               fontFamily: 'var(--font-primary)',
-              fontSize: 'var(--text-xs)',
+              fontSize: '13px',
               fontWeight: 300,
               color: 'var(--fg2)',
               letterSpacing: 'var(--tracking-widest)',

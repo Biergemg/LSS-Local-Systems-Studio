@@ -14,7 +14,7 @@ export default function Hero() {
             <a className="btn btn-primary" data-hide-wa href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer">{HERO.ctaPrimary}</a>
             <a className="link-line" href="#proceso">{HERO.ctaSecondary}</a>
           </div>
-          <p className="small hero-micro">{HERO.micro} <a href={EMAIL_CONTACT_URL}>¿Prefieres correo? Solicita la revisión por email.</a></p>
+          <p className="small hero-micro">{HERO.micro} <a href={EMAIL_CONTACT_URL} style={{ display: 'inline-flex', alignItems: 'center', minHeight: 44, maxWidth: '100%' }}>¿Prefieres correo? Solicita la revisión por email.</a></p>
         </div>
 
         <figure className="hero-figure" aria-label={`${s.label}. ${s.desc}`}>
