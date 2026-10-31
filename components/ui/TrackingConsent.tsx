@@ -119,7 +119,7 @@ export default function TrackingConsent({ pixelId, gaId }: { pixelId?: string; g
     "fbq('track','PageView');"
   ].join('\n') : '';
 
-  const purposes = [gaId && 'medir visitas y clics de contacto con Google Analytics', pixelId && 'la medición publicitaria de Meta'].filter(Boolean).join(' y ');
+  const purposes = [gaId && 'Google Analytics: visitas y clics', pixelId && 'Meta: medición publicitaria'].filter(Boolean).join('; ');
   const noun = pixelId && gaId ? '' : gaId ? ' medición' : ' publicidad';
 
   return (
@@ -134,8 +134,7 @@ export default function TrackingConsent({ pixelId, gaId }: { pixelId?: string; g
       {(choice === null || open) && (
         <aside className="privacy-consent" role="dialog" aria-label="Preferencias de privacidad" aria-modal="false">
           <div>
-            <strong>Tu privacidad, tu decisión.</strong>
-            <p>Usamos tecnologías técnicas necesarias. Solo con tu permiso activamos {purposes}. Puedes continuar sin aceptarlo. <a href="/privacidad#cookies">Consulta el aviso</a>.</p>
+            <p><strong>Medición opcional. </strong>{purposes}. Solo si aceptas. <a href="/privacidad#cookies">Ver aviso</a>.</p>
           </div>
           <div className="privacy-consent-actions">
             <button type="button" className="btn btn-ghost" onClick={() => decide('no')}>Rechazar{noun}</button>
