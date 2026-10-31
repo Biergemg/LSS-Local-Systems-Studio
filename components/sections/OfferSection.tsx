@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { OFFER, CONTACT } from '@/data/content';
 import Corners from '@/components/ui/Corners';
 
@@ -36,6 +37,7 @@ export default function OfferSection() {
           <p>{OFFER.existing.text}</p>
         </div>
 
+        <p style={{ marginTop: 20 }}><Link className="link-line" href="/servicios/presencia-digital">Leer qué incluye web, Google y contacto</Link></p>
         <p className="cta-row" data-hide-wa>
           <a className="btn btn-primary" href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer">{OFFER.cta}</a>
         </p>

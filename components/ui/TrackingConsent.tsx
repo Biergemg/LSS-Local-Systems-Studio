@@ -147,7 +147,7 @@ export default function TrackingConsent({ pixelId, gaId }: { pixelId?: string; g
         </>
       )}
       {(choice === null || open) && (
-        <aside className="privacy-consent" role="dialog" aria-label="Preferencias de privacidad" aria-modal="false">
+        <div className="privacy-consent" role="dialog" aria-label="Preferencias de privacidad" aria-modal="false">
           <div>
             <p><strong>Medición opcional. </strong>{purposes}. Solo si aceptas. <a href="/privacidad#cookies">Ver aviso</a>.</p>
           </div>
@@ -156,7 +156,7 @@ export default function TrackingConsent({ pixelId, gaId }: { pixelId?: string; g
             <button type="button" className="btn btn-ghost" onClick={() => decide('yes')}>Permitir{noun}</button>
             {open && choice !== null && <button type="button" className="link-line" onClick={() => setOpen(false)}>Cerrar</button>}
           </div>
-        </aside>
+        </div>
       )}
     </>
   );

@@ -3,7 +3,7 @@ import TrackingConsent from '@/components/ui/TrackingConsent';
 import { Inter_Tight, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import { SITE } from '@/data/content';
-import { faqSchema, organizationSchema, websiteSchema } from '@/lib/schema';
+import { organizationSchema, websiteSchema } from '@/lib/schema';
 import { GA_ID, META_PIXEL_ID } from '@/lib/analytics';
 
 const interTight = Inter_Tight({ 
@@ -54,7 +54,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body className="min-h-full flex flex-col">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify([organizationSchema, websiteSchema, faqSchema]) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify([organizationSchema, websiteSchema]) }}
         />
         {children}
         <TrackingConsent pixelId={META_PIXEL_ID} gaId={GA_ID} />

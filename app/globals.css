@@ -428,3 +428,28 @@ body:has(.privacy-consent) .wa-float { opacity: 0; pointer-events: none; transfo
   /* Evita contenido invisible por animación ligada al scroll en pantallas reducidas. */
   .reveal, .display.reveal { animation: none !important; opacity: 1 !important; transform: none !important; clip-path: none !important; }
 }
+
+/* LSS: página editorial de servicio rastreable, sin librerías adicionales. */
+.service-page .service-intro { padding-top: calc(var(--nav-h) + 54px); }
+.service-page .service-intro .display { max-width: 21ch; }
+.service-page .service-intro .lede, .service-page .service-end .lede { max-width: 68ch; }
+.service-area { margin-top: 24px; color: var(--fg-2); font-size: 15px; }
+.service-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; margin-top: 30px; }
+.service-cta .link-line { min-height: 54px; }
+.service-section-heading { max-width: 22ch; margin-bottom: 30px; }
+.service-questions { display: grid; grid-template-columns: minmax(0, 1fr); border-bottom: 1px solid var(--paper-line); }
+.service-question { border-top: 1px solid var(--paper-line); padding: 30px 0 35px; min-width: 0; scroll-margin-top: 90px; }
+.service-question h3 { font-family: var(--font-display); font-size: clamp(22px, 3.3vw, 31px); line-height: 1.16; letter-spacing: -0.02em; max-width: 34ch; margin: 12px 0 16px; }
+.service-question > p:not(.idx) { max-width: 75ch; font-size: 17px; line-height: 1.63; color: var(--paper-ink); }
+.service-question .service-proof { border-left: 3px solid var(--paper-ink); padding: 10px 0 10px 16px; margin-top: 16px; font-size: 15px !important; color: var(--paper-2) !important; }
+.service-question .service-proof strong { color: var(--paper-ink); }
+.service-end { border-top: 1px solid var(--line); }
+@media (min-width: 900px) {
+  .service-questions { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 46px; }
+  .service-question { padding: 38px 0 42px; }
+}
+@media (max-width: 420px) {
+  .service-page .service-intro { padding-top: calc(var(--nav-h) + 30px); }
+  .service-cta { flex-direction: column; align-items: stretch; }
+  .service-cta .btn, .service-cta .link-line { width: 100%; justify-content: center; }
+}

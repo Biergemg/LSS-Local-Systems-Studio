@@ -1,4 +1,5 @@
 import WhatsAppFloat from '@/components/ui/WhatsAppFloat';
+import { faqSchema } from '@/lib/schema';
 import BeliefSection from '@/components/sections/BeliefSection';
 import CTASection from '@/components/sections/CTASection';
 import EvidenceSection from '@/components/sections/EvidenceSection';
@@ -28,6 +29,7 @@ export default function Page() {
       </main>
       <Footer />
       <WhatsAppFloat />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
     </>
   );
 }

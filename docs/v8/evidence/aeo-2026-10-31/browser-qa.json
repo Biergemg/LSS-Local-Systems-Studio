@@ -1,0 +1,266 @@
+{
+  "origin": "http://localhost:3242",
+  "pass": 49,
+  "fail": 0,
+  "tests": [
+    {
+      "name": "service-http-320",
+      "ok": true,
+      "detail": "200"
+    },
+    {
+      "name": "headings-320",
+      "ok": true,
+      "detail": "h1 1 questions 6"
+    },
+    {
+      "name": "six-real-answers-320",
+      "ok": true,
+      "detail": "n 6"
+    },
+    {
+      "name": "no-overflow-320",
+      "ok": true,
+      "detail": "scroll 320"
+    },
+    {
+      "name": "no-browser-errors-320",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "service-schema-320",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no-unrelated-faq-schema-320",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "canonical-320",
+      "ok": true,
+      "detail": "https://www.lsslocalsystemsstudio.com/servicios/presencia-digital"
+    },
+    {
+      "name": "contact-cta-320",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "navigation-home-320",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "service-http-390",
+      "ok": true,
+      "detail": "200"
+    },
+    {
+      "name": "headings-390",
+      "ok": true,
+      "detail": "h1 1 questions 6"
+    },
+    {
+      "name": "six-real-answers-390",
+      "ok": true,
+      "detail": "n 6"
+    },
+    {
+      "name": "no-overflow-390",
+      "ok": true,
+      "detail": "scroll 390"
+    },
+    {
+      "name": "no-browser-errors-390",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "service-schema-390",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no-unrelated-faq-schema-390",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "canonical-390",
+      "ok": true,
+      "detail": "https://www.lsslocalsystemsstudio.com/servicios/presencia-digital"
+    },
+    {
+      "name": "contact-cta-390",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "navigation-home-390",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "axe-390",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "service-http-768",
+      "ok": true,
+      "detail": "200"
+    },
+    {
+      "name": "headings-768",
+      "ok": true,
+      "detail": "h1 1 questions 6"
+    },
+    {
+      "name": "six-real-answers-768",
+      "ok": true,
+      "detail": "n 6"
+    },
+    {
+      "name": "no-overflow-768",
+      "ok": true,
+      "detail": "scroll 768"
+    },
+    {
+      "name": "no-browser-errors-768",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "service-schema-768",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no-unrelated-faq-schema-768",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "canonical-768",
+      "ok": true,
+      "detail": "https://www.lsslocalsystemsstudio.com/servicios/presencia-digital"
+    },
+    {
+      "name": "contact-cta-768",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "navigation-home-768",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "service-http-1440",
+      "ok": true,
+      "detail": "200"
+    },
+    {
+      "name": "headings-1440",
+      "ok": true,
+      "detail": "h1 1 questions 6"
+    },
+    {
+      "name": "six-real-answers-1440",
+      "ok": true,
+      "detail": "n 6"
+    },
+    {
+      "name": "no-overflow-1440",
+      "ok": true,
+      "detail": "scroll 1440"
+    },
+    {
+      "name": "no-browser-errors-1440",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "service-schema-1440",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no-unrelated-faq-schema-1440",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "canonical-1440",
+      "ok": true,
+      "detail": "https://www.lsslocalsystemsstudio.com/servicios/presencia-digital"
+    },
+    {
+      "name": "contact-cta-1440",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "navigation-home-1440",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "axe-1440",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage-200",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "home-service-links",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "home-faq-schema",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "legal-200",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "legal-no-faq-schema",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "sitemap-new-service",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "robots-crawlable",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "screens": [
+    "aeo-20261031-qa-final\\service-320-hero.png",
+    "aeo-20261031-qa-final\\service-320-faq.png",
+    "aeo-20261031-qa-final\\service-320-cta.png",
+    "aeo-20261031-qa-final\\service-390-hero.png",
+    "aeo-20261031-qa-final\\service-390-faq.png",
+    "aeo-20261031-qa-final\\service-390-cta.png",
+    "aeo-20261031-qa-final\\service-768-hero.png",
+    "aeo-20261031-qa-final\\service-768-faq.png",
+    "aeo-20261031-qa-final\\service-768-cta.png",
+    "aeo-20261031-qa-final\\service-1440-hero.png",
+    "aeo-20261031-qa-final\\service-1440-faq.png",
+    "aeo-20261031-qa-final\\service-1440-cta.png"
+  ]
+}

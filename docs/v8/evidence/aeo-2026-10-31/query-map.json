@@ -1,0 +1,97 @@
+{
+    "skills":  [
+                   {
+                       "appliedEvidence":  "docs/v8/LSS_F5_SEO_AEO_GEO_SCHEMA_2026-10-31.md",
+                       "skillFileSha256":  "66c18add7037cc5ee3e9242858d007151690ba82557a3d6eb7e3fe4a5ad19577",
+                       "capability":  "seo-audit",
+                       "executedAt":  "2026-10-31T07:02:00.9868147Z",
+                       "status":  "APPLIED_TO_IMPLEMENTATION"
+                   },
+                   {
+                       "appliedEvidence":  "docs/v8/LSS_F5_SEO_AEO_GEO_SCHEMA_2026-10-31.md",
+                       "skillFileSha256":  "9ca866ae95723d1545f8b0448c9fa94136c2d97517c885ffe90edea3fb865a23",
+                       "capability":  "ai-seo",
+                       "executedAt":  "2026-10-31T07:02:00.9868147Z",
+                       "status":  "APPLIED_TO_IMPLEMENTATION"
+                   },
+                   {
+                       "appliedEvidence":  "docs/v8/LSS_F5_SEO_AEO_GEO_SCHEMA_2026-10-31.md",
+                       "skillFileSha256":  "5606f9b71487823eeac123de47ee7c4745dd73ef25d89da0cac4d8ca31fa8653",
+                       "capability":  "schema",
+                       "executedAt":  "2026-10-31T07:02:00.9868147Z",
+                       "status":  "APPLIED_TO_IMPLEMENTATION"
+                   }
+               ],
+    "queryMap":  [
+                     {
+                         "query":  "¿Quién hace páginas web profesionales para negocios de servicios?",
+                         "intent":  "contratación comercial",
+                         "market":  "México, con atención a distancia",
+                         "sourceSha256":  "2bfd83ab2cc17b81f4f3c1a0f53102b587d751106021c6252bdead24d3ec2776",
+                         "language":  "es-MX",
+                         "sourceFile":  "app/servicios/presencia-digital/page.tsx",
+                         "proof":  "Browser QA: browser-qa.json; HTML visible",
+                         "targetUrl":  "https://www.lsslocalsystemsstudio.com/servicios/presencia-digital#quien-hace-paginas-web"
+                     },
+                     {
+                         "query":  "¿Cómo mejoro mi presencia en Google sin pagar anuncios?",
+                         "intent":  "contratación comercial",
+                         "market":  "México, con atención a distancia",
+                         "sourceSha256":  "2bfd83ab2cc17b81f4f3c1a0f53102b587d751106021c6252bdead24d3ec2776",
+                         "language":  "es-MX",
+                         "sourceFile":  "app/servicios/presencia-digital/page.tsx",
+                         "proof":  "Browser QA: browser-qa.json; HTML visible",
+                         "targetUrl":  "https://www.lsslocalsystemsstudio.com/servicios/presencia-digital#mejorar-google"
+                     },
+                     {
+                         "query":  "¿Cómo conecto mi página web a WhatsApp?",
+                         "intent":  "contratación comercial",
+                         "market":  "México, con atención a distancia",
+                         "sourceSha256":  "2bfd83ab2cc17b81f4f3c1a0f53102b587d751106021c6252bdead24d3ec2776",
+                         "language":  "es-MX",
+                         "sourceFile":  "app/servicios/presencia-digital/page.tsx",
+                         "proof":  "Browser QA: browser-qa.json; HTML visible",
+                         "targetUrl":  "https://www.lsslocalsystemsstudio.com/servicios/presencia-digital#web-whatsapp"
+                     },
+                     {
+                         "query":  "¿Qué hago si ya tengo una página web?",
+                         "intent":  "contratación comercial",
+                         "market":  "México, con atención a distancia",
+                         "sourceSha256":  "2bfd83ab2cc17b81f4f3c1a0f53102b587d751106021c6252bdead24d3ec2776",
+                         "language":  "es-MX",
+                         "sourceFile":  "app/servicios/presencia-digital/page.tsx",
+                         "proof":  "Browser QA: browser-qa.json; HTML visible",
+                         "targetUrl":  "https://www.lsslocalsystemsstudio.com/servicios/presencia-digital#ya-tengo-sitio"
+                     },
+                     {
+                         "query":  "¿Hay agencia web en Tampico, Ciudad Madero o Altamira?",
+                         "intent":  "contratación comercial",
+                         "market":  "México, con atención a distancia",
+                         "sourceSha256":  "2bfd83ab2cc17b81f4f3c1a0f53102b587d751106021c6252bdead24d3ec2776",
+                         "language":  "es-MX",
+                         "sourceFile":  "app/servicios/presencia-digital/page.tsx",
+                         "proof":  "Browser QA: browser-qa.json; HTML visible",
+                         "targetUrl":  "https://www.lsslocalsystemsstudio.com/servicios/presencia-digital#tampico-ciudad-madero-altamira"
+                     },
+                     {
+                         "query":  "¿Cómo me encuentran en búsquedas por voz y asistentes IA?",
+                         "intent":  "contratación comercial",
+                         "market":  "México, con atención a distancia",
+                         "sourceSha256":  "2bfd83ab2cc17b81f4f3c1a0f53102b587d751106021c6252bdead24d3ec2776",
+                         "language":  "es-MX",
+                         "sourceFile":  "app/servicios/presencia-digital/page.tsx",
+                         "proof":  "Browser QA: browser-qa.json; HTML visible",
+                         "targetUrl":  "https://www.lsslocalsystemsstudio.com/servicios/presencia-digital#voz-asistentes"
+                     }
+                 ],
+    "baseline":  {
+                     "googleSearch":  "BLOCKED",
+                     "assistants":  "NOT_TESTED",
+                     "duckduckgo":  "HTTP_202_INCONCLUSIVE",
+                     "bingSearch":  "NOT_OBSERVED_IN_RETRIEVED_RESULTS",
+                     "searchConsole":  "NOT_READ_IN_THIS_RUN"
+                 },
+    "date":  "2026-10-31T07:02:00.9868147Z",
+    "url":  "https://www.lsslocalsystemsstudio.com/servicios/presencia-digital",
+    "status":  "CODE_IMPLEMENTED_AND_BROWSER_VERIFIED_NO_AI_VISIBILITY_CLAIM"
+}

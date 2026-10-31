@@ -1,0 +1,35 @@
+[
+  {
+    "provider": "Google Search",
+    "query": "quién hace páginas web para negocios de servicios Tampico",
+    "checkedAt": "2026-10-31T06:58:33.264Z",
+    "http": 200,
+    "title": "https://www.google.com/search?q=qui%C3%A9n%20hace%20p%C3%A1ginas%20web%20para%20negocios%20de%20servicios%20Tampico&sei=mJHlasJs5qaa2Q-UyPrICQ",
+    "blocked": true,
+    "observed": "BLOCKED",
+    "sample": "\n\nAcerca de esta página\n\nNuestros sistemas han detectado tráfico inusual procedente de tu red de ordenadores. En esta página se comprueba si eres tú quien envía las solicitudes en lugar de un robot. ¿A qué se debe esto?\n\n\n\nDirección IP: 2806:2f0:4260:f321:160:bed5:98bf:b149\nHora: 2026-10-31T06:58:32Z\nURL: https://www.google.com/search?q=qui%C3%A9n%20hace%20p%C3%A1ginas%20web%20para%20negocios%20de%20servicios%20Tampico&sei=mJHlasJs5qaa2Q-UyPrICQ\n",
+    "screenshot": "aeo-20261031-qa\\probes\\google.png"
+  },
+  {
+    "provider": "Bing Search",
+    "query": "mejorar presencia en Google y WhatsApp para un negocio Ciudad Madero",
+    "checkedAt": "2026-10-31T06:58:35.374Z",
+    "http": 200,
+    "title": "mejorar presencia en Google y WhatsApp para un negocio Ciudad Madero - Búsqueda",
+    "blocked": false,
+    "observed": "NOT_MENTIONED",
+    "sample": "Ir al contenido\nComentarios de accesibilidad\nRewards\nTODOMODO DE IAIMÁGENESVÍDEOSMAPASNOTICIAS\nMÁS\nAproximadamente 50 resultados\ngoogle.com.mx\nhttps://maps.google.com.mx › mapfiles\nGoogle Maps\n\nExplore the world and navigate your surroundings with Google Maps, offering tools for planning trips, discovering places, and much …\n\n \ngoogle.com.mx\nhttps://maps.google.com.mx › intl › help › maps › streetview › privacy.html\nPrivacy – Street View – Google Maps\n\nGoogle Maps with Street View lets you explore places around the world through 360-degree, panoramic, and street-level imagery. …\n\ngoogle.com.mx\nhttps://maps.google.com.mx › mapfiles › ms › blank.html\nGoogle Maps\n\nDescubre y navega el mundo con Google Maps, una herramienta para planificar viajes y explorar lugares con facilidad.\n\ngoogle.com.mx\nhttps://maps.google.com.mx › landing › transit › index.html\nTransit – Google Maps\n\nIf you provide a transportation service that is open to the public, and operates with fixed schedules and routes, we welcome your …\n\ngoogle.com.mx\nhttps://maps.google.com.mx › help › attribution_maps\nAvisos legales para Google Maps o Google Earth y las API de Google …\n\nMediante el uso de un producto o servicio de Google que incluye datos de fichas de la empresa, usted acepta quedar obligado por …\n\ngoogle.com.mx\nhttps://maps.google.com.mx › intl › en › help › maps › businessphotos\nBusiness Photos – Google Maps\n\nNot only will these images appear on Google searches, Google Maps, and Google+ Local, but you can easily embed panoramic …\n\ngoogle.com.mx\nhttps://maps.google.com.mx › apple-app-site-association\nGoogle Maps\n\n{ \"applinks\": { \"apps\": [], \"details\": [ { \"appID\": \"EQHXZ8M8AV.com.google.Dzimuth\", \"paths\": [ \"/\", \"/maps\", \"/maps/@*\", \"/maps/@/*\", …\n\ngoogle.com.mx\nhttps://maps.google.com.mx › intl › help",
+    "screenshot": "aeo-20261031-qa\\probes\\bing.png"
+  },
+  {
+    "provider": "DuckDuckGo Search",
+    "query": "quién hace páginas web para negocios de servicios Tampico",
+    "checkedAt": "2026-10-31T06:58:38.022Z",
+    "http": 202,
+    "title": "quién hace páginas web para negocios de servicios Tampico at DuckDuckGo",
+    "blocked": false,
+    "observed": "NOT_MENTIONED",
+    "sample": "DuckDuckGo\nAbrir menú\n Todo\nImágenes\nVideos\nNoticias\nMapas\nDuck.ai\nConfiguración de búsqueda\nPrivado\nMéxico\nBúsqueda segura: moderada\nEn cualquier momento\nCerrar menú\nBUSCAR\nPágina de inicio\nTemas\nAjustes\nCOMPARTIR COMENTARIOS\nDESCARGAS\nNavegador iOS\nNavegador Android\nNavegador Mac\nNavegador Windows\nExtensiones de navegador\nMÁS SOBRE DUCKDUCKGO\n\nPásate a nuestro navegador privado\n\nRápido. Seguro. Gratuito.\n\nDescargar navegador\nDuck.ai\nProtección del correo electrónico\nBoletín\nBlog\nPódcast\nColaboraciones\nAPRENDE MÁS\nNovedades\nComparar privacidad\nAcerca de nuestro navegador\nAcerca de DuckDuckGo\nOTROS RECURSOS\nAyuda\nComunidad\nTrabajos\nPolítica de Privacidad\nCondiciones del servicio\nDossier de prensa\nAnunciarse en la búsqueda\nDonaciones benéficas de DuckDuckGo\n\n$1 millones para organizaciones de todo el mundo en 2026.\n\nAprende Más\nAprende Más\nNovedades\nAcerca del navegador\nComparar privacidad\nPáginas de ayuda\nObtener más\nProtección del correo electrónico\nPódcast y Boletín\nColaboraciones\nLamentablemente, los bots también usan DuckDuckGo.\nCompleta el siguiente desafío para confirmar que es una persona la que ha realizado esta búsqueda.\nSelecciona todos los cuadrados que contengan un pato:\nEnviar\nCompartir comentarios\n\nActualizar a nuestro navegador.\n\nPrueba el\nnavegador DuckDuckGo.\nRápido. Gratuito. Privado.\n\nDescargar navegador\nGRATIS",
+    "screenshot": "aeo-20261031-qa\\probes\\duckduckgo.png"
+  }
+]
