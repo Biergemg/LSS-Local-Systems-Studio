@@ -21,12 +21,12 @@ export default function PrivacyPage() {
 
       <h2>2. Datos que podemos tratar</h2>
       <p>Según tu interacción, podemos tratar tu nombre, empresa y cargo, ciudad o área de servicio, número telefónico, correo electrónico, enlaces públicos que compartas, servicios que te interesan, contenido de conversaciones y archivos que nos envíes; así como datos de facturación y contratación cuando corresponda. Nuestros proveedores de alojamiento también pueden tratar información técnica necesaria para prestar el sitio, como dirección IP, fecha, tipo de navegador y registros de seguridad.</p>
-      <p>La Primera Visita Digital consiste en revisar información que tu negocio muestra públicamente en Internet y materiales que compartes para ese fin. Este sitio <strong>no contiene un simulador</strong> que recabe el nombre de un negocio ni un formulario de captura propio: el botón de contacto abre WhatsApp y el mensaje se envía solo si tú decides enviarlo.</p>
+      <p>Para preparar una propuesta podemos revisar información que tu negocio muestra públicamente en Internet y materiales que compartes para ese fin. Este sitio <strong>no contiene un simulador</strong> que recabe el nombre de un negocio ni un formulario de captura propio: el botón de contacto abre WhatsApp y el mensaje se envía solo si tú decides enviarlo.</p>
       <p>No solicitamos datos sensibles (por ejemplo, salud, biometría, origen racial, creencias o información financiera privada) mediante este sitio. Evita enviarlos por WhatsApp o correo. Si un proyecto excepcionalmente los requiriera, el tratamiento deberá definirse por separado con las autorizaciones y salvaguardas correspondientes.</p>
 
       <h2>3. Finalidades necesarias</h2>
       <ul>
-        <li>Responder consultas y solicitudes de cotización de la landing de una página y de Primera Visita Digital; verificar los datos necesarios para dar seguimiento.</li>
+        <li>Responder consultas y solicitudes de propuesta; verificar los datos necesarios para dar seguimiento.</li>
         <li>Analizar la presencia digital que nos indiques, preparar observaciones y propuestas solicitadas.</li>
         <li>Evaluar factibilidad, negociar, formalizar, ejecutar, administrar y dar soporte a los servicios contratados.</li>
         <li>Coordinar accesos delegados autorizados y comunicarnos sobre entregables, pagos, cambios y continuidad.</li>

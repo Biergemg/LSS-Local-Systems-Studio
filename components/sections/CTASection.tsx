@@ -9,7 +9,7 @@ export default function CTASection() {
         <div className="container faq-wrap">
           <div>
             <p className="eyebrow">Preguntas frecuentes</p>
-            <h2 id="faq-h" className="display">Lo que suelen preguntar antes de empezar.</h2>
+            <h2 id="faq-h" className="display">Lo que suelen preguntar antes de contratar.</h2>
           </div>
           <div className="faq">
             {FAQ_ITEMS.map((f) => (
@@ -33,7 +33,7 @@ export default function CTASection() {
             <a className="btn btn-primary btn-lg" href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer">{CTA_SECTION.submit}</a>
           </p>
           <p className="small" style={{ maxWidth: '60ch' }}>{CTA_SECTION.micro}</p>
-          <p className="small mail-line">Si prefieres no usar WhatsApp, <a href={EMAIL_CONTACT_URL}>solicita tu landing por correo</a>. También puedes escribir a <a href={`mailto:${CONTACT.email}`} style={{ display: 'inline-flex', alignItems: 'center', minHeight: 44 }}>{CONTACT.email}</a>.</p>
+          <p className="small mail-line">Si prefieres no usar WhatsApp, <a href={EMAIL_CONTACT_URL}>solicita tu propuesta por correo</a>. También puedes escribir a <a href={`mailto:${CONTACT.email}`} style={{ display: 'inline-flex', alignItems: 'center', minHeight: 44 }}>{CONTACT.email}</a>.</p>
         </div>
       </section>
     </>

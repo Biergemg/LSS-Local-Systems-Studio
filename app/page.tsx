@@ -1,15 +1,13 @@
 import WhatsAppFloat from '@/components/ui/WhatsAppFloat';
 import { faqSchema } from '@/lib/schema';
-import BeliefSection from '@/components/sections/BeliefSection';
 import CTASection from '@/components/sections/CTASection';
-import EvidenceSection from '@/components/sections/EvidenceSection';
-import ExpectationsSection from '@/components/sections/ExpectationsSection';
 import Footer from '@/components/sections/Footer';
 import Hero from '@/components/sections/Hero';
 import Nav from '@/components/sections/Nav';
-import OfferSection from '@/components/sections/OfferSection';
-import PpvSection from '@/components/sections/PpvSection';
+import IncludesSection from '@/components/sections/IncludesSection';
+import PerceptionSection from '@/components/sections/PerceptionSection';
 import ProcessSection from '@/components/sections/ProcessSection';
+import ResultSection from '@/components/sections/ResultSection';
 
 export default function Page() {
   return (
@@ -19,12 +17,10 @@ export default function Page() {
       <Nav />
       <main id="contenido">
         <Hero />
-        <BeliefSection />
-        <PpvSection />
-        <OfferSection />
+        <PerceptionSection />
+        <ResultSection />
+        <IncludesSection />
         <ProcessSection />
-        <EvidenceSection />
-        <ExpectationsSection />
         <CTASection />
       </main>
       <Footer />

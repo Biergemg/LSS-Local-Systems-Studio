@@ -30,8 +30,8 @@ const answers = [
   },
   {
     id: 'ya-tengo-sitio', question: '¿Y si ya tengo una página web y no quiero rehacerla?',
-    answer: 'La Primera Visita Digital revisa qué encuentra una persona que no te conoce, qué entiende y qué tan sencillo es contactarte. Si el problema está en el texto, los datos o algún enlace, podemos recomendar reparar la web que ya tienes.',
-    proof: 'La recomendación inicial incluye capturas fechadas y tres observaciones concretas, no la obligación de comprar una página nueva.',
+    answer: 'Cuéntanos qué tienes: revisamos qué encuentra una persona que no te conoce, qué entiende y qué tan sencillo es contactarte. Si el problema está en el texto, los datos o algún enlace, podemos recomendar reparar la web que ya tienes.',
+    proof: 'La recomendación llega por escrito dentro de tu propuesta y no implica la obligación de comprar una página nueva.',
   },
   {
     id: 'tampico-ciudad-madero-altamira', question: '¿Atienden negocios de Tampico, Ciudad Madero y Altamira?',
@@ -69,7 +69,7 @@ export default function DigitalPresencePage() {
       <header className="nav">
         <nav className="container nav-inner" aria-label="Navegación del servicio">
           <Logo />
-          <Link href="/#contacto" className="btn btn-primary" style={{ minHeight: 44, padding: '9px 13px', fontSize: 14 }}>Solicitar revisión</Link>
+          <Link href="/#contacto" className="btn btn-primary" style={{ minHeight: 44, padding: '9px 13px', fontSize: 14 }}>Solicitar una propuesta</Link>
         </nav>
       </header>
       <main id="contenido" className="service-page">
@@ -80,8 +80,8 @@ export default function DigitalPresencePage() {
             <p className="lede">Si alguien busca tu negocio por primera vez, necesita saber qué haces, si puedes atenderlo y cómo pedir una cita o cotización. Revisamos esa experiencia y construimos o corregimos lo que realmente haga falta.</p>
             <p className="service-area">Atención remota desde México · Tampico, Ciudad Madero, Altamira y otras ciudades.</p>
             <div className="service-cta">
-              <a className="btn btn-primary" href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer">Quiero mi landing de una página</a>
-              <Link className="link-line" href="/#oferta">Ver alcance del servicio</Link>
+              <a className="btn btn-primary" href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer">Solicitar una propuesta</a>
+              <Link className="link-line" href="/#incluye">Ver qué incluye</Link>
             </div>
           </div>
         </section>
@@ -103,11 +103,11 @@ export default function DigitalPresencePage() {
         </section>
         <section className="section service-end" aria-labelledby="service-contact">
           <div className="container">
-            <p className="eyebrow">La Primera Visita Digital</p>
-            <h2 id="service-contact" className="display">Primero observamos. Después proponemos.</h2>
-            <p className="lede">La revisión inicial no tiene costo. Revisamos lo que se ve públicamente de tu negocio y compartimos tres observaciones concretas. Si hay encaje, definimos el alcance, las fechas y la inversión por escrito.</p>
+            <p className="eyebrow">Solicitar una propuesta</p>
+            <h2 id="service-contact" className="display">Cuéntanos de tu negocio.</h2>
+            <p className="lede">Escríbenos por WhatsApp o por correo. Conversamos, revisamos lo que se ve públicamente de tu negocio y, si hay encaje, te enviamos una propuesta por escrito con alcance, fechas e inversión.</p>
             <div className="service-cta">
-              <a className="btn btn-primary btn-lg" href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer">Quiero mis tres observaciones</a>
+              <a className="btn btn-primary btn-lg" href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer">Solicitar una propuesta</a>
               <a className="link-line" href={EMAIL_CONTACT_URL}>Solicitar por correo</a>
             </div>
             <p className="small" style={{ marginTop: 16 }}>Sin garantizar posiciones en buscadores, clientes nuevos ni herramientas que no estén contratadas.</p>

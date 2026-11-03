@@ -16,7 +16,9 @@ export default function ProcessSection() {
             </li>
           ))}
         </ol>
-        <p className="small tl-note">{PROCESS.note}</p>
+        <ul className="assurances">
+          {PROCESS.assurances.map((a) => (<li key={a}>{a}</li>))}
+        </ul>
       </div>
     </section>
   );

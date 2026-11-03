@@ -1,4 +1,5 @@
-import { HERO, CONTACT, EMAIL_CONTACT_URL } from '@/data/content';
+import { HERO, CONTACT } from '@/data/content';
+import Corners from '@/components/ui/Corners';
 import FlowMark from '@/components/ui/FlowMark';
 
 export default function Hero() {
@@ -12,13 +13,19 @@ export default function Hero() {
           <p className="lede">{HERO.body}</p>
           <div className="hero-actions">
             <a className="btn btn-primary" data-hide-wa href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer">{HERO.ctaPrimary}</a>
-            <a className="link-line" href="#entrega">{HERO.ctaSecondary}</a>
+            <a className="link-line" href="#proceso">{HERO.ctaSecondary}</a>
           </div>
-          <p className="small hero-micro">{HERO.micro} <a href={EMAIL_CONTACT_URL} style={{ display: 'inline-flex', alignItems: 'center', minHeight: 44, maxWidth: '100%' }}>¿Prefieres correo? Solicítalo por email.</a></p>
+          <p className="small hero-micro">{HERO.micro}</p>
         </div>
 
-        <figure className="hero-figure" aria-label={`${s.label}. ${s.desc}`}>
+        <figure className="hero-figure" aria-label={s.label}>
+          <Corners />
           <FlowMark />
+          <ol className="hero-notes">
+            {s.lines.map((l) => (
+              <li key={l.n}><span className="note-n">{l.n}</span><b>{l.t}</b><span>{l.d}</span></li>
+            ))}
+          </ol>
           <figcaption>{s.label}</figcaption>
         </figure>
       </div>
