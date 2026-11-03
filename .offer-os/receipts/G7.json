@@ -1,0 +1,21 @@
+{
+  "gate": "G7",
+  "skillVersion": "3.0.0",
+  "operatorId": "builder-claude",
+  "gateHash": "fc07cec4f443db387b904304372d80f15e6bf319811155e70491c4d4dbb1b52c",
+  "evidence": [
+    {
+      "path": "evidence/G7-independent-review.md",
+      "sha256": "d4e8f1debb98d4efd242ac3766c15ecffc2fdc1e5b3579ec54a79b08b49dad79",
+      "size": 32688
+    },
+    {
+      "path": "evidence/G7-experimentos-y-disposicion.md",
+      "sha256": "573167a131beeb02246db1a08cd22fc347c51394b891d1037a47511bb5268865",
+      "size": 6052
+    }
+  ],
+  "previousReceiptHash": "bef23ee709d971f44814d576449acfdb7fd72e7d768ecd76b621cef024746905",
+  "sealedAt": "2026-11-03T07:23:57.264Z",
+  "limits": "Structural checks and local file integrity only. External truth and reviewer independence require independent verification."
+}

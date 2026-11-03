@@ -14,6 +14,17 @@ export default function OfferSection() {
           <p className="lede reveal">{OFFER.intro}</p>
         </div>
 
+        <div className="reveal" style={{ margin: '48px 0 40px' }}>
+          <h3 className="h2">{OFFER.deliverablesTitle}</h3>
+          <ul style={{ margin: '12px 0 0', paddingLeft: 20, display: 'grid', gap: 10, listStyle: 'disc' }}>
+            {OFFER.deliverables.map((d) => (
+              <li key={d}>{d}</li>
+            ))}
+          </ul>
+          <p className="small" style={{ marginTop: 16 }}><strong>{OFFER.excludesTitle}.</strong> {OFFER.excludes}</p>
+        </div>
+
+        <h3 className="h2 reveal" style={{ marginBottom: 12 }}>{OFFER.groupsTitle}</h3>
         <ol className="groups">
           {OFFER.groups.map((g) => (
             <li className="group reveal" key={g.n}>

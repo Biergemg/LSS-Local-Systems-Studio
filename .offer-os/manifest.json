@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 3,
+  "skill": "offers",
+  "skillVersion": "3.0.0",
+  "operatorId": "builder-claude",
+  "createdAt": "2026-11-03T06:51:28.271Z",
+  "gateOrder": [
+    "G0",
+    "G1",
+    "G2",
+    "G3",
+    "G4",
+    "G5",
+    "G6",
+    "G7",
+    "G8"
+  ],
+  "provenanceLimits": "Hashes prove that local files did not change after sealing; they do not independently establish the truth of their contents."
+}

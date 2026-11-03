@@ -1,0 +1,16 @@
+{
+  "gate": "G2",
+  "skillVersion": "3.0.0",
+  "operatorId": "builder-claude",
+  "gateHash": "541bf5858911135bab926f9f511d7eecbb5afe0f051afab52fdf361749ead14d",
+  "evidence": [
+    {
+      "path": "evidence/G2-posicionamiento.md",
+      "sha256": "2b296a3a8d204126f6910dc6628aa5605f11b59176bc88682c8a934c86facd54",
+      "size": 1759
+    }
+  ],
+  "previousReceiptHash": "57ab4e2fd68e8f328cac240e1a813d7c1b67fd2018ac50ece3dd2f9cc4b2aec8",
+  "sealedAt": "2026-11-03T06:54:36.117Z",
+  "limits": "Structural checks and local file integrity only. External truth and reviewer independence require independent verification."
+}

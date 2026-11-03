@@ -1,0 +1,1 @@
+Create substantive evidence files in this directory and cite original source URLs or document IDs. Never include secrets, patient information or invented testimonials. Set gate JSON fields then run seal and check.

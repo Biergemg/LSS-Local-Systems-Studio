@@ -1,8 +1,8 @@
 import type { ContactInfo, FaqItem, NavLink } from '@/types';
 
-/* Copy V6 → V8 definitivo (2026-10-29). Fuente: LSS_LANDING_Y_VENTAS_COPY_V6 + LSS_OFERTA_V6.
-   Sin precios, garantías vigentes, casos, cifras ni testimonios: no están aprobados para publicación (matriz H, oferta V6).
-   Los límites contractuales viven en la propuesta y en las preguntas frecuentes, no en el discurso de venta. */
+/* Copy de oferta reingenierizada (2026-11-03). Trazabilidad: .offer-os/evidence (G0-G8).
+   Sin precios, garantias, casos, cifras ni testimonios: ninguno esta aprobado para publicacion.
+   El bloque "No incluye" delimita el alcance; los limites contractuales completos viven en la propuesta y en los terminos. */
 
 export const SITE = {
   name: 'LSS — Local Systems Studio',
@@ -10,7 +10,7 @@ export const SITE = {
   url: 'https://www.lsslocalsystemsstudio.com',
   title: 'LSS | Web, Google y contacto para negocios de servicios',
   description:
-    'Revisamos a distancia cómo te ve un cliente nuevo y te damos tres observaciones concretas, sin costo. Web, Google y contacto por WhatsApp.',
+    'Hacemos o corregimos tu web, tus datos en Google y tu ruta de contacto, y los probamos contigo en un teléfono. Primera Visita Digital sin costo.',
 };
 
 const WA_NUMBER = '528333263389';
@@ -40,21 +40,21 @@ export const SOCIALS = [
 
 export const NAV_LINKS: NavLink[] = [
   { href: '#cambio', label: 'Qué cambiaríamos' },
-  { href: '#prueba', label: 'La prueba' },
+  { href: '#prueba', label: 'Primera Visita' },
   { href: '#oferta', label: 'Qué recibes' },
   { href: '#proceso', label: 'Cómo se entrega' },
   { href: '#preguntas', label: 'Preguntas' },
 ];
 
-export const NAV_CTA = 'Revisar mi negocio';
+export const NAV_CTA = 'Primera Visita Digital';
 
 export const HERO = {
   eyebrow: 'Negocios de servicios que venden por cita o cotización',
-  headline: 'Que quien te encuentre entienda por qué tu trabajo vale lo que cobras.',
-  body: 'Ordenamos tu primera impresión: una web clara, tus datos correctos en Google y una forma directa de escribirte. Trabajamos a distancia, estés en otra ciudad o en otro país.',
+  headline: 'Tu web, tu perfil de Google y tu WhatsApp, probados en un teléfono antes de entregártelos.',
+  body: 'Para negocios de servicios que reciben clientes por recomendación. Hacemos o corregimos tu sitio, tus datos en Google y tu ruta de contacto, y te mostramos que funcionan. Todo a distancia, con las cuentas a tu nombre.',
   ctaPrimary: 'Quiero mi Primera Visita Digital',
   ctaSecondary: 'Ver cómo comprobamos la entrega',
-  micro: 'Revisión a distancia, sin costo: tres observaciones concretas. Se abre WhatsApp con tu mensaje listo.',
+  micro: 'Sin costo: tres observaciones concretas sobre cómo se ve hoy tu negocio. LSS es un estudio pequeño y nuevo: todavía no publicamos casos de clientes, por eso el alcance y la inversión total van por escrito antes de que decidas. Se abre WhatsApp con tu mensaje listo.',
   schematic: {
     label: 'Primera Visita Digital',
     desc: 'Recorrido de un cliente nuevo: lo que encuentra, lo que entiende y cómo te escribe.',
@@ -70,20 +70,20 @@ export const BELIEF = {
     { n: '02', name: 'En Google', lead: 'Verifican dónde estás.', text: 'Revisan tu información y las reseñas que realmente tienes.' },
     { n: '03', name: 'En WhatsApp', lead: 'Te preguntan lo que necesitan.', text: 'Sin tener que adivinar a qué número escribir.' },
   ],
-  closing: 'Tres piezas que cuentan la misma historia.',
+  closing: 'Cuando las tres dicen lo mismo, la persona no tiene que adivinar.',
 };
 
 export const PPV = {
   eyebrow: 'La Primera Visita Digital',
-  title: 'Abre tu negocio como si nunca hubieras oído hablar de él.',
-  body: 'Es lo primero que hacemos, y se hace a distancia: observamos tu presencia digital como la vería quien te busca por primera vez, anotamos tres puntos que dificultan entenderte, confiar o contactarte, y te mostramos las capturas y qué cambiaríamos.',
-  remote: 'No hace falta que vayamos a tu local: todo parte de lo que tu negocio muestra en Internet, estés en otra ciudad o en otro país.',
+  title: 'Lo primero: revisamos tu negocio como lo vería alguien que no te conoce.',
+  body: 'La Primera Visita Digital es una revisión a distancia, no una visita a tu local: observamos tu presencia digital como la vería quien te busca por primera vez, anotamos tres puntos que dificultan entenderte, confiar o contactarte, y te mostramos las capturas y qué cambiaríamos.',
+  remote: 'No hace falta que vayamos a tu local: todo parte de lo que tu negocio muestra en Internet, estés en la ciudad de México que estés.',
   steps: [
     { n: '01', t: 'Lo que la persona encuentra', d: 'Qué aparece al buscarte y si web, Google y redes coinciden.' },
     { n: '02', t: 'Lo que entiende', d: 'Si en segundos sabe qué haces, para quién y dónde.' },
     { n: '03', t: 'Cómo puede escribirte', d: 'Si el botón lleva al número correcto y a quien responde.' },
   ],
-  sample: 'Si el proyecto encaja y hay disponibilidad, preparamos una primera dirección visual con tu marca para que veas el enfoque antes de contratar.',
+  sample: 'Si decides avanzar, recibes una propuesta con alcance, calendario e inversión total antes de pagar nada.',
   cta: 'Quiero mi Primera Visita Digital',
   docTitle: 'Tres observaciones',
   docTag: 'Formato',
@@ -92,33 +92,44 @@ export const PPV = {
 
 export const OFFER = {
   eyebrow: 'LSS Presencia Resuelta',
-  title: 'Tu cliente debería poder responder cuatro preguntas antes de escribirte.',
-  intro: 'Presencia Resuelta reúne en un solo proyecto lo que suele quedar repartido entre diseño, textos, Google y contacto. Tú apruebas el mensaje y la evidencia; LSS ejecuta y documenta.',
+  title: 'Qué recibes, en concreto.',
+  intro: 'Un proyecto con alcance escrito que reúne lo que suele quedar repartido entre diseño, textos, Google y contacto. Tú apruebas el mensaje y la evidencia; LSS ejecuta, prueba y documenta.',
+  deliverablesTitle: 'Incluye',
+  deliverables: [
+    'Un sitio web para teléfono de hasta cinco páginas, con tus servicios explicados con las palabras de quien los busca.',
+    'Tu información de Google coherente con la web: Perfil de Empresa revisado con tu autorización y SEO técnico inicial. La verificación del perfil la decide Google.',
+    'Una ruta de contacto (enlace de WhatsApp, teléfono o correo) con prueba de que el mensaje llega al número o buzón que acordamos.',
+    'Search Console y Analytics configurados en cuentas a tu nombre, con tu autorización y tu acceso al dominio, para saber qué llega.',
+    'Un acta de entrega con capturas y fechas, y los accesos y renovaciones por escrito.',
+  ],
+  excludesTitle: 'No incluye',
+  excludes: 'Garantía de clientes, ventas ni posiciones en Google; anuncios; fotografía profesional; tienda en línea; agenda, cobros ni asistente automático. Dominio, alojamiento y correo los contratas tú, a tu nombre; antes de empezar te decimos su costo anual aproximado.',
+  groupsTitle: 'Las cuatro preguntas que tu cliente se hace antes de escribirte',
   groups: [
     { n: '01', title: '¿Hacen lo que necesito?', text: 'Servicios explicados con las palabras de quien los busca, en una web móvil con preguntas frecuentes.' },
-    { n: '02', title: '¿Por qué confiar?', text: 'Fotografías, experiencia y credenciales auténticas, con datos coherentes entre web y Google.' },
-    { n: '03', title: '¿Cómo pido precio?', text: 'WhatsApp, teléfono y el formulario contratado, probados y conectados a quien responde.' },
+    { n: '02', title: '¿Por qué confiar?', text: 'Fotografías, experiencia y credenciales tuyas y auténticas, con datos coherentes entre web y Google.' },
+    { n: '03', title: '¿Cómo pido precio?', text: 'Un WhatsApp, teléfono o correo visibles, con prueba de que el mensaje llega al destino acordado.' },
     { n: '04', title: '¿Quién tiene el control?', text: 'Cuentas, fechas, accesos, propiedad del dominio y condiciones de renovación, por escrito.' },
   ],
-  closing: 'No hace falta fingir una empresa más grande. Hace falta mostrar mejor la que ya existe.',
+  closing: 'Todo parte de lo que tu negocio ya hace: no inventamos casos, reseñas ni cifras.',
   detailsSummary: 'Ver el detalle técnico del alcance',
-  details: 'Hasta cinco páginas, revisión autorizada de un Perfil de Empresa de Google, SEO técnico inicial, integración de contacto, checklist y entrega documentada, conforme a la propuesta. Alojamiento, dominio y correo empresarial se incluyen cuando la propuesta lo indica.',
+  details: 'Hasta cinco páginas, revisión autorizada de un Perfil de Empresa de Google, SEO técnico inicial, integración de contacto, checklist y entrega documentada, conforme a la propuesta. Dominio, alojamiento y correo quedan a tu nombre; sus costos anuales aproximados se te informan antes de empezar.',
   existing: {
-    title: 'Si tu web ya funciona, la conservamos.',
-    text: 'Hay negocios que necesitan un sitio nuevo y otros que solo necesitan ordenar servicios, corregir Google o reparar cómo llegan los mensajes. Primero distinguimos una cosa de la otra.',
+    title: 'Si ya tienes web, la conservamos.',
+    text: 'Corregimos Google, el contacto y la medición sin rehacer tu sitio. Si no tienes uno, hacemos un sitio nuevo de hasta cinco páginas además de lo anterior. Primero distinguimos una cosa de la otra en la revisión.',
   },
-  cta: 'Ver si encaja con mi negocio',
+  cta: 'Quiero mi Primera Visita Digital',
 };
 
 export const PROCESS = {
   eyebrow: 'Un proceso que puedes revisar',
-  title: 'Sabes qué estamos haciendo y qué recibes al final.',
+  title: 'Cinco pasos, cada uno con algo que puedes revisar.',
   steps: [
     { title: 'Revisamos tu negocio a distancia', text: 'Conversación breve en línea y las tres prioridades de la Primera Visita Digital.' },
-    { title: 'Te enseñamos la dirección', text: 'Para proyectos que encajan, una muestra visual y un recorrido propuesto; después presupuesto y calendario.' },
+    { title: 'Te presentamos la propuesta', text: 'Si decides avanzar: alcance, calendario e inversión total por escrito, antes de pagar nada.' },
     { title: 'Lo construimos con tus datos', text: 'Mensaje, web, Google y enlaces, dentro del alcance firmado y los permisos autorizados.' },
     { title: 'Lo abrimos desde un teléfono', text: 'Comprobamos qué se muestra, qué enlace se pulsa y si el contacto llega al destino pactado.' },
-    { title: 'Te damos el control', text: 'Resumen, accesos, renovaciones, entrega y seguimiento correctivo definido.' },
+    { title: 'Te damos el control', text: 'Resumen, accesos y renovaciones por escrito. Las correcciones posteriores a la entrega se definen en la propuesta.' },
   ],
   note: 'Las fechas empiezan a contar cuando tenemos los materiales, accesos y aprobaciones que el proyecto necesita.',
 };
@@ -126,7 +137,7 @@ export const PROCESS = {
 export const EVIDENCE = {
   eyebrow: 'La prueba se hace contigo, en línea',
   title: 'Antes de decir “quedó listo”, lo abrimos contigo.',
-  body: 'Lo revisamos juntos a distancia: cómo se lee en el celular, el número de WhatsApp, las rutas de contacto contratadas, los enlaces y quién tiene acceso. Una función incluida que no pasa la prueba no se da por entregada.',
+  body: 'Lo revisamos juntos a distancia: cómo se lee en el celular, el número de WhatsApp, las rutas de contacto contratadas, los enlaces y quién tiene acceso. Cada punto del acta se marca como pasa, no pasa o depende de un tercero; lo que no pasa se corrige o se explica antes de cerrar la entrega.',
   docTitle: 'Acta de entrega',
   docTag: 'Formato',
   docRows: [
@@ -138,16 +149,16 @@ export const EVIDENCE = {
   ],
   docNote: 'Cada casilla se completa con la prueba real de tu proyecto.',
   measuredTitle: 'Medición de esta página',
-  measuredMeta: 'Medido el 29 de octubre de 2026 en la versión de revisión con Lighthouse 12.8.2 (móvil, simulado; mediana de 5 corridas) y axe-core con WCAG 2.2 AA.',
+  measuredMeta: 'Es lo que hicimos con nuestra propia página; todavía no tenemos clientes externos. Medido el 3 de noviembre de 2026 sobre la versión que se publica, con Lighthouse 12.8.2 (móvil, simulado; mediana de 5 corridas) y axe-core con WCAG 2.2 AA.',
   measured: [
     { k: 'Accesibilidad', v: '100' },
     { k: 'Buenas prácticas', v: '100' },
     { k: 'SEO', v: '100' },
-    { k: 'Rendimiento (móvil, laboratorio)', v: '93' },
+    { k: 'Rendimiento (móvil, laboratorio)', v: '89' },
     { k: 'Cambio de diseño (CLS)', v: '0' },
     { k: 'Errores WCAG 2.2 AA', v: '0' },
   ],
-  measuredNote: 'Se vuelve a medir al publicar.',
+  measuredNote: 'Mediciones de laboratorio: no equivalen a la experiencia de cada visitante.',
   cta: 'Quiero mi Primera Visita Digital',
 };
 
@@ -165,25 +176,25 @@ export const EXPECTATIONS = {
   ],
   driversNote: 'La propuesta con calendario e inversión total llega después de la Primera Visita Digital.',
   compareTitle: 'Si comparas con una web más económica, compara el mismo alcance.',
-  compareIntro: 'Una web económica puede bastar si solo necesitas publicar tu información. Esto añade Presencia Resuelta:',
+  compareIntro: 'Una web económica puede bastar si solo necesitas publicar tu información. Antes de decidir, pregunta a quien te cotice:',
   compare: [
-    { f: 'Mensaje', lo: 'Información publicada en una página.', hi: 'Servicios ordenados alrededor de las preguntas del cliente.' },
-    { f: 'Google', lo: 'Perfil y sitio por separado.', hi: 'Coherencia entre ambos, con cambios autorizados.' },
-    { f: 'Contacto', lo: 'Un botón o formulario publicado.', hi: 'Rutas comprobadas hasta su destino real.' },
-    { f: 'Entrega', lo: 'Publicación y archivos.', hi: 'Pruebas, accesos, fechas de renovación y guía de uso.' },
+    { f: 'Mensaje', lo: '¿Quién escribe los servicios con las preguntas de tu cliente?', hi: 'LSS, con tu aprobación del mensaje.' },
+    { f: 'Google', lo: '¿Quién revisa que web y Google digan lo mismo?', hi: 'LSS, con los cambios que tú autorizas.' },
+    { f: 'Contacto', lo: '¿Quién prueba que el mensaje llega a tu número o correo?', hi: 'LSS, con captura en el acta de entrega.' },
+    { f: 'Entrega', lo: '¿A nombre de quién quedan las cuentas y qué se entrega por escrito?', hi: 'A tu nombre, con accesos, renovaciones y guía de uso.' },
   ],
-  lo: 'Web económica',
+  lo: 'Pregunta a cualquier proveedor',
   hi: 'Presencia Resuelta',
-  criterion: 'Qué se compara',
+  criterion: 'Tema',
   continuityTitle: 'Lo que viene después también queda por escrito.',
-  continuity: 'Desde la propuesta sabes quién administra dominio, alojamiento y correo, qué servicios vencen y cuáles puedes mantener tú. Si quieres seguimiento continuo de contenido, presencia local y contactos, hay un plan mensual independiente de la instalación.',
+  continuity: 'Desde la propuesta sabes quién administra dominio, alojamiento y correo, qué servicios vencen y cuáles puedes mantener tú. Si quieres seguimiento, hay un plan mensual opcional, independiente del proyecto: reporte mensual con la fuente de cada dato, correcciones y cambios menores. Su alcance y sus condiciones también se te entregan por escrito antes de contratarlo.',
   continuityMicro: 'Ninguna suscripción sustituye tu titularidad sobre las cuentas y activos definidos en el contrato.',
 };
 
 export const CTA_SECTION = {
   eyebrow: 'Empecemos por lo que ya tienes',
   title: 'Enséñanos tu negocio. Te diremos qué mejoraríamos primero.',
-  description: 'Cuéntanos el nombre de tu empresa, tu ciudad y el servicio que quieres destacar. Revisamos a distancia cómo se entiende hoy y te compartimos tres observaciones concretas, desde cualquier ciudad o país.',
+  description: 'Cuéntanos el nombre de tu empresa, tu ciudad y el servicio que quieres destacar. Revisamos a distancia cómo se entiende hoy y te compartimos tres observaciones concretas, desde cualquier ciudad de México.',
   submit: 'Quiero mis tres observaciones',
   micro: 'WhatsApp abre una conversación con LSS; respondemos personalmente.',
 };
@@ -191,14 +202,16 @@ export const CTA_SECTION = {
 export const FAQ_ITEMS: FaqItem[] = [
   { question: 'Ya tengo Instagram y WhatsApp. ¿Para qué una web?', answer: 'Son buenos canales para mantener la relación y responder. Una web ordena servicios, zonas, proceso, preguntas y pruebas en un lugar que un desconocido puede consultar sin buscar entre publicaciones. La necesidad concreta se determina en la revisión.' },
   { question: '¿Me garantizan clientes nuevos?', answer: 'Cuántas personas buscan un servicio y deciden contratarlo depende también de tu oferta, tu reputación y tu mercado. Lo que sí se pacta y se comprueba es que la presentación y los canales de contacto incluidos funcionen.' },
-  { question: '¿Tienen que ir a mi negocio? ¿Trabajan a distancia?', answer: 'No tienen que ir. La Primera Visita Digital y el proyecto completo pueden hacerse 100 % a distancia, a partir de tu presencia en Internet y de los materiales que compartas. Funciona igual si estás en otra ciudad o en otro país.' },
+  { question: '¿Tienen que ir a mi negocio? ¿Trabajan a distancia?', answer: 'No tienen que ir. La Primera Visita Digital y el proyecto completo pueden hacerse 100 % a distancia, a partir de tu presencia en Internet y de los materiales que compartas. Funciona igual en cualquier ciudad de México.' },
   { question: '¿Qué pasa si ya tengo una web?', answer: 'La revisamos antes de recomendar sustituirla. Si la mejor inversión es conservarla y corregir tres cosas, eso es lo que te decimos.' },
   { question: '¿Qué pasa si no tengo fotos profesionales?', answer: 'Revisamos lo que sí tienes y diseñamos con material auténtico. Si conviene fotografiar el negocio, se cotiza aparte.' },
   { question: '¿Mi dominio y mi información quedan a mi nombre?', answer: 'El dominio y las cuentas que deban pertenecer a tu empresa se configuran con ese titular. Las licencias y derechos sobre código y diseño se explican en la propuesta y el contrato.' },
-  { question: '¿Cuánto costará mantenerlo?', answer: 'Antes de contratar conoces los costos de proveedores, las fechas de renovación y los servicios de mantenimiento opcionales.' },
+  { question: '¿Cuánto costará mantenerlo?', answer: 'Antes de contratar conoces los costos de proveedores, las fechas de renovación y el plan mensual opcional, con su alcance y sus condiciones. Puedes mantener tú mismo lo que te corresponda.' },
+  { question: '¿Es obligatorio el plan mensual?', answer: 'No. El proyecto se entrega con tus accesos y su guía. El seguimiento mensual solo existe si lo contratas, por escrito.' },
+  { question: '¿Cuánto cuesta el proyecto?', answer: 'Depende de lo que haya que construir o corregir, por eso no publicamos una cifra única. Después de la Primera Visita Digital recibes una propuesta con alcance, calendario e inversión total.' },
   { question: '¿Cuánto tarda?', answer: 'Depende del sitio, los materiales y las aprobaciones. La propuesta incluye calendario y lo que necesitas entregar.' },
   { question: '¿Qué tendría que hacer yo?', answer: 'Confirmar la información del negocio, compartir materiales propios, delegar accesos en las plataformas que correspondan y aprobar contenido. El trabajo técnico y las pruebas quedan a cargo de LSS dentro del alcance.' },
-  { question: '¿Tiene costo la primera revisión?', answer: 'La revisión inicial de tres observaciones no tiene costo. Si encontramos encaje, podemos mostrarte una dirección visual breve, sujeta a disponibilidad.' },
+  { question: '¿Tiene costo la primera revisión?', answer: 'La revisión inicial de tres observaciones no tiene costo. Si decides avanzar, recibes una propuesta con alcance, calendario e inversión total antes de pagar nada.' },
 ];
 
 export const FOOTER = {

@@ -1,0 +1,16 @@
+{
+  "gate": "G4",
+  "skillVersion": "3.0.0",
+  "operatorId": "builder-claude",
+  "gateHash": "e74ef8a01abf614f403d10fa011db28c58402bf25149be93a543f199a10a8250",
+  "evidence": [
+    {
+      "path": "evidence/G4-claims-y-riesgos.md",
+      "sha256": "d7e3551743dca262911adc32549df024799911c892692d53c8580b7606e30a1b",
+      "size": 2870
+    }
+  ],
+  "previousReceiptHash": "8a10c3e445c550f7816808f3edce20c76710d1af0e3b3fb60058dde5ae4c31db",
+  "sealedAt": "2026-11-03T07:22:44.454Z",
+  "limits": "Structural checks and local file integrity only. External truth and reviewer independence require independent verification."
+}

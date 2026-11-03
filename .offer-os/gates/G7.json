@@ -1,0 +1,87 @@
+{
+  "gate": "G7",
+  "decision": "PASS",
+  "operatorId": "builder-claude",
+  "data": {
+    "adversarialFindings": [
+      {
+        "finding": "C-1: la página no ofrece razón verificable para confiar en LSS; no hay nombre del responsable",
+        "severity": "critical",
+        "resolution": "Parcial: declaración honesta de estudio nuevo sin casos y medición propia fechada; nombre y ciudad pendientes del titular",
+        "verification": "content.ts HERO.micro; qa run3; pendiente en G8"
+      },
+      {
+        "finding": "Bloque Lighthouse del 29-oct contradecía la política de G4",
+        "severity": "critical",
+        "resolution": "Remedido el 3-nov y publicado con fecha y etiqueta de página propia",
+        "verification": "lighthouse-local.json: móvil 89/100/100/100; escritorio 100/100/100/100; axe 0 en run3"
+      },
+      {
+        "finding": "C-2: muestra visual gratuita sin costear",
+        "severity": "critical",
+        "resolution": "Retirada del copy",
+        "verification": "grep sin coincidencias de dirección visual"
+      },
+      {
+        "finding": "C-3: experimento de pago sin umbrales",
+        "severity": "critical",
+        "resolution": "Diseñado con umbrales y reglas de decisión; ejecución pendiente",
+        "verification": "evidence/G7-experimentos-y-disposicion.md"
+      },
+      {
+        "finding": "A-3: promesas operativas no respaldadas (hasta quien responde, formulario, reclamar perfil)",
+        "severity": "high",
+        "resolution": "Reescritas con límites verificables",
+        "verification": "content.ts OFFER.deliverables/groups"
+      },
+      {
+        "finding": "A-6 y revisión financiera: precio anclado a marketplaces y economía optimista",
+        "severity": "high",
+        "resolution": "Precio fijo retirado; rango de prueba; G5 rehecho a $400/h con abandono, CAC completo y capacidad realista",
+        "verification": "G3, G5 resellados; P50 +3,880; downside -11,940"
+      },
+      {
+        "finding": "M-7 y CLM-5: modalidad 100 % remota publicada sin aprobación del titular",
+        "severity": "medium",
+        "resolution": "No resoluble por el implementador; acotado a México; queda como decisión del titular",
+        "verification": "G8 approvalStatus PENDING"
+      }
+    ],
+    "experiments": [
+      {
+        "hypothesis": "Al menos un dueño calificado paga anticipo por Presencia Resuelta entre $9,800 y $14,500 tras una Primera Visita",
+        "baselinePlan": "30 Primeras Visitas ofrecidas en 60 días; propuestas alternando $9,800 y $14,500; Corrección $6,900 como entrada; registro de objeciones literales",
+        "metric": "Anticipos cobrados de al menos 50 % del proyecto; conversaciones de propuesta; precios dichos",
+        "guardrail": "Horas por Primera Visita no mayores a 3; horas de venta por cliente no mayores a 6",
+        "decisionRule": "Cero anticipos tras 15 propuestas: bajar precio o cambiar producto o segmento; 2 o más anticipos al brazo alto: mantener cerca de $14,500; solo brazo bajo: revisar viabilidad (downside de G5 es negativo)"
+      },
+      {
+        "hypothesis": "Los clientes contratan el seguimiento a $1,990 o $2,490 y el soporte real no supera 4 h al mes",
+        "baselinePlan": "Ofrecer el plan con alcance escrito a cada cliente del proyecto; medir horas reales de entrega y soporte durante 3 meses en los primeros 3 clientes",
+        "metric": "Tasa de aceptación del plan por precio; horas de entrega; horas de soporte mensual; abandono antes del mes 6",
+        "guardrail": "Puntos pasa del acta al menos 90 por ciento; sin garantías ni créditos otorgados",
+        "decisionRule": "Soporte mayor a 5.3 h a $2,490 o 4.05 h a $1,990, o entrega mayor a 32 h: rediseñar alcance o subir precio; aceptación menor a 1 de 3: vender solo proyecto"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "path": "evidence/G7-independent-review.md",
+      "purpose": "Revisión adversarial de contexto nuevo con hallazgos y veredicto BLOCKED_BY_DATA"
+    },
+    {
+      "path": "evidence/G7-experimentos-y-disposicion.md",
+      "purpose": "Disposición de cada hallazgo y diseño de experimentos con umbrales"
+    }
+  ],
+  "limitations": [
+    "Revisor de IA de contexto nuevo: independencia no verificable criptográficamente, no es auditoría humana",
+    "Ningún experimento ejecutado ni conversación con compradores",
+    "Dos hallazgos requieren decisión del titular"
+  ],
+  "review": {
+    "mode": "independent-agent",
+    "reviewerId": "fresh-reviewer-ad191",
+    "evidencePath": "evidence/G7-independent-review.md"
+  }
+}

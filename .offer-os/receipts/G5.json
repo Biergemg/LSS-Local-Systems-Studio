@@ -1,0 +1,16 @@
+{
+  "gate": "G5",
+  "skillVersion": "3.0.0",
+  "operatorId": "builder-claude",
+  "gateHash": "c61387be08b2cec74f6a423d57a5140f7a172683410ab4c9e08b64f8204de95f",
+  "evidence": [
+    {
+      "path": "evidence/G5-economia.md",
+      "sha256": "56f668eb9d0a0106388958d675a91b04b5f32c80fa775e7e0c5de06fbf320e1c",
+      "size": 3687
+    }
+  ],
+  "previousReceiptHash": "a00f6ee97648009a5ee3c4cc51c9ede48822210b71e4cc1a6f034d17ff8da789",
+  "sealedAt": "2026-11-03T07:22:44.636Z",
+  "limits": "Structural checks and local file integrity only. External truth and reviewer independence require independent verification."
+}

@@ -1,0 +1,16 @@
+{
+  "gate": "G6",
+  "skillVersion": "3.0.0",
+  "operatorId": "builder-claude",
+  "gateHash": "992b25a262c50d4c4fe5f7db95599404d462d43fd1d7b20d3a6a7c7a2a7f46e6",
+  "evidence": [
+    {
+      "path": "evidence/G6-motion-de-venta.md",
+      "sha256": "100a4a4a39edba957c9a89d16f2e18562537b66efbc5e7cdaf22d3adf7dc3372",
+      "size": 1770
+    }
+  ],
+  "previousReceiptHash": "07e281ab4c3100a8753c692801da37c6de6631bc688b4db88d824bf5c7d3856c",
+  "sealedAt": "2026-11-03T07:22:44.795Z",
+  "limits": "Structural checks and local file integrity only. External truth and reviewer independence require independent verification."
+}

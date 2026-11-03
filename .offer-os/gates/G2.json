@@ -1,0 +1,37 @@
+{
+  "gate": "G2",
+  "decision": "PASS",
+  "operatorId": "builder-claude",
+  "data": {
+    "usp": "Lo dejamos funcionando y lo abrimos contigo en tu teléfono antes de entregarlo",
+    "mechanism": "Primera Visita Digital, propuesta escrita, construcción, prueba en vivo con acta fechada, titularidad y medición del cliente",
+    "category": "Servicio implementado de presencia digital para negocios de servicios",
+    "bestFitBuyer": "Dueño de negocio de servicios por cita o cotización con clientes por recomendación, que quiere una entrega ordenada y verificable",
+    "differentiationStatus": "PROPOSED",
+    "credibleAlternatives": [
+      "Web de plantilla",
+      "Freelancer",
+      "Agencia local",
+      "Constructor propio",
+      "Instagram y WhatsApp"
+    ],
+    "distinctCapabilities": [
+      "Prueba de entrega en teléfono con acta fechada",
+      "Revisión conjunta de web, Google y contacto",
+      "Titularidad de cuentas del cliente y alcance escrito"
+    ]
+  },
+  "evidence": [
+    {
+      "path": "evidence/G2-posicionamiento.md",
+      "purpose": "Alternativas, capacidades, USP propuesto y límites de prueba"
+    }
+  ],
+  "limitations": [
+    "Ventaja de ejecución, replicable",
+    "Sin casos ni compradores que la prefieran"
+  ],
+  "review": {
+    "mode": "self"
+  }
+}

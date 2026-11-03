@@ -1,0 +1,21 @@
+{
+  "gate": "G1",
+  "skillVersion": "3.0.0",
+  "operatorId": "builder-claude",
+  "gateHash": "2fdb001f043bb4d83d40b3c8a227e67679e3c381829d6821ddd80ccfd9833f0d",
+  "evidence": [
+    {
+      "path": "evidence/G1-fuentes-anotadas.md",
+      "sha256": "1d3845d19b6f8aa974b4f7151a89d8f6ed52f4614d3c776dd7db126c142184b8",
+      "size": 3549
+    },
+    {
+      "path": "evidence/G1-comparativo-y-demanda.md",
+      "sha256": "ff6a5ad72ca547c9d56b0e5073ab131efc43423c0972da11495c191105bc505d",
+      "size": 2551
+    }
+  ],
+  "previousReceiptHash": "b68d93caea23c8da38d1c4ac1c04c46bf59de713be5e8c6949304ec16d29cf32",
+  "sealedAt": "2026-11-03T06:54:35.973Z",
+  "limits": "Structural checks and local file integrity only. External truth and reviewer independence require independent verification."
+}

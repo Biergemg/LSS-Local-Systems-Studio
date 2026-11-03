@@ -1,0 +1,16 @@
+{
+  "gate": "G3",
+  "skillVersion": "3.0.0",
+  "operatorId": "builder-claude",
+  "gateHash": "4541d5da5226af0eab2636560e33700a7a680a1afa147fe78b6448c6d8da9d3f",
+  "evidence": [
+    {
+      "path": "evidence/G3-arquitectura.md",
+      "sha256": "f69c501f3ae660e7ea6449fc132da554ab77458222538b4a1dfaf1846e33f490",
+      "size": 3210
+    }
+  ],
+  "previousReceiptHash": "e18005f4d2751e99b93afd2e3708bb1355a77e1596540f86d8322fa4b05bad0b",
+  "sealedAt": "2026-11-03T07:22:44.276Z",
+  "limits": "Structural checks and local file integrity only. External truth and reviewer independence require independent verification."
+}

@@ -1,0 +1,112 @@
+{
+  "gate": "G3",
+  "decision": "PASS",
+  "operatorId": "builder-claude",
+  "data": {
+    "options": [
+      {
+        "name": "Corrección de presencia",
+        "buyerBenefit": "Quien lo busque encuentra datos coherentes y un contacto que funciona, sin rehacer su web",
+        "mechanism": "Auditoría, ajustes en Google autorizados, ruta de contacto probada, medición, acta",
+        "timeline": "Calendario en la propuesta, desde que el cliente entrega accesos",
+        "cta": "Quiero mi Primera Visita Digital",
+        "includes": [
+          "Revisión y coherencia de Google",
+          "Ruta de contacto probada hasta su destino",
+          "Medición con Search Console y Analytics en cuentas del cliente",
+          "Acta de entrega"
+        ],
+        "excludes": [
+          "Garantía de ventas, clientes o posiciones",
+          "Agenda, anticipos y asistente de IA",
+          "Costos de terceros del cliente",
+          "Sitio nuevo",
+          "Muestras visuales gratuitas previas a la contratación"
+        ],
+        "price": {
+          "amount": null,
+          "currency": "MXN",
+          "classification": "PROPOSAL"
+        },
+        "cost": {
+          "variableDelivery": 4800
+        },
+        "guarantee": "NONE",
+        "urgency": "NONE"
+      },
+      {
+        "name": "Presencia Resuelta",
+        "buyerBenefit": "Una presencia clara y verificable en un solo proyecto",
+        "mechanism": "Sitio móvil de hasta cinco páginas, Google, contacto probado, medición, acta, titularidad",
+        "timeline": "Calendario en la propuesta, desde que el cliente entrega materiales y accesos",
+        "cta": "Quiero mi Primera Visita Digital",
+        "includes": [
+          "Sitio móvil hasta cinco páginas",
+          "Google coherente con autorización",
+          "Contacto probado",
+          "Medición",
+          "Acta y titularidad"
+        ],
+        "excludes": [
+          "Garantía de ventas, clientes o posiciones",
+          "Agenda, anticipos y asistente de IA",
+          "Costos de terceros del cliente",
+          "Fotografía profesional",
+          "Tienda en línea"
+        ],
+        "price": {
+          "amount": null,
+          "currency": "MXN",
+          "classification": "PROPOSAL"
+        },
+        "cost": {
+          "variableDelivery": 10400
+        },
+        "guarantee": "NONE",
+        "urgency": "NONE"
+      },
+      {
+        "name": "Presencia Resuelta con seguimiento",
+        "buyerBenefit": "Mantener la presencia y saber cada mes qué llegó",
+        "mechanism": "Proyecto completo más reporte mensual con fuente, correcciones y cambios menores",
+        "timeline": "Proyecto según propuesta; seguimiento mensual desde la entrega",
+        "cta": "Quiero mi Primera Visita Digital",
+        "includes": [
+          "Todo lo de Presencia Resuelta",
+          "Reporte mensual con fuente",
+          "Correcciones y cambios menores"
+        ],
+        "excludes": [
+          "Garantía de ventas, clientes o posiciones",
+          "Agenda, anticipos y asistente de IA",
+          "Costos de terceros del cliente",
+          "Producción de contenido nuevo no pactado"
+        ],
+        "price": {
+          "amount": null,
+          "currency": "MXN",
+          "classification": "PROPOSAL"
+        },
+        "cost": {
+          "variableDelivery": 24530
+        },
+        "guarantee": "NONE",
+        "urgency": "NONE"
+      }
+    ],
+    "priceNote": "Sin precio fijado. Rango de prueba hipotético, no autorizado: Corrección $6,900; Presencia Resuelta $9,800 vs $14,500; seguimiento $1,990 vs $2,490 mensual. Se valida en conversaciones reales (G7)."
+  },
+  "evidence": [
+    {
+      "path": "evidence/G3-arquitectura.md",
+      "purpose": "Estructura, precios propuestos, costos, exclusiones, CTA"
+    }
+  ],
+  "limitations": [
+    "Precios no autorizados ni validados",
+    "Costos de entrega supuestos a $400/h"
+  ],
+  "review": {
+    "mode": "self"
+  }
+}

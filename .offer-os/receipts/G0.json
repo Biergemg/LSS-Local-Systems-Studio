@@ -1,0 +1,16 @@
+{
+  "gate": "G0",
+  "skillVersion": "3.0.0",
+  "operatorId": "builder-claude",
+  "gateHash": "43cef3fbb4b848c1ac74dfb23a1423b5d8240bef3dc2492a3082fea68baf73c9",
+  "evidence": [
+    {
+      "path": "evidence/G0-brief.md",
+      "sha256": "52ab75169e44a2ca163bb11d61f10994c1fdf5f04fdc070f91566fb18f8b8a48",
+      "size": 3249
+    }
+  ],
+  "previousReceiptHash": null,
+  "sealedAt": "2026-11-03T06:54:26.491Z",
+  "limits": "Structural checks and local file integrity only. External truth and reviewer independence require independent verification."
+}
