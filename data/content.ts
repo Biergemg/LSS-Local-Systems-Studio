@@ -21,10 +21,6 @@ export function waLink(text: string = WA_DEFAULT_TEXT): string {
   return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`;
 }
 
-export const EMAIL_CONTACT_URL = 'mailto:contacto@lsslocalsystemsstudio.com?subject=' +
-  encodeURIComponent('Solicitud de propuesta — LSS') + '&body=' +
-  encodeURIComponent('Hola LSS, quiero solicitar una propuesta para mi negocio.\n\nNombre: \nNegocio: \nCiudad: \nA qué me dedico: \nMi página o perfil de Google (si lo tengo): \n\nGracias.');
-
 export const CONTACT: ContactInfo = {
   whatsapp: '+52 833 326 3389',
   whatsappUrl: waLink(),
@@ -39,7 +35,7 @@ export const SOCIALS = [
 ];
 
 export const NAV_LINKS: NavLink[] = [
-  { href: '#percepcion', label: 'Cómo te ven' },
+  { href: '#percepcion', label: 'Ejemplos' },
   { href: '#incluye', label: 'Qué incluye' },
   { href: '#proceso', label: 'Cómo trabajamos' },
   { href: '#preguntas', label: 'Preguntas' },
@@ -64,26 +60,28 @@ export const HERO = {
   },
 };
 
-export const PERCEPTION = {
-  eyebrow: 'Lo que ve quien te busca',
-  title: 'Un cliente nuevo se forma una opinión antes de escribirte.',
-  body: 'Alguien te recomendó. Antes de contactarte revisa tu perfil, tu página y la forma de escribirte. Ahí empieza la primera impresión de tu negocio.',
-  frames: [
-    { n: '01', t: 'Te busca' },
-    { n: '02', t: 'Te entiende' },
-    { n: '03', t: 'Te escribe' },
+export const SHOWCASE = {
+  eyebrow: 'Así puede verse tu negocio',
+  title: 'Diseño pensado para cada tipo de negocio.',
+  body: 'Una página bien diseñada presenta tu trabajo con carácter propio: tu estilo, tus servicios y un botón directo a tu WhatsApp. Estos son tres ejemplos conceptuales.',
+  concepts: [
+    { id: 'estetica', sector: 'Estética', brand: 'Tu estética', headline: 'Cuidado personal, a tu ritmo.', sub: 'Faciales, uñas y masajes con atención personalizada.', items: ['Faciales', 'Manicure y pedicure', 'Masajes', 'Tratamientos corporales'] },
+    { id: 'taller', sector: 'Taller mecánico', brand: 'Tu taller', headline: 'Diagnóstico claro antes de empezar.', sub: 'Afinación, frenos y servicio general para tu vehículo.', items: ['Afinación', 'Frenos', 'Suspensión', 'Diagnóstico'] },
+    { id: 'despacho', sector: 'Despacho', brand: 'Tu despacho', headline: 'Asesoría clara para decidir mejor.', sub: 'Atención contable, fiscal y legal para empresas y personas.', items: ['Contabilidad', 'Fiscal', 'Legal', 'Nómina'] },
   ],
-  caption: 'Ilustración del recorrido de un cliente nuevo. Los textos son de ejemplo.',
-  closing: 'Que tu negocio se vea tan bien como lo que haces.',
+  cta: 'Escribir por WhatsApp',
+  foot: 'Horarios · Ubicación',
+  tag: 'Ejemplo conceptual',
+  caption: 'Ejemplos conceptuales de diseño para distintos sectores. Los nombres y textos son ilustrativos y no representan a clientes de LSS.',
 };
 
 export const RESULT = {
-  eyebrow: 'Lo que cambia',
-  title: 'Un negocio que inspira confianza a primera vista.',
+  eyebrow: 'Lo que cambia para ti',
+  title: 'Tu negocio, listo para recibir mensajes.',
   items: [
-    { n: '01', t: 'Se nota la calidad.', d: 'Tu trabajo, presentado con orden, buen diseño y datos que coinciden en todos lados.' },
-    { n: '02', t: 'Se entiende qué ofreces.', d: 'Tus servicios, tu zona y tu forma de trabajar, explicados con las palabras de tu cliente.' },
-    { n: '03', t: 'Es fácil contratarte.', d: 'Un botón directo a tu WhatsApp y a tu teléfono desde el primer vistazo.' },
+    { n: '01', t: 'Menos explicaciones repetidas.', d: 'Lo básico, qué haces, dónde estás y cómo trabajas, ya está contado antes de que te escriban.' },
+    { n: '02', t: 'Un solo mensaje, en todos lados.', d: 'Mismo nombre, mismos horarios y un mismo número en tu página, tu ficha de Google y tus redes.' },
+    { n: '03', t: 'Una dirección para compartir.', d: 'Un enlace que puedes poner en tu bio, en tus tarjetas y en cada conversación.' },
   ],
   cta: 'Solicitar una propuesta',
 };
@@ -131,7 +129,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   { question: '¿Cuánto tarda?', answer: 'El calendario va en tu propuesta y empieza a contar cuando recibimos tu anticipo y tu material.' },
   { question: '¿Qué tengo que hacer yo?', answer: 'Contarnos de tu negocio, enviarnos fotos y datos, autorizar el acceso a tu ficha de Google, juntar tus ajustes en una sola ronda y probar la página en tu teléfono.' },
   { question: '¿Y si ya tengo página o uso una agenda?', answer: 'Trabajamos con lo que tienes. Si tu página sirve, te decimos qué corregir en lugar de rehacerla. Si usas una agenda, tu página lleva un botón hacia ella.' },
-  { question: '¿Me garantizan clientes?', answer: 'No, y conviene desconfiar de quien lo haga: depende de tu oferta, tu reputación y tu mercado. Lo que sí cuidamos es que tu negocio se vea bien, que el contacto funcione y que todo quede a tu nombre.' },
+    { question: '¿Me garantizan clientes?', answer: 'Nadie puede asegurarlo: depende de tu oferta, tu reputación y tu mercado. Nosotros cuidamos que tu negocio se presente bien, que el contacto funcione y que todo quede a tu nombre.' },
   { question: '¿Quién paga el dominio, el alojamiento y el correo?', answer: 'Tú, a tu nombre y a tu cargo. Te decimos cuánto cuestan antes de que pagues el anticipo.' },
 ];
 

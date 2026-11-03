@@ -1,4 +1,4 @@
-import { CTA_SECTION, CONTACT, EMAIL_CONTACT_URL, FAQ_ITEMS } from '@/data/content';
+import { CTA_SECTION, CONTACT, FAQ_ITEMS } from '@/data/content';
 import Corners from '@/components/ui/Corners';
 import Mark from '@/components/ui/Mark';
 
@@ -32,8 +32,7 @@ export default function CTASection() {
           <p className="cta-row" data-hide-wa>
             <a className="btn btn-primary btn-lg" href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer">{CTA_SECTION.submit}</a>
           </p>
-          <p className="small" style={{ maxWidth: '60ch' }}>{CTA_SECTION.micro}</p>
-          <p className="small mail-line">Si prefieres no usar WhatsApp, <a href={EMAIL_CONTACT_URL}>solicita tu propuesta por correo</a>. También puedes escribir a <a href={`mailto:${CONTACT.email}`} style={{ display: 'inline-flex', alignItems: 'center', minHeight: 44 }}>{CONTACT.email}</a>.</p>
+          <p className="small" style={{ maxWidth: '60ch' }}>{CTA_SECTION.micro}</p>
         </div>
       </section>
     </>

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Logo from '@/components/ui/Logo';
 import Footer from '@/components/sections/Footer';
-import { CONTACT, EMAIL_CONTACT_URL, SITE } from '@/data/content';
+import { CONTACT, SITE } from '@/data/content';
 
 const slug = '/servicios/presencia-digital';
 export const metadata: Metadata = {
@@ -107,8 +107,7 @@ export default function DigitalPresencePage() {
             <h2 id="service-contact" className="display">Cuéntanos de tu negocio.</h2>
             <p className="lede">Escríbenos por WhatsApp o por correo. Conversamos, revisamos lo que se ve públicamente de tu negocio y, si hay encaje, te enviamos una propuesta por escrito con alcance, fechas e inversión.</p>
             <div className="service-cta">
-              <a className="btn btn-primary btn-lg" href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer">Solicitar una propuesta</a>
-              <a className="link-line" href={EMAIL_CONTACT_URL}>Solicitar por correo</a>
+              <a className="btn btn-primary btn-lg" href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer">Solicitar una propuesta</a>
             </div>
             <p className="small" style={{ marginTop: 16 }}>Sin garantizar posiciones en buscadores, clientes nuevos ni herramientas que no estén contratadas.</p>
           </div>

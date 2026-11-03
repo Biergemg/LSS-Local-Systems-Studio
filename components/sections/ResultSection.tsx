@@ -1,10 +1,8 @@
 import { RESULT as R, CONTACT } from '@/data/content';
-import Mark from '@/components/ui/Mark';
 
 export default function ResultSection() {
   return (
     <section id="resultado" className="section method" aria-labelledby="res-h">
-      <Mark />
       <div className="container">
         <p className="eyebrow">{R.eyebrow}</p>
         <h2 id="res-h" className="mega reveal">{R.title}</h2>
