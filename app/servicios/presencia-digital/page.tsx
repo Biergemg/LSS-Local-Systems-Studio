@@ -80,7 +80,7 @@ export default function DigitalPresencePage() {
             <p className="lede">Si alguien busca tu negocio por primera vez, necesita saber qué haces, si puedes atenderlo y cómo pedir una cita o cotización. Revisamos esa experiencia y construimos o corregimos lo que realmente haga falta.</p>
             <p className="service-area">Atención remota desde México · Tampico, Ciudad Madero, Altamira y otras ciudades.</p>
             <div className="service-cta">
-              <a className="btn btn-primary" href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer">Quiero mi Primera Visita Digital</a>
+              <a className="btn btn-primary" href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer">Quiero mi landing de una página</a>
               <Link className="link-line" href="/#oferta">Ver alcance del servicio</Link>
             </div>
           </div>
