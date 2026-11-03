@@ -1,0 +1,167 @@
+{
+  "base": "http://localhost:3300",
+  "date": "2026-11-03T14:44:47.927Z",
+  "routes": {
+    "/": 200,
+    "/privacidad": 200,
+    "/terminos": 200,
+    "/servicios/presencia-digital": 200,
+    "/robots.txt": 200,
+    "/sitemap.xml": 200
+  },
+  "widths": {
+    "320": {
+      "scrollWidth": 320,
+      "innerWidth": 320,
+      "overflowX": false,
+      "h1": "Cuando alguien te recomienda, primero te busca. Que encuentre lo mismo en todos lados y tenga a un toque cómo escribirte.",
+      "hiddenCount": 0,
+      "hidden": [],
+      "wide": [],
+      "small": []
+    },
+    "390": {
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "overflowX": false,
+      "h1": "Cuando alguien te recomienda, primero te busca. Que encuentre lo mismo en todos lados y tenga a un toque cómo escribirte.",
+      "hiddenCount": 0,
+      "hidden": [],
+      "wide": [],
+      "small": []
+    },
+    "768": {
+      "scrollWidth": 768,
+      "innerWidth": 768,
+      "overflowX": false,
+      "h1": "Cuando alguien te recomienda, primero te busca. Que encuentre lo mismo en todos lados y tenga a un toque cómo escribirte.",
+      "hiddenCount": 0,
+      "hidden": [],
+      "wide": [],
+      "small": []
+    },
+    "1440": {
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "overflowX": false,
+      "h1": "Cuando alguien te recomienda, primero te busca. Que encuentre lo mismo en todos lados y tenga a un toque cómo escribirte.",
+      "hiddenCount": 0,
+      "hidden": [],
+      "wide": [],
+      "small": []
+    },
+    "1920": {
+      "scrollWidth": 1920,
+      "innerWidth": 1920,
+      "overflowX": false,
+      "h1": "Cuando alguien te recomienda, primero te busca. Que encuentre lo mismo en todos lados y tenga a un toque cómo escribirte.",
+      "hiddenCount": 0,
+      "hidden": [],
+      "wide": [],
+      "small": []
+    }
+  },
+  "axe": {
+    "320": {
+      "violations": []
+    },
+    "390": {
+      "violations": []
+    },
+    "1440": {
+      "violations": []
+    }
+  },
+  "links": {
+    "total": 28,
+    "dead": [],
+    "external": [
+      "https://wa.me/528333263389?text=Hola%2C%20quiero%20la%20landing%20de%20una%20p%C3%A1gina%2",
+      "mailto:contacto@lsslocalsystemsstudio.com?subject=Landing%20de%20una%20p%C3%A1gina%20%E2%8",
+      "mailto:contacto@lsslocalsystemsstudio.com",
+      "https://www.instagram.com/lsslocalsystemsstudio",
+      "https://www.facebook.com/lsslocalsystemsstudio"
+    ]
+  },
+  "ctas": {
+    "whatsappLinks": 8,
+    "destinations": [
+      "528333263389"
+    ],
+    "texts": [
+      "Quiero mi landing",
+      "Quiero mi landing de una página",
+      "WhatsApp +52 833 326 3389",
+      "Pide tu landing por WhatsApp"
+    ],
+    "prefill": "Hola, quiero la landing de una página para mi negocio. Nombre: ___ | Ciudad: ___ | Giro y servicio que quiero destacar: ___ | Web o perfil de Google (si lo tengo): ___",
+    "mailto": [
+      "mailto:contacto@lsslocalsystemsstudio.com?subject=Landing%20de%20una%20p%C3%A1gi",
+      "mailto:contacto@lsslocalsystemsstudio.com?subject=Landing%20de%20una%20p%C3%A1gi",
+      "mailto:contacto@lsslocalsystemsstudio.com",
+      "mailto:contacto@lsslocalsystemsstudio.com"
+    ]
+  },
+  "text": {
+    "/": {
+      "precio12500": 5,
+      "otrosPrecios": [
+        "$12,500"
+      ],
+      "cincoPaginas": 3,
+      "unProyectoALaVez": false,
+      "plazoGarantizado": false,
+      "lighthouseCifras": true,
+      "garantiaResultados": false
+    },
+    "/servicios/presencia-digital": {
+      "precio12500": 0,
+      "otrosPrecios": [],
+      "cincoPaginas": 0,
+      "unProyectoALaVez": false,
+      "plazoGarantizado": false,
+      "lighthouseCifras": false,
+      "garantiaResultados": false
+    },
+    "/privacidad": {
+      "precio12500": 0,
+      "otrosPrecios": [],
+      "cincoPaginas": 0,
+      "unProyectoALaVez": false,
+      "plazoGarantizado": true,
+      "lighthouseCifras": false,
+      "garantiaResultados": false
+    },
+    "/terminos": {
+      "precio12500": 0,
+      "otrosPrecios": [],
+      "cincoPaginas": 1,
+      "unProyectoALaVez": false,
+      "plazoGarantizado": false,
+      "lighthouseCifras": false,
+      "garantiaResultados": true
+    }
+  },
+  "console": [
+    {
+      "w": 320,
+      "errors": []
+    },
+    {
+      "w": 390,
+      "errors": []
+    },
+    {
+      "w": 768,
+      "errors": []
+    },
+    {
+      "w": 1440,
+      "errors": []
+    },
+    {
+      "w": 1920,
+      "errors": []
+    }
+  ]
+}

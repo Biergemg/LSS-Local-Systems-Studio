@@ -26,7 +26,7 @@ export default function PrivacyPage() {
 
       <h2>3. Finalidades necesarias</h2>
       <ul>
-        <li>Responder consultas y solicitudes de Primera Visita Digital; verificar los datos necesarios para dar seguimiento.</li>
+        <li>Responder consultas y solicitudes de cotización de la landing de una página y de Primera Visita Digital; verificar los datos necesarios para dar seguimiento.</li>
         <li>Analizar la presencia digital que nos indiques, preparar observaciones y propuestas solicitadas.</li>
         <li>Evaluar factibilidad, negociar, formalizar, ejecutar, administrar y dar soporte a los servicios contratados.</li>
         <li>Coordinar accesos delegados autorizados y comunicarnos sobre entregables, pagos, cambios y continuidad.</li>
