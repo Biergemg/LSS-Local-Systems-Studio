@@ -1,6 +1,6 @@
 import type { ContactInfo, FaqItem, NavLink } from '@/types';
 
-/* Copy de oferta "Presencia Resuelta · Landing de una página" (2026-11-03). Trazabilidad: docs/estrategia/oferta (método Grand Slam) y .offer-os/evidence (G0-G8).
+/* Copy de oferta "Presencia Resuelta · Landing de una página" (2026-11-03). Trazabilidad en documentación interna privada (método Grand Slam, Offer OS G0-G8).
    Precio publicado: solo la landing de una página ($12,500 MXN + IVA, autorizado por el titular). El sitio de hasta cinco páginas es otro servicio y no tiene precio publicado.
    Sin plazo garantizado (no medido), sin escasez, sin casos, cifras de clientes ni testimonios. La garantía es de aceptación (saldo tras los puntos de revisión que dependen de LSS), no de resultados. */
 

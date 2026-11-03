@@ -12,3 +12,14 @@ Thumbs.db
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Información comercial y estratégica privada: nunca en el repositorio público
+.offer-os/
+docs/estrategia/
+sistema-web-captacion-local.md
+arquitectura-operativa-waas.md
+_privado*/
+*.private.md
+*.confidential.md
+.env.*
+!.env.example

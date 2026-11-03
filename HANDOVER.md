@@ -61,5 +61,5 @@ Si el admin sigue sin CSS, verificar que el archivo existe y el servidor fue rei
 
 - El copy y los estilos responsive ya están integrados y probados (0 errores nuevos en lint y tsc) y todo el código ha sido pusheado.
 - lss-core corre en puerto 3000 (not 3003 — el 3003 fue un error de sesión anterior).
-- El cliente demo fue creado en la DB remota (187.124.227.210:5432). No requiere re-seed salvo que se limpie la DB.
+- El cliente demo fue creado en la DB remota (host y puerto en la configuración privada). No requiere re-seed salvo que se limpie la DB.
 - Todos los tests funcionales del diagnostic flow pasaron en sandbox.
