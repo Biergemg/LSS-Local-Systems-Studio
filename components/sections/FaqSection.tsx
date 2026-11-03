@@ -6,6 +6,7 @@ export default function FaqSection() {
       <div className="container fq-wrap">
         <div>
           <h2 id="faq-h" className="fq-h">Antes de escribirnos.</h2>
+          <span className="fq-glyph" aria-hidden="true">?</span>
         </div>
         <div className="fq-list">
           {FAQ_ITEMS.map((f) => (

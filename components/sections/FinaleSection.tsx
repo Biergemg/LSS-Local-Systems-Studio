@@ -1,5 +1,6 @@
 import { CTA_SECTION, CONTACT } from '@/data/content';
 import Mark from '@/components/ui/Mark';
+import Ticker from '@/components/ui/Ticker';
 
 export default function FinaleSection() {
   return (
@@ -13,6 +14,7 @@ export default function FinaleSection() {
         </p>
         <p className="fin-micro">{CTA_SECTION.micro}</p>
       </div>
+      <Ticker words={['Hagamos tu página', 'Solicitar una propuesta']} className="ticker-dark" />
     </section>
   );
 }

@@ -1,24 +1,16 @@
 import type { Metadata } from 'next';
 import TrackingConsent from '@/components/ui/TrackingConsent';
-import { Inter_Tight, Space_Grotesk } from 'next/font/google';
+import { Bricolage_Grotesque, Instrument_Sans, Space_Mono } from 'next/font/google';
 import './globals.css';
 import { SITE } from '@/data/content';
 import { organizationSchema, websiteSchema } from '@/lib/schema';
 import { GA_ID, META_PIXEL_ID } from '@/lib/analytics';
 
-const interTight = Inter_Tight({ 
-  subsets: ['latin'], 
-  variable: '--font-inter-tight', 
-  weight: ['400','700'], 
-  display: 'swap' 
-});
+const spaceMono = Space_Mono({ subsets: ['latin'], variable: '--font-mono', weight: ['400', '700'], display: 'swap' });
 
-const spaceGrotesk = Space_Grotesk({ 
-  subsets: ['latin'], 
-  variable: '--font-space-grotesk', 
-  weight: ['700'], 
-  display: 'swap' 
-});
+const interTight = Instrument_Sans({ subsets: ['latin'], variable: '--font-inter-tight', weight: ['400', '500', '700'], display: 'swap' });
+
+const spaceGrotesk = Bricolage_Grotesque({ subsets: ['latin'], variable: '--font-space-grotesk', weight: ['700', '800'], display: 'swap' });
 
 const siteUrl = SITE.url;
 const siteTitle = SITE.title;
@@ -50,7 +42,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="es-MX" className={`${interTight.variable} ${spaceGrotesk.variable} h-full antialiased`}>
+    <html lang="es-MX" className={`${interTight.variable} ${spaceGrotesk.variable} ${spaceMono.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <script
           type="application/ld+json"

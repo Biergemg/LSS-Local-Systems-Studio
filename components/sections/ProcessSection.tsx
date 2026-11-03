@@ -14,10 +14,10 @@ export default function ProcessSection() {
             </li>
           ))}
         </ol>
-        <ul className="pr-assure">
-          {PROCESS.assurances.map((a) => (<li key={a}>{a}</li>))}
-        </ul>
       </div>
+      <ul className="pr-band">
+        {PROCESS.assurances.map((a) => (<li key={a}>{a}</li>))}
+      </ul>
     </section>
   );
 }

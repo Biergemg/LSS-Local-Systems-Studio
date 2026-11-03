@@ -49,7 +49,8 @@ export const HERO = {
   body: 'Diseño y desarrollo web para negocios de servicios: sitios con identidad propia, construidos para que quien te busque te encuentre claro y fácil de contactar.',
   ctaPrimary: 'Solicitar una propuesta',
   ctaSecondary: 'Cómo trabajamos',
-  micro: 'Conversamos por WhatsApp. Sin compromiso.',
+  ticks: ['Propuesta por escrito', 'Respuesta por WhatsApp', 'Sin compromiso'],
+  ticker: ['Diseño web', 'Identidad propia', 'Textos', 'Contacto directo'],
 };
 
 export const STATEMENT = {
@@ -57,6 +58,11 @@ export const STATEMENT = {
   em: 'te buscan.',
   post: 'Lo que encuentran decide si te escriben.',
   side: 'Tu página, tu perfil de Google y tu forma de contacto son la primera conversación con un cliente nuevo. La diseñamos para que empiece bien.',
+  steps: [
+    { t: 'Te buscan', d: 'En Google, en redes y en tu página.' },
+    { t: 'Te comparan', d: 'Con otras opciones, en cuestión de segundos.' },
+    { t: 'Te escriben', d: 'Si lo que encontraron los convence.' },
+  ],
 };
 
 export const SERVICE = {
