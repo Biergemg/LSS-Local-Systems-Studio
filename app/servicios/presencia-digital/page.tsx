@@ -81,7 +81,7 @@ export default function DigitalPresencePage() {
             <p className="service-area">Atención remota desde México · Tampico, Ciudad Madero, Altamira y otras ciudades.</p>
             <div className="service-cta">
               <a className="btn btn-primary" href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer">Solicitar una propuesta</a>
-              <Link className="link-line" href="/#incluye">Ver qué incluye</Link>
+              <Link className="link-line" href="/#servicio">Ver qué recibes</Link>
             </div>
           </div>
         </section>

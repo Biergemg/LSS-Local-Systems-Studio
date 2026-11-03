@@ -2,21 +2,19 @@ import { PROCESS } from '@/data/content';
 
 export default function ProcessSection() {
   return (
-    <section id="proceso" className="section process" aria-labelledby="proc-h">
+    <section id="proceso" className="pr" aria-labelledby="proc-h">
       <div className="container">
-        <p className="eyebrow">{PROCESS.eyebrow}</p>
-        <h2 id="proc-h" className="display reveal">{PROCESS.title}</h2>
-        <ol className="timeline">
+        <h2 id="proc-h" className="pr-h reveal">{PROCESS.title}</h2>
+        <ol className="pr-steps">
           {PROCESS.steps.map((s, i) => (
-            <li className="tl-step reveal" key={s.title}>
-              <span className="tl-node" aria-hidden="true" />
-              <span className="idx">{String(i + 1).padStart(2, '0')}</span>
+            <li className="pr-step reveal" key={s.title}>
+              <span className="pr-n">{String(i + 1).padStart(2, '0')}</span>
               <h3>{s.title}</h3>
               <p>{s.text}</p>
             </li>
           ))}
         </ol>
-        <ul className="assurances">
+        <ul className="pr-assure">
           {PROCESS.assurances.map((a) => (<li key={a}>{a}</li>))}
         </ul>
       </div>
