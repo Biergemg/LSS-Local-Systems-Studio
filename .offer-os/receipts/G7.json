@@ -2,7 +2,7 @@
   "gate": "G7",
   "skillVersion": "3.0.0",
   "operatorId": "builder-claude",
-  "gateHash": "fc07cec4f443db387b904304372d80f15e6bf319811155e70491c4d4dbb1b52c",
+  "gateHash": "53a5dd2cec7be3a2e68956a833e6457c29cf3061af1b226e596ea06d5c0a5fd3",
   "evidence": [
     {
       "path": "evidence/G7-independent-review.md",
@@ -11,11 +11,11 @@
     },
     {
       "path": "evidence/G7-experimentos-y-disposicion.md",
-      "sha256": "573167a131beeb02246db1a08cd22fc347c51394b891d1037a47511bb5268865",
-      "size": 6052
+      "sha256": "f4bc9837fdc19b340846b116f48c440d4d645cc042f1b2613360da354185aa12",
+      "size": 6097
     }
   ],
-  "previousReceiptHash": "bef23ee709d971f44814d576449acfdb7fd72e7d768ecd76b621cef024746905",
-  "sealedAt": "2026-11-03T07:23:57.264Z",
+  "previousReceiptHash": "08b9bff134f8c870a7aef8d39d19832726858f3ccb9322ccdfefc29446d214a1",
+  "sealedAt": "2026-11-03T07:52:37.882Z",
   "limits": "Structural checks and local file integrity only. External truth and reviewer independence require independent verification."
 }

@@ -6,11 +6,11 @@
   "evidence": [
     {
       "path": "evidence/G4-claims-y-riesgos.md",
-      "sha256": "d7e3551743dca262911adc32549df024799911c892692d53c8580b7606e30a1b",
-      "size": 2870
+      "sha256": "bbf429c0b998a62047616dd980fce5180dd470b4cf5fd2fa57c923069d19f70e",
+      "size": 2915
     }
   ],
   "previousReceiptHash": "8a10c3e445c550f7816808f3edce20c76710d1af0e3b3fb60058dde5ae4c31db",
-  "sealedAt": "2026-11-03T07:22:44.454Z",
+  "sealedAt": "2026-11-03T07:52:27.748Z",
   "limits": "Structural checks and local file integrity only. External truth and reviewer independence require independent verification."
 }

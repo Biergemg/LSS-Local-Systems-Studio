@@ -59,7 +59,8 @@ for (const w of widths) {
   await page.screenshot({ path: path.join(out, `home-${w}.png`), fullPage: true });
   if (w === 390 || w === 1440) {
     const ax = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa']).analyze();
-    report.axe[w] = { violations: ax.violations.map((v) => ({ id: v.id, impact: v.impact, nodes: v.nodes.length })) };
+    await page.evaluate(() => window.scrollTo(0, 0)); await page.waitForTimeout(1500);
+    report.axe[w] = { violations: ax.violations.map((v) => ({ id: v.id, impact: v.impact, nodes: v.nodes.length, targets: v.nodes.slice(0, 3).map((n) => n.target.join(' ')) })) };
   }
   await ctx.close();
 }

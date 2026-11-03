@@ -149,12 +149,12 @@ export const EVIDENCE = {
   ],
   docNote: 'Cada casilla se completa con la prueba real de tu proyecto.',
   measuredTitle: 'Medición de esta página',
-  measuredMeta: 'Es lo que hicimos con nuestra propia página; todavía no tenemos clientes externos. Medido el 3 de noviembre de 2026 sobre la versión que se publica, con Lighthouse 12.8.2 (móvil, simulado; mediana de 5 corridas) y axe-core con WCAG 2.2 AA.',
+  measuredMeta: 'Es lo que hicimos con nuestra propia página; todavía no tenemos clientes externos. Medido el 3 de noviembre de 2026 sobre la versión publicada, con Lighthouse 12.8.2 (móvil, simulado; mediana de 5 corridas) y axe-core con WCAG 2.2 AA.',
   measured: [
     { k: 'Accesibilidad', v: '100' },
     { k: 'Buenas prácticas', v: '100' },
     { k: 'SEO', v: '100' },
-    { k: 'Rendimiento (móvil, laboratorio)', v: '89' },
+    { k: 'Rendimiento (móvil, laboratorio)', v: '95' },
     { k: 'Cambio de diseño (CLS)', v: '0' },
     { k: 'Errores WCAG 2.2 AA', v: '0' },
   ],
@@ -169,7 +169,7 @@ export const EXPECTATIONS = {
   driversTitle: 'Lo que mueve el costo',
   drivers: [
     'Cuántas páginas y servicios hay que explicar.',
-    'Si tu perfil de Google existe, hay que corregirlo o reclamarlo.',
+    'Si tu perfil de Google existe y hay que corregirlo, o si hay que solicitar su verificación.',
     'Qué material propio tienes: fotos, textos y credenciales.',
     'Qué rutas de contacto se contratan y se prueban.',
     'Si sumas el plan mensual de seguimiento.',

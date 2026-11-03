@@ -14,7 +14,7 @@
         "finding": "Bloque Lighthouse del 29-oct contradecía la política de G4",
         "severity": "critical",
         "resolution": "Remedido el 3-nov y publicado con fecha y etiqueta de página propia",
-        "verification": "lighthouse-local.json: móvil 89/100/100/100; escritorio 100/100/100/100; axe 0 en run3"
+        "verification": "lighthouse-local.json: móvil 95/100/100/100 en producción (local 89); escritorio 100/100/100/100; axe 0 en run3"
       },
       {
         "finding": "C-2: muestra visual gratuita sin costear",

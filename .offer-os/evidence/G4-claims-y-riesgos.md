@@ -1,7 +1,7 @@
 # G4 — Libro de afirmaciones y riesgo (2026-11-03)
 
 ## Afirmaciones publicables (con su clasificación)
-- CLM-1 FACT (SRC-F): la landing propia se midió el 3-nov-2026 con Lighthouse 12.8.2 y axe-core; el bloque publicado indica fecha, herramienta y que es la página propia (móvil 89 rendimiento, 100 accesibilidad, 100 buenas prácticas, 100 SEO, CLS 0).
+- CLM-1 FACT (SRC-F): la landing propia se midió el 3-nov-2026 con Lighthouse 12.8.2 y axe-core; el bloque publicado indica fecha, herramienta y que es la página propia (móvil 95 rendimiento en producción (89 en la compilación local), 100 accesibilidad, 100 buenas prácticas, 100 SEO, CLS 0).
 - CLM-9 FACT (SRC-F): LSS es un estudio pequeño y nuevo, sin casos de clientes publicados (se declara en la landing).
 - CLM-10 PROPOSAL: dominio, alojamiento y correo a nombre del cliente; costo anual aproximado informado antes de empezar.
 - CLM-2 FACT (SRC-F): LSS mide con Search Console y Analytics su propio sitio (lecturas del 31-oct HTTP 200). NO se publica como resultado comercial ni como caso.

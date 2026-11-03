@@ -6,7 +6,7 @@ Revisión independiente: evidence/G7-independent-review.md (agente de contexto n
 | ID | Sev. | Disposición | Verificación |
 |---|---|---|---|
 | C-1 sin razón para confiar en LSS | Crítico | PARCIAL. Se declara con honestidad que LSS es nuevo y sin casos (hero micro); se re-mide y fecha el bloque Lighthouse con la etiqueta "es lo que hicimos con nuestra propia página". NO resuelto: nombre/rostro del responsable y ciudad (requiere decisión del titular). | content.ts HERO.micro, EVIDENCE.measuredMeta; qa run3 |
-| Bloque Lighthouse del 29-oct (G4) | Crítico | RESUELTO. Remedido 3-nov: móvil 89/100/100/100, escritorio 100/100/100/100, CLS 0, axe 0. | docs/v8/qa-offer/lighthouse-local.json, run3/report.json |
+| Bloque Lighthouse del 29-oct (G4) | Crítico | RESUELTO. Remedido 3-nov: móvil 95/100/100/100 en producción (89 en la compilación local), escritorio 100/100/100/100, CLS 0, axe 0. | docs/v8/qa-offer/lighthouse-local.json, run3/report.json |
 | C-2 muestra visual gratuita sin costear | Crítico | RESUELTO. Retirada de PPV, PROCESS y FAQ. | grep "dirección visual" sin resultados |
 | C-3 experimento sin umbrales | Crítico | RESUELTO en diseño (abajo). La ejecución requiere al titular. | esta sección |
 | A-1 H1 gramatical y sin sustantivo | Alto | RESUELTO. Nuevo H1 nombra web, perfil de Google y WhatsApp. | QA h1 |
