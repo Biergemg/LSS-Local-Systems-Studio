@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-11-04T02:25:49.220Z",
+  "method": "Real in-app browser read of the site's default wa.me destination; no app opening or send action",
+  "destination": "https://api.whatsapp.com/send/?phone=528333263389",
+  "visibleHeading": "Chatea en WhatsApp con el +52 833 326 3389",
+  "visibleMessage": "Hola, quiero solicitar una propuesta para mi negocio. Nombre: ___ | Ciudad: ___ | A qué me dedico: ___ | Mi página o perfil de Google (si lo tengo): ___",
+  "rawEvidence": "Private audit: whatsapp-destination.txt and whatsapp-destination.png",
+  "limits": [
+    "No message sent, delivery or receipt not confirmed.",
+    "Three contextual service URLs validated by automated URL/message assertions; their individual provider pages were not opened in this observation."
+  ]
+}

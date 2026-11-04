@@ -120,14 +120,32 @@ test('navigation without JavaScript and reduced-motion fallback', async ({browse
 });
 
 test('all WhatsApp URLs use the real number, intent and safe target', async ({page}) => {
-  await ready(page);
+  for(const route of ['/','/privacidad','/terminos','/servicios/presencia-digital']) {
+  await page.goto(route);
   for(const link of await page.locator('a[href^="https://wa.me/"]').all()) {
     const url=new URL((await link.getAttribute('href'))!);
     expect(url.pathname).toBe('/528333263389');
     expect(url.searchParams.get('text')).toContain('solicitar una propuesta');
     expect(await link.getAttribute('rel')).toContain('noopener');
   }
+  }
 });
+
+for(const route of ['/privacidad','/terminos','/servicios/presencia-digital']) {
+  test(`internal text 200% reflows without header occlusion ${route}`,async({page})=>{
+    await page.setViewportSize({width:320,height:568});await page.goto(route);
+    await page.evaluate(()=>document.fonts.ready);
+    await page.evaluate(()=>{
+      const sizes=Array.from(document.querySelectorAll<HTMLElement>('p,h1,h2,h3,a,button,summary,li,span')).map(el=>({el,size:parseFloat(getComputedStyle(el).fontSize)*2}));
+      for(const {el,size}of sizes)el.style.fontSize=`${size}px`;
+    });
+    expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBeLessThanOrEqual(320);
+    if(route.includes('/servicios/')) {
+      const bounds=await page.evaluate(()=>({header:document.querySelector('header')!.getBoundingClientRect().bottom,intro:document.querySelector('.service-intro .eyebrow')!.getBoundingClientRect().top}));
+      expect(bounds.intro).toBeGreaterThanOrEqual(bounds.header);
+    }
+  });
+}
 
 test('FAQ, service focus and hover, hero lens and live reduced-motion switch', async ({page})=>{
   await page.setViewportSize({width:1440,height:900}); await ready(page);
@@ -200,11 +218,18 @@ test('zoom reflow, slow resources, external failure and short landscape', async 
   await page.route('**/*.woff2',async r=>{await new Promise(resolve=>setTimeout(resolve,500));await r.continue();});
   await ready(page);
   await page.evaluate(()=>{
-    const sizes=Array.from(document.querySelectorAll<HTMLElement>('.hx-lede,.hx-ticks,.btn,.privacy-consent p,.privacy-consent button'))
+    const sizes=Array.from(document.querySelectorAll<HTMLElement>('p,h1,h2,h3,a,button,summary,li,span'))
       .map(el=>({el,size:parseFloat(getComputedStyle(el).fontSize)*2}));
     for(const {el,size} of sizes) el.style.fontSize=`${size}px`;
   });
   expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBeLessThanOrEqual(320);
+  const clippedHeadings=await page.locator('h1,h2,h3').evaluateAll(elements=>elements.flatMap(el=>{
+    const walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);const bad:string[]=[];
+    while(walker.nextNode()) {const range=document.createRange();range.selectNodeContents(walker.currentNode);
+      for(const r of range.getClientRects()) if(r.width&& (r.left< -1||r.right>innerWidth+1)) bad.push(walker.currentNode.textContent||'');}
+    return bad;
+  }));
+  expect(clippedHeadings).toEqual([]);
   await page.locator('#inicio .btn-primary').focus(); await page.waitForTimeout(350);
   expect((await exposure(page,'#inicio .btn-primary')).unobscured).toBe(true);
   await page.setViewportSize({width:568,height:320});

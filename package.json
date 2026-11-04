@@ -9,7 +9,7 @@
     "lint": "eslint app components data lib types tests scripts playwright.config.ts next.config.ts",
     "typecheck": "tsc --noEmit",
     "test:critical": "playwright test",
-    "test:release-guard": "node --test tests/release-guard.test.mjs",
+    "test:release-guard": "node --test tests/release-guard.test.mjs tests/evidence-api.test.mjs",
     "verify:v8": "node vendor/v8/scripts/verify-integrity.mjs --verify",
     "verify:delivery": "node scripts/release-guard.mjs V8_DELIVERY_EVIDENCE.json"
   },

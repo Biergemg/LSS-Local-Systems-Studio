@@ -453,3 +453,19 @@ body:has(.privacy-consent) { padding-bottom: calc(var(--consent-h, 150px) + 16px
 .hx-h1 .ln { max-width: 100%; overflow-wrap: anywhere; }
 .skip-link { top: 12px; max-width: calc(100vw - 24px); transform: translateY(calc(-100% - 24px)); }
 .skip-link:focus { transform: none; }
+.stm-big { min-width: 0; grid-template-columns: minmax(0, 1fr); }
+.stm-big > span { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
+.stm-hit { white-space: normal; }
+.nav { height: auto; }
+.nav-inner { height: auto; min-height: 60px; padding-block: 8px; }
+@media (min-width: 900px) { .nav-inner { min-height: 72px; } }
+.nav-inner > a { min-width: 0; }
+.nav-inner > a > div { min-width: 0; overflow-wrap: anywhere; }
+.nav-inner > a > svg, .nav-toggle { flex-shrink: 0; }
+@media (max-width: 899px) { .nav-inner > a { max-width: calc(100% - 64px); } }
+h1, h2, h3 { overflow-wrap: anywhere; }
+.pr-steps > *, .fq-wrap > *, .sig > * { min-width: 0; }
+/* The service header remains in flow when enlarged, including without JS. */
+body:has(.service-page) .nav { position: sticky; flex-shrink: 0; }
+.service-page .service-intro { padding-top: 54px; }
+@media (max-width: 420px) { .service-page .service-intro { padding-top: 30px; } }

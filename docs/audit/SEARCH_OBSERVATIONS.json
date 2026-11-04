@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-11-04T01:47:10.315Z",
+  "observations": [
+    {"provider":"Bing","query":"¿Dónde contratar una página web y contacto por WhatsApp para mi negocio en México?","observed":"NOT_MENTIONED","scope":"Resumen de IA y primeros resultados visibles; una observación, sin LSS. Captura y árbol accesible completos en el expediente privado.","url":"https://www.bing.com/search"},
+    {"provider":"DuckDuckGo","query":"¿Quién hace páginas web para negocios de servicios en México?","observed":"NOT_MENTIONED","scope":"Primeros resultados visibles; buscador, no asistente. Una observación. Posible fuente de índice compartida con Bing.","url":"https://duckduckgo.com/"}
+  ],
+  "baseline":{"status":"NO_DATA","reason":"Search Console mostró la página pública con enlaces de inicio de sesión, sin propiedad ni informe autenticados.","url":"https://search.google.com/search-console/about"},
+  "limits":["No acredita posición, cuota, indexación efectiva ni recomendación en asistentes.","Google: intento de adjuntar navegador agotó tiempo; sin respuesta fabricada.","Cartera de consultas derivada de oferta real, no investigación cuantitativa de demanda."]
+}

@@ -1,4 +1,14 @@
-# HANDOVER — 2026-05-04T20:44:00Z
+# HANDOVER — auditoría V8 noviembre 2026, pendiente revisión final
+
+Alcance vigente: sitio público LSS, rama audit/v8-certification-20261103, procedente de producción 8393d44. No liberar ni hacer push a main sin autorización expresa final del propietario. El contenido restante de este archivo es histórico; las tareas Core/VPS/YCloud no forman parte de esta auditoría y no deben ejecutarse por este handoff.
+
+Se corrigieron CTA móvil, consentimiento, legales, fallback sin JS, movimiento reducido, reflujo y seguridad Next. Procedimientos en QA_EVIDENCE.md; contrato V8 íntegro en vendor/v8; control de publicación en docs/audit/RELEASE_CONTROL.md. La revisión final, CI remoto, Vercel administrativo y autorización determinan el estado del expediente, no este resumen. La auditoría y recuperación privadas están fuera del repositorio público. No se reescribió historial ni se tocaron otros worktrees.
+
+No se declara completada la transición verify → archive: requiere revisión humana según AGENTS.md. Datos de campo, recepción WhatsApp e informe GSC autenticado no disponibles. GitHub → main → Vercel es el flujo declarado por el propietario; no se usa despliegue directo en esta tarea.
+
+---
+
+# Histórico — 2026-05-04T20:44:00Z
 
 > **Para el agente que retoma esta sesión:** Lee este archivo PRIMERO, antes de
 > cualquier otra acción. Luego ejecuta `mem_context` para recuperar decisiones

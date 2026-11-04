@@ -15,6 +15,8 @@ jobs:
     name: V8 critical QA
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    outputs:
+      evidence: ${{ steps.submission.outputs.artifact-id }}
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
@@ -56,6 +58,7 @@ jobs:
           V8_INDEPENDENT_REVIEW_JSON: ${{ vars.V8_INDEPENDENT_REVIEW_JSON }}
         run: node scripts/assemble-evidence.mjs
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        id: submission
         with:
           name: v8-submitted-evidence-${{ github.event.pull_request.head.sha || github.sha }}
           path: .audit-private/
@@ -67,12 +70,45 @@ jobs:
           name: v8-regression-${{ github.event.pull_request.head.sha || github.sha }}
           path: test-results/
           retention-days: 14
+  custody:
+    name: V8 owner authorization and custody
+    needs: critical
+    environment: v8-release-approval
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      evidence: ${{ steps.certified.outputs.artifact-id }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version-file: .nvmrc
+      - name: Authenticate same-run evidence and server-recorded owner approval
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          RELEASE_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+          EVIDENCE_ARTIFACT_ID: ${{ needs.critical.outputs.evidence }}
+        run: node scripts/custody-evidence.mjs
+      - run: node scripts/release-guard.mjs V8_DELIVERY_EVIDENCE.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        id: certified
+        with:
+          name: v8-certified-evidence-${{ github.event.pull_request.head.sha || github.sha }}
+          path: .audit-private/
+          include-hidden-files: true
+          retention-days: 30
   certification:
     name: V8 delivery certification
-    needs: critical
+    needs: [critical, custody]
+    if: always()
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
+      - name: Reject failed, cancelled or skipped prerequisite jobs
+        run: test '${{ needs.critical.result }}' = success && test '${{ needs.custody.result }}' = success
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
@@ -84,6 +120,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
           RELEASE_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
-          V8_EVIDENCE_ARTIFACT_ID: ${{ vars.V8_EVIDENCE_ARTIFACT_ID }}
+          V8_EVIDENCE_ARTIFACT_ID: ${{ needs.custody.outputs.evidence }}
         run: node scripts/fetch-evidence.mjs
       - run: node scripts/release-guard.mjs V8_DELIVERY_EVIDENCE.json

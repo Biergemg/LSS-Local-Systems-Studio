@@ -7,8 +7,18 @@ import { NAV_LINKS, NAV_CTA, CONTACT } from '@/data/content';
 export default function Nav() {
   const [open, setOpen] = useState(false);
   const toggleRef = useRef<HTMLButtonElement>(null);
+  const innerRef = useRef<HTMLElement>(null);
   const [active, setActive] = useState('');
   const [hidden, setHidden] = useState(false);
+
+  useEffect(() => {
+    const inner = innerRef.current;
+    if (!inner) return;
+    const measure = () => document.documentElement.style.setProperty('--nav-h', `${inner.getBoundingClientRect().height}px`);
+    const observer = new ResizeObserver(measure);
+    observer.observe(inner);
+    return () => { observer.disconnect(); document.documentElement.style.removeProperty('--nav-h'); };
+  }, []);
 
   useEffect(() => {
     const desktop = window.matchMedia('(min-width: 900px)');
@@ -62,7 +72,7 @@ export default function Nav() {
   return (
     <>
     <header className={`nav${hidden && !open ? ' nav-hide' : ''}`} onFocusCapture={() => setHidden(false)}>
-      <nav className="container nav-inner" aria-label="Navegación principal">
+      <nav ref={innerRef} className="container nav-inner" aria-label="Navegación principal">
         <Logo />
         <div className="nav-links">
           {NAV_LINKS.map((l) => (

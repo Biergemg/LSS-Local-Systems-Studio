@@ -1,6 +1,6 @@
 ---
 contract_version: 1
-last_updated: 2026-04-25
+last_updated: 2026-11-03
 changed_by: initialization
 ---
 
@@ -19,13 +19,13 @@ changed_by: initialization
 
 > Fuente: leído de package.json y entorno real. No rellenar de memoria.
 
-- Runtime: Node.js 22.22.2 (sistema — sin .nvmrc)
-- Framework: Next.js 16.2.4 (App Router)
+- Runtime: Node.js 24.22.1 (fijado en .nvmrc; auditoría noviembre 2026)
+- Framework: Next.js 16.4.5 (App Router)
 - UI Library: React 19.2.4
 - Language: TypeScript 5.x
 - Styling: Tailwind CSS v4 + @tailwindcss/postcss
-- Linting: ESLint 9 + eslint-config-next 16.2.4
-- Testing: ninguno instalado (baseline_test_count: 0)
+- Linting: ESLint 9 + eslint-config-next 16.4.5
+- Testing: Playwright 1.64.1, axe-core 4.11.0; Node test para controles de evidencia. Baseline de abril conservado abajo como histórico.
 
 ---
 
