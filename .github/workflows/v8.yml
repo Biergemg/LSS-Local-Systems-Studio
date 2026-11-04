@@ -76,6 +76,8 @@ jobs:
     environment: v8-release-approval
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    env:
+      GITHUB_TOKEN: ${{ github.token }}
     outputs:
       evidence: ${{ steps.certified.outputs.artifact-id }}
     steps:
@@ -106,6 +108,8 @@ jobs:
     if: always()
     runs-on: ubuntu-latest
     timeout-minutes: 5
+    env:
+      GITHUB_TOKEN: ${{ github.token }}
     steps:
       - name: Reject failed, cancelled or skipped prerequisite jobs
         run: test '${{ needs.critical.result }}' = success && test '${{ needs.custody.result }}' = success

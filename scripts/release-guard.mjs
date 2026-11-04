@@ -4,6 +4,8 @@ import crypto from 'node:crypto';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import {validateCoverage,evidencePath,digestFile} from './evidence-source.mjs';
+import {validateCommand,validatePng} from './evidence-artifacts.mjs';
+import {ownerApproval} from './evidence-api.mjs';
 
 export const V8_LOCK_SHA256 = '537ef9de19bd30c39a8f1a10df8dd2f56558f742800abb78be053f37c5845085';
 const hash = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
@@ -24,6 +26,12 @@ export function assertSource(root,doc) {
   if(JSON.stringify(actual)!==JSON.stringify(doc.sourceSnapshot)) throw new Error('RELEASE_SNAPSHOT_MISMATCH: full tracked tree changed since evidence capture');
   for(const r of doc.skills||[]) if(r.sourceCommit!==head) throw new Error('SKILL_COMMIT_MISMATCH');
   for(const r of doc.commands||[]) if(r.sourceCommit!==head) throw new Error('COMMAND_COMMIT_MISMATCH');
+  if(!doc.commands?.length) throw new Error('COMMANDS_REQUIRED');
+  for(const command of doc.commands) validateCommand(root,command);
+  for(const shot of doc.screenshots||[]) {
+    const bytes=fs.readFileSync(evidencePath(root,shot.file));
+    if(bytes.length<1024||validatePng(bytes,shot.width)<100) throw new Error('SCREENSHOT_RASTER_REQUIRED');
+  }
   // A local JSON cannot establish human approval or an independent execution.
   // CI additionally authenticates the artifact's run/commit in fetch-evidence.mjs.
   const independent=doc.independentReview;
@@ -47,6 +55,15 @@ if(process.argv[1] && path.resolve(process.argv[1])===fileURLToPath(import.meta.
     const evidence=path.resolve(process.argv[2]||'V8_DELIVERY_EVIDENCE.json');
     const doc=JSON.parse(fs.readFileSync(evidence,'utf8'));
     assertSource(root,doc);
+    if(process.env.GITHUB_ACTIONS!=='true'||!process.env.GITHUB_TOKEN||!process.env.GITHUB_RUN_ID||!process.env.GITHUB_REPOSITORY) throw new Error('SERVER_RECORDED_OWNER_CUSTODY_REQUIRED: local approval assertions cannot authorize production');
+    const api=async endpoint=>{
+      const response=await fetch(`https://api.github.com/repos/${process.env.GITHUB_REPOSITORY}/${endpoint}`,{headers:{Authorization:`Bearer ${process.env.GITHUB_TOKEN}`,Accept:'application/vnd.github+json'}});
+      if(!response.ok) throw new Error('Owner custody API '+response.status);
+      return response.json();
+    };
+    const repo=await api('');const run=await api(`actions/runs/${process.env.GITHUB_RUN_ID}`);
+    if(run.head_sha!==doc.sourceCommit||doc.approval?.approvedBy!==repo.owner.login) throw new Error('OWNER_CUSTODY_SOURCE_MISMATCH');
+    ownerApproval(await api(`actions/runs/${process.env.GITHUB_RUN_ID}/approvals`),repo.owner.login);
     const check=spawnSync(process.execPath,['vendor/v8/scripts/verify-integrity.mjs','--verify'],{cwd:root,stdio:'inherit'});
     if(check.status!==0) process.exit(check.status||1);
     const delivery=spawnSync(process.execPath,['vendor/v8/scripts/verify-delivery.mjs','--project',root,'--evidence',evidence,'--mode','production'],{cwd:root,stdio:'inherit'});

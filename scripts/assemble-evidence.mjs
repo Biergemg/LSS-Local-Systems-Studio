@@ -17,13 +17,13 @@ doc.skills=doc.skills.map(s=>({...s,sourceCommit:sha}));
 const commandFiles=fs.readdirSync('.audit-private/commands').filter(p=>p.endsWith('.json'));
 doc.commands=commandFiles.map(file=>JSON.parse(fs.readFileSync(path.join('.audit-private/commands',file),'utf8')));
 const browser=doc.commands.find(c=>c.kind==='browser');
-if(browser) for(const kind of ['accessibility','seo']) doc.commands.push({...browser,kind,command:browser.command+' (included '+kind+' assertions; same execution)'});
+if(browser) for(const kind of ['accessibility','seo']) doc.commands.push({...browser,kind,derivedFrom:'browser'});
 const browserResults=JSON.parse(fs.readFileSync('test-results/results.json','utf8'));
 const browserPassed=browser?.status==='PASS'&&browser.exitCode===0&&browserResults.stats.expected===39&&browserResults.stats.unexpected===0&&browserResults.stats.skipped===0;
 // Component outcomes refer to the defined full regression suite, never a
 // filtered smoke run. Phase/gate/manual review decisions remain untouched.
 for(const component of doc.components) for(const test of component.tests) test.status=browserPassed?'PASS':'BLOCKED';
-const retests={H02:['browser'],H03:['browser'],SEC01:['dependency','build','browser'],PRIV01:['browser'],NAV01:['browser'],A11Y01:['browser'],A11Y02:['browser'],CI01:['release-guard'],CI02:['release-guard']};
+const retests={H02:['browser'],H03:['browser'],SEC01:['dependency','build','browser'],PRIV01:['browser'],NAV01:['browser'],A11Y01:['browser'],A11Y02:['browser'],A11Y03:['browser'],CI01:['release-guard'],CI02:['release-guard'],V8V01:['release-guard']};
 for(const issue of doc.issues) {
  const kinds=retests[issue.id];
  if(kinds&&browserPassed&&kinds.every(kind=>doc.commands.some(c=>c.kind===kind&&c.status==='PASS'&&c.exitCode===0&&c.sourceCommit===sha))) {
