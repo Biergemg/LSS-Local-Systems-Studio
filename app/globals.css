@@ -440,7 +440,7 @@ body:has(.privacy-consent) .wa-float { visibility: hidden; }
 html:has(.privacy-consent) { scroll-padding-bottom: calc(var(--consent-h, 150px) + 16px); }
 body:has(.privacy-consent) { padding-bottom: calc(var(--consent-h, 150px) + 16px); }
 .nav-panel { max-height: calc(100dvh - var(--nav-h) - var(--consent-h, 0px)); overflow-y: auto; overscroll-behavior: contain; }
-.nav:focus-within { transform: none; }
+.nav:focus-within { transform: none; transition: none; }
 .nav-fallback { padding-top: calc(var(--nav-h) + 12px); display: flex; flex-wrap: wrap; gap: 8px 20px; }
 .nav-fallback a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: underline; }
 @media (prefers-reduced-motion: reduce) { .hx-row, .hx-inner { animation: none !important; } }

@@ -23,7 +23,7 @@ const browserPassed=browser?.status==='PASS'&&browser.exitCode===0&&browserResul
 // Component outcomes refer to the defined full regression suite, never a
 // filtered smoke run. Phase/gate/manual review decisions remain untouched.
 for(const component of doc.components) for(const test of component.tests) test.status=browserPassed?'PASS':'BLOCKED';
-const retests={H02:['browser'],H03:['browser'],SEC01:['dependency','build','browser'],PRIV01:['browser'],NAV01:['browser'],A11Y01:['browser'],A11Y02:['browser'],A11Y03:['browser'],CI01:['release-guard'],CI02:['release-guard'],V8V01:['release-guard']};
+const retests={H02:['browser'],H03:['browser'],SEC01:['dependency','build','browser'],PRIV01:['browser'],NAV01:['browser'],A11Y01:['browser'],A11Y02:['browser'],A11Y03:['browser'],A11Y04:['browser'],CI01:['release-guard'],CI02:['release-guard'],V8V01:['release-guard']};
 for(const issue of doc.issues) {
  const kinds=retests[issue.id];
  if(kinds&&browserPassed&&kinds.every(kind=>doc.commands.some(c=>c.kind===kind&&c.status==='PASS'&&c.exitCode===0&&c.sourceCommit===sha))) {

@@ -73,6 +73,16 @@ test('legal pages expose consent revocation and preserve rejection', async ({pag
 
 test('keyboard skip link and full focus traversal stay reachable with consent open',async ({page})=>{
   await page.setViewportSize({width:320,height:568});await ready(page);
+  await page.evaluate(()=>window.scrollTo({top:1200,behavior:'instant'}));
+  await expect(page.locator('header.nav')).toHaveClass(/nav-hide/);
+  await page.waitForTimeout(350);
+  const immediateFocus=await page.locator('.nav-inner > a').evaluate(el=>{
+    (el as HTMLElement).focus();const r=el.getBoundingClientRect();
+    const hit=document.elementFromPoint(r.left+r.width/2,r.top+r.height/2);
+    return r.top>=0&&r.bottom<=innerHeight&&!!hit&&el.contains(hit);
+  });
+  expect(immediateFocus,'focused brand must be reachable immediately, including during nav animation').toBe(true);
+  await ready(page);
   await page.keyboard.press('Tab');await expect(page.locator('.skip-link')).toBeFocused();
   await page.keyboard.press('Enter');await expect(page).toHaveURL(/#contenido$/);
   const visited:string[]=[];
