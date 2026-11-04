@@ -1,5 +1,5 @@
 {
-  "reviewedAt": "2026-11-04T03:01:21.264Z",
+  "reviewedAt": "2026-11-04T03:04:32.551Z",
   "reviewedFiles": {
     ".gitattributes": "ae7f987847d03501802d70ae88417e544baeecf5a4e991c89b12003df1ee283d",
     ".github/workflows/v8.yml": "e43d1d337012a9cbb16c3eda1f5f48f69fbf97e0b3096dd2b123953b3a181a5e",
@@ -62,7 +62,7 @@
     "scripts/extract-evidence.mjs": "b51dd2247e35244cac875c4fdd59f455ad9807c6a553c641479643f2fb585c88",
     "scripts/fetch-evidence.mjs": "a50f4262bcad8354e9bea6ad48017698af9b3462f976ae70b1e7d57aeeaa6611",
     "scripts/release-guard.mjs": "e363f50e34f77209f67e51522cec7de44bea477ed9c906c64fbabaa6b8e02ab6",
-    "scripts/replay-independent.mjs": "0b9f4ec931add007fde1dde61072018d88406c393048b8a5b399c99832810b94",
+    "scripts/replay-independent.mjs": "d6b93ef19eda05424f5c46d532912045c8603a7b794ac88b646b1191381102d6",
     "scripts/run-check.mjs": "7095154d1da07fc8bdff6da9c37c2852026a46a3568ccd77f60edadd18dbaf1a",
     "tests/critical.spec.ts": "d20662e306c36ddf6777aca3d67570ea2bec47f97725237abd105e0626ccc188",
     "tests/evidence-api.test.mjs": "75165199512e04f9f5f3c02fba18bd75dd88f805848b25751dafb901172f2754",
@@ -819,7 +819,7 @@
       "version": "v8-aeo-geo/1",
       "technicalAudit": {
         "status": "PASS",
-        "checkedAt": "2026-11-04T03:01:21.264Z",
+        "checkedAt": "2026-11-04T03:04:32.551Z",
         "checkedUrl": "http://127.0.0.1:3418",
         "evidence": ".audit-private/commands/browser.log"
       },
@@ -908,7 +908,7 @@
       },
       "schemaReview": {
         "status": "PASS",
-        "checkedAt": "2026-11-04T03:01:21.264Z",
+        "checkedAt": "2026-11-04T03:04:32.551Z",
         "evidence": ".audit-private/commands/browser.log"
       }
     },

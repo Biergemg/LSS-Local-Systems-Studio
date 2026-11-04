@@ -1,7 +1,7 @@
 {
   "capability": "ai-seo",
   "executedAt": "2026-11-04T02:32:53.788Z",
-  "validatedAt": "2026-11-04T03:01:21.264Z",
+  "validatedAt": "2026-11-04T03:04:32.551Z",
   "reviewType": "Manual skill operation over actual final inputs, with separate executable retests",
   "skillFile": "vendor/v8/vendor/marketing-skills/ai-seo/SKILL.md",
   "skillFileSha256": "9ca866ae95723d1545f8b0448c9fa94136c2d97517c885ffe90edea3fb865a23",
@@ -68,7 +68,7 @@
     "scripts/extract-evidence.mjs": "b51dd2247e35244cac875c4fdd59f455ad9807c6a553c641479643f2fb585c88",
     "scripts/fetch-evidence.mjs": "a50f4262bcad8354e9bea6ad48017698af9b3462f976ae70b1e7d57aeeaa6611",
     "scripts/release-guard.mjs": "e363f50e34f77209f67e51522cec7de44bea477ed9c906c64fbabaa6b8e02ab6",
-    "scripts/replay-independent.mjs": "0b9f4ec931add007fde1dde61072018d88406c393048b8a5b399c99832810b94",
+    "scripts/replay-independent.mjs": "d6b93ef19eda05424f5c46d532912045c8603a7b794ac88b646b1191381102d6",
     "scripts/run-check.mjs": "7095154d1da07fc8bdff6da9c37c2852026a46a3568ccd77f60edadd18dbaf1a",
     "tests/critical.spec.ts": "d20662e306c36ddf6777aca3d67570ea2bec47f97725237abd105e0626ccc188",
     "tests/evidence-api.test.mjs": "75165199512e04f9f5f3c02fba18bd75dd88f805848b25751dafb901172f2754",

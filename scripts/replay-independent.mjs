@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import {spawnSync} from 'node:child_process';
 import {validateCoverage,digestFile} from './evidence-source.mjs';
 import {validateCommand} from './evidence-artifacts.mjs';
+if(process.env.GITHUB_ACTIONS!=='true') throw new Error('CI_REPLAY_ONLY: use the independent reviewer report directly for local evidence');
 const root=process.cwd(),sourceCommit=spawnSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).stdout.trim();
 const target='.audit-private/independent-review.json';
 if(!process.env.V8_INDEPENDENT_REVIEW_JSON) {
