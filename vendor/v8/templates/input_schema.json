@@ -1,0 +1,267 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "BusinessBrief — PROMPT MAESTRO V8",
+  "description": "Ficha del negocio. Todos los campos opcionales deben completarse si existen. V8 asumirá lo mínimo razonable para campos faltantes y los reportará en sección L (Supuestos).",
+  "type": "object",
+  "required": [
+    "negocio",
+    "nicho",
+    "zona_geografica",
+    "oferta_principal",
+    "conversion_primaria"
+  ],
+  "properties": {
+    "negocio": {
+      "type": "string",
+      "description": "Nombre del negocio o empresa"
+    },
+    "nicho": {
+      "type": "string",
+      "description": "Sector o industria. Ej: clínica dental, taller mecánico, despacho de abogados, estudio de arquitectura, academia de idiomas"
+    },
+    "zona_geografica": {
+      "type": "string",
+      "description": "Ciudad, barrio o zona de operación. Ej: Madrid centro, Zona norte de Bogotá, CDMX Polanco"
+    },
+    "oferta_principal": {
+      "type": "string",
+      "description": "Qué se vende exactamente. Ser específico: no 'servicios dentales' sino 'blanqueamiento dental, ortodoncia invisible y limpieza profesional para adultos en Madrid'"
+    },
+    "servicios": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Lista de servicios o productos ofrecidos"
+    },
+    "buyer": {
+      "type": "object",
+      "description": "Perfil del comprador ideal",
+      "properties": {
+        "descripcion": {
+          "type": "string",
+          "description": "Quién es el cliente ideal. Edad, situación, motivación principal"
+        },
+        "resultado_buscado": {
+          "type": "string",
+          "description": "Qué resultado comprensible busca el cliente al contratar este servicio"
+        },
+        "objecion_principal": {
+          "type": "string",
+          "description": "Cuál es la fricción o duda principal que le impide convertir"
+        }
+      }
+    },
+    "conversion_primaria": {
+      "type": "string",
+      "enum": [
+        "whatsapp",
+        "llamada",
+        "formulario",
+        "reserva",
+        "visita_local"
+      ],
+      "description": "Conversión primaria deseada. V8 la valida y puede ajustarla si no es la mejor opción para el negocio"
+    },
+    "conversion_secundaria": {
+      "type": "string",
+      "enum": [
+        "whatsapp",
+        "llamada",
+        "formulario",
+        "reserva",
+        "visita_local",
+        "ninguna"
+      ],
+      "description": "Conversión secundaria opcional. Nunca debe competir visualmente con la primaria"
+    },
+    "mecanismo_confianza": {
+      "type": "object",
+      "description": "Señales de autoridad o confianza disponibles y verificables",
+      "properties": {
+        "testimonios": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "autor": {
+                "type": "string"
+              },
+              "texto": {
+                "type": "string"
+              },
+              "resultado": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "anos_experiencia": {
+          "type": "number",
+          "description": "Solo si es dato real verificable"
+        },
+        "certificaciones": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Solo certificaciones reales y verificables"
+        },
+        "casos_o_proyectos": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "garantia": {
+          "type": "string",
+          "description": "Garantía real ofrecida al cliente"
+        }
+      }
+    },
+    "infraestructura_hint": {
+      "type": "string",
+      "enum": [
+        "A",
+        "B",
+        "C"
+      ],
+      "description": "Sugerencia de infraestructura. A=HTML demo premium, B=Next.js producción, C=Astro contenido. V8 puede ignorarla si no es la mejor opción técnica y comercial."
+    },
+    "identidad_visual": {
+      "type": "object",
+      "description": "Sistema visual existente del negocio si lo hay",
+      "properties": {
+        "paleta_oficial": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Colores hex oficiales si existen. Ej: ['#1A1A2E', '#E94560']"
+        },
+        "tipografia_oficial": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Fuentes oficiales si existen"
+        },
+        "logo_disponible": {
+          "type": "boolean"
+        },
+        "assets_disponibles": {
+          "type": "string",
+          "enum": [
+            "ninguno",
+            "fotos_mediocres",
+            "fotos_buenas",
+            "fotos_profesionales",
+            "video"
+          ],
+          "description": "Calidad del material visual disponible del cliente"
+        }
+      }
+    },
+    "datos_contacto": {
+      "type": "object",
+      "properties": {
+        "telefono": {
+          "type": "string"
+        },
+        "whatsapp": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "direccion": {
+          "type": "string"
+        },
+        "horarios": {
+          "type": "string"
+        },
+        "redes_sociales": {
+          "type": "object",
+          "properties": {
+            "instagram": {
+              "type": "string"
+            },
+            "facebook": {
+              "type": "string"
+            },
+            "linkedin": {
+              "type": "string"
+            },
+            "tiktok": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "competencia": {
+      "type": "string",
+      "description": "Con quién compite. Qué hace diferente a este negocio. Opcional pero útil para diferenciación."
+    },
+    "cinematic_mode": {
+      "type": "boolean",
+      "default": false,
+      "description": "Activa capa cinematográfica visual si el nicho lo permite y si no sacrifica claridad"
+    },
+    "notas_adicionales": {
+      "type": "string",
+      "description": "Cualquier información adicional relevante que no encaje en los campos anteriores"
+    },
+    "tipo_sitio": {
+      "type": "string",
+      "enum": [
+        "landing",
+        "multipagina",
+        "webapp",
+        "ecommerce",
+        "existente"
+      ],
+      "description": "Permitir IA multipágina, no asumir landing única"
+    },
+    "plataforma_existente": {
+      "type": "string",
+      "description": "Shopify/WordPress/Webflow/CMS/Next/Astro preexistente"
+    },
+    "referencias_creativas": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "URLs verificables de excelencia visual; no clonar"
+    },
+    "ambicion_visual": {
+      "type": "string",
+      "enum": [
+        "alta_editorial",
+        "alta_interactiva",
+        "minimal_fina",
+        "funcional_local"
+      ]
+    },
+    "firma_funcional_deseada": {
+      "type": "string",
+      "description": "Una interacción real que demuestre oferta o facilite decisión"
+    },
+    "presupuesto_motion": {
+      "type": "string",
+      "enum": [
+        "bajo",
+        "medio",
+        "alto"
+      ]
+    },
+    "permiso_uso_assets": {
+      "type": "string",
+      "description": "Licencias y límites de imágenes/video/marcas"
+    },
+    "restricciones_de_publicacion": {
+      "type": "string",
+      "description": "Permisos de compra/publicación y acceso"
+    }
+  }
+}

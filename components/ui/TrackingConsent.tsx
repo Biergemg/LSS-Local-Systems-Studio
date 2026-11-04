@@ -1,19 +1,18 @@
 'use client';
 
 import Script from 'next/script';
-import { useEffect, useState, useSyncExternalStore } from 'react';
+import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
 
 type Choice = 'yes' | 'no' | null | 'pending';
 // Nueva autorización específica para la medición: un "sí" anterior a Meta no autoriza GA4.
 // Requerir una nueva decisión impide extender retrospectivamente un consentimiento.
-const STORAGE_KEY = 'lss-tracking-consent-v2';
 const COOKIE_DOMAIN = '.lsslocalsystemsstudio.com';
 
 type GaWindow = Window & { gtag?: (...args: unknown[]) => void; dataLayer?: unknown[] };
 
-function readConsent(): Choice {
+function readConsent(storageKey: string): Choice {
   try {
-    const value = localStorage.getItem(STORAGE_KEY);
+    const value = localStorage.getItem(storageKey);
     return value === 'yes' || value === 'no' ? value : null;
   } catch { return null; }
 }
@@ -52,9 +51,42 @@ function clearCookies(names: (name: string) => boolean) {
 }
 
 export default function TrackingConsent({ pixelId, gaId }: { pixelId?: string; gaId?: string }) {
-  const choice = useSyncExternalStore(subscribeConsent, readConsent, readServerConsent);
+  // A changed provider set requires a new decision; old GA permission cannot authorize Meta.
+  const storageKey = `lss-tracking-consent-v3:${gaId || 'no-ga'}:${pixelId || 'no-meta'}`;
+  const choice = useSyncExternalStore(subscribeConsent, () => readConsent(storageKey), readServerConsent);
   const [open, setOpen] = useState(false);
+  const bannerRef = useRef<HTMLDivElement>(null);
   const active = Boolean(pixelId || gaId);
+
+  useEffect(() => {
+    const banner = bannerRef.current;
+    const root = document.documentElement;
+    if (!banner) { root.style.setProperty('--consent-h', '0px'); return; }
+    const revealFocus = () => {
+      const target = document.activeElement;
+      if (!(target instanceof HTMLElement) || target === document.body || banner.contains(target)) return;
+      const rect = target.getBoundingClientRect();
+      const edge = banner.getBoundingClientRect().top;
+      if (rect.top < 0 || rect.bottom > edge) {
+        target.scrollIntoView({ block: 'center', behavior: 'instant' });
+        const next = target.getBoundingClientRect();
+        if (next.bottom > edge) window.scrollBy({ top: next.bottom - edge + 12, behavior: 'instant' });
+      }
+    };
+    const measure = () => {
+      root.style.setProperty('--consent-h', `${banner.getBoundingClientRect().height}px`);
+      revealFocus();
+    };
+    const observer = new ResizeObserver(measure);
+    observer.observe(banner);
+    measure();
+    document.addEventListener('focusin', revealFocus);
+    return () => {
+      observer.disconnect();
+      document.removeEventListener('focusin', revealFocus);
+      root.style.setProperty('--consent-h', '0px');
+    };
+  }, [choice, open, active]);
 
   useEffect(() => {
     if (!active) return;
@@ -95,7 +127,7 @@ export default function TrackingConsent({ pixelId, gaId }: { pixelId?: string; g
 
   function decide(next: 'yes' | 'no') {
     const wasAllowed = choice === 'yes';
-    try { localStorage.setItem(STORAGE_KEY, next); } catch { /* Deny tracking if persistence is unavailable. */ }
+    try { localStorage.setItem(storageKey, next); } catch { /* Deny tracking if persistence is unavailable. */ }
     window.dispatchEvent(new Event('lss:consent-changed'));
     setOpen(false);
     if (wasAllowed && next === 'no') {
@@ -103,10 +135,10 @@ export default function TrackingConsent({ pixelId, gaId }: { pixelId?: string; g
         (window as unknown as Record<string, boolean>)['ga-disable-' + gaId] = true;
         clearCookies((name) => name === '_ga' || name.startsWith('_ga_'));
       }
+      clearCookies((name) => name === '_fbp' || name === '_fbc');
       if (pixelId) {
         const fbq = (window as Window & { fbq?: (operation: string, argument?: string) => void }).fbq;
         fbq?.('consent', 'revoke');
-        clearCookies((name) => name === '_fbp' || name === '_fbc');
       }
       window.location.reload();
     }
@@ -147,7 +179,7 @@ export default function TrackingConsent({ pixelId, gaId }: { pixelId?: string; g
         </>
       )}
       {(choice === null || open) && (
-        <div className="privacy-consent" role="dialog" aria-label="Preferencias de privacidad" aria-modal="false">
+        <div ref={bannerRef} className="privacy-consent" role="dialog" aria-label="Preferencias de privacidad" aria-modal="false">
           <div>
             <p><strong>Medición opcional. </strong>{purposes}. Solo si aceptas. <a href="/privacidad#cookies">Ver aviso</a>.</p>
           </div>

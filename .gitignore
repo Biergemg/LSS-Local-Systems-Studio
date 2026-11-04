@@ -23,3 +23,12 @@ _privado*/
 *.confidential.md
 .env.*
 !.env.example
+
+# QA artifacts stay local or in controlled CI storage.
+test-results/
+playwright-report/
+.audit-private/
+V8_DELIVERY_EVIDENCE.json
+*.tsbuildinfo
+__pycache__/
+*.pyc

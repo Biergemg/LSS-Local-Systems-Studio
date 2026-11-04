@@ -99,14 +99,7 @@ a, button, summary, input { scroll-margin-block: 80px; }
 /* ───────── Hero ───────── */
 
 /* Diagrama: estado base = estado final. La secuencia (~3 s, una vez) es solo animación de entrada. */
-@keyframes trace { from { stroke-dashoffset: 100; } to { stroke-dashoffset: 0; } }
 @keyframes appear { from { opacity: 0; } to { opacity: 1; } }
-@keyframes gridIn { from { clip-path: inset(0 100% 100% 0); } to { clip-path: inset(0 0 0 0); } }
-@keyframes blockIn { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-@keyframes wipe { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
-@keyframes nodeIn { from { transform: scale(0); } to { transform: scale(1); } }
-@keyframes cornerIn { from { transform: scale(0); } to { transform: scale(1); } }
-@keyframes ruleIn { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 
 /* ───────── Método: Primera Visita (oscuro) ───────── */
 
@@ -137,8 +130,6 @@ a, button, summary, input { scroll-margin-block: 80px; }
 .progress { display: none; }
 @keyframes reveal { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
 @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-@keyframes lineY { from { transform: scaleY(0); } to { transform: scaleY(1); } }
-@keyframes lineX { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
     .reveal { animation: reveal linear both; animation-timeline: view(); animation-range: entry 5% entry 42%; }
@@ -157,8 +148,7 @@ a, button, summary, input { scroll-margin-block: 80px; }
 .legal .btn-ghost { border-color: var(--line-2); color: #fff; }
 .legal .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
 
-@media (min-width: 640px) {
-}
+
 
 @media (min-width: 900px) {
   :root { --gutter: 44px; --nav-h: 72px; }
@@ -173,7 +163,7 @@ a, button, summary, input { scroll-margin-block: 80px; }
   .footer { padding-bottom: 64px; }
 }
 
-/* V9.3: microinteracción de CTA y revelado de titulares (patrones tomados de 21st.dev, ejecución propia) */
+/* CTA y titulares: interacción local mediante CSS. */
 .btn-primary::after { content: ""; width: 14px; height: 2px; background: currentColor; transition: width .2s ease-out; }
 .btn-primary:hover::after, .btn-primary:focus-visible::after { width: 26px; }
 .nav-links .btn::after, .nav-panel .btn::after { display: none; }
@@ -254,9 +244,7 @@ body:has(.privacy-consent) .wa-float { opacity: 0; pointer-events: none; transfo
 
 /* ───────── V10: hero (composición recuperada de V9.1), recorrido del cliente nuevo, incluye y compromisos ───────── */
 
-@media (min-width: 900px) {
 
-}
 
 .nav-links .btn { white-space: nowrap; }
 @media (min-width: 900px) and (max-width: 1119px) {
@@ -265,14 +253,11 @@ body:has(.privacy-consent) .wa-float { opacity: 0; pointer-events: none; transfo
   .nav-links .btn { padding: 10px 14px; font-size: 14px; }
 }
 
-@media (min-width: 900px) {
-}
 
-@media (min-width: 900px) {
-}
 
-@media (min-width: 900px) {
-}
+
+
+
 
 p { text-wrap: pretty; }
 
@@ -393,8 +378,7 @@ p { text-wrap: pretty; }
 .ix-n { font: 400 12px var(--mono); letter-spacing: 0.1em; color: var(--accent); transition: color .3s; }
 .ix-row h3 { font: 800 clamp(38px, 10vw, 92px)/0.95 var(--font-display); letter-spacing: -0.05em; transition: transform .55s cubic-bezier(.2, .8, .2, 1), color .3s; }
 .ix-row p { max-width: 38ch; color: var(--fg-2); transition: color .3s; }
-@media (hover: hover) {
-}
+
 @media (min-width: 900px) {
   .hx-h1 { font-size: clamp(56px, 6.3vw, 96px); max-width: none; line-height: 0.96; }
   .hx-h1 .ln { display: block; }
@@ -440,3 +424,32 @@ html:has(.privacy-consent) { scroll-padding-bottom: 130px; }
 
 .wa-float.is-hidden { visibility: hidden; }
 body:has(.privacy-consent) .wa-float { visibility: hidden; }
+
+/* Short mobile screens retain the editorial hierarchy and a fully reachable proposal CTA. */
+@media (max-width: 420px) {
+  .hx-h1 { font-size: clamp(32px, 10vw, 42px); letter-spacing: -0.04em; }
+  .hx-row { margin-top: 18px; padding-top: 16px; gap: 16px; animation: none; }
+  .hx-lede { font-size: 16px; line-height: 1.5; }
+  .hx-cta { gap: 4px 18px; }
+  .hx-cta .btn-lg { min-height: 54px; padding: 14px 18px; font-size: 15px; }
+  .hx-act { gap: 12px; }
+  .hx-inner { padding-bottom: 48px; }
+}
+.privacy-consent { max-height: 40dvh; overflow-y: auto; overscroll-behavior: contain; }
+.privacy-consent .btn { min-height: 44px; }
+html:has(.privacy-consent) { scroll-padding-bottom: calc(var(--consent-h, 150px) + 16px); }
+body:has(.privacy-consent) { padding-bottom: calc(var(--consent-h, 150px) + 16px); }
+.nav-panel { max-height: calc(100dvh - var(--nav-h) - var(--consent-h, 0px)); overflow-y: auto; overscroll-behavior: contain; }
+.nav:focus-within { transform: none; }
+.nav-fallback { padding-top: calc(var(--nav-h) + 12px); display: flex; flex-wrap: wrap; gap: 8px 20px; }
+.nav-fallback a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: underline; }
+@media (prefers-reduced-motion: reduce) { .hx-row, .hx-inner { animation: none !important; } }
+
+/* Text enlargement and long contact labels must reflow rather than widen the page. */
+.btn, .footer a, .privacy-consent-actions > *, .ix-row > * { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
+.btn { white-space: normal; }
+.ix-cta { white-space: normal; }
+.hx-row > *, .hx-act, .hx-cta { min-width: 0; }
+.hx-h1 .ln { max-width: 100%; overflow-wrap: anywhere; }
+.skip-link { top: 12px; max-width: calc(100vw - 24px); transform: translateY(calc(-100% - 24px)); }
+.skip-link:focus { transform: none; }

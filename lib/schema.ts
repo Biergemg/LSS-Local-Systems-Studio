@@ -5,7 +5,7 @@ const ORG_ID = `${SITE.url}/#organization`;
 
 export const organizationSchema = {
   '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
+  '@type': 'Organization',
   '@id': ORG_ID,
   name: SITE.name,
   alternateName: 'LSS',

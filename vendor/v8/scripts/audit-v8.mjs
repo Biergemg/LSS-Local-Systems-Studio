@@ -1,0 +1,32 @@
+
+import fs from 'node:fs';
+import path from 'node:path';
+const root=path.resolve(import.meta.dirname,'..');
+const get=(f)=>fs.readFileSync(path.join(root,f),'utf8');
+const input=JSON.parse(get('templates/input_schema.json'));
+const output=JSON.parse(get('templates/output_schema.json'));
+const main=get('SKILL.md');
+const man=get('manifest.yaml');
+const faults=[];
+const required=['SKILL.md','README.md','manifest.yaml','orchestration/flow.md','orchestration/skill-routing.md','rules/guardrails.md','rules/enforcement.md','rules/quality-gates-2026.md','references/21st-dev-y-herramientas-2026.md','references/direccion-arte-agencia-premium.md','references/stack-y-pruebas-2026.md','templates/input_schema.json','templates/output_schema.json','templates/delivery-evidence.example.json','rules/execution-contract.md','scripts/verify-delivery.mjs','scripts/test-v8.mjs','scripts/verify-integrity.mjs','scripts/sync-v8.mjs'];
+for(const f of [...required,'rules/aeo-geo-evidence.md','scripts/sync-marketing-skills.mjs','scripts/21st-direct.mjs','vendor/marketing-skills/ai-seo/SKILL.md','vendor/marketing-skills/seo-audit/SKILL.md','vendor/marketing-skills/schema/SKILL.md','vendor/marketing-skills/LICENSE.txt',...['copywriting','cro','ui-ux-pro-max','impeccable'].map(s=>'vendor/locked-skills/'+s+'/SKILL.md'),'vendor/locked-skills/LICENSE_MARKETING_MIT.txt','vendor/locked-skills/LICENSE_UI_UX_MIT.txt','vendor/locked-skills/LICENSE_IMPECCABLE_APACHE_2.txt']){if(!fs.existsSync(path.join(root,f)))faults.push('MISSING '+f);}
+for(const f of ['SKILL.md','manifest.yaml','scripts/bootstrap-v8.mjs','scripts/verify-delivery.mjs','scripts/test-v8.mjs'])if(!get(f).includes('ai-seo'))faults.push('MISSING_AI_SEO_ENFORCEMENT '+f);
+if(!get('scripts/verify-delivery.mjs').includes('seoVisibility'))faults.push('MISSING_AEO_GEO_DELIVERY_GATE');
+if(!get('scripts/bootstrap-v8.mjs').includes('sync-marketing-skills.mjs'))faults.push('MISSING_CANONICAL_MARKETING_BOOTSTRAP');
+if(!/^name: prompt-maestro-v8-orchestrator$/m.test(man))faults.push('NAME changed');
+if(!/^version: 8\.0\.0$/m.test(man))faults.push('VERSION changed');
+for(let i=1;i<=9;i++)if(!main.includes('FASE '+i+' '))faults.push('missing phase '+i);
+for(const x of 'ABCDEFGHIJKL') if(!output.properties[x])faults.push('missing output '+x);
+for(const x of ['negocio','nicho','zona_geografica','oferta_principal','conversion_primaria']) if(!input.required.includes(x))faults.push('lost required input '+x);
+for(const x of ['21st MCP','Motion','GSAP','Playwright','ART_DIRECTION.md','QA_EVIDENCE.md','390','1440','BLOCKED','firma funcional']) if(!main.includes(x)) faults.push('creative integration missing '+x);
+if(!man.includes('production_requires_browser_evidence: true'))faults.push('missing browser gate');
+const gates=get('rules/quality-gates-2026.md');
+for(const x of ['rules/execution-contract.md','scripts/verify-delivery.mjs','scripts/verify-integrity.mjs','scripts/sync-v8.mjs']) if(!main.includes(x))faults.push('MISSING CONTRACT IN SKILL '+x);
+for(const x of ['scripts/verify-delivery.mjs','21st.dev','todos los elementos']) if(!get('rules/execution-contract.md').includes(x))faults.push('execution contract incomplete '+x);
+for(let i=0;i<=9;i++)if(!gates.includes('G'+i))faults.push('missing gate G'+i);
+for(const x of ['tipo_sitio','plataforma_existente','referencias_creativas','ambicion_visual'])if(!input.properties[x])faults.push('missing input '+x);
+if(!output.properties.G?.properties?.art_direction_reference)faults.push('missing art direction output');
+if(!output.properties.H?.properties?.qa_evidence_reference)faults.push('missing QA output');
+if(!output.properties.L?.properties?.gate_status)faults.push('missing QA status output');
+console.log(JSON.stringify({version:'V8',status:faults.length?'FAIL':'PASS',checks:required.length+9+12+10+15,errors:faults},null,2));
+process.exitCode=faults.length?1:0;

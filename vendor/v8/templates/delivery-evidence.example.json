@@ -1,0 +1,442 @@
+{
+    "contract":  "v8-delivery-evidence/1",
+    "projectName":  "EJEMPLO â€” NO PUBLICABLE",
+    "sourceCommit":  "REEMPLAZAR_CON_SHA40",
+    "phases":  [
+                   {
+                       "id":  1,
+                       "status":  "BLOCKED",
+                       "evidence":  [
+                                        "evidence/f1-report.md"
+                                    ]
+                   },
+                   {
+                       "id":  2,
+                       "status":  "BLOCKED",
+                       "evidence":  [
+                                        "evidence/f2-report.md"
+                                    ]
+                   },
+                   {
+                       "id":  3,
+                       "status":  "BLOCKED",
+                       "evidence":  [
+                                        "evidence/f3-report.md"
+                                    ]
+                   },
+                   {
+                       "id":  4,
+                       "status":  "BLOCKED",
+                       "evidence":  [
+                                        "evidence/f4-report.md"
+                                    ]
+                   },
+                   {
+                       "id":  5,
+                       "status":  "BLOCKED",
+                       "evidence":  [
+                                        "evidence/f5-report.md"
+                                    ]
+                   },
+                   {
+                       "id":  6,
+                       "status":  "BLOCKED",
+                       "evidence":  [
+                                        "evidence/f6-report.md"
+                                    ]
+                   },
+                   {
+                       "id":  7,
+                       "status":  "BLOCKED",
+                       "evidence":  [
+                                        "evidence/f7-report.md"
+                                    ]
+                   },
+                   {
+                       "id":  8,
+                       "status":  "BLOCKED",
+                       "evidence":  [
+                                        "evidence/f8-report.md"
+                                    ]
+                   },
+                   {
+                       "id":  9,
+                       "status":  "BLOCKED",
+                       "evidence":  [
+                                        "evidence/f9-report.md"
+                                    ]
+                   }
+               ],
+    "gates":  [
+                  {
+                      "id":  "G0",
+                      "status":  "BLOCKED",
+                      "evidence":  [
+                                       "evidence/g0-log.txt"
+                                   ]
+                  },
+                  {
+                      "id":  "G1",
+                      "status":  "BLOCKED",
+                      "evidence":  [
+                                       "evidence/g1-log.txt"
+                                   ]
+                  },
+                  {
+                      "id":  "G2",
+                      "status":  "BLOCKED",
+                      "evidence":  [
+                                       "evidence/g2-log.txt"
+                                   ]
+                  },
+                  {
+                      "id":  "G3",
+                      "status":  "BLOCKED",
+                      "evidence":  [
+                                       "evidence/g3-log.txt"
+                                   ]
+                  },
+                  {
+                      "id":  "G4",
+                      "status":  "BLOCKED",
+                      "evidence":  [
+                                       "evidence/g4-log.txt"
+                                   ]
+                  },
+                  {
+                      "id":  "G5",
+                      "status":  "BLOCKED",
+                      "evidence":  [
+                                       "evidence/g5-log.txt"
+                                   ]
+                  },
+                  {
+                      "id":  "G6",
+                      "status":  "BLOCKED",
+                      "evidence":  [
+                                       "evidence/g6-log.txt"
+                                   ]
+                  },
+                  {
+                      "id":  "G7",
+                      "status":  "BLOCKED",
+                      "evidence":  [
+                                       "evidence/g7-log.txt"
+                                   ]
+                  },
+                  {
+                      "id":  "G8",
+                      "status":  "BLOCKED",
+                      "evidence":  [
+                                       "evidence/g8-log.txt"
+                                   ]
+                  },
+                  {
+                      "id":  "G9",
+                      "status":  "BLOCKED",
+                      "evidence":  [
+                                       "evidence/g9-log.txt"
+                                   ]
+                  }
+              ],
+    "skills":  [
+                   {
+                       "capability":  "copywriting",
+                       "installedName":  "copywriting",
+                       "source":  "Fuente verificada",
+                       "status":  "BLOCKED",
+                       "artifact":  "evidence/copywriting.md",
+                       "executionLog":  "evidence/copywriting-log.txt",
+                       "executedAt":  "",
+                       "skillFileSha256":  ""
+                   },
+                   {
+                       "capability":  "page-cro",
+                       "installedName":  "page-cro",
+                       "source":  "Fuente verificada",
+                       "status":  "BLOCKED",
+                       "artifact":  "evidence/page-cro.md",
+                       "executionLog":  "evidence/page-cro-log.txt",
+                       "executedAt":  "",
+                       "skillFileSha256":  ""
+                   },
+                   {
+                       "capability":  "ui-ux-pro-max",
+                       "installedName":  "ui-ux-pro-max",
+                       "source":  "Fuente verificada",
+                       "status":  "BLOCKED",
+                       "artifact":  "evidence/ui-ux-pro-max.md",
+                       "executionLog":  "evidence/ui-ux-pro-max-log.txt",
+                       "executedAt":  "",
+                       "skillFileSha256":  ""
+                   },
+                   {
+                       "capability":  "seo-audit",
+                       "installedName":  "seo-audit",
+                       "source":  "Fuente verificada",
+                       "status":  "BLOCKED",
+                       "artifact":  "evidence/seo-audit.md",
+                       "executionLog":  "evidence/seo-audit-log.txt",
+                       "executedAt":  "",
+                       "skillFileSha256":  ""
+                   },
+                   {
+                       "capability":  "schema",
+                       "installedName":  "schema",
+                       "source":  "Fuente verificada",
+                       "status":  "BLOCKED",
+                       "artifact":  "evidence/schema.md",
+                       "executionLog":  "evidence/schema-log.txt",
+                       "executedAt":  "",
+                       "skillFileSha256":  ""
+                   },
+                   {
+                       "capability":  "impeccable",
+                       "installedName":  "impeccable",
+                       "source":  "Fuente verificada",
+                       "status":  "BLOCKED",
+                       "artifact":  "evidence/impeccable.md",
+                       "executionLog":  "evidence/impeccable-log.txt",
+                       "executedAt":  "",
+                       "skillFileSha256":  ""
+                   },
+                   {
+                       "capability":  "ai-seo",
+                       "installedName":  "ai-seo",
+                       "source":  "vendor/marketing-skills/ai-seo",
+                       "status":  "BLOCKED",
+                       "executedAt":  "",
+                       "skillFileSha256":  "",
+                       "artifact":  "evidence/ai-seo-report.md",
+                       "executionLog":  "evidence/ai-seo-run.log"
+                   }
+               ],
+    "components":  [
+                       {
+                           "id":  "hero-cta",
+                           "sourceFile":  "components/Hero.tsx",
+                           "sourceSha256":  "SHA256_REAL_DE_ARCHIVO",
+                           "purpose":  "Orientar al visitante a contacto",
+                           "kind":  "interactive",
+                           "tests":  [
+                                         {
+                                             "kind":  "render",
+                                             "status":  "BLOCKED",
+                                             "assertion":  "Se muestra sin recorte en mÃ³vil",
+                                             "evidence":  "evidence/hero-render.txt"
+                                         },
+                                         {
+                                             "kind":  "interaction",
+                                             "status":  "BLOCKED",
+                                             "assertion":  "El enlace abre un contacto vÃ¡lido",
+                                             "evidence":  "evidence/hero-click.txt"
+                                         }
+                                     ]
+                       }
+                   ],
+    "journeys":  [
+                     {
+                         "name":  "WhatsApp",
+                         "status":  "BLOCKED",
+                         "assertion":  "El enlace abre el destinatario autorizado",
+                         "evidence":  "evidence/wa-test.txt"
+                     }
+                 ],
+    "screenshots":  [
+                        {
+                            "width":  320,
+                            "region":  "hero",
+                            "browserCaptured":  false,
+                            "file":  "evidence/screenshots/320-hero.png"
+                        },
+                        {
+                            "width":  320,
+                            "region":  "signature",
+                            "browserCaptured":  false,
+                            "file":  "evidence/screenshots/320-signature.png"
+                        },
+                        {
+                            "width":  320,
+                            "region":  "cta",
+                            "browserCaptured":  false,
+                            "file":  "evidence/screenshots/320-cta.png"
+                        },
+                        {
+                            "width":  320,
+                            "region":  "footer",
+                            "browserCaptured":  false,
+                            "file":  "evidence/screenshots/320-footer.png"
+                        },
+                        {
+                            "width":  390,
+                            "region":  "hero",
+                            "browserCaptured":  false,
+                            "file":  "evidence/screenshots/390-hero.png"
+                        },
+                        {
+                            "width":  390,
+                            "region":  "signature",
+                            "browserCaptured":  false,
+                            "file":  "evidence/screenshots/390-signature.png"
+                        },
+                        {
+                            "width":  390,
+                            "region":  "cta",
+                            "browserCaptured":  false,
+                            "file":  "evidence/screenshots/390-cta.png"
+                        },
+                        {
+                            "width":  390,
+                            "region":  "footer",
+                            "browserCaptured":  false,
+                            "file":  "evidence/screenshots/390-footer.png"
+                        },
+                        {
+                            "width":  768,
+                            "region":  "hero",
+                            "browserCaptured":  false,
+                            "file":  "evidence/screenshots/768-hero.png"
+                        },
+                        {
+                            "width":  768,
+                            "region":  "signature",
+                            "browserCaptured":  false,
+                            "file":  "evidence/screenshots/768-signature.png"
+                        },
+                        {
+                            "width":  768,
+                            "region":  "cta",
+                            "browserCaptured":  false,
+                            "file":  "evidence/screenshots/768-cta.png"
+                        },
+                        {
+                            "width":  768,
+                            "region":  "footer",
+                            "browserCaptured":  false,
+                            "file":  "evidence/screenshots/768-footer.png"
+                        },
+                        {
+                            "width":  1440,
+                            "region":  "hero",
+                            "browserCaptured":  false,
+                            "file":  "evidence/screenshots/1440-hero.png"
+                        },
+                        {
+                            "width":  1440,
+                            "region":  "signature",
+                            "browserCaptured":  false,
+                            "file":  "evidence/screenshots/1440-signature.png"
+                        },
+                        {
+                            "width":  1440,
+                            "region":  "cta",
+                            "browserCaptured":  false,
+                            "file":  "evidence/screenshots/1440-cta.png"
+                        },
+                        {
+                            "width":  1440,
+                            "region":  "footer",
+                            "browserCaptured":  false,
+                            "file":  "evidence/screenshots/1440-footer.png"
+                        }
+                    ],
+    "commands":  [
+                     {
+                         "kind":  "build",
+                         "status":  "BLOCKED",
+                         "command":  "Comando real aquÃ­",
+                         "exitCode":  null,
+                         "executedAt":  "",
+                         "log":  "evidence/build.log"
+                     },
+                     {
+                         "kind":  "typecheck",
+                         "status":  "BLOCKED",
+                         "command":  "Comando real aquÃ­",
+                         "exitCode":  null,
+                         "executedAt":  "",
+                         "log":  "evidence/typecheck.log"
+                     },
+                     {
+                         "kind":  "lint",
+                         "status":  "BLOCKED",
+                         "command":  "Comando real aquÃ­",
+                         "exitCode":  null,
+                         "executedAt":  "",
+                         "log":  "evidence/lint.log"
+                     },
+                     {
+                         "kind":  "browser",
+                         "status":  "BLOCKED",
+                         "command":  "Comando real aquÃ­",
+                         "exitCode":  null,
+                         "executedAt":  "",
+                         "log":  "evidence/browser.log"
+                     },
+                     {
+                         "kind":  "accessibility",
+                         "status":  "BLOCKED",
+                         "command":  "Comando real aquÃ­",
+                         "exitCode":  null,
+                         "executedAt":  "",
+                         "log":  "evidence/accessibility.log"
+                     },
+                     {
+                         "kind":  "seo",
+                         "status":  "BLOCKED",
+                         "command":  "Comando real aquÃ­",
+                         "exitCode":  null,
+                         "executedAt":  "",
+                         "log":  "evidence/seo.log"
+                     }
+                 ],
+    "assets":  [
+
+               ],
+    "issues":  [
+
+               ],
+    "thirdParty21st":  {
+                           "status":  "BLOCKED",
+                           "authentication":  "AUTH_REQUIRED",
+                           "searches":  [
+
+                                        ],
+                           "candidates":  [
+
+                                          ],
+                           "integrations":  [
+
+                                            ]
+                       },
+    "approval":  {
+                     "status":  "NOT_APPROVED",
+                     "approvedBy":  "",
+                     "evidence":  "evidence/approval.txt"
+                 },
+    "seoVisibility":  {
+                          "version":  "v8-aeo-geo/1",
+                          "technicalAudit":  {
+                                                 "status":  "BLOCKED",
+                                                 "checkedAt":  "",
+                                                 "checkedUrl":  "",
+                                                 "evidence":  "evidence/technical-seo-audit.md"
+                                             },
+                          "queryMap":  [
+
+                                       ],
+                          "assistantProbes":  [
+
+                                              ],
+                          "baseline":  {
+                                           "status":  "BLOCKED",
+                                           "checkedAt":  "",
+                                           "evidence":  "evidence/search-console-baseline.md"
+                                       },
+                          "schemaReview":  {
+                                               "status":  "BLOCKED",
+                                               "checkedAt":  "",
+                                               "evidence":  "evidence/schema-validation.md"
+                                           }
+                      }
+}

@@ -1,0 +1,126 @@
+# Portable G0 bootstrap obligatory: references/portabilidad-instalacion-automatica.md
+name: prompt-maestro-v8-orchestrator
+version: 8.0.0
+description: >
+  Orquestador de sistemas de adquisición local premium. Coordina múltiples
+  skills especializadas para construir sitios web que comunican oferta con
+  claridad inmediata, convierten visitas en contactos y se mantienen como
+  servicio recurrente (WaaS). V8 decide la infraestructura, el tono visual
+  y el stack técnico — no el usuario.
+
+inputs:
+  required:
+    - name: business_brief
+      type: object
+      description: Ficha del negocio (ver templates/input_schema.json)
+    - name: conversion_goal
+      type: string
+      description: "Conversión primaria deseada: whatsapp | llamada | formulario | reserva | visita_local"
+  optional:
+    - name: cinematic_mode
+      type: boolean
+      default: false
+      description: Activa capa cinematográfica visual si el nicho lo permite
+    - name: infrastructure_hint
+      type: string
+      description: "Sugerencia de infraestructura (A/B/C). V8 puede ignorarla si no es la mejor opción."
+
+outputs:
+  - strategic_diagnosis      # A
+  - decision_matrix          # B
+  - infrastructure           # C
+  - visual_direction         # D
+  - conversion_architecture  # E
+  - full_copy                # F
+  - visual_system            # G
+  - code                     # H
+  - seo_jsonld               # I
+  - waas_proposal            # J
+  - austere_version          # K
+  - assumptions              # L
+
+dependencies:
+  - name: copywriting
+    phase: 2
+    required: true
+    fallback: internal_copywriting
+  - name: page-cro
+    phase: 3
+    required: true
+    fallback: internal_cro_checklist
+  - name: ui-ux-pro-max
+    phase: 4
+    required: true
+    fallback: internal_ux_review
+  - name: seo-audit
+    phase: 5
+    required: true
+    fallback: internal_seo_checklist
+  - name: schema-markup
+    phase: 5
+    required: true
+    fallback: internal_jsonld_builder
+  - name: ai-seo
+    phase: 5
+    required: true
+    fallback: blocked_no_aeo_geo_evidence
+  - name: impeccable
+    phase: 7
+    required: true
+    fallback: internal_qa_filter
+
+tags:
+  - conversion
+  - local-seo
+  - ux
+  - cro
+  - waas
+  - acquisition
+  - local-business
+
+priority_hierarchy:
+  1: claridad_de_oferta
+  2: conversion
+  3: credibilidad
+  4: adaptacion_al_nicho
+  5: ux_movil
+  6: percepcion_visual_premium
+  7: rendimiento
+  8: animacion
+
+conflict_resolution:
+  estetica_vs_conversion: conversion wins
+  efectos_vs_claridad: claridad wins
+  complejidad_tecnica_vs_utilidad_real: utilidad_real wins
+  modernidad_vs_estabilidad: moderno_estable wins
+
+# V8 UPDATED 2026-10-23 — major identity unchanged (version 8.0.0).
+last_reviewed: '2026-10-31'
+execution_contract: rules/execution-contract.md
+integrity_lock: .v8-integrity.json
+required_delivery_verifier: scripts/verify-delivery.mjs
+creative_standard: studio_grade_interactive_premium
+reference_files:
+  - references/21st-dev-y-herramientas-2026.md
+  - references/direccion-arte-agencia-premium.md
+  - references/stack-y-pruebas-2026.md
+  - rules/quality-gates-2026.md
+optional_tools:
+  - name: 21st-mcp
+    role: component_discovery_only
+    usage_requires_approval_if_paid: true
+  - name: motion
+    role: react_microinteractions
+  - name: gsap
+    role: complex_scroll_only
+  - name: playwright
+    role: browser_evidence
+  - name: axe-core
+    role: accessibility_tests
+constraints:
+  identity: V8
+  original_phases: 9
+  original_output: A-L
+  no_paid_tool_without_consent: true
+  no_publish_without_consent: true
+  production_requires_browser_evidence: true

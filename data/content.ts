@@ -2,7 +2,7 @@ import type { ContactInfo, FaqItem, NavLink } from '@/types';
 
 /* Copy de la landing de LSS: estudio de diseño web para negocios de servicios.
    Embudo de cotización: atracción → propuesta de valor → demostración → servicio → solicitud de propuesta (WhatsApp) → conversación.
-   Sin precios publicados. La muestra de trabajo es un proyecto demostrativo propio, con marca ficticia, identificado como tal. */
+   Sin precios publicados, portafolios ficticios ni ejemplos conceptuales. */
 
 export const SITE = {
   name: 'LSS — Local Systems Studio',

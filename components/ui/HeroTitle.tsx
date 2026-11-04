@@ -12,7 +12,8 @@ export default function HeroTitle({ pre, em, post }: { pre: string; em: string; 
     const root = h1.current; const top = layer.current;
     if (!root || !top) return;
     const section = root.closest('section') ?? root;
-    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let reduce = motion.matches;
     const fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
     let raf = 0;
     let cur = { x: 0, y: 0, w: 0, h: 0 };
@@ -53,11 +54,16 @@ export default function HeroTitle({ pre, em, post }: { pre: string; em: string; 
       hover = true; target = { x, y, w: size.w, h: size.h }; go();
     };
     const onLeave = () => { hover = false; target = rest; go(); };
+    const onMotion = () => {
+      reduce = motion.matches;
+      if (reduce) { cancelAnimationFrame(raf); raf = 0; hover = false; target = rest; cur = { ...rest }; paint(); }
+    };
+    motion.addEventListener('change', onMotion);
     const ro = new ResizeObserver(() => { measure(); if (!hover) { cur = { ...rest }; paint(); } });
     ro.observe(root);
     section.addEventListener('pointermove', onMove as EventListener);
     section.addEventListener('pointerleave', onLeave);
-    return () => { window.clearTimeout(start); cancelAnimationFrame(raf); ro.disconnect(); section.removeEventListener('pointermove', onMove as EventListener); section.removeEventListener('pointerleave', onLeave); };
+    return () => { window.clearTimeout(start); cancelAnimationFrame(raf); ro.disconnect(); motion.removeEventListener('change', onMotion); section.removeEventListener('pointermove', onMove as EventListener); section.removeEventListener('pointerleave', onLeave); };
   }, []);
 
   return (

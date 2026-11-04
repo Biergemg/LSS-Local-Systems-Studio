@@ -6,20 +6,28 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint app components data lib types tests scripts playwright.config.ts next.config.ts",
+    "typecheck": "tsc --noEmit",
+    "test:critical": "playwright test",
+    "test:release-guard": "node --test tests/release-guard.test.mjs",
+    "verify:v8": "node vendor/v8/scripts/verify-integrity.mjs --verify",
+    "verify:delivery": "node scripts/release-guard.mjs V8_DELIVERY_EVIDENCE.json"
   },
   "dependencies": {
-    "next": "16.2.4",
+    "next": "16.4.5",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
   "devDependencies": {
+    "@axe-core/playwright": "4.11.0",
+    "@playwright/test": "1.64.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.2.4",
+    "eslint-config-next": "16.4.5",
+    "lighthouse": "13.6.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

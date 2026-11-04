@@ -1,0 +1,6 @@
+title = "LSS candidate secret scan"
+[extend]
+useDefault = true
+[[allowlists]]
+description = "Non-executable historical diagnostics and normative synthetic examples; not a credential allowlist"
+paths = ['''(^|/)node_modules/''', '''(^|/)\.next/''', '''(^|/)\.git/''', '''(^|/)test-results/''']

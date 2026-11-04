@@ -1,6 +1,8 @@
 import type { ReactNode } from 'react';
 import Link from 'next/link';
 import Logo from '@/components/ui/Logo';
+import PrivacyPreferencesButton from '@/components/ui/PrivacyPreferencesButton';
+import { GA_ID, META_PIXEL_ID } from '@/lib/analytics';
 
 export default function LegalPage({ title, updated, children }: { title: string; updated: string; children: ReactNode }) {
   return (
@@ -15,6 +17,7 @@ export default function LegalPage({ title, updated, children }: { title: string;
           <Link href="/terminos">Términos de uso</Link>
         </nav>
         <div className="legal-body">{children}</div>
+        <PrivacyPreferencesButton enabled={Boolean(GA_ID || META_PIXEL_ID)} />
         <p style={{ marginTop: 48 }}><Link className="btn btn-ghost" href="/">Volver al inicio</Link></p>
       </div>
     </main>

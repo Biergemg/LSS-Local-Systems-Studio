@@ -1,0 +1,16 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { spawnSync } from 'node:child_process';
+const [kind,executable,...args]=process.argv.slice(2);
+if(!/^[a-z-]+$/.test(kind||'')||!executable) throw new Error('Usage: run-check.mjs kind executable args...');
+fs.mkdirSync('.audit-private/commands',{recursive:true});
+const executedAt=new Date().toISOString();
+const head=spawnSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).stdout.trim();
+const result=spawnSync(executable==='node'?process.execPath:executable,args,{encoding:'utf8',maxBuffer:32*1024*1024,windowsHide:true});
+const log=`.audit-private/commands/${kind}.log`;
+fs.writeFileSync(log,JSON.stringify({executedAt,sourceCommit:head,executable,args})+'\nSTDOUT\n'+(result.stdout||'')+'\nSTDERR\n'+(result.stderr||'')+'\nEXIT '+result.status+'\n');
+const record={kind,executedAt,finishedAt:new Date().toISOString(),sourceCommit:head,command:[executable,...args].join(' '),exitCode:result.status,status:result.status===0?'PASS':'FAIL',log};
+fs.writeFileSync(path.join('.audit-private/commands',kind+'.json'),JSON.stringify(record,null,2));
+process.stdout.write(result.stdout||'');process.stderr.write(result.stderr||'');
+if(result.error) console.error(result.error.message);
+process.exitCode=result.status??1;

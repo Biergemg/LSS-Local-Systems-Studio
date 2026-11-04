@@ -1,0 +1,824 @@
+{
+  "product": "PROMPT MAESTRO V8",
+  "skill": "prompt-maestro-v8-orchestrator",
+  "version": "8.0.0",
+  "algorithm": "sha256",
+  "files": [
+    {
+      "path": "examples/example_input.md",
+      "sha256": "cffd8f8b856e2e58b82e4d67e5c55b8c56a9bd56b42b50d78d64794805ae5cfb"
+    },
+    {
+      "path": "examples/example_output.md",
+      "sha256": "b717970a9d052b2de77000e869a34853cafcb5eeae6bcd97859d22328eed86db"
+    },
+    {
+      "path": "INSTALACION_EN_OTRA_COMPUTADORA.md",
+      "sha256": "27c7762eabb204408defc82aaf345b7a423c54d8d9fb31dd2b3dc8ae02155eff"
+    },
+    {
+      "path": "manifest.yaml",
+      "sha256": "1f46ef8fe0e06de150f9bc801ddd88bb57102c4e9b6e2bb1fc2906edb09eda50"
+    },
+    {
+      "path": "orchestration/flow.md",
+      "sha256": "9afc29bc7c0a7e1bb6c796c192b0949500309220ce06877d87d97357d68ce827"
+    },
+    {
+      "path": "orchestration/skill-routing.md",
+      "sha256": "90cdd1b7b182c88f4826ebbdf6a26560bfd815316e3fbc4f24f46022b5324681"
+    },
+    {
+      "path": "README.md",
+      "sha256": "44005276ac659da5ff0900f30b543333ddb6bd4a9815e64fadef951c8fc02938"
+    },
+    {
+      "path": "references/21st-dev-y-herramientas-2026.md",
+      "sha256": "10fc40117f72ba45f56db647c34e7d209f0295318e3a606a167b1b2ac767dfc1"
+    },
+    {
+      "path": "references/direccion-arte-agencia-premium.md",
+      "sha256": "eb2cc1dab287c443049dfa4e8fb41eac82e8cf628ecae288c771debcb70738e2"
+    },
+    {
+      "path": "references/portabilidad-instalacion-automatica.md",
+      "sha256": "f7c4316049bce218ea96f9cf3ec593b78ad2068d3b54025453c815ece81eafca"
+    },
+    {
+      "path": "references/stack-y-pruebas-2026.md",
+      "sha256": "155d69c2f5240bfdc2536dbd286d1e2166935bcb42a44ac8cfaafa41d87bcefa"
+    },
+    {
+      "path": "rules/aeo-geo-evidence.md",
+      "sha256": "3e5ee10ff4e100057fb2bbecc9841d458b437ed9df48b6f39b97d648d9209d35"
+    },
+    {
+      "path": "rules/enforcement.md",
+      "sha256": "7b30b56b1129259b0e5ba257b1277cd6aaf675e62baee60dbd5b1545402158c1"
+    },
+    {
+      "path": "rules/execution-contract.md",
+      "sha256": "9c604a27257833bc9bc589d386809cec1ee45dd9fc77d13975b64aa7158c2ba1"
+    },
+    {
+      "path": "rules/guardrails.md",
+      "sha256": "b0bef2e4c5676f71ec46da8724338c97647101ad2e68292caac0c7f67729229f"
+    },
+    {
+      "path": "rules/quality-gates-2026.md",
+      "sha256": "bd15215a3e2bd25a1a7248a2fe81c8c716acba0f8ce70c41821e97951b090868"
+    },
+    {
+      "path": "scripts/21st-direct.mjs",
+      "sha256": "721231d08b3b2e5f4e30bb15329b2bc344b32b2a67a09bfdf72f3efb9cbdc3d5"
+    },
+    {
+      "path": "scripts/audit-v8.mjs",
+      "sha256": "4df8f6c84bc70162a921fd034472c43faf2ee4236531455a7b449738f9f47e72"
+    },
+    {
+      "path": "scripts/bootstrap-v8.mjs",
+      "sha256": "dabb0b6f10c0e711d6600c3deb9bd97947adec1ee688ec244f7eb05246b9be0e"
+    },
+    {
+      "path": "scripts/build-v8-pdf.mjs",
+      "sha256": "ed87047f80ef5b110ffb467734829031b5189ed0810e2d9346d9f5a35a7dcad3"
+    },
+    {
+      "path": "scripts/patch-schema.mjs",
+      "sha256": "1f19655b617ae9e4bfbff60fb732ce869a27f4e8c18d0025653ce21c1720c1ab"
+    },
+    {
+      "path": "scripts/sync-marketing-skills.mjs",
+      "sha256": "553e32348c2e8051bd489be735f6b8b33ad6dc237d72ab4a9b5d9bb9a190913a"
+    },
+    {
+      "path": "scripts/sync-v8.mjs",
+      "sha256": "c136d081092ec571434b8f0e2d61533e7b4c8b58f235fbe54d0f287956fc7934"
+    },
+    {
+      "path": "scripts/test-v8.mjs",
+      "sha256": "85ffc8faab93b8e7358efebde4ee4c0cfd1cb2e256c6778b4c7feb2deee91343"
+    },
+    {
+      "path": "scripts/verify-delivery.mjs",
+      "sha256": "41ad3b36bea2bfdebaa61b160b7d4a46ee2dbada2325a7863746a3898d532029"
+    },
+    {
+      "path": "scripts/verify-integrity.mjs",
+      "sha256": "7ba159c201b288c6664bff5e57d0257454dccc0e5a0fd1d90d41a84a278b4a1c"
+    },
+    {
+      "path": "SKILL.md",
+      "sha256": "3a30e300347dc0bf50e111508b86a0fcb1a59e3bda66b2cd202f43544ee7a1a4"
+    },
+    {
+      "path": "templates/delivery-evidence.example.json",
+      "sha256": "abd08717fc8e56ec84d3d685584e7ade7348cead0d75cb86f1533a074b0633b6"
+    },
+    {
+      "path": "templates/input_schema.json",
+      "sha256": "009f6265bd677db67ba5e8d268a6902d9bbb713d40987f590dd1709c64797b51"
+    },
+    {
+      "path": "templates/output_schema.json",
+      "sha256": "2f7443a380c9b59411cac9b310f198b440df5b762a810218d26c81f2a0bc810b"
+    },
+    {
+      "path": "V8_RELEASE_NOTES_2026-10-30.md",
+      "sha256": "1a9afe7ad89c50de03b4696938a5999c571f7c140db493df3bf00c2056f209e1"
+    },
+    {
+      "path": "vendor/locked-skills/copywriting/evals/evals.json",
+      "sha256": "e1fbcf4ee001a96df023e97e7269a808ab73d88ae4d253e71cba6a9afd285da1"
+    },
+    {
+      "path": "vendor/locked-skills/copywriting/references/copy-frameworks.md",
+      "sha256": "b2ba17be31db872912967e6cc348d7503500a550f8d9fe150dd4e76a0439a197"
+    },
+    {
+      "path": "vendor/locked-skills/copywriting/references/natural-transitions.md",
+      "sha256": "f738e7933906576a54008aa97f2e279afe029989e4d471454112bf847e11ecc3"
+    },
+    {
+      "path": "vendor/locked-skills/copywriting/SKILL.md",
+      "sha256": "37909bbc83d050fb8375e5b1df96725b6f7c7c3b6163d278c849fd58cac073b6"
+    },
+    {
+      "path": "vendor/locked-skills/cro/evals/evals.json",
+      "sha256": "31a978defd41b86a0aafa2728499be488de21bfb0f1c7f33a93c1ce876eb38fd"
+    },
+    {
+      "path": "vendor/locked-skills/cro/references/experiments.md",
+      "sha256": "f3103edc47e61e62eb4c733f30aa6bebe31e117beb74d61b3d44b766ae9324a1"
+    },
+    {
+      "path": "vendor/locked-skills/cro/references/form.md",
+      "sha256": "5ec37523ce85312c23da1a8980d35956a9654010f415ced318503bfaa2afef0d"
+    },
+    {
+      "path": "vendor/locked-skills/cro/SKILL.md",
+      "sha256": "fb4f8601c3c723b3167a21bd2a7ce7d4b6530f39fc28cc9f1e09d56530c9c5ce"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/adapt.md",
+      "sha256": "4c2564d97824b981c110d0dd31261f006582e4231ba47cc794c71cd074d28d6d"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/adapt.native.md",
+      "sha256": "93703076fcdb782195a35e8340eb00af55c38851b5b33f88651ad70b9f712d53"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/android.md",
+      "sha256": "90143ff65239db1ecf84cc370717582708aa31731be82a50085cc40e3e94ed7d"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/animate.md",
+      "sha256": "0964df17380aaaf3a65befb05cadcc2bcaab8acd289b33d10d1eb0db1897b643"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/audit.md",
+      "sha256": "909bb755ac1afd998fe04c7b23ddab4627aa46ee8622348c1fb125ad0f370529"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/audit.native.md",
+      "sha256": "5b4347a81726fa080779b761a15e3d23b4d1adc5d4b875bc84a7b67053ada953"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/bolder.md",
+      "sha256": "64138d4817563e1a71d97b3ac65b95ffac778d2cc29c0a3af326303f05047f4c"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/clarify.md",
+      "sha256": "ae344a11a75cb29cf09ad2325bbdf8caa2e7468a61b88f766a01c758b95bbd23"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/colorize.md",
+      "sha256": "06652c3b1b84177445eb99f97e0be3450c3219d8d704ba0382fb48b13ad5c1d9"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/component-review.md",
+      "sha256": "d1f05e8ad6ec7e0a73efd2a1437c60aa321803466ceb408c6bf8796269e456b9"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/craft-floor.md",
+      "sha256": "b7c0e1c409f36d0ad4fc0d63110d515bee00c27b8c371e3f936a13c41457cc5c"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/craft.md",
+      "sha256": "39b5fefbf524ad156a4cab2fbc5b65f2358c213a30d59a4c7510704e8d9dd56b"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/critique.md",
+      "sha256": "6fc31c0c85d99438c6aef91b4dbda4457d9836ddc7358a9e3d6ab5dfbf7c7859"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/degraded/asset-producer.md",
+      "sha256": "6c5959ef48e3d7c4b6ed3f667fa210b86b2e30090e41f5ba0922b71507b5c6b2"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/degraded/documenter.md",
+      "sha256": "15675b359e88851a3224eb7b3bc7296b7879f9874cdaa345806503db8a6f7ce2"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/degraded/finish-reviewer.md",
+      "sha256": "619f523f57071b84f8cc921746eb5cef971406c811b57cbb09999d5cdb7d2378"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/degraded/manual-edit-applier.md",
+      "sha256": "f0c38364f16417ecc680d5402b47f121fa7d066aaf6f25855bb236fa161863d3"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/delight.md",
+      "sha256": "6a6641bde4c9a3b4b260447d4a91d5a3eefa10ec18939a945aa6f27a34343047"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/distill.md",
+      "sha256": "2a47dde1100b40a02b250e7a93974c43b0b9d0b095f5d6544eebb3ab6bc4ea57"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/doctor.md",
+      "sha256": "a7dc52533c5f491ce4cd3ab4a913db631a7ab1088e2bb454bee36e5942ea4256"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/document.md",
+      "sha256": "60980a28ff57296ae56efd44bb2147cf8ffa724318d10b28af8dc34d5444fe81"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/extract.md",
+      "sha256": "e59d59a3d4a7740d5b1fb555036e9de3d57c2589e03bec87e2956ef474054444"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/generate.md",
+      "sha256": "59c3b265316bd4a08d79cd14a24077ed46c03388a46cc168afacbff12b0482a4"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/harden.md",
+      "sha256": "4dc982fc08f16fbc335edfa9421793947e178773e7bba8684c27acee1ec34abb"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/hooks.md",
+      "sha256": "33d7c4bf409d18746e0293c0309ada3eb9f999eac83a87419b6e3e1bc7a87acd"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/init.md",
+      "sha256": "af0634d4409eda1634ae3dbb7e59a8199ad0e5e6a2fdf9e955d4e16d7a9b6b65"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/ios.md",
+      "sha256": "60ada207bfb419ad0a570b8319c29403713ca2ad3fb9a2f5bdffa62ab25611bb"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/layout.md",
+      "sha256": "8b6bc4dbe6dafd8ea14f311e531ad8fbb10e277d973bd84a2875b4cad4a8fe9b"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/live-setup.md",
+      "sha256": "203337c0da65f8247b1df29d0e0119ff7e5d07dc66aab79816a2a8f2e25826de"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/live.md",
+      "sha256": "5ec884af85748f595bc2b8ec7f6e55e52ebc56d3b82e9dbe7358d3fc5b530b18"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/mode-operate.md",
+      "sha256": "7cc131b41dae694a4b554c940445117318f0c6fb19f905cf1f8cbafc08a3f430"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/mode-persuade.md",
+      "sha256": "81cf3d22f747b9768abe48bd6cb881b8807809b8995f20096cfb442dadf550bc"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/mode-read.md",
+      "sha256": "20da46dd620da4433736173b130de306ceeb124dac83fccf664a12e236ee0b8d"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/new-work.md",
+      "sha256": "7f136edb5747eecc55037426ddd2531520d67da289bb8826b25c7688738b010a"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/onboard.md",
+      "sha256": "4a11e8545a1547f4d14263bd4e36df4a41bb15fbed2e76df774ec044b71e8e61"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/operate.md",
+      "sha256": "c4b169ab7932329c833750971c53bc129d0385e16d0219b31f002792fce939e8"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/optimize.md",
+      "sha256": "503cfad4108542139bcb1f4e0cb3e3091bd88e161dfd219cd349230095d1db0d"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/overdrive.md",
+      "sha256": "e6fcad80c93b914bbc289435e7844c763e2b7086308bd86a250e60fb268c23fa"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/polish.md",
+      "sha256": "d401c38a58380966ba6af10f75f47dd815d104b8405044b623a321f45a3cef76"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/quieter.md",
+      "sha256": "d85b54d14ce8d98ac8401e7fba482f5452c96a6c6159e81af1bfea3ef28850ca"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/region-map.md",
+      "sha256": "f136945ad0c93bf58439f60f01a0451b7115d4e769b156f5038d1919b3f509f1"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/routing.md",
+      "sha256": "9b575b774cdf7683cf6212b4bfc4a038e54eeb46df995e5045be7b4e8dd7888b"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/shape.md",
+      "sha256": "51960b514f8437baf12484dd5be824e0c2d0ee8802e29e7f511e431493a6c417"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/typeset.md",
+      "sha256": "014908642a4d7dc6915d0e3592333942313b16964d47d83c66993895be1fdbe7"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/reference/visualize.md",
+      "sha256": "30e37ace9288a04cb881690f14993f46c4d9af81aa7989a91c7053f335222e6f"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/scripts/command-metadata.json",
+      "sha256": "7b91b379cc594cb9e45945f7c29838324c531b04e27ab52713eb0a35f02c6479"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/scripts/data/font-index-failures.json",
+      "sha256": "7461de9923357d70b1365647b0a85d181eac1702f622cbf24465767f4ba99d06"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/scripts/data/font-index.json",
+      "sha256": "47edbdfaf27073c47033d1ac7dfee881be49e2dcbda7671d1157300481dde6da"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/scripts/engine-checksums.txt",
+      "sha256": "8df1c1403ddb41285f095d82938193afce4f49597f92d54e54e3b769a0a1b3b0"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/scripts/impeccable",
+      "sha256": "9e34e55f4d3937ed9029abfad35b084a1f220988bc14b6565fed45626ed07939"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/scripts/impeccable.cmd",
+      "sha256": "73c2e4d7613c38e35654df0444d559c97f1d09a9d373f4e72b3d7b21b6e1060c"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/scripts/live-browser-dom.js",
+      "sha256": "0e8e243d4242d1af8a710a548a85fe421a4fcf7787c6dbc11376ebe4c0f8f118"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/scripts/live-browser-ignores.js",
+      "sha256": "d5fb703e91293f5769bfa2376076c115823be19ef8d8f1eab57e8dd6e4283c4a"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/scripts/live-browser-session.js",
+      "sha256": "bd1580c0a32b88863b8bb014c6007054d496de9cd18cebd612e220f11f2c9474"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/scripts/live-browser.js",
+      "sha256": "ee99e47d0e185f482e53177598bff254b79a3a3d1a3f564d96b1bc36ba576dac"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/scripts/modern-screenshot.umd.js",
+      "sha256": "9b0dc34415466edac6e6802574006608b5e5c0da9fdcb7b2651dbd1ea06713a6"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/scripts/VERSION",
+      "sha256": "a75bbc9cdf47f121283907052a2c720d41c7eea941495152d25d2c718e53ebb5"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/SKILL.md",
+      "sha256": "3324f3f4abdebd9e41957be4059d0633913a55e4bddc11f4ce8433236af69168"
+    },
+    {
+      "path": "vendor/locked-skills/impeccable/V8_ORIGIN.txt",
+      "sha256": "0f3d83db5b2f6a06ba0887f9e5b8111ac067be962e06dfde09cfd90883f13b4b"
+    },
+    {
+      "path": "vendor/locked-skills/LICENSE_IMPECCABLE_APACHE_2.txt",
+      "sha256": "fc0673369dae07c045c46869d3d4c9113678c77fcc7d3b4e3a39ac074cfa68b6"
+    },
+    {
+      "path": "vendor/locked-skills/LICENSE_MARKETING_MIT.txt",
+      "sha256": "3bb73920cd10a04b0ce3f28b84bada69e9286d0c33cf654ff10c279409791aa9"
+    },
+    {
+      "path": "vendor/locked-skills/LICENSE_UI_UX_MIT.txt",
+      "sha256": "738f69dfa83db5c347c678fb9d90e560877059f0de93a327c39001bff92dc014"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/app-interface.csv",
+      "sha256": "f502a372b25ebd186dc850a77462b1a7c0a95c02595122cd6d55a629739073af"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/catalog-summary.json",
+      "sha256": "804ceaa425ac951a2028fb1030ddd44d44f3c2ecccb1aa924f56b8fa6339e70e"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/charts.csv",
+      "sha256": "1fd649c00516a24b193940902548d2584381f1e3cfa048490c9f88cddcf65bb4"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/colors.csv",
+      "sha256": "1c7527d81842b386fbb066376e1e449b05c4bb5db72e6842b51db752801b6fc0"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/data-provenance.json",
+      "sha256": "f171af8a6981559f1feca34e65347515035dc6b983661e0ab1698078e12836d7"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/google-font-licenses.json",
+      "sha256": "7c35e410dd8b5853ca86c3e0e3d3cfb73db1ffa3d9a2fa688c182bc44cd9a8d7"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/google-fonts.csv",
+      "sha256": "d03194d2c35a2cdc4c6846ddde9beb54fdd1f81a3ddc80fead3c0ba2842b75fb"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/icons.csv",
+      "sha256": "272ccf0eb60e50ba7af55de3ef5c195d92e1862d411b6cb80d81dec4fe56deee"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/landing.csv",
+      "sha256": "9efd4568de12dc9e9e4c5b7c1743f3643243232d2dbb9257d30d88613d4bb8fc"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/motion.csv",
+      "sha256": "854b30af6fdd40a735eeed077eabec3a6917923627220bc5062ea8a15165ef6b"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/phosphor-icons-upstream.json",
+      "sha256": "81c37fb3583eb43a91e93f1a62c4da3b4ff089624c06bfe53950b8205b54974d"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/products.csv",
+      "sha256": "c3ef558cf2987e145e90ab22ff71dbe769d38d2c83999bfd63d7dd58b477f73d"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/react-performance.csv",
+      "sha256": "4dc9b897a2150a8f30b4ad18f67ebc62074d1706bde9849c189b7f511fb821d2"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/stacks/angular.csv",
+      "sha256": "9fc11f2b1c9efe6aac4e0416f2a022389c1ee005551523fc6a776cd39494eb2c"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/stacks/astro.csv",
+      "sha256": "85ddebda566b2814a6088140d06af2b729d582d5df73ba5f954a9009e17b3a5d"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/stacks/avalonia.csv",
+      "sha256": "a7ea4a448bb26e50b8eb69f8c191ecb374aaa4ddea6b39deadf2ad5d482e71d9"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/stacks/flutter.csv",
+      "sha256": "be5422f81892515ea4646460a7a77c95a4e22db0d112b05d5885757fd5c16016"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/stacks/html-tailwind.csv",
+      "sha256": "4004df03af7cf4cdd635d7a2127f6da4f94f6718af6556bee6bc2a14e6093cb8"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/stacks/javafx.csv",
+      "sha256": "f1d83197228e5265f80a8cb9598c03c76d4280bfb2804aca6eef841f5972b449"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/stacks/jetpack-compose.csv",
+      "sha256": "3e39065aa4c08e88117905558979a6bad799f691f72dc570b82b6d206b627a1d"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/stacks/laravel.csv",
+      "sha256": "2491ee000953ae99b929bcf9a3937672a8c4e0cc89d4737e12cb5fbe6d46d96d"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/stacks/nextjs.csv",
+      "sha256": "ece292708d2d4d41aaa6f339640f4ffc1adf5d052a7d633cc0201d5a79307c37"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/stacks/nuxt-ui.csv",
+      "sha256": "5b76f8506e34369d23ea70c79f96c6292db91d8c5df52cf6534c7b36b22a4127"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/stacks/nuxtjs.csv",
+      "sha256": "ebe9bfe54cb1ee6e26c6776d72fa2290e7ba289d116afd6857e4d68a21475bb4"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/stacks/react-native.csv",
+      "sha256": "1f7c99ea422ecd84ba3b0df5920c25f315ca9f3a15cf862a9a7183ed50e9a5e9"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/stacks/react.csv",
+      "sha256": "6a4cb8e26393afe21f5a5ec171c6ed1c9438b46a5330923cc3d83bc99406cee6"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/stacks/shadcn.csv",
+      "sha256": "14d303b0adef425c388367e6825b92808cacbc0846e554889507c288b9e8e53d"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/stacks/svelte.csv",
+      "sha256": "59af6ab78a0550313489441fffe17d7317de5a819aa992b1e2dca73ecb0a82d6"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/stacks/swiftui.csv",
+      "sha256": "29b62817abfc03a0789180247ce98ac6fe00b7e54632c328c71af707e68d6915"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/stacks/threejs.csv",
+      "sha256": "d690c41d86d87747d6b7be6e6e8cd95432d31edb31f19497c0e56e8997b35cfc"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/stacks/uno.csv",
+      "sha256": "a52939b4c3c0fa604ab91d32216b7dba28fcd7b4b03a2e7f46b79749e3241228"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/stacks/uwp.csv",
+      "sha256": "ba334d0f2f478d73a7d80528b940f9e2f4ec6a8a7acafae92d69f0fb10837170"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/stacks/vue.csv",
+      "sha256": "bb492b870b5bc7abff86dfebe73adad36c811a10907709f6a2da19c388f4edbf"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/stacks/winui.csv",
+      "sha256": "0a2b7a991adc8f126a31a953b8ad211a8162889fcc4e66c1484328847b206849"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/stacks/wpf.csv",
+      "sha256": "1b98ddc6354f7e3f05071679dae1c1f49dbda7639e48d5ceb2378e82cd3e2594"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/styles.csv",
+      "sha256": "667595149f49cc894ac4b7b3468e7b9c6b0c2795ebea26dce20ca3f92044d517"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/typography.csv",
+      "sha256": "5c32783790714baaa0f870131aacff021b865495008ed8ab65e7ddf894862581"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/ui-reasoning.csv",
+      "sha256": "8c45627a7ac18cc57b8abe909d840aae3cf9a9f3ef15b8a6e1bf6c64fb02ed64"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/data/ux-guidelines.csv",
+      "sha256": "0552e850d47fb5b5cf0b2e35784e1d44f6b2aea52c9255193f7eb2588c2c9f4b"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/references/pro-rules.md",
+      "sha256": "b64961a5f324bf0c480dd06c6154787298c4baa6d07fdcd8dab1fee7058c09f8"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/references/quick-reference.md",
+      "sha256": "b3ada267d3fa7c6237834683748bc0b486c7c15ebf6f0590ce38bf6b988595d5"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/scripts/core.py",
+      "sha256": "9169fdda39bf41c5e528caf04a996f8c943bc8838062967c725fc39522760a4e"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/scripts/design_system.py",
+      "sha256": "64457f35d085208d5075f9a519cfc502089a7630ca43976df07652b97566cc41"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/scripts/reasoning_contract.py",
+      "sha256": "094c8d35e7e69b243f57c4be5d61096634f8e2144fa03afd2b18c5f97de1cffb"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/scripts/search.py",
+      "sha256": "0e106775eed61e2954c0af41e9ed73b816c3bfbb2de936e07957907db846b7d6"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-api.json",
+      "sha256": "503a0d00ebf5621b70a1035425701d7204f18998b8a983b8aaf53e69848fcc8c"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-catalog.json",
+      "sha256": "b83a59f0374fbb771b37288cacca3b9525a1c6c435c8b51f34da4e8f7315eb11"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-existing.csv",
+      "sha256": "a897ec8bdccd93f416ec51797e7bd58ecb7009d0fb74b3bca615b1a073b50435"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-metadata.json",
+      "sha256": "12b4a4c05fdb56fa720a01bd83abc3da4a7dde2295998cab59d73a47b9428c10"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-overrides.json",
+      "sha256": "507032ab4482cc5079e427280e904ee89c9f255a0474ff7d32947cc0d75bc541"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/icons-curated.csv",
+      "sha256": "e04ac4ef7d95a09276fec3311759206675609c1358300ea4e960214d6c1accfc"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/phosphor-core.json",
+      "sha256": "d22fc37d9e2f7db33ee6284590b87adc6664a251748d9ff9a0f9f78eaee5de33"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/phosphor-package.json",
+      "sha256": "186bfa5abdd5dd1f1629be711dcee8c95edb5c0bd3679c05ce84bd4e927bfde7"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/phosphor-react-exports.json",
+      "sha256": "2818efb3acdcfb68632b483928458f500c470bb70b53461f426101bd95b0fa10"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/phosphor-react-package.json",
+      "sha256": "c46b8f1a61cbf9211d1b3b6ae6dfd781533e7bbd6c9808cc90fa89d72de4911e"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/scripts/tests/fixtures/relevance-baseline.json",
+      "sha256": "f1cab931dc0fe61c8e668fbf8b16ae0d3a7374fc9db3481b49624e42aa8a4097"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/scripts/tests/fixtures/relevance-cases.json",
+      "sha256": "9ebf970dd96c5ffb62e1c533f344362c7becf4c8773c2956554578986fb4ffb1"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/scripts/tests/fixtures/relevance-thresholds.json",
+      "sha256": "e7bc4b5fbd9f36d234277ce8a25bc4620a75e63d435603f44f1397bba45c2dae"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/scripts/tests/test_catalog_refresh.py",
+      "sha256": "8f006f97be04669a8c08aec20fcea3c02f54d0e047cbffb4f962b78d1f66a3f4"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/scripts/tests/test_catalog_summary_line_endings.py",
+      "sha256": "273e1843cf64e129b7ca964b36c44bf7bb364d83e30d0a14e9522c3980264ad6"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/scripts/tests/test_core_data_quality.py",
+      "sha256": "c1e58089471d86667656c2453da49b4adcac1e81d6e84eaddcc4a39fde509ee8"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/scripts/tests/test_core.py",
+      "sha256": "2487a5d776ac2d8070d12686357124523dc0aec94d38acbfdd677e40c51a3857"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/scripts/tests/test_data_contracts.py",
+      "sha256": "0dfa5544bd5a2bd06a93e9a027dd2bbae0ad6351c37e9b7fb64e5aea78d76aae"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/scripts/tests/test_design_system_mode.py",
+      "sha256": "27554cfbcd375ce8f5b4ac97a0ab420bab182a264bf7d96aa37d3207abdb12c8"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/scripts/tests/test_design_system_stack.py",
+      "sha256": "0f9efc89b66a360933f0e748bbb0ff1a1845f74249632a29b50964825dbe3c6c"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/scripts/tests/test_native_desktop_stack_freshness.py",
+      "sha256": "7fa718a4dc5472fdbe6767eb0fb08e660f9ddad8e27669cb9716e6e950b9857c"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/scripts/tests/test_relevance_evaluator.py",
+      "sha256": "b5aef6bbdefd7b72ca3d23f6331a13671cf40ecbe3fbb20cb735c201e78f8f5a"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/scripts/tests/test_skill_script_paths.py",
+      "sha256": "e9ddd562c16d577675707d9534a01b5237b6a4960a5fffa15c920d9a5b2858e2"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/scripts/tests/test_style_taxonomy.py",
+      "sha256": "1257b28c39f2173289214f9462b780cb296467ba93e382560d076a4792b0df90"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/scripts/tests/test_text_layout_resilience.py",
+      "sha256": "da649f4c3e7ca751b8b5c76495c411f9efd137b78f17ca6e4ad35d831a8326b7"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/scripts/tests/test_web_stack_freshness.py",
+      "sha256": "e35c8835c1c8bbef4c0996df749770ed4ba6598d85791cccfd04896d728bd5cd"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/scripts/validate_data.py",
+      "sha256": "0a40f854159a855133d08e73795abf94a8cb30f84c02f4d6e1d1c7a62225b2b6"
+    },
+    {
+      "path": "vendor/locked-skills/ui-ux-pro-max/SKILL.md",
+      "sha256": "88aadd21220542083a455e373bd162ffe7843266a71f06f4d837bb3b34f9c9c7"
+    },
+    {
+      "path": "vendor/marketing-skills/ai-seo/evals/evals.json",
+      "sha256": "7b36af6609906cdb559a0138b03c25c161f143b85fcc295bb7355663e6f9a157"
+    },
+    {
+      "path": "vendor/marketing-skills/ai-seo/references/agent-defaults.md",
+      "sha256": "52dd7927b9d94865617d1eb1491788cd531b080a59e79bb59d5df9483893834b"
+    },
+    {
+      "path": "vendor/marketing-skills/ai-seo/references/agent-readiness.md",
+      "sha256": "070af8442e0f876a72822ce169a210e56f498cd171c854030d767cb5c9f4e68d"
+    },
+    {
+      "path": "vendor/marketing-skills/ai-seo/references/ai-attribution.md",
+      "sha256": "c0a71b165a31650ff7e44ab6db3ef293d4fe0918c06691b88d0d4662edb4b679"
+    },
+    {
+      "path": "vendor/marketing-skills/ai-seo/references/answer-accuracy.md",
+      "sha256": "9269e683d4c74d77bb357ef5da9ddfbcd23e4e29ff857ee50e3446e251a2a87d"
+    },
+    {
+      "path": "vendor/marketing-skills/ai-seo/references/citations-vs-recommendations.md",
+      "sha256": "2ebf7faa308402d98e13f1507f60ffa59d0163598f2618b25a3b434f5a07b696"
+    },
+    {
+      "path": "vendor/marketing-skills/ai-seo/references/content-patterns.md",
+      "sha256": "470833aed12593a88e13696dfa1188e3a47411f9fd07e2d493e75c763e98f080"
+    },
+    {
+      "path": "vendor/marketing-skills/ai-seo/references/content-types.md",
+      "sha256": "e9bb6f9fb7c532654e838fca2c273e6136b838e843159f864916c0de5b6efe39"
+    },
+    {
+      "path": "vendor/marketing-skills/ai-seo/references/format-volatility.md",
+      "sha256": "d3a1bf01fee577b6081c500206e4cfbee95547bbc90d6dc1f71f6491599f0ae7"
+    },
+    {
+      "path": "vendor/marketing-skills/ai-seo/references/linkedin-ai-citations.md",
+      "sha256": "1cfef30d80ac4e6bce84a737ad34e8e352c45e745f0170ebabdd69ff53798c1f"
+    },
+    {
+      "path": "vendor/marketing-skills/ai-seo/references/multilingual-and-commerce.md",
+      "sha256": "a0028cb618a0277f591d7ad4a0acb241875b843152bd0e642d5a5f2bae92c744"
+    },
+    {
+      "path": "vendor/marketing-skills/ai-seo/references/okf.md",
+      "sha256": "7fd63ae9a47ce1705edaf3d8cb0d00d61755791019a483aa510d1d2b6ed9a509"
+    },
+    {
+      "path": "vendor/marketing-skills/ai-seo/references/platform-ranking-factors.md",
+      "sha256": "0141f1347c849772e101d339157be9674071c862fa61c718ae32bd230a9c2a8b"
+    },
+    {
+      "path": "vendor/marketing-skills/ai-seo/references/positioning-and-consensus.md",
+      "sha256": "764deaaee11b7895c73ef4a997b97a6988bce6d47008459bf19d8e69958c682d"
+    },
+    {
+      "path": "vendor/marketing-skills/ai-seo/references/prompt-portfolio.md",
+      "sha256": "ecbc9717bf802d2b047ad26f7e6c1f8d1628b85a30742ede217c8d5ec47c8fb5"
+    },
+    {
+      "path": "vendor/marketing-skills/ai-seo/references/youtube-ai-citations.md",
+      "sha256": "a482fd623e7e1f9626e28677ffef0c733c31256e3e5cc6f6dde4c73f327a605f"
+    },
+    {
+      "path": "vendor/marketing-skills/ai-seo/SKILL.md",
+      "sha256": "9ca866ae95723d1545f8b0448c9fa94136c2d97517c885ffe90edea3fb865a23"
+    },
+    {
+      "path": "vendor/marketing-skills/LICENSE.txt",
+      "sha256": "3bb73920cd10a04b0ce3f28b84bada69e9286d0c33cf654ff10c279409791aa9"
+    },
+    {
+      "path": "vendor/marketing-skills/schema/evals/evals.json",
+      "sha256": "97185063f4656d2f68d47a2f1c68227595a1e13103daa4485ac477d918ebc890"
+    },
+    {
+      "path": "vendor/marketing-skills/schema/references/schema-examples.md",
+      "sha256": "741b79db51909479e27e9e48955664394a3981e7083071a555a08b02e9f6b529"
+    },
+    {
+      "path": "vendor/marketing-skills/schema/SKILL.md",
+      "sha256": "5606f9b71487823eeac123de47ee7c4745dd73ef25d89da0cac4d8ca31fa8653"
+    },
+    {
+      "path": "vendor/marketing-skills/seo-audit/evals/evals.json",
+      "sha256": "556bc8d66fc8b429b0f17a084433cb212541f183ee39ac70433ed0e34dc0e788"
+    },
+    {
+      "path": "vendor/marketing-skills/seo-audit/references/ai-writing-detection.md",
+      "sha256": "847cbc0e9effb41e9fbdc98f05b85e2824ebe266dcbc291689a23ee0ea320f11"
+    },
+    {
+      "path": "vendor/marketing-skills/seo-audit/references/international-seo.md",
+      "sha256": "69f6bca80580fe7bcd03a54edd5f99f83317ffc359d5aea50a4a436f1a59a4f7"
+    },
+    {
+      "path": "vendor/marketing-skills/seo-audit/references/local-seo-pages-and-measurement.md",
+      "sha256": "d701d6f05343566e4766cbaba2289393972d32b13e1328f537243d9238ed105f"
+    },
+    {
+      "path": "vendor/marketing-skills/seo-audit/references/local-seo-profile-and-citations.md",
+      "sha256": "a391b633149be3c0cf3e5fb7cb31746cf8c970581fbdc6feb1fb59423c83ea05"
+    },
+    {
+      "path": "vendor/marketing-skills/seo-audit/references/local-seo.md",
+      "sha256": "6930b7c10c69ac2136e3b135432f69f9da68640206c7bbcb28b28e74d9a8468f"
+    },
+    {
+      "path": "vendor/marketing-skills/seo-audit/references/rankings-push.md",
+      "sha256": "6ad38a99617cb0db839b8825adc18795d3a094ff304a73765d3966c1891bdde0"
+    },
+    {
+      "path": "vendor/marketing-skills/seo-audit/references/title-tags.md",
+      "sha256": "a31be7db8a68ce18f3c482b58d77a292aaccab9f08bff3c0ace5f4f9f9127c6a"
+    },
+    {
+      "path": "vendor/marketing-skills/seo-audit/SKILL.md",
+      "sha256": "66c18add7037cc5ee3e9242858d007151690ba82557a3d6eb7e3fe4a5ad19577"
+    }
+  ]
+}

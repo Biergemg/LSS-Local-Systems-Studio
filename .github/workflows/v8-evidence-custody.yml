@@ -1,0 +1,43 @@
+name: V8 owner reviewed evidence custody
+on:
+  workflow_dispatch:
+    inputs:
+      evidence_artifact_id:
+        description: Submitted evidence artifact from a successful V8 run of this exact ref
+        required: true
+        type: string
+      authorize_production_release:
+        description: Explicit owner authorization for this exact candidate; no deployment is performed here
+        required: true
+        default: 'no'
+        type: choice
+        options: ['no', 'yes']
+permissions:
+  contents: read
+  actions: read
+jobs:
+  custody:
+    if: inputs.authorize_production_release == 'yes'
+    environment: v8-release-approval
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version-file: .nvmrc
+      - name: Authenticate submission and independent owner approval
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          EVIDENCE_ARTIFACT_ID: ${{ inputs.evidence_artifact_id }}
+        run: node scripts/custody-evidence.mjs
+      - name: Official production verifier plus complementary source guard
+        run: node scripts/release-guard.mjs V8_DELIVERY_EVIDENCE.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: v8-certified-evidence-${{ github.sha }}
+          path: .audit-private/
+          include-hidden-files: true
+          retention-days: 30

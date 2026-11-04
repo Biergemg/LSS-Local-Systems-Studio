@@ -11,6 +11,13 @@ export default function Nav() {
   const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
+    const desktop = window.matchMedia('(min-width: 900px)');
+    const closeOnDesktop = () => { if (desktop.matches) setOpen(false); };
+    desktop.addEventListener('change', closeOnDesktop);
+    return () => desktop.removeEventListener('change', closeOnDesktop);
+  }, []);
+
+  useEffect(() => {
     const els = Array.from(document.querySelectorAll('main > section'));
     const hrefs = NAV_LINKS.map((l) => l.href);
     const io = new IntersectionObserver(
@@ -53,6 +60,7 @@ export default function Nav() {
   }, [open]);
 
   return (
+    <>
     <header className={`nav${hidden && !open ? ' nav-hide' : ''}`} onFocusCapture={() => setHidden(false)}>
       <nav className="container nav-inner" aria-label="Navegación principal">
         <Logo />
@@ -89,5 +97,13 @@ export default function Nav() {
         </div>
       )}
     </header>
+    <noscript>
+      <style>{'.nav-toggle { display: none; }'}</style>
+      <nav className="container nav-fallback" aria-label="Enlaces de la página">
+        {NAV_LINKS.map((link) => <a key={link.href} href={link.href}>{link.label}</a>)}
+        <a href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer">{NAV_CTA}</a>
+      </nav>
+    </noscript>
+    </>
   );
 }

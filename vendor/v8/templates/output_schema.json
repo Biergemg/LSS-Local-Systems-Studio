@@ -1,0 +1,567 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "OutputSchema — PROMPT MAESTRO V8",
+  "description": "Formato de entrega obligatorio. Los 12 bloques A-L se entregan en este orden exacto, siempre.",
+  "type": "object",
+  "required": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L"
+  ],
+  "properties": {
+    "A": {
+      "title": "Diagnóstico estratégico del negocio",
+      "type": "object",
+      "required": [
+        "oferta_extraida",
+        "buyer_definido",
+        "zona_geografica",
+        "objecion_principal",
+        "mecanismo_confianza_disponible",
+        "conversion_primaria",
+        "conversion_secundaria"
+      ],
+      "properties": {
+        "oferta_extraida": {
+          "type": "string",
+          "description": "Qué se vende exactamente, para quién, en qué contexto"
+        },
+        "buyer_definido": {
+          "type": "string",
+          "description": "Perfil del comprador ideal con motivación y resultado buscado"
+        },
+        "zona_geografica": {
+          "type": "string"
+        },
+        "objecion_principal": {
+          "type": "string",
+          "description": "La fricción principal que impide la conversión"
+        },
+        "mecanismo_confianza_disponible": {
+          "type": "string",
+          "description": "Qué señal de autoridad real se puede usar"
+        },
+        "conversion_primaria": {
+          "type": "string",
+          "description": "Acción principal elegida y justificación"
+        },
+        "conversion_secundaria": {
+          "type": "string",
+          "description": "Acción secundaria si aplica"
+        }
+      }
+    },
+    "B": {
+      "title": "Matriz de decisión del proyecto",
+      "type": "object",
+      "required": [
+        "clasificacion",
+        "decisiones"
+      ],
+      "properties": {
+        "clasificacion": {
+          "type": "object",
+          "properties": {
+            "urgencia_compra": {
+              "type": "string",
+              "enum": [
+                "alta",
+                "media",
+                "baja"
+              ]
+            },
+            "sensibilidad_precio": {
+              "type": "string",
+              "enum": [
+                "alta",
+                "media",
+                "baja"
+              ]
+            },
+            "necesidad_autoridad": {
+              "type": "string",
+              "enum": [
+                "alta",
+                "media",
+                "baja"
+              ]
+            },
+            "necesidad_cercania_emocional": {
+              "type": "string",
+              "enum": [
+                "alta",
+                "media",
+                "baja"
+              ]
+            },
+            "necesidad_teatralidad_visual": {
+              "type": "string",
+              "enum": [
+                "alta",
+                "media",
+                "baja"
+              ]
+            },
+            "complejidad_decision": {
+              "type": "string",
+              "enum": [
+                "alta",
+                "media",
+                "baja"
+              ]
+            }
+          }
+        },
+        "decisiones": {
+          "type": "object",
+          "description": "Decisiones derivadas de la matriz",
+          "properties": {
+            "tono_copy": {
+              "type": "string"
+            },
+            "agresividad_cta": {
+              "type": "string"
+            },
+            "densidad_informacion": {
+              "type": "string"
+            },
+            "cantidad_prueba_social": {
+              "type": "string"
+            },
+            "nivel_dramatismo_visual": {
+              "type": "string"
+            },
+            "cantidad_animacion": {
+              "type": "string"
+            },
+            "estructura_landing": {
+              "type": "string"
+            },
+            "longitud_secciones": {
+              "type": "string"
+            },
+            "secciones_especiales": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "C": {
+      "title": "Elección de infraestructura y justificación",
+      "type": "object",
+      "required": [
+        "opcion_elegida",
+        "justificacion"
+      ],
+      "properties": {
+        "opcion_elegida": {
+          "type": "string",
+          "enum": [
+            "A. HTML demo premium",
+            "B. Next.js producción",
+            "C. Astro contenido"
+          ]
+        },
+        "justificacion": {
+          "type": "string",
+          "description": "Razón técnica y comercial concreta"
+        },
+        "stack_detallado": {
+          "type": "string",
+          "description": "Tecnologías específicas a usar"
+        }
+      }
+    },
+    "D": {
+      "title": "Dirección visual propuesta",
+      "type": "object",
+      "required": [
+        "criterio_visual",
+        "sistema_color",
+        "tipografia"
+      ],
+      "properties": {
+        "criterio_visual": {
+          "type": "string",
+          "description": "Qué tipo de estética y por qué (autoridad técnica / deseo aspiracional / innovación / cercanía humana)"
+        },
+        "cinematic_mode_activado": {
+          "type": "boolean"
+        },
+        "sistema_color": {
+          "type": "object",
+          "properties": {
+            "fondo_principal": {
+              "type": "string"
+            },
+            "fondo_secundario": {
+              "type": "string"
+            },
+            "texto_principal": {
+              "type": "string"
+            },
+            "acento_cta": {
+              "type": "string"
+            },
+            "color_auxiliar": {
+              "type": "string"
+            },
+            "color_microdetalles": {
+              "type": "string"
+            },
+            "justificacion": {
+              "type": "string"
+            }
+          }
+        },
+        "tipografia": {
+          "type": "object",
+          "properties": {
+            "familia_principal": {
+              "type": "string"
+            },
+            "familia_secundaria": {
+              "type": "string"
+            },
+            "monospace_si_aplica": {
+              "type": "string"
+            },
+            "justificacion": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "E": {
+      "title": "Arquitectura de conversión propuesta",
+      "type": "object",
+      "required": [
+        "secciones_elegidas",
+        "justificacion"
+      ],
+      "properties": {
+        "secciones_elegidas": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "nombre": {
+                "type": "string"
+              },
+              "funcion": {
+                "type": "string"
+              },
+              "posicion": {
+                "type": "number"
+              }
+            }
+          }
+        },
+        "justificacion": {
+          "type": "string",
+          "description": "Por qué esta arquitectura específica para este negocio"
+        },
+        "donde_aparece_cta_primario": {
+          "type": "string"
+        },
+        "donde_se_resuelve_objecion_principal": {
+          "type": "string"
+        }
+      }
+    },
+    "F": {
+      "title": "Copy completo por sección",
+      "type": "object",
+      "required": [
+        "hero",
+        "cta_primario"
+      ],
+      "properties": {
+        "hero": {
+          "type": "object",
+          "properties": {
+            "headline": {
+              "type": "string"
+            },
+            "subheadline": {
+              "type": "string"
+            },
+            "cta": {
+              "type": "string"
+            }
+          }
+        },
+        "secciones": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "seccion": {
+                "type": "string"
+              },
+              "titulo": {
+                "type": "string"
+              },
+              "cuerpo": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "cta_primario": {
+          "type": "string"
+        },
+        "cta_secundario": {
+          "type": "string"
+        },
+        "faq": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "pregunta": {
+                "type": "string"
+              },
+              "respuesta": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "G": {
+      "title": "Sistema visual detallado",
+      "type": "object",
+      "properties": {
+        "tokens_diseno": {
+          "type": "string"
+        },
+        "componentes_elegidos": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "componente": {
+                "type": "string"
+              },
+              "por_que_si": {
+                "type": "string"
+              },
+              "que_problema_resuelve": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "grid_y_espaciado": {
+          "type": "string"
+        },
+        "jerarquia_por_seccion": {
+          "type": "string"
+        },
+        "art_direction_reference": {
+          "type": "string",
+          "description": "Ruta ART_DIRECTION.md y keyframes 390/1440"
+        },
+        "signature_interaction": {
+          "type": "string",
+          "description": "Firma funcional, estados y fallback"
+        }
+      }
+    },
+    "H": {
+      "title": "Código completo",
+      "type": "object",
+      "required": [
+        "codigo_ejecutable"
+      ],
+      "properties": {
+        "codigo_ejecutable": {
+          "type": "string",
+          "description": "Código completo, ejecutable, limpio y ordenado según la infraestructura elegida en C"
+        },
+        "instrucciones_deploy": {
+          "type": "string"
+        },
+        "estructura_archivos": {
+          "type": "string"
+        },
+        "qa_evidence_reference": {
+          "type": "string",
+          "description": "QA_EVIDENCE.md y capturas reales de prueba"
+        }
+      }
+    },
+    "I": {
+      "title": "Metadata SEO + JSON-LD",
+      "type": "object",
+      "required": [
+        "title",
+        "meta_description",
+        "jsonld"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "meta_description": {
+          "type": "string"
+        },
+        "open_graph": {
+          "type": "object",
+          "properties": {
+            "og_title": {
+              "type": "string"
+            },
+            "og_description": {
+              "type": "string"
+            },
+            "og_image": {
+              "type": "string"
+            }
+          }
+        },
+        "canonical": {
+          "type": "string"
+        },
+        "jsonld": {
+          "type": "string",
+          "description": "JSON-LD completo como string. Incluir tipo más específico disponible."
+        }
+      }
+    },
+    "J": {
+      "title": "Propuesta WaaS",
+      "type": "object",
+      "required": [
+        "mantenimiento_mensual",
+        "upsells_posibles"
+      ],
+      "properties": {
+        "mantenimiento_mensual": {
+          "type": "string",
+          "description": "Qué parte del sitio requiere mantenimiento mensual justificado"
+        },
+        "upsells_posibles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Qué puede venderse como upsell en fases siguientes"
+        },
+        "automatizaciones_fase2": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "justificacion_recurrente": {
+          "type": "string",
+          "description": "Cómo justificar el servicio recurrente sin humo"
+        }
+      }
+    },
+    "K": {
+      "title": "Versión austera",
+      "type": "object",
+      "required": [
+        "descripcion",
+        "que_se_elimina",
+        "impacto_conservado"
+      ],
+      "properties": {
+        "descripcion": {
+          "type": "string",
+          "description": "Qué versión conserva el 80% del impacto con el mínimo de complejidad"
+        },
+        "que_se_elimina": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "impacto_conservado": {
+          "type": "string",
+          "description": "Por qué esta versión sigue siendo comercialmente efectiva"
+        }
+      }
+    },
+    "L": {
+      "title": "Supuestos y huecos detectados",
+      "type": "object",
+      "required": [
+        "supuestos",
+        "huecos"
+      ],
+      "properties": {
+        "supuestos": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "campo": {
+                "type": "string"
+              },
+              "valor_asumido": {
+                "type": "string"
+              },
+              "razon": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "huecos": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "campo": {
+                "type": "string"
+              },
+              "accion_requerida": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "dependencies_missing": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "skill": {
+                "type": "string"
+              },
+              "fallback_usado": {
+                "type": "string"
+              },
+              "impacto": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "gate_status": {
+          "type": "object",
+          "description": "Estado por G0-G9 con prueba objetiva",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
