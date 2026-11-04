@@ -7,6 +7,7 @@ import {spawnSync} from 'node:child_process';
 import {assertSource} from '../scripts/release-guard.mjs';
 import {validateCoverage,evidencePath,digestFile} from '../scripts/evidence-source.mjs';
 import {validateCommand,validatePng} from '../scripts/evidence-artifacts.mjs';
+import {LEGACY_AUDIT_COMMIT,assertHistoricalReview,assertCurrentIndependentReview,assertAuditProvenance,loadCurrentIndependentReview} from '../scripts/review-provenance.mjs';
 import {deflateSync,crc32} from 'node:zlib';
 
 test('dirty tracked CSS is rejected even if HEAD matches and evidence asserts PASS',()=>{
@@ -58,4 +59,122 @@ test('PNG header-only forgery is rejected; real compressed raster is accepted',(
  const real=Buffer.concat([Buffer.from('89504e470d0a1a0a','hex'),chunk('IHDR',ihdr),chunk('IDAT',deflateSync(Buffer.from([0,0,0,0,255]))),chunk('IEND',Buffer.alloc(0))]);
  assert.equal(validatePng(real,1),1);
  const damaged=Buffer.from(real);damaged[damaged.length-1]^=1;assert.throws(()=>validatePng(damaged,1),/CRC/);
+});
+
+test('historical review provenance allows known tooling drift but rejects changed product and forged history',()=>{
+ const root=fs.mkdtempSync(path.join(os.tmpdir(),'lss-historical-review-'));
+ const git=(...args)=>{
+  const r=spawnSync('git',args,{cwd:root,encoding:'utf8'});
+  assert.equal(r.status,0,r.stderr);return r.stdout.trim();
+ };
+ try {
+  git('init','-q');
+  fs.mkdirSync(path.join(root,'app'));
+  fs.mkdirSync(path.join(root,'docs','audit'),{recursive:true});
+  fs.writeFileSync(path.join(root,'app','page.tsx'),'<main>Original</main>');
+  fs.writeFileSync(path.join(root,'package-lock.json'),'{"lockfileVersion":3}');
+  const reviewedFiles={
+   'app/page.tsx':digestFile(path.join(root,'app','page.tsx')),
+   'package-lock.json':digestFile(path.join(root,'package-lock.json')),
+  };
+  const legacy={reviewedAt:'2026-01-01T00:00:00.000Z',reviewedFiles,evidence:{phases:[{status:'PASS'}]}};
+  fs.writeFileSync(path.join(root,'docs','audit','reviews.json'),JSON.stringify(legacy));
+  git('add','.');
+  git('-c','user.name=Synthetic Reviewer','-c','user.email=test@example.invalid','commit','-qm','historical fixture');
+  const old=git('rev-parse','HEAD');
+  const registry={...legacy,reviewedSourceCommit:old};
+  assert.equal(assertHistoricalReview(root,registry,old).originalInputs,2);
+  fs.writeFileSync(path.join(root,'package-lock.json'),'{"lockfileVersion":3,"tools":"patched"}');
+  assert.deepEqual(assertHistoricalReview(root,registry,old).permittedChanges,['package-lock.json']);
+  assert.throws(()=>assertHistoricalReview(root,{...registry,evidence:{phases:[{status:'PASS',forged:true}]}},old),/HISTORICAL_EVIDENCE_MODIFIED/);
+  assert.throws(()=>assertHistoricalReview(root,{...registry,reviewedAt:'2027-01-01T00:00:00Z'},old),/HISTORICAL_EVIDENCE_MODIFIED/);
+  git('add','package-lock.json');
+  git('-c','user.name=Synthetic Reviewer','-c','user.email=test@example.invalid','commit','-qm','later tooling edit');
+  const descendant=git('rev-parse','HEAD');
+  assert.deepEqual(assertHistoricalReview(root,registry,descendant).permittedChanges,['package-lock.json']);
+  fs.writeFileSync(path.join(root,'app','new.tsx'),'<main>New product without review</main>');
+  git('add','app/new.tsx');
+  assert.throws(()=>assertHistoricalReview(root,registry,old),/HISTORICAL_REVIEW_SCOPE_ADDITION: app\/new.tsx/);
+  git('reset','-q','--','app/new.tsx');
+  fs.rmSync(path.join(root,'app','new.tsx'));
+  fs.writeFileSync(path.join(root,'app','page.tsx'),'<main>Changed without review</main>');
+  assert.throws(()=>assertHistoricalReview(root,registry,old),/HISTORICAL_REVIEW_SCOPE_DRIFT: app\/page.tsx/);
+  fs.writeFileSync(path.join(root,'app','page.tsx'),'<main>Original</main>');
+  assert.throws(()=>assertHistoricalReview(root,{...registry,reviewedFiles:{...reviewedFiles,'app/page.tsx':'0'.repeat(64)}},old),/HISTORICAL_EVIDENCE_MODIFIED/);
+  assert.throws(()=>assertHistoricalReview(root,{...registry,reviewedFiles:{'package-lock.json':reviewedFiles['package-lock.json']}},old),/HISTORICAL_EVIDENCE_MODIFIED/);
+  assert.throws(()=>assertHistoricalReview(root,{...registry,reviewedSourceCommit:'a'.repeat(40)},old),/HISTORICAL_REVIEW_COMMIT_INVALID/);
+  assert.throws(()=>assertHistoricalReview(root,{...registry,reviewedSourceCommit:'not-a-sha'},old),/HISTORICAL_REVIEW_COMMIT_INVALID/);
+ } finally {fs.rmSync(root,{recursive:true,force:true});}
+});
+
+test('exact-commit independent source review rejects missing implementer, self-review, stale and incomplete coverage',()=>{
+ const root=fs.mkdtempSync(path.join(os.tmpdir(),'lss-current-review-'));
+ try {
+  spawnSync('git',['init','-q'],{cwd:root});
+  fs.mkdirSync(path.join(root,'app'));
+  fs.writeFileSync(path.join(root,'app','page.tsx'),'<main>Test only</main>');
+  spawnSync('git',['add','.'],{cwd:root});
+  const sha='b'.repeat(40);
+  const report={
+   status:'PASS',sourceCommit:sha,reviewer:'Separate audit agent',implementer:'Code implementer',
+   reviewedFiles:{'app/page.tsx':digestFile(path.join(root,'app','page.tsx'))},
+  };
+  assert.equal(assertCurrentIndependentReview(root,report,sha),true);
+  for(const bad of [
+    {...report,status:'BLOCKED'},
+    {...report,sourceCommit:'a'.repeat(40)},
+    {...report,reviewer:report.implementer},
+    {...report,implementer:null},
+    {...report,reviewedFiles:{}},
+    null,
+  ]) assert.throws(()=>assertCurrentIndependentReview(root,bad,sha),/CURRENT_INDEPENDENT_REVIEW_INVALID|REVIEW_STALE_OR_OMITTED/);
+  fs.appendFileSync(path.join(root,'app','page.tsx'),'<button>Edited</button>');
+  assert.throws(()=>assertCurrentIndependentReview(root,report,sha),/REVIEW_STALE_OR_OMITTED/);
+ } finally {fs.rmSync(root,{recursive:true,force:true});}
+});
+
+test('assembler review loader fails closed for missing, blocked, stale and spoofed reports',()=>{
+ const root=fs.mkdtempSync(path.join(os.tmpdir(),'lss-assembly-review-'));
+ try {
+  spawnSync('git',['init','-q'],{cwd:root});
+  fs.mkdirSync(path.join(root,'app'));
+  fs.mkdirSync(path.join(root,'.audit-private'));
+  fs.writeFileSync(path.join(root,'app','page.tsx'),'<main>Test fixture only</main>');
+  spawnSync('git',['add','app/page.tsx'],{cwd:root});
+  const sha='c'.repeat(40);
+  assert.throws(()=>loadCurrentIndependentReview(root,sha),/CURRENT_INDEPENDENT_REVIEW_MISSING/);
+  const reportPath=path.join(root,'.audit-private','independent-review.json');
+  const coverage={'app/page.tsx':digestFile(path.join(root,'app','page.tsx'))};
+  fs.writeFileSync(reportPath,JSON.stringify({status:'BLOCKED',sourceCommit:sha,reviewedFiles:coverage}));
+  assert.throws(()=>loadCurrentIndependentReview(root,sha),/CURRENT_INDEPENDENT_REVIEW_INVALID/);
+  const good={status:'PASS',sourceCommit:sha,reviewer:'External code reviewer',implementer:'Implementer',reviewedFiles:coverage};
+  fs.writeFileSync(reportPath,JSON.stringify(good));
+  const poison='{"status":"BLOCKED","sourceCommit":"evil"}';
+  const before=process.env.V8_INDEPENDENT_REVIEW_JSON;
+  process.env.V8_INDEPENDENT_REVIEW_JSON=poison;
+  try {assert.deepEqual(loadCurrentIndependentReview(root,sha),good);}
+  finally {if(before===undefined) delete process.env.V8_INDEPENDENT_REVIEW_JSON;else process.env.V8_INDEPENDENT_REVIEW_JSON=before;}
+  assert.equal(fs.readFileSync(reportPath,'utf8'),JSON.stringify(good));
+  assert.throws(()=>loadCurrentIndependentReview(root,'d'.repeat(40)),/CURRENT_INDEPENDENT_REVIEW_INVALID/);
+  fs.writeFileSync(reportPath,'{broken json');
+  assert.throws(()=>loadCurrentIndependentReview(root,sha),/CURRENT_INDEPENDENT_REVIEW_UNREADABLE/);
+ }finally {fs.rmSync(root,{recursive:true,force:true});}
+});
+
+test('legacy timestamps cannot be passed as authenticated current audit provenance',()=>{
+ const sha='c'.repeat(40);
+ const legacy={
+  sourceCommit:LEGACY_AUDIT_COMMIT,
+  status:'HISTORICAL_CONTENT_INTEGRITY_ONLY',
+  reviewedAtAuthenticated:false,
+  humanReviewerAuthenticated:false,
+  evidenceSha256:'a'.repeat(64),
+ };
+ const current={sourceCommit:sha,status:'PASS',ownerApproval:'NOT_ASSERTED'};
+ const doc={sourceCommit:sha,evidenceScope:{legacyReview:legacy,currentIndependentReview:current}};
+ assert.equal(assertAuditProvenance(doc),true);
+ assert.throws(()=>assertAuditProvenance({...doc,evidenceScope:{...doc.evidenceScope,legacyReview:{...legacy,reviewedAtAuthenticated:true}}}),/LEGACY_EVIDENCE_PROVENANCE_MISSING/);
+ assert.throws(()=>assertAuditProvenance({...doc,evidenceScope:{...doc.evidenceScope,legacyReview:{...legacy,humanReviewerAuthenticated:true}}}),/LEGACY_EVIDENCE_PROVENANCE_MISSING/);
+ assert.throws(()=>assertAuditProvenance({...doc,evidenceScope:{...doc.evidenceScope,currentIndependentReview:{...current,sourceCommit:'d'.repeat(40)}}}),/CURRENT_REVIEW_PROVENANCE_MISSING/);
+ assert.throws(()=>assertAuditProvenance({...doc,evidenceScope:{...doc.evidenceScope,currentIndependentReview:{...current,ownerApproval:'APPROVED'}}}),/CURRENT_REVIEW_PROVENANCE_MISSING/);
 });

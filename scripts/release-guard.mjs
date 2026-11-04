@@ -4,6 +4,7 @@ import crypto from 'node:crypto';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import {validateCoverage,evidencePath,digestFile} from './evidence-source.mjs';
+import {assertAuditProvenance} from './review-provenance.mjs';
 import {validateCommand,validatePng} from './evidence-artifacts.mjs';
 import {ownerApproval} from './evidence-api.mjs';
 
@@ -24,6 +25,7 @@ export function assertSource(root,doc) {
   if(hash(fs.readFileSync(path.join(root,'vendor/v8/.v8-integrity.json')))!==V8_LOCK_SHA256) throw new Error('V8_CANONICAL_LOCK_MISMATCH');
   const actual=snapshot(root);
   if(JSON.stringify(actual)!==JSON.stringify(doc.sourceSnapshot)) throw new Error('RELEASE_SNAPSHOT_MISMATCH: full tracked tree changed since evidence capture');
+  assertAuditProvenance(doc);
   for(const r of doc.skills||[]) if(r.sourceCommit!==head) throw new Error('SKILL_COMMIT_MISMATCH');
   for(const r of doc.commands||[]) if(r.sourceCommit!==head) throw new Error('COMMAND_COMMIT_MISMATCH');
   if(!doc.commands?.length) throw new Error('COMMANDS_REQUIRED');

@@ -3,35 +3,44 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import {spawnSync} from 'node:child_process';
 import {snapshot} from './release-guard.mjs';
-import {validateCoverage} from './evidence-source.mjs';
+import {LEGACY_AUDIT_COMMIT,assertHistoricalReview,loadCurrentIndependentReview,assertAuditProvenance} from './review-provenance.mjs';
 const root=process.cwd();
 const sha=spawnSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).stdout.trim();
 const registry=JSON.parse(fs.readFileSync('docs/audit/reviews.json','utf8'));
 const hash=file=>crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
-// The original registry is historical evidence. Verify it against its actual
-// source commit, not against newer files that its reviewer never inspected.
-const historicalCommit=registry.reviewedSourceCommit;
-if(!/^[a-f0-9]{40}$/.test(historicalCommit||'') ||
-   spawnSync('git',['merge-base','--is-ancestor',historicalCommit,sha],{cwd:root}).status!==0)
-  throw new Error('HISTORICAL_REVIEW_COMMIT_INVALID');
-for(const [file,expected] of Object.entries(registry.reviewedFiles||{})) {
-  if(hash(file)===expected) continue;
-  const historical=spawnSync('git',['show',`${historicalCommit}:${file}`],{cwd:root});
-  if(historical.status!==0 || crypto.createHash('sha256').update(historical.stdout).digest('hex')!==expected)
-    throw new Error('HISTORICAL_REVIEW_PROVENANCE_MISMATCH: '+file);
-}
-// The independent report from this exact SHA supplies current tracked-input
-// coverage. The CI replay produced it after authenticating the original review.
-const finalReviewFile='.audit-private/independent-review.json';
-if(!fs.existsSync(finalReviewFile)) throw new Error('CURRENT_INDEPENDENT_REVIEW_MISSING');
-const finalReview=JSON.parse(fs.readFileSync(finalReviewFile,'utf8'));
-if(finalReview.sourceCommit!==sha || finalReview.status!=='PASS' || !finalReview.reviewer || finalReview.reviewer===finalReview.implementer)
-  throw new Error('CURRENT_INDEPENDENT_REVIEW_INVALID');
-validateCoverage(root,finalReview.reviewedFiles);
+// Legacy evidence is pinned to the original commit and cannot be edited or
+// restamped onto changed product sources. Its timestamp is not authenticated.
+if(registry.reviewedSourceCommit!==LEGACY_AUDIT_COMMIT)
+  throw new Error('HISTORICAL_REVIEW_COMMIT_CHANGED');
+const historical=assertHistoricalReview(root,registry,sha);
+// The CI replay has already authenticated this exact-SHA independent review.
+// No old SHA or unverified environment variable can replace its coverage.
+const finalReview=loadCurrentIndependentReview(root,sha);
 const doc=structuredClone(registry.evidence);
 doc.sourceCommit=sha;doc.sourceSnapshot=snapshot(root);
-// Dates and findings remain those of the real manual review. The source digest,
-// not a rewritten date or an old commit assertion, determines applicability.
+// Legacy PASS labels and timestamps are inherited from a content snapshot;
+// they must never be represented as a newly authenticated human review.
+doc.evidenceScope={
+  ...doc.evidenceScope,
+  legacyReview:{
+    sourceCommit:LEGACY_AUDIT_COMMIT,
+    status:'HISTORICAL_CONTENT_INTEGRITY_ONLY',
+    reviewedAt:registry.reviewedAt,
+    reviewedAtAuthenticated:false,
+    humanReviewerAuthenticated:false,
+    evidenceSha256:historical.originalEvidenceDigest,
+    unchangedProductSourcesRequired:true,
+  },
+  currentIndependentReview:{
+    sourceCommit:sha,
+    status:finalReview.status,
+    reviewerLabel:finalReview.reviewer,
+    ownerApproval:'NOT_ASSERTED',
+  },
+};
+assertAuditProvenance(doc);
+// Historical skill applications remain attributed to unchanged source inputs.
+// The current independent report and CI logs support only their scoped claims.
 doc.skills=doc.skills.map(s=>({...s,sourceCommit:sha}));
 const commandFiles=fs.readdirSync('.audit-private/commands').filter(p=>p.endsWith('.json'));
 doc.commands=commandFiles.map(file=>JSON.parse(fs.readFileSync(path.join('.audit-private/commands',file),'utf8')));
@@ -68,12 +77,9 @@ for(const profile of ['mobile','desktop']) {
   doc.performance.reports.push({profile,file,sourceCommit:sha,checkedAt:result.fetchTime,url:result.finalDisplayedUrl,lighthouseVersion:result.lighthouseVersion,scores:Object.fromEntries(['performance','accessibility','best-practices','seo'].map(id=>[id,result.categories[id]?.score])),LCPms:result.audits['largest-contentful-paint'].numericValue,CLS:result.audits['cumulative-layout-shift'].numericValue,TBTms:result.audits['total-blocking-time'].numericValue});
  }
 }
-if(process.env.V8_INDEPENDENT_REVIEW_JSON) fs.writeFileSync(independentFile,process.env.V8_INDEPENDENT_REVIEW_JSON);
-if(fs.existsSync(independentFile)) {
- const review=JSON.parse(fs.readFileSync(independentFile,'utf8'));
- if(review.sourceCommit!==sha) throw new Error('Independent review belongs to a different commit');
- doc.independentReview={status:review.status,sourceCommit:review.sourceCommit,evidence:independentFile,sha256:hash(independentFile)};
-} else doc.independentReview={status:'BLOCKED',sourceCommit:sha,evidence:'docs/audit/INDEPENDENT_REVIEW_REQUIREMENTS.md',reason:'No independent final-commit report was supplied'};
+// Reuse only the already-validated CI report; never overwrite it with a raw
+// environment variable after the authentication and current-SHA hash checks.
+doc.independentReview={status:finalReview.status,sourceCommit:sha,evidence:independentFile,sha256:hash(independentFile)};
 doc.generatedAt=new Date().toISOString();
 fs.writeFileSync('V8_DELIVERY_EVIDENCE.json',JSON.stringify(doc,null,2));
 fs.copyFileSync('V8_DELIVERY_EVIDENCE.json','.audit-private/V8_DELIVERY_EVIDENCE.json');

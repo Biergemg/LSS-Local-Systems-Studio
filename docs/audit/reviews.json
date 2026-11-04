@@ -1,5 +1,6 @@
 {
   "reviewedAt": "2026-11-04T03:04:32.551Z",
+  "reviewedAtProvenance": "Historical metadata timestamp only; not independently authenticated as a human manual-review event. reviewedFiles records original content integrity, not certification of later commits.",
   "reviewedSourceCommit": "ff3c00e84a728f5a69acc905ccef62db620534c2",
   "reviewedFiles": {
     ".gitattributes": "ae7f987847d03501802d70ae88417e544baeecf5a4e991c89b12003df1ee283d",
