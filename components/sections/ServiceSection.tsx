@@ -1,4 +1,4 @@
-import { SERVICE as S, CONTACT } from '@/data/content';
+import { SERVICE as S, CONTACT, waLink } from '@/data/content';
 
 export default function ServiceSection() {
   return (
@@ -7,11 +7,18 @@ export default function ServiceSection() {
         <h2 id="sx-h" className="sx-h reveal">{S.title}</h2>
         <ol className="ix">
           {S.items.map((i) => (
-            <li className="ix-row reveal" key={i.n}>
-              <span className="ix-n">{i.n}</span>
-              <h3>{i.t}</h3>
-              <p>{i.d}</p>
-              <span className="ix-arrow" aria-hidden="true">→</span>
+            <li className="reveal" key={i.n}>
+              <a
+                className="ix-row"
+                href={waLink(`Hola, quiero solicitar una propuesta para mi negocio. Me interesa: ${i.t}. Nombre: ___ | Ciudad: ___ | A qué me dedico: ___`)}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="ix-n">{i.n}</span>
+                <h3>{i.t}</h3>
+                <p>{i.d}</p>
+                <span className="ix-cta">Solicitar propuesta<i aria-hidden="true"> →</i></span>
+              </a>
             </li>
           ))}
         </ol>

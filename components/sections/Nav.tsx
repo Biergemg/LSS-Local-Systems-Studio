@@ -8,6 +8,7 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
   const toggleRef = useRef<HTMLButtonElement>(null);
   const [active, setActive] = useState('');
+  const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
     const els = Array.from(document.querySelectorAll('main > section'));
@@ -27,6 +28,19 @@ export default function Nav() {
   }, []);
 
   useEffect(() => {
+    let last = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY; const dy = y - last;
+      if (Math.abs(dy) < 6) return;
+      setHidden(y > 140 && dy > 0);
+      last = y;
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+
+  useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
@@ -39,7 +53,7 @@ export default function Nav() {
   }, [open]);
 
   return (
-    <header className="nav">
+    <header className={`nav${hidden && !open ? ' nav-hide' : ''}`} onFocusCapture={() => setHidden(false)}>
       <nav className="container nav-inner" aria-label="Navegación principal">
         <Logo />
         <div className="nav-links">
