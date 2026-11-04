@@ -33,11 +33,11 @@ jobs:
           echo '537ef9de19bd30c39a8f1a10df8dd2f56558f742800abb78be053f37c5845085  vendor/v8/.v8-integrity.json' | sha256sum -c
           node vendor/v8/scripts/verify-integrity.mjs --verify
           node vendor/v8/scripts/test-v8.mjs
-      - run: npm run test:release-guard
+      - run: node scripts/run-check.mjs release-guard node --test tests/release-guard.test.mjs tests/evidence-api.test.mjs
       - run: node scripts/run-check.mjs lint node node_modules/eslint/bin/eslint.js app components data lib types tests scripts playwright.config.ts next.config.ts
       - run: node scripts/run-check.mjs build node node_modules/next/dist/bin/next build
       - run: node scripts/run-check.mjs typecheck node node_modules/typescript/bin/tsc --noEmit
-      - run: npm audit --omit=dev --audit-level=high
+      - run: node scripts/run-check.mjs dependency npm audit --omit=dev --audit-level=high
       - name: Secret scan of candidate tree
         run: |
           curl --fail --location --silent --show-error -o /tmp/gitleaks.tar.gz https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_linux_x64.tar.gz
@@ -53,9 +53,21 @@ jobs:
           npm start -- --hostname 127.0.0.1 --port 3418 > /tmp/lss-server.log 2>&1 &
           for i in $(seq 1 60); do curl --fail --silent http://127.0.0.1:3418 >/dev/null && break; sleep 1; done
           node scripts/run-check.mjs browser node node_modules/playwright/cli.js test
-      - name: Assemble submitted evidence without changing review results
+      - name: Replay independently authored browser and source checks
+        run: |
+          node scripts/run-check.mjs independent-browser node tests/independent/runtime.cjs
+          node scripts/run-check.mjs independent-source node tests/independent/source-ci.mjs
+      - name: Measure candidate performance in the runner (laboratory)
+        run: |
+          export CHROME_PATH="$(node -p "require('playwright').chromium.executablePath()")"
+          node -e "require('fs').mkdirSync('.audit-private/performance',{recursive:true})"
+          node scripts/run-check.mjs performance-mobile node node_modules/lighthouse/cli/index.js http://127.0.0.1:3418 --output=json --output-path=.audit-private/performance/mobile.json --chrome-flags='--headless --no-sandbox' --quiet
+          node scripts/run-check.mjs performance-desktop node node_modules/lighthouse/cli/index.js http://127.0.0.1:3418 --preset=desktop --output=json --output-path=.audit-private/performance/desktop.json --chrome-flags='--headless --no-sandbox' --quiet
+      - name: Preserve source review and attach actual CI replay evidence
         env:
           V8_INDEPENDENT_REVIEW_JSON: ${{ vars.V8_INDEPENDENT_REVIEW_JSON }}
+        run: node scripts/replay-independent.mjs
+      - name: Assemble submitted evidence without changing review results
         run: node scripts/assemble-evidence.mjs
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         id: submission

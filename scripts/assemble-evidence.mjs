@@ -41,6 +41,14 @@ function scan(dir){for(const entry of fs.readdirSync(dir,{withFileTypes:true})){
 for(const c of doc.components) c.sourceSha256=hash(c.sourceFile);
 for(const q of doc.seoVisibility.queryMap) q.sourceSha256=hash(q.sourceFile);
 const independentFile='.audit-private/independent-review.json';
+doc.performance={measurement:'LABORATORY',fieldCWV:{status:'NO_DATA',reason:'No authenticated RUM/CrUX p75 data available; laboratory TBT is not field INP.'},reports:[]};
+for(const profile of ['mobile','desktop']) {
+ const file=`.audit-private/performance/${profile}.json`,command=doc.commands.find(c=>c.kind===`performance-${profile}`);
+ if(fs.existsSync(file)&&command?.status==='PASS'&&command.sourceCommit===sha) {
+  const result=JSON.parse(fs.readFileSync(file,'utf8'));
+  doc.performance.reports.push({profile,file,sourceCommit:sha,checkedAt:result.fetchTime,url:result.finalDisplayedUrl,lighthouseVersion:result.lighthouseVersion,scores:Object.fromEntries(['performance','accessibility','best-practices','seo'].map(id=>[id,result.categories[id]?.score])),LCPms:result.audits['largest-contentful-paint'].numericValue,CLS:result.audits['cumulative-layout-shift'].numericValue,TBTms:result.audits['total-blocking-time'].numericValue});
+ }
+}
 if(process.env.V8_INDEPENDENT_REVIEW_JSON) fs.writeFileSync(independentFile,process.env.V8_INDEPENDENT_REVIEW_JSON);
 if(fs.existsSync(independentFile)) {
  const review=JSON.parse(fs.readFileSync(independentFile,'utf8'));

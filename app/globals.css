@@ -176,7 +176,7 @@ a, button, summary, input { scroll-margin-block: 80px; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  *, *::before, *::after { animation: none !important; transition-duration: 0.01ms !important; transition-delay: 0s !important; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
 }
 
 /* Legal documents — accessible long-form reading inside the LSS design system. */
@@ -451,8 +451,8 @@ body:has(.privacy-consent) { padding-bottom: calc(var(--consent-h, 150px) + 16px
 .ix-cta { white-space: normal; }
 .hx-row > *, .hx-act, .hx-cta { min-width: 0; }
 .hx-h1 .ln { max-width: 100%; overflow-wrap: anywhere; }
-.skip-link { top: 12px; max-width: calc(100vw - 24px); transform: translateY(calc(-100% - 24px)); }
-.skip-link:focus { transform: none; }
+.skip-link { top: 12px; max-width: calc(100vw - 24px); transform: translateY(calc(-100% - 24px)); transition: none !important; pointer-events: none; }
+.skip-link:focus { transform: none; pointer-events: auto; }
 .stm-big { min-width: 0; grid-template-columns: minmax(0, 1fr); }
 .stm-big > span { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
 .stm-hit { white-space: normal; }
