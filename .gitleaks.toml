@@ -4,3 +4,9 @@ useDefault = true
 [[allowlists]]
 description = "Non-executable historical diagnostics and normative synthetic examples; not a credential allowlist"
 paths = ['''(^|/)node_modules/''', '''(^|/)\.next/''', '''(^|/)\.git/''', '''(^|/)test-results/''']
+[[allowlists]]
+description = "Computed SHA256 source digests of API-named files, not API credentials"
+condition = "AND"
+paths = ['''(^|/)docs/audit/(executions/[^/]+\.json|reviews\.json)$''']
+regexTarget = "line"
+regexes = ['''^\s*"(?:scripts/evidence-api\.mjs|tests/evidence-api\.test\.mjs)": "[0-9a-f]{64}",?$''']

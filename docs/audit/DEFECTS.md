@@ -23,3 +23,5 @@ Los estados definitivos y el retest del mismo SHA se registran en V8_DELIVERY_EV
 | ENV01 / P1 | Sincronizador oficial no pudo sustituir carpeta global UI/UX bloqueada. | Se usa copia canónica para la ejecución; instalación global divergente permanece bloqueada hasta sincronización oficial satisfactoria. |
 
 Límites: axe sin violaciones no acredita todo WCAG. No hubo mensaje WhatsApp enviado/recibido, datos RUM/p75, informe Search Console autenticado ni validación externa Rich Results. No se ocultan estos límites ni se convierten en N/A para conseguir PASS.
+
+Escáner final:16 alertas correspondían exclusivamente a hashes SHA256 calculados de scripts/tests cuyos nombres contienen «api». Se conserva el resultado rojo y se añade una excepción AND restringida a los JSON de registro y a la línea exacta ruta→64 hex; no se excluyen archivos completos ni credenciales. Repetición: cero alertas. El único hallazgo histórico inspeccionado era un nombre de localStorage, no una credencial; no se reescribe historial.

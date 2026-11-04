@@ -1,6 +1,7 @@
 {
   "capability": "seo-audit",
   "executedAt": "2026-11-04T02:32:53.788Z",
+  "validatedAt": "2026-11-04T02:35:25.082Z",
   "reviewType": "Manual skill operation over actual final inputs, with separate executable retests",
   "skillFile": "vendor/v8/vendor/marketing-skills/seo-audit/SKILL.md",
   "skillFileSha256": "66c18add7037cc5ee3e9242858d007151690ba82557a3d6eb7e3fe4a5ad19577",
@@ -9,7 +10,7 @@
     ".gitattributes": "ae7f987847d03501802d70ae88417e544baeecf5a4e991c89b12003df1ee283d",
     ".github/workflows/v8.yml": "caf3cede704fc9d5a04867acb548ca7b4c929b632eb15328a5016153ff8f642c",
     ".gitignore": "695703d5676b2510afe7de044f63e39a2cdb43371fd2b6f44835b4fac3d5cb1b",
-    ".gitleaks.toml": "46c9246144d0f97a9b8058140294974cb0e8199e41472ee5c5d8a896ca3a59ac",
+    ".gitleaks.toml": "5efe71e0da3ada84028d8379d17b6730d1908ee5ca7474ac6513e0224e9debec",
     ".nvmrc": "d9f318747a126ce2247661af67852b185def7789492eabfad7bba322be087c33",
     "app/favicon.ico": "4af92b38adc01ee4f29bfc0f818d2f922de1423388249b2cb32fc23257e692dc",
     "app/globals.css": "9b3c561d85c3d19b6dfa06ec1ee8c4445ac39ec791ba174e099324c77ad6f403",
@@ -75,15 +76,7 @@
   },
   "operation": "Re-read final four routes, metadata, robots, sitemap and HTTP browser assertions; current service source hash.",
   "findingsArtifact": "docs/audit/skills/seo-audit.md",
-  "affectedFiles": [
-    "app/globals.css",
-    "components/sections/Nav.tsx",
-    "components/ui/TrackingConsent.tsx",
-    "components/ui/LegalPage.tsx",
-    "components/ui/HeroTitle.tsx",
-    "lib/schema.ts",
-    "data/content.ts"
-  ],
+  "affectedFiles": [],
   "retest": {
     "status": "SEE_SAME_COMMIT_EXECUTION",
     "evidence": ".audit-private/commands/browser.log"
