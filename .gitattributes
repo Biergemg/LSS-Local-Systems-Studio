@@ -1,4 +1,4 @@
-* text=auto eol=lf
+* -text
 *.png binary
 *.ts text eol=lf
 *.tsx text eol=lf
@@ -7,4 +7,6 @@
 *.json text eol=lf
 *.yml text eol=lf
 vendor/v8/** -text
+docs/v8/** -text
+docs/legal/** -text
 app/servicios/presencia-digital/page.tsx -text
