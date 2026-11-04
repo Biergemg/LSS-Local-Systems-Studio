@@ -15,6 +15,7 @@ Los estados definitivos y el retest del mismo SHA se registran en V8_DELIVERY_EV
 | NAV01 / P2 | Menú móvil desaparece sin JS. | Enlaces noscript; teclado/Escape/anclas y rotación. |
 | A11Y01 / P2 | Foco bajo aviso en landscape y texto aumentado. | Medición aviso y recuperación de foco; prueba pantalla baja, 200% de cada tamaño computado y recorrido Tab. |
 | A11Y02 / P2 | Revisión independiente: titulares de Statement y marca se recortan al200%. | Reflujo/min-width y navegación medida; test de rangos de texto de todos los h1/h2/h3. Retest final requerido. |
+| A11Y03 / P2 | Correos de legales desbordan al200%; sinJS el header ampliado cubre un enlace de respaldo. | Permitir corte de texto legal y header sticky sinJS; pruebas de las cuatro rutas ampliadas y de exposición del enlace. |
 | CI01 / P1 | Revisión independiente: custodia exigía éxito del run que dependía de custodia. | Cadena del mismo run; autenticar éxito de jobs previos, sin ciclo. Prueba roja privada, regresión API stub. |
 | CI02 / P1 | Revisor adversarial: archivo independiente inexistente aceptado; cobertura de entrada incompleta permitía reasignación. | Guard comprueba archivo+hash+operaciones, cobertura completa de inputs; pruebas negativas. No se modifica V8 canónico. |
 | V8V01 / P1 | Seis fixtures inválidos aceptados por verificador oficial en copia sintética. | Evidencia roja preservada; guard complementario endurece árbol/revisión/custodia. Integridad V8 intacta. Defectos de validador no se disfrazan de QA del sitio. |

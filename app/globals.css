@@ -469,3 +469,4 @@ h1, h2, h3 { overflow-wrap: anywhere; }
 body:has(.service-page) .nav { position: sticky; flex-shrink: 0; }
 .service-page .service-intro { padding-top: 54px; }
 @media (max-width: 420px) { .service-page .service-intro { padding-top: 30px; } }
+.legal-body { overflow-wrap: anywhere; }

@@ -113,6 +113,11 @@ test('navigation without JavaScript and reduced-motion fallback', async ({browse
   const page=await context.newPage(); await page.goto(process.env.TEST_BASE_URL || 'http://127.0.0.1:3418');
   await expect(page.locator('h1')).toBeVisible();
   await expect(page.locator('.nav-fallback a[href="#servicio"]')).toBeVisible();
+  await page.evaluate(()=>{
+    const sizes=Array.from(document.querySelectorAll<HTMLElement>('p,h1,h2,h3,a,button,summary,li,span')).map(el=>({el,size:parseFloat(getComputedStyle(el).fontSize)*2}));
+    for(const {el,size}of sizes)el.style.fontSize=`${size}px`;
+  });
+  expect((await exposure(page,'.nav-fallback a[href="#servicio"]')).unobscured).toBe(true);
   await page.locator('.nav-fallback a[href="#servicio"]').click(); await expect(page).toHaveURL(/#servicio$/);
   await expect(page.locator('#servicio .ix-row').first()).toBeVisible();
   expect(await page.locator('script[src*="googletagmanager"]').count()).toBe(0);

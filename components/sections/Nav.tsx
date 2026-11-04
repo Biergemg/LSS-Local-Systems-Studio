@@ -108,7 +108,7 @@ export default function Nav() {
       )}
     </header>
     <noscript>
-      <style>{'.nav-toggle { display: none; }'}</style>
+      <style>{'.nav-toggle { display: none; } .nav { position: sticky; flex-shrink: 0; } .nav-fallback { padding-top: 12px; } .hx { padding-top: 20px; }'}</style>
       <nav className="container nav-fallback" aria-label="Enlaces de la página">
         {NAV_LINKS.map((link) => <a key={link.href} href={link.href}>{link.label}</a>)}
         <a href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer">{NAV_CTA}</a>
