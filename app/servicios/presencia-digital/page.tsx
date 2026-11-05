@@ -69,7 +69,7 @@ export default function DigitalPresencePage() {
       <header className="nav">
         <nav className="container nav-inner" aria-label="Navegación del servicio">
           <Logo />
-          <Link href="/#contacto" className="btn btn-primary" style={{ minHeight: 44, padding: '9px 13px', fontSize: 14 }}>Solicitar una propuesta</Link>
+          <Link href="/#contacto" className="btn btn-primary" style={{ minHeight: 44, padding: '9px 13px', fontSize: 14 }}>Pedir diagnóstico</Link>
         </nav>
       </header>
       <main id="contenido" className="service-page">
@@ -80,7 +80,7 @@ export default function DigitalPresencePage() {
             <p className="lede">Si alguien busca tu negocio por primera vez, necesita saber qué haces, si puedes atenderlo y cómo pedir una cita o cotización. Revisamos esa experiencia y construimos o corregimos lo que realmente haga falta.</p>
             <p className="service-area">Atención remota desde México · Tampico, Ciudad Madero, Altamira y otras ciudades.</p>
             <div className="service-cta">
-              <a className="btn btn-primary" href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer">Solicitar una propuesta</a>
+              <a className="btn btn-primary" href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer">Pedir mi diagnóstico</a>
               <Link className="link-line" href="/#servicio">Ver qué recibes</Link>
             </div>
           </div>
@@ -103,11 +103,11 @@ export default function DigitalPresencePage() {
         </section>
         <section className="section service-end" aria-labelledby="service-contact">
           <div className="container">
-            <p className="eyebrow">Solicitar una propuesta</p>
+            <p className="eyebrow">Pedir diagnóstico</p>
             <h2 id="service-contact" className="display">Cuéntanos de tu negocio.</h2>
             <p className="lede">Escríbenos por WhatsApp o por correo. Conversamos, revisamos lo que se ve públicamente de tu negocio y, si hay encaje, te enviamos una propuesta por escrito con alcance, fechas e inversión.</p>
             <div className="service-cta">
-              <a className="btn btn-primary btn-lg" href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer">Solicitar una propuesta</a>
+              <a className="btn btn-primary btn-lg" href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer">Pedir mi diagnóstico</a>
             </div>
             <p className="small" style={{ marginTop: 16 }}>Sin garantizar posiciones en buscadores, clientes nuevos ni herramientas que no estén contratadas.</p>
           </div>

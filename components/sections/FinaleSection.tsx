@@ -14,7 +14,7 @@ export default function FinaleSection() {
         </p>
         <p className="fin-micro">{CTA_SECTION.micro}</p>
       </div>
-      <Ticker words={['Hagamos tu página', 'Solicitar una propuesta']} className="ticker-dark" />
+      <Ticker words={['Primera cita', 'Pedir diagnóstico']} className="ticker-dark" />
     </section>
   );
 }
