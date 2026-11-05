@@ -1,6 +1,7 @@
 import { HERO, CONTACT } from '@/data/content';
 import HeroTitle from '@/components/ui/HeroTitle';
 import Ticker from '@/components/ui/Ticker';
+import { ChatMock, Phone } from '@/components/ui/Mocks';
 
 export default function Hero() {
   return (
@@ -18,6 +19,9 @@ export default function Hero() {
               {HERO.ticks.map((t) => (<li key={t}>{t}</li>))}
             </ul>
           </div>
+        </div>
+        <div className="hx-visual">
+          <Phone caption="Ejemplo ilustrativo: una conversación de WhatsApp guiada."><ChatMock /></Phone>
         </div>
       </div>
       <Ticker words={HERO.ticker} />

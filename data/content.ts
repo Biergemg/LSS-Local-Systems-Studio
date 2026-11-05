@@ -9,9 +9,9 @@ export const SITE = {
   name: 'LSS — Local Systems Studio',
   shortName: 'LSS',
   url: 'https://www.lsslocalsystemsstudio.com',
-  title: 'LSS | Primeras citas para clínicas y negocios por cita',
+  title: 'LSS | Sitio, Google y agenda para clínicas y negocios por cita',
   description:
-    'Revisamos el camino de tu primera cita (Google, WhatsApp y agenda) y lo dejamos claro: sitio, ficha de Google, agenda y correo. Diagnóstico sin costo.',
+    'Revisamos cómo te encuentra, te entiende y te contacta quien aún no te conoce, y lo dejamos listo: sitio, ficha de Google, agenda y correo. Diagnóstico sin costo.',
 };
 
 const WA_NUMBER = '528333263389';
@@ -44,30 +44,30 @@ export const NAV_LINKS: NavLink[] = [
 export const NAV_CTA = 'Pedir diagnóstico';
 
 export const HERO = {
-  pre: '¿Tu clínica pierde',
-  em: 'primeras citas',
-  post: 'sin saberlo?',
-  body: 'Revisamos tu Google, tu WhatsApp y tu agenda, y te decimos qué está frenando el camino de la primera cita. Si hay encaje, lo dejamos claro: sitio, ficha de Google, agenda y correo, a tu nombre.',
+  pre: 'Que te encuentren,',
+  em: 'te entiendan',
+  post: 'y puedan agendar.',
+  body: 'Revisamos cómo te encuentra, te entiende y te contacta quien aún no te conoce, y lo dejamos listo: sitio, ficha de Google, WhatsApp, agenda y correo, a tu nombre.',
   ctaPrimary: 'Pedir mi diagnóstico',
   ctaSecondary: 'Cómo trabajamos',
   ticks: ['Diagnóstico sin costo', 'Respuesta por WhatsApp', 'Sin compromiso'],
-  ticker: ['Google', 'WhatsApp', 'Agenda', 'Primera cita'],
+  ticker: ['Te encuentran', 'Te entienden', 'Te escriben', 'Agendan'],
 };
 
 export const STATEMENT = {
-  pre: 'No siempre faltan pacientes.',
-  em: 'El camino',
-  post: 'a la primera cita no está claro.',
-  side: 'Una persona con interés real se enfría si Google no explica por qué elegirte, si WhatsApp no guía la conversación o si agendar es lento. Revisamos esos tres puntos.',
+  pre: 'Antes de escribirte,',
+  em: 'te buscan.',
+  post: 'Lo que encuentran decide si te escriben.',
+  side: 'Una persona que no te conoce busca tu servicio en Google, compara y decide en segundos. Revisamos y dejamos listo lo que encuentra: tu ficha, tu sitio, tu WhatsApp y tu agenda.',
   steps: [
-    { t: 'Google', d: '¿Te encuentran y entienden por qué elegirte?' },
-    { t: 'WhatsApp', d: '¿Respondes con claridad y seguimiento?' },
-    { t: 'Agenda', d: '¿El siguiente paso es fácil y sin fricción?' },
+    { t: 'Te encuentran', d: '¿Tu ficha de Google y tu sitio aparecen con servicios, horarios y contacto claros?' },
+    { t: 'Te entienden', d: '¿En segundos se entiende qué haces y por qué elegirte?' },
+    { t: 'Te escriben', d: '¿Escribir o agendar es un solo paso, sin vueltas?' },
   ],
 };
 
 export const SERVICE = {
-  title: 'Un sistema, de la búsqueda a la primera cita.',
+  title: 'Un sistema, de la búsqueda al mensaje.',
   items: [
     { n: '01', t: 'Tu sitio web', d: 'Un sitio con identidad propia, a la medida de tu negocio y pensado primero para el celular, con tus textos explicados con claridad y en tu tono.' },
     { n: '02', t: 'Página de tu servicio principal', d: 'Una página aparte, en su propio subdominio, para el servicio que elijas, lista para compartir en tus redes y llevar a quien te busca justo a eso.' },
@@ -83,7 +83,7 @@ export const SERVICE = {
 export const PROCESS = {
   title: 'Cuatro pasos, sin juntas largas.',
   steps: [
-    { title: 'Pides tu diagnóstico', text: 'Escribes DIAGNÓSTICO por WhatsApp y nos cuentas de tu negocio. Te enviamos tres hallazgos sobre tu Google, tu WhatsApp y tu agenda.' },
+    { title: 'Pides tu diagnóstico', text: 'Escribes DIAGNÓSTICO por WhatsApp y nos cuentas de tu negocio. Te enviamos tres hallazgos sobre cómo te encuentran, te entienden y te contactan.' },
     { title: 'Te enviamos una propuesta', text: 'Qué incluye, cuánto cuesta y en qué tiempos, por escrito.' },
     { title: 'Lo construimos y lo ves', text: 'Revisas tu sitio en un enlace privado y nos mandas tus ajustes en una sola ronda.' },
     { title: 'Lo entregamos', text: 'Lo abres en tu teléfono, pruebas el camino completo —buscar, escribir, agendar— y recibes todo a tu nombre.' },
@@ -96,20 +96,18 @@ export const PROCESS = {
 };
 
 export const CTA_SECTION = {
-  title: 'Revisemos tu camino a la primera cita.',
-  description: 'Escribe DIAGNÓSTICO por WhatsApp y respóndenos tres preguntas. Te enviamos tres hallazgos sobre tu Google, tu WhatsApp y tu agenda, sin costo.',
+  title: 'Pide tu diagnóstico.',
+  description: 'Escribe DIAGNÓSTICO por WhatsApp y respóndenos tres preguntas. Te enviamos tres hallazgos sobre cómo te encuentran, te entienden y te contactan, sin costo.',
   submit: 'Pedir mi diagnóstico',
   micro: 'WhatsApp abre una conversación con LSS; respondemos personalmente. Hacemos hasta 10 diagnósticos por semana.',
 };
 
 export const FAQ_ITEMS: FaqItem[] = [
-  { question: '¿Qué recibo en el diagnóstico?', answer: 'Tres hallazgos por escrito sobre tu ficha de Google, tu WhatsApp y tu agenda, con un siguiente paso sugerido. Revisamos información pública y lo que nos compartas; no es una auditoría completa ni una promesa de resultados.' },
-  { question: '¿Cuánto cuesta?', answer: 'El diagnóstico no tiene costo. El sistema depende de si necesitas una landing de una página o un sitio de varias, y de lo que haya que escribir. El precio llega por escrito en tu propuesta, antes de pagar nada.' },
-  { question: '¿Cuánto tarda?', answer: 'El calendario va en tu propuesta y empieza a contar cuando recibimos tu anticipo y tu material completo.' },
-  { question: '¿Qué tengo que hacer yo?', answer: 'Contarnos de tu negocio, enviarnos fotos, servicios y horarios, autorizar el acceso a tu ficha de Google, juntar tus ajustes en una sola ronda y probar el camino completo en tu teléfono.' },
+  { question: '¿Esto me trae pacientes nuevos?', answer: 'No compramos ni prometemos tráfico. Dejamos listo lo que hace que, cuando alguien que no te conoce te busca, te encuentre, entienda qué haces y pueda escribirte o agendar. Lo demás depende de tu oferta, tu reputación y tu mercado.' },
+  { question: '¿Qué recibo en el diagnóstico?', answer: 'Tres hallazgos por escrito sobre cómo te encuentran, cómo te entienden y cómo te contactan, con el principal freno y un siguiente paso sugerido. Revisamos información pública y lo que nos compartas; es sin costo y no obliga a nada.' },
+  { question: '¿Qué incluye y cuánto cuesta?', answer: 'Tu sitio, una página para tu servicio principal, tu ficha de Google, WhatsApp y agenda listos, y tu dirección web, hospedaje y correo. El precio, los tiempos, la vigencia y la renovación llegan por escrito en tu propuesta, antes de pagar nada. Tu dominio y tus cuentas quedan a tu nombre.' },
   { question: '¿Y si ya tengo página o uso una agenda?', answer: 'Trabajamos con lo que tienes. Si tu página sirve, te decimos qué corregir en lugar de rehacerla. Si usas una agenda, tu sitio lleva un botón hacia ella.' },
-  { question: '¿Me garantizan pacientes?', answer: 'Nadie puede asegurarlo: depende de tu oferta, tu reputación y tu mercado. Nosotros cuidamos que te encuentren con claridad, te escriban sin fricción y agenden fácil, y que todo quede funcionando y a tu nombre.' },
-  { question: '¿Qué incluye el dominio, el hospedaje y el correo?', answer: 'Tu propuesta incluye tu dirección web, el hospedaje administrado por LSS y tu correo profesional. La vigencia, la renovación y lo que cuesta mantenerlos después van por escrito antes de que pagues el anticipo. Tu dominio y tus cuentas quedan a tu nombre.' },
+  { question: '¿Qué tengo que hacer yo y cuánto tarda?', answer: 'Contarnos de tu negocio, enviarnos fotos, servicios y horarios, autorizar el acceso a tu ficha de Google y juntar tus ajustes en una sola ronda. El calendario va en tu propuesta y empieza a contar cuando recibimos tu anticipo y tu material completo.' },
 ];
 
 export const FOOTER = {

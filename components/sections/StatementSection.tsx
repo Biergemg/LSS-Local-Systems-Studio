@@ -1,4 +1,11 @@
 import { STATEMENT as S } from '@/data/content';
+import { AgendaMock, GoogleMock, Phone, SiteMock } from '@/components/ui/Mocks';
+
+const VISUALS = [
+  { mock: <GoogleMock />, caption: 'Ejemplo ilustrativo: cómo puede verse tu ficha cuando te buscan.' },
+  { mock: <SiteMock />, caption: 'Ejemplo ilustrativo: tu sitio, explicado en segundos.' },
+  { mock: <AgendaMock />, caption: 'Ejemplo ilustrativo: agendar sin vueltas.' },
+];
 
 export default function StatementSection() {
   return (
@@ -13,6 +20,7 @@ export default function StatementSection() {
         <ol className="sig">
           {S.steps.map((s, i) => (
             <li className="sig-step reveal" key={s.t}>
+              <div className="sig-vis"><Phone caption={VISUALS[i].caption}>{VISUALS[i].mock}</Phone></div>
               <span className="sig-n">0{i + 1}</span>
               <h3>{s.t}</h3>
               <p>{s.d}</p>
