@@ -69,13 +69,13 @@ export default function DigitalPresencePage() {
       <header className="nav">
         <nav className="container nav-inner" aria-label="Navegación del servicio">
           <Logo />
-          <Link href="/#contacto" className="btn btn-primary" style={{ minHeight: 44, padding: '9px 13px', fontSize: 14 }}>Pedir diagnóstico</Link>
+          <a href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary nav-cta">Pedir diagnóstico</a>
         </nav>
       </header>
       <main id="contenido" className="service-page">
         <section className="section service-intro" aria-labelledby="service-heading">
           <div className="container">
-            <p className="eyebrow">LSS Presencia Resuelta · Trabajo a distancia</p>
+            <p className="eyebrow">LSS · Trabajo a distancia</p>
             <h1 id="service-heading" className="display">Web, Google y contacto: tres partes de la misma decisión.</h1>
             <p className="lede">Si alguien busca tu negocio por primera vez, necesita saber qué haces, si puedes atenderlo y cómo pedir una cita o cotización. Revisamos esa experiencia y construimos o corregimos lo que realmente haga falta.</p>
             <p className="service-area">Atención remota desde México · Tampico, Ciudad Madero, Altamira y otras ciudades.</p>
@@ -107,7 +107,7 @@ export default function DigitalPresencePage() {
             <h2 id="service-contact" className="display">Cuéntanos de tu negocio.</h2>
             <p className="lede">Escríbenos por WhatsApp o por correo. Conversamos, revisamos lo que se ve públicamente de tu negocio y, si hay encaje, te enviamos una propuesta por escrito con alcance, fechas e inversión.</p>
             <div className="service-cta">
-              <a className="btn btn-primary btn-lg" href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer">Pedir mi diagnóstico</a>
+              <a className="btn btn-primary btn-lg" href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer">Pedir mi diagnóstico</a>
             </div>
             <p className="small" style={{ marginTop: 16 }}>Sin garantizar posiciones en buscadores, clientes nuevos ni herramientas que no estén contratadas.</p>
           </div>

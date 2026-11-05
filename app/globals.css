@@ -533,3 +533,9 @@ body:has(.privacy-consent) .wa-float { visibility: hidden; }
 .phone-screen .m-sub, .phone-screen .m-note { color: #a6a6a6; }
 /* Elementos destacados de las maquetas: se distinguen por fondo, sin borde propio (evita tarjeta dentro de tarjeta). */
 .m-res.me, .m-card { border-color: transparent; background: #12301f; }
+
+/* Página de servicio: botón de la barra en una sola línea y contenido por debajo de la barra fija */
+.nav-inner > .nav-cta { white-space: nowrap; min-height: 44px; padding: 10px 14px; font-size: 14px; flex-shrink: 0; }
+.nav-inner > .nav-cta::after { display: none; }
+.service-page .service-intro.section { padding-top: calc(var(--nav-h) + 40px); }
+@media (min-width: 900px) { .service-page .service-intro.section { padding-top: calc(var(--nav-h) + 64px); } }
