@@ -464,13 +464,16 @@ body:has(.privacy-consent) .wa-float { visibility: hidden; }
 }
 @keyframes msgIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
 .m-search { display: flex; align-items: center; gap: 8px; padding: 8px 11px; border-radius: 999px; background: #1c1c1c; color: #d0d0d0; font-size: 11px; }
-.m-map { position: relative; height: 66px; border: 1px solid #262626; border-radius: 10px; background-color: #131313; background-image: repeating-linear-gradient(0deg, transparent 0 15px, #1f1f1f 15px 16px), repeating-linear-gradient(90deg, transparent 0 21px, #1f1f1f 21px 22px); }
+.m-map { position: relative; height: 66px; border: 1px solid #262626; border-radius: 10px; background: #131313; overflow: hidden; }
+.m-map::before { content: ''; position: absolute; inset: 30% 0; border-block: 1px solid #242424; }
+.m-map::after { content: ''; position: absolute; inset: 0 28%; border-inline: 1px solid #242424; }
 .m-pin { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -62%); color: var(--accent); display: grid; }
 .m-res { display: grid; gap: 5px; padding: 9px 10px; border: 1px solid #262626; border-radius: 10px; background: #141414; }
 .m-res.me { border-color: #2f6a4e; background: #0d1f17; }
 .m-line { display: block; height: 7px; border-radius: 4px; background: #2a2a2a; } .m-line.s { width: 58%; }
-.m-tags { display: flex; flex-wrap: wrap; gap: 4px; }
-.m-tag { padding: 2px 7px; border-radius: 6px; background: #12301f; color: #86f2c0; font-size: 10px; }
+.m-tags { display: flex; flex-wrap: wrap; gap: 4px 10px; }
+.m-tag { display: inline-flex; align-items: center; gap: 5px; color: #86f2c0; font-size: 10.5px; }
+.m-tag::before { content: ''; width: 5px; height: 5px; background: var(--accent); }
 .m-site-top { display: flex; align-items: center; gap: 7px; }
 .m-sq { width: 14px; height: 14px; border: 2px solid var(--accent); border-radius: 3px; }
 .m-h { font: 800 19px/1.05 var(--font-display); letter-spacing: -0.03em; margin-top: 4px; }
@@ -480,7 +483,7 @@ body:has(.privacy-consent) .wa-float { visibility: hidden; }
 .m-step { flex: 1; padding-top: 5px; border-top: 2px solid #2c2c2c; color: #a0a0a0; font-size: 10px; } .m-step.on { border-color: var(--accent); color: var(--accent); }
 .m-cal { display: grid; grid-template-columns: repeat(7, 1fr); gap: 3px; text-align: center; }
 .m-cal span { padding: 5px 0; border-radius: 8px; font-size: 10.5px; color: #dcdcdc; }
-.m-cal .dow { color: #a0a0a0; font-size: 9.5px; } .m-cal .off { color: #5a5a5a; } .m-cal .sel { background: var(--accent); color: #000; font-weight: 700; }
+.m-cal .dow { color: #a0a0a0; font-size: 9.5px; } .m-cal .off { color: #808080; } .m-cal .sel { background: var(--accent); color: #000; font-weight: 700; }
 .m-slots { display: grid; gap: 6px; }
 .m-slot { display: flex; justify-content: space-between; padding: 7px 10px; border: 1px solid #2a2a2a; border-radius: 10px; color: #c4c4c4; font-size: 11px; }
 .m-slot.on { border-color: var(--accent); background: #0d1f17; color: #fff; } .m-slot b { color: var(--accent); font-weight: 700; }
@@ -518,7 +521,7 @@ body:has(.privacy-consent) .wa-float { visibility: hidden; }
 
 .m-card { align-self: flex-end; display: flex; align-items: center; gap: 9px; width: 90%; padding: 9px 10px; border: 1px solid #2f6a4e; border-radius: 12px; background: #0d1f17; color: #86f2c0; }
 .m-card > span:nth-child(2) { display: grid; flex: 1; } .m-card b { color: #fff; font-size: 12px; }
-.m-ok { padding: 2px 7px; border-radius: 6px; background: var(--accent); color: #000; font-size: 10px; font-weight: 700; }
+.m-ok { color: var(--accent); font-size: 10.5px; font-weight: 700; }
 .m-input { margin-top: auto; padding: 9px 12px; border-radius: 999px; background: #1c1c1c; color: #a6a6a6; font-size: 11px; }
 .m-row { display: flex; justify-content: space-between; align-items: center; padding: 10px; border: 1px solid #262626; border-radius: 10px; background: #141414; font-size: 12px; font-weight: 600; }
 .m-go { color: var(--accent); font-size: 11px; font-weight: 700; }
@@ -528,3 +531,5 @@ body:has(.privacy-consent) .wa-float { visibility: hidden; }
 /* El texto de las maquetas no hereda el color de la sección (p.ej. .sig-step p): se fija sobre fondo oscuro. */
 .phone-screen p { max-width: none; margin: 0; color: #fff; }
 .phone-screen .m-sub, .phone-screen .m-note { color: #a6a6a6; }
+/* Elementos destacados de las maquetas: se distinguen por fondo, sin borde propio (evita tarjeta dentro de tarjeta). */
+.m-res.me, .m-card { border-color: transparent; background: #12301f; }
