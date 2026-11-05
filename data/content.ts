@@ -31,7 +31,7 @@ export const CONTACT: ContactInfo = {
 };
 
 export const SOCIALS = [
-  { label: 'Instagram', href: 'https://www.instagram.com/lsslocalsystemsstudio' },
+  { label: 'Instagram', href: 'https://www.instagram.com/localsystemsstudio' },
   { label: 'Facebook', href: 'https://www.facebook.com/lsslocalsystemsstudio' },
 ];
 
