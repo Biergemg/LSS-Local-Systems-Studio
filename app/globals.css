@@ -291,7 +291,7 @@ p { text-wrap: pretty; }
 
 .ticker { position: relative; z-index: 1; overflow: hidden; border-top: 1px solid var(--line-2); }
 .tk-track { display: flex; width: max-content; }
-@supports (animation-timeline: view()) { @media (prefers-reduced-motion: no-preference) { .tk-track { animation: tick linear both; animation-timeline: view(); animation-range: entry 0% exit 100%; } } }
+@media (prefers-reduced-motion: no-preference) { .tk-track { animation: tick 40s linear infinite; } }
 .tk-track span { display: inline-flex; align-items: center; padding: 18px 0; font: 700 clamp(30px, 5.6vw, 66px)/1 var(--font-display); letter-spacing: -0.03em; text-transform: uppercase; white-space: nowrap; color: transparent; -webkit-text-stroke: 1px rgba(255, 255, 255, .55); }
 .tk-track i { flex: none; width: 0.3em; height: 0.3em; margin: 0 0.7em; background: var(--accent); }
 .ticker-dark { border-top-color: #000; } .ticker-dark .tk-track span { -webkit-text-stroke-color: #000; } .ticker-dark .tk-track i { background: #000; }
