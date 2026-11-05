@@ -524,3 +524,7 @@ body:has(.privacy-consent) .wa-float { visibility: hidden; }
 .m-go { color: var(--accent); font-size: 11px; font-weight: 700; }
 .m-map { height: 86px; }
 @media (min-width: 900px) { .sig-vis .phone-cap { min-height: 4.2em; } }
+
+/* El texto de las maquetas no hereda el color de la sección (p.ej. .sig-step p): se fija sobre fondo oscuro. */
+.phone-screen p { max-width: none; margin: 0; color: #fff; }
+.phone-screen .m-sub, .phone-screen .m-note { color: #a6a6a6; }
