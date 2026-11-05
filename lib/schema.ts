@@ -10,7 +10,7 @@ export const organizationSchema = {
   name: SITE.name,
   alternateName: 'LSS',
   description:
-    'Diseño y desarrollo de sitios web con identidad propia para negocios de servicios. Servicio a distancia en México.',
+    'Sitio web, ficha de Google, WhatsApp y agenda para clínicas y negocios que atienden por cita. Servicio a distancia en México.',
   url: SITE.url,
   logo: `${SITE.url}/logo.png`,
   image: `${SITE.url}/og-image.png`,

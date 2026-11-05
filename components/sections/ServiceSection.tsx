@@ -10,14 +10,14 @@ export default function ServiceSection() {
             <li className="reveal" key={i.n}>
               <a
                 className="ix-row"
-                href={waLink(`Hola, quiero solicitar una propuesta para mi negocio. Me interesa: ${i.t}. Nombre: ___ | Ciudad: ___ | A qué me dedico: ___`)}
+                href={waLink(`DIAGNÓSTICO. Me interesa: ${i.t}. Nombre: ___ | Ciudad: ___ | Tipo de negocio: ___ | Mi Google o Instagram: ___`)}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <span className="ix-n">{i.n}</span>
                 <h3>{i.t}</h3>
                 <p>{i.d}</p>
-                <span className="ix-cta">Solicitar propuesta<i aria-hidden="true"> →</i></span>
+                <span className="ix-cta">{S.rowCta}<i aria-hidden="true"> →</i></span>
               </a>
             </li>
           ))}
