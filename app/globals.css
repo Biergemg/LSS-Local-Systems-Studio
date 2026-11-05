@@ -430,7 +430,7 @@ p { text-wrap: pretty; }
 }
 
 @media (min-width: 900px) and (max-height: 820px) { .hx-inner { padding-bottom: 36px; } .hx-row { margin-top: 24px; padding-top: 18px; } }
-@media (max-width: 899px) { .hx-inner { padding-bottom: 175px; } }
+@media (max-width: 899px) { body:has(.privacy-consent) .hx-inner { padding-bottom: 175px; } .fin .mark { display: none; } }
 
 .ix-cta { white-space: nowrap; }
 @media (min-width: 900px) { .ix-row { padding-right: 16px; } }
