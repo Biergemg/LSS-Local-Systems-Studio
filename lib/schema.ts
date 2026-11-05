@@ -10,13 +10,12 @@ export const organizationSchema = {
   name: SITE.name,
   alternateName: 'LSS',
   description:
-    'Sitio web, ficha de Google, WhatsApp y agenda para clínicas y negocios que atienden por cita. Servicio a distancia en México.',
+    'Sitio web, ficha de Google, WhatsApp y agenda para clínicas y negocios que atienden por cita. Servicio a distancia, en español, desde México.',
   url: SITE.url,
   logo: `${SITE.url}/logo.png`,
   image: `${SITE.url}/og-image.png`,
   telephone: CONTACT.phone,
   email: CONTACT.email,
-  areaServed: { '@type': 'Country', name: 'México' },
   sameAs: SOCIALS.map((s) => s.href),
 };
 
