@@ -13,7 +13,7 @@ const ICONS: Record<string, React.ReactNode> = {
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="container">
+      <div className="wrap">
         <div className="ft-top">
           <Logo />
           <p className="ft-blurb">{FOOTER.blurb}</p>

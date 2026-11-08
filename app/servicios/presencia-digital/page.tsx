@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import Logo from '@/components/ui/Logo';
+import Nav from '@/components/sections/Nav';
 import Footer from '@/components/sections/Footer';
 import { CONTACT, SITE } from '@/data/content';
 
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 const answers = [
   {
     id: 'cuesta-citas', question: '¿Cómo sé si mi sitio actual me está costando citas?',
-    answer: 'Haz tres pruebas desde tu celular. Busca tu servicio y tu ciudad, a ver si apareces. Abre tu sitio y tu ficha de Google: en cinco segundos, ¿se entiende qué haces, dónde y cómo agendar? Intenta escribirte como si fueras un cliente nuevo: ¿lo logras en un solo paso? Si alguna falla, ahí se está perdiendo gente.',
+    answer: 'Haz tres pruebas desde tu celular. Busca tu servicio y tu ciudad, a ver si apareces. Abre tu sitio y, si lo tienes, tu Perfil de Empresa de Google: en cinco segundos, ¿se entiende qué haces, dónde y cómo pedir una cita? Intenta escribirte como si fueras un cliente nuevo: ¿lo logras en un solo paso? Si alguna falla, ahí se está perdiendo gente.',
     proof: 'Esas mismas tres pruebas son la base de tu diagnóstico, y te las devolvemos por escrito con lo que vimos.',
   },
   {
@@ -24,31 +24,36 @@ const answers = [
     proof: 'Es sin costo y no obliga a contratar nada. Si tu sitio ya funciona, te lo decimos.',
   },
   {
+    id: 'que-hacen-google', question: '¿Qué hacen exactamente con Google?',
+    answer: 'Son tres tareas distintas. La preparación técnica del sitio (estructura, metadatos, canónicas, robots y sitemap) ayuda a que los buscadores lo interpreten. Search Console permite consultar cómo Google descubre y procesa tus páginas: verificamos la propiedad y enviamos el sitemap cuando está incluido y nos das acceso. El Perfil de Empresa de Google se revisa solo si tu negocio es elegible, hay permiso y está en el alcance escrito. Analytics y Tag Manager se configuran únicamente cuando están incluidos y autorizados, y su uso en el sitio respeta el consentimiento de quien lo visita.',
+    proof: 'Enviar un sitemap no significa que Google indexe tus páginas, y ninguna de estas herramientas garantiza una posición. Te informamos el estado de cada una con precisión: configurada, pendiente de autorización, pendiente de terceros o verificada.',
+  },
+  {
     id: 'ya-tengo-sitio', question: '¿Rehacen mi página o arreglan la que ya tengo?',
-    answer: 'Depende de lo que encontremos. Si la base sirve y el problema está en los textos, los datos de contacto o los enlaces, se corrige. Si no se ve bien en celular, no carga o no la puedes editar, conviene rehacerla. Si usas una agenda, tu sitio lleva un botón hacia ella.',
+    answer: 'Depende de lo que encontremos. Si la base sirve y el problema está en los textos, los datos de contacto o los enlaces, se corrige. Si no se ve bien en celular, no carga o no la puedes editar, conviene rehacerla. Si ya usas una plataforma de citas, podemos enlazarla desde tu sitio.',
     proof: 'La recomendación llega por escrito y explica el porqué. No hay obligación de comprar una página nueva.',
   },
   {
     id: 'fuera-de-mexico', question: '¿Trabajan con negocios fuera de México?',
     answer: 'Sí. Todo se hace a distancia y en español: diagnóstico, propuesta, construcción y revisión. El horario de atención, la moneda y la forma de pago se acuerdan por escrito en tu propuesta antes de pagar nada.',
-    proof: 'Algunas cosas dependen de tu país: si tu negocio puede tener ficha en Google y qué reglas aplican a lo que publicas. Lo revisamos contigo desde el diagnóstico.',
+    proof: 'Algunas cosas dependen de tu país: si tu negocio es elegible para un Perfil de Empresa de Google y qué reglas aplican a lo que publicas. Lo revisamos contigo desde el diagnóstico.',
   },
   {
     id: 'mis-cuentas', question: '¿Qué pasa con mi dominio y mis cuentas?',
-    answer: 'Tu dirección web, tu ficha de Google y tus accesos quedan a tu nombre. Nada se publica sin que lo apruebes, y revisas tu sitio en un enlace privado antes de que salga. Los cambios se juntan en una sola ronda.',
+    answer: 'La titularidad de tu dominio y de tus cuentas es tuya, con accesos y responsabilidades documentados en la propuesta. Nada se publica sin tu revisión y aceptación.',
     proof: 'Alcance, tiempos, vigencia y renovación van por escrito en la propuesta, no en la conversación.',
   },
   {
-    id: 'garantia-resultados', question: '¿Me garantizan pacientes o el primer lugar en Google?',
-    answer: 'No, y desconfía de quien lo haga: depende de tu oferta, tu reputación y tu mercado. Lo que sí hacemos es dejar listo y probado el camino completo: que quien te busque te encuentre, entienda qué haces y pueda escribirte o agendar en un paso.',
-    proof: 'Probamos el recorrido en celular y en computadora antes de entregarlo, y te mostramos el resultado.',
+    id: 'garantia-resultados', question: '¿Me garantizan clientes o un lugar en Google?',
+    answer: 'No. El resultado depende de tu oferta, tu reputación, tu mercado y de Google. Lo que sí hacemos es diseñar y comprobar contigo el camino: que quien te busque pueda entender qué haces y escribirte o solicitar una cita.',
+    proof: 'Probamos contigo el recorrido desde el celular antes de entregarlo y te mostramos el resultado.',
   },
 ] as const;
 
 const serviceJsonLd = {
   '@context': 'https://schema.org', '@type': 'Service',
   '@id': `${SITE.url}/#presencia-digital`,
-  name: 'Sitios web, presencia en Google y contacto para negocios de servicios',
+  name: 'Sitios web, preparación para buscadores y contacto para negocios de servicios',
   description: 'Revisión de presencia digital, desarrollo o mejora de sitios web y comprobación de canales de contacto, según el alcance acordado.',
   url: `${SITE.url}${slug}`, provider: { '@id': `${SITE.url}/#organization` },
   serviceType: 'Presencia digital para negocios de servicios',
@@ -64,13 +69,7 @@ const breadcrumbsJsonLd = {
 export default function DigitalPresencePage() {
   return (
     <>
-      <a className="skip-link" href="#contenido">Saltar al contenido</a>
-      <header className="nav">
-        <nav className="container nav-inner" aria-label="Navegación del servicio">
-          <Logo />
-          <a href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary nav-cta">Pedir diagnóstico</a>
-        </nav>
-      </header>
+      <Nav />
       <main id="contenido" className="service-page">
         <section className="section service-intro" aria-labelledby="service-heading">
           <div className="container">

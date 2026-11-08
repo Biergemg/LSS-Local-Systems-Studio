@@ -1,94 +1,27 @@
 import Link from 'next/link';
-interface LogoProps {
-  size?: number;
-  showText?: boolean;
-  muted?: boolean;
-}
 
-export default function Logo({ size = 32, showText = true }: LogoProps) {
+/* Logotipo oficial de LSS: marca (cuatro esquinas de visor y trazo de señal con quiebre a 90°) + nombre completo en texto real
+   (LSS, filete, LOCAL / SYSTEMS / STUDIO y subrayado verde). El SVG se recorta a la marca (viewBox 80×80 sin aire sobrante) y el
+   tamaño lo fija el CSS (.lk) para que el nombre completo se lea en cualquier pantalla. */
+export default function Logo({ showText = true }: { showText?: boolean }) {
   return (
-    <Link
-      href="/"
-      style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none', minHeight: 44 }}
-      aria-label={showText ? undefined : 'LSS Local Systems Studio'}
-    >
-      <svg
-        viewBox="0 0 80 80"
-        width={size}
-        height={size}
-        fill="none"
-        aria-hidden="true"
-      >
-        <polyline
-          points="4,28 4,4 28,4"
-          stroke="#FFFFFF"
-          strokeWidth="5"
-          strokeLinecap="square"
-        />
-        <polyline
-          points="52,4 76,4 76,28"
-          stroke="#FFFFFF"
-          strokeWidth="5"
-          strokeLinecap="square"
-        />
-        <polyline
-          points="4,52 4,76 28,76"
-          stroke="#FFFFFF"
-          strokeWidth="5"
-          strokeLinecap="square"
-        />
-        <polyline
-          points="52,76 76,76 76,52"
-          stroke="#FFFFFF"
-          strokeWidth="5"
-          strokeLinecap="square"
-        />
-        <line
-          x1="4"
-          y1="40"
-          x2="60"
-          y2="40"
-          stroke="#00FF88"
-          strokeWidth="6"
-          strokeLinecap="square"
-        />
-        <line
-          x1="60"
-          y1="40"
-          x2="60"
-          y2="62"
-          stroke="#00FF88"
-          strokeWidth="6"
-          strokeLinecap="square"
-        />
+    <Link href="/" className="lk">
+      <svg viewBox="0 0 80 80" fill="none" aria-hidden="true" focusable="false">
+        <path d="M 4 28 L 4 4 L 28 4" stroke="currentColor" strokeWidth="5" strokeLinecap="square" />
+        <path d="M 52 4 L 76 4 L 76 28" stroke="currentColor" strokeWidth="5" strokeLinecap="square" />
+        <path d="M 4 52 L 4 76 L 28 76" stroke="currentColor" strokeWidth="5" strokeLinecap="square" />
+        <path d="M 52 76 L 76 76 L 76 52" stroke="currentColor" strokeWidth="5" strokeLinecap="square" />
+        <line x1="4" y1="40" x2="60" y2="40" stroke="#00FF88" strokeWidth="6" strokeLinecap="square" />
+        <line x1="60" y1="40" x2="60" y2="62" stroke="#00FF88" strokeWidth="6" strokeLinecap="square" />
       </svg>
+      {!showText && <small className="sr">LSS Local Systems Studio, inicio</small>}
       {showText && (
-        <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1 }}>
-          <span
-            style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: '18px',
-              fontWeight: 700,
-              color: 'var(--fg)',
-              letterSpacing: 'var(--tracking-wider)',
-            }}
-          >
-            LSS
-          </span>
-          <span
-            style={{
-              fontFamily: 'var(--font-primary)',
-              fontSize: '13px',
-              fontWeight: 300,
-              color: 'var(--fg2)',
-              letterSpacing: 'var(--tracking-widest)',
-              textTransform: 'uppercase',
-              marginTop: '2px',
-            }}
-          >
-            LOCAL SYSTEMS STUDIO
-          </span>
-        </div>
+        <>
+          <b>LSS</b>
+          <i aria-hidden="true" />
+          <span><em>Local</em> <em>Systems</em> <em>Studio</em></span>
+          <small className="sr"> Inicio</small>
+        </>
       )}
     </Link>
   );

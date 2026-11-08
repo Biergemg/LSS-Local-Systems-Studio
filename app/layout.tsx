@@ -1,21 +1,28 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
+import localFont from 'next/font/local';
 import TrackingConsent from '@/components/ui/TrackingConsent';
-import { Bricolage_Grotesque, Instrument_Sans, Space_Mono } from 'next/font/google';
 import './globals.css';
 import { SITE } from '@/data/content';
 import { organizationSchema, websiteSchema } from '@/lib/schema';
 import { GA_ID, META_PIXEL_ID } from '@/lib/analytics';
 
-const spaceMono = Space_Mono({ subsets: ['latin'], variable: '--font-mono', weight: ['400', '700'], display: 'swap' });
-
-const interTight = Instrument_Sans({ subsets: ['latin'], variable: '--font-inter-tight', weight: ['400', '500', '700'], display: 'swap' });
-
-const spaceGrotesk = Bricolage_Grotesque({ subsets: ['latin'], variable: '--font-space-grotesk', weight: ['700', '800'], display: 'swap' });
+/* Tipografías autoalojadas (OFL): Instrument Serif (titulares), Space Grotesk (interfaz) e IBM Plex Mono (etiquetas y texto del mensaje 3D). */
+const serif = localFont({
+  src: [
+    { path: './fonts/instrument-serif-latin-400-normal.woff2', weight: '400', style: 'normal' },
+    { path: './fonts/instrument-serif-latin-400-italic.woff2', weight: '400', style: 'italic' },
+  ],
+  variable: '--font-serif', display: 'swap',
+});
+const ui = localFont({ src: './fonts/space-grotesk-latin-wght-normal.woff2', weight: '300 700', variable: '--font-ui', display: 'swap' });
+const mono = localFont({ src: './fonts/ibm-plex-mono-latin-500-normal.woff2', weight: '500', variable: '--font-mono', display: 'swap' });
 
 const siteUrl = SITE.url;
 const siteTitle = SITE.title;
 const siteDescription = SITE.description;
 const ogImage = `${SITE.url}/og-image.png`;
+
+export const viewport: Viewport = { themeColor: '#120d0a', colorScheme: 'dark', viewportFit: 'cover' };
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -40,10 +47,15 @@ export const metadata: Metadata = {
   },
 };
 
+/* Decide ANTES del primer pintado si la portada usa la toma cinematográfica (disposición alta con escenario fijo) o la secuencia estática:
+   sin movimiento reducido, sin ahorro de datos y con WebGL disponible. Si el motor falla después, VisorStage retira la clase. */
+const GL_PROBE = "try{var d=document.documentElement,c=navigator.connection;if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&!(c&&c.saveData)&&window.WebGLRenderingContext)d.classList.add('gl-able')}catch(e){}";
+
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="es-MX" className={`${interTight.variable} ${spaceGrotesk.variable} ${spaceMono.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">
+    <html lang="es-MX" className={`${serif.variable} ${ui.variable} ${mono.variable}`} suppressHydrationWarning>
+      <body>
+        <script dangerouslySetInnerHTML={{ __html: GL_PROBE }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify([organizationSchema, websiteSchema]) }}
