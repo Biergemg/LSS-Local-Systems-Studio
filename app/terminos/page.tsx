@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <LegalPage title="Términos de uso del sitio web" updated="29 de octubre de 2026">
+    <LegalPage title="Términos de uso del sitio web" updated="7 de noviembre de 2026">
       <p className="legal-intro">Estos términos regulan el acceso y utilización del sitio <strong>www.lsslocalsystemsstudio.com</strong>, operado comercialmente bajo la marca <strong>LSS — Local Systems Studio</strong>. Su finalidad es informar de manera transparente las condiciones de navegación y de contacto. La contratación de un servicio profesional requiere una propuesta y un acuerdo específicos.</p>
 
       <h2>1. Identificación y alcance</h2>
@@ -47,7 +47,7 @@ export default function TermsPage() {
       <p>En la máxima medida permitida por las leyes aplicables, LSS no asume responsabilidad por daños atribuibles exclusivamente a información falsa proporcionada por terceros, uso indebido del sitio o sistemas externos fuera del alcance contratado. Cualquier limitación, asignación de riesgos o compensación económica sobre un servicio pagado deberá establecerse con claridad en el contrato correspondiente y respetar los derechos irrenunciables del consumidor y demás normas imperativas. Esta página no impone una renuncia general a reclamar.</p>
 
       <h2>9. Precios, pagos, cancelaciones y garantías</h2>
-      <p>Este sitio no procesa pagos ni confirma contrataciones mediante sus botones. Antes de formalizar un proyecto se informarán alcance, precio, impuestos cuando procedan, calendario, condiciones de cancelación y renovaciones; no se interpretará una conversación preliminar como aceptación de cargos periódicos. Ninguna mensualidad será obligatoria salvo que exista acuerdo expreso que la contemple. Esta página no publica precios: el precio se comunica en la conversación o en la propuesta escrita y depende del alcance (por ejemplo, una landing de una página o un sitio de varias páginas). No se promete una fecha de entrega salvo la que conste por escrito en la propuesta.</p>
+      <p>Este sitio no procesa pagos ni confirma contrataciones mediante sus botones. Antes de formalizar un proyecto se informarán alcance, precio, impuestos cuando procedan, calendario, condiciones de cancelación y renovaciones; no se interpretará una conversación preliminar como aceptación de cargos periódicos. Ninguna mensualidad será obligatoria salvo que exista acuerdo expreso que la contemple. Esta página no publica precios: el precio se comunica en la conversación o en la propuesta escrita y depende del alcance (por ejemplo, las páginas o secciones acordadas, las herramientas incluidas y los servicios de terceros). No se promete una fecha de entrega salvo la que conste por escrito en la propuesta.</p>
       <p>Los derechos, garantías y remedios reconocidos por la Ley Federal de Protección al Consumidor y otras normas aplicables prevalecen sobre cualquier estipulación incompatible. La garantía de un proyecto no se confunde con la revisión gratuita inicial ni puede limitarse mediante frases generales de este sitio.</p>
 
       <h2>10. Confidencialidad y datos personales</h2>

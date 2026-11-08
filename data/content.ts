@@ -1,17 +1,18 @@
 import type { ContactInfo, FaqItem, NavLink } from '@/types';
+import { CLAIMS } from '@/data/claims';
 
-/* Copy de la landing de LSS: «Primera Cita Resuelta» para clínicas y negocios que atienden por cita.
-   Embudo de aplicación corta: atracción → problema (Google, WhatsApp, agenda) → qué incluye → proceso → diagnóstico por WhatsApp → propuesta por escrito.
-   Fuente de verdad: LSS_OFERTA_RAIZ_PRIMERA_CITA_RESUELTA (documento interno, fuera del repositorio).
-   Sin precios, garantías ni casos publicados; sin ejemplos ficticios. */
+/* Copy del sitio de LSS: diseño y puesta en marcha de la presencia digital de negocios de servicios.
+   Recorrido: te encuentran → te entienden → te escriben → agendan; después qué incluye, cómo se trabaja y cómo pedir el diagnóstico por WhatsApp.
+   Las funciones que dependen del alcance de cada proyecto (Search Console, Perfil de Empresa de Google, agenda, medición) se redactan siempre como condicionadas a la propuesta.
+   Sin precios, garantías de resultados, cupos, plazos de respuesta, casos ni ejemplos ficticios. Las frases operativas condicionadas viven en data/claims.ts. */
 
 export const SITE = {
   name: 'LSS — Local Systems Studio',
   shortName: 'LSS',
   url: 'https://www.lsslocalsystemsstudio.com',
-  title: 'LSS | Sitio, Google y agenda para clínicas y negocios por cita',
+  title: 'LSS | Presencia digital para negocios de servicios',
   description:
-    'Revisamos cómo te encuentra, te entiende y te contacta quien aún no te conoce, y lo dejamos listo: sitio, ficha de Google, agenda y correo. Diagnóstico sin costo.',
+    'Diseñamos y ponemos en marcha tu presencia digital: sitio claro, base técnica para buscadores y contacto directo para pedir cita. Revisión inicial sin costo.',
 };
 
 const WA_NUMBER = '528333263389';
@@ -47,10 +48,10 @@ export const HERO = {
   pre: 'Que te encuentren,',
   em: 'te entiendan',
   post: 'y puedan agendar.',
-  body: 'Revisamos cómo te encuentra, te entiende y te contacta quien aún no te conoce, y lo dejamos listo: sitio, ficha de Google, WhatsApp, agenda y correo, a tu nombre.',
+  body: 'Diseñamos cómo se presenta tu negocio en Internet: un sitio que explica tus servicios, una base técnica preparada para buscadores y un camino claro para que puedan escribirte o solicitar una cita. Lo ponemos en marcha y lo probamos contigo.',
   ctaPrimary: 'Pedir mi diagnóstico',
   ctaSecondary: 'Cómo trabajamos',
-  ticks: ['Diagnóstico sin costo', 'Respuesta por WhatsApp', 'Sin compromiso'],
+  ticks: ['Revisión inicial sin costo', 'Propuesta por escrito', 'Entrega comprobable'],
   ticker: ['Te encuentran', 'Te entienden', 'Te escriben', 'Agendan'],
 };
 
@@ -58,59 +59,79 @@ export const STATEMENT = {
   pre: 'Antes de escribirte,',
   em: 'te buscan.',
   post: 'Lo que encuentran decide si te escriben.',
-  side: 'Una persona que no te conoce busca tu servicio en Google, compara y decide en segundos. Revisamos y dejamos listo lo que encuentra: tu ficha, tu sitio, tu WhatsApp y tu agenda.',
+  side: 'Una persona que no te conoce busca tu servicio, compara y decide en segundos. Diseñamos lo que encuentra: el sitio, la información de tu negocio y el camino hasta el mensaje.',
   steps: [
-    { t: 'Te encuentran', d: '¿Tu ficha de Google y tu sitio aparecen con servicios, horarios y contacto claros?' },
-    { t: 'Te entienden', d: '¿En segundos se entiende qué haces y por qué elegirte?' },
-    { t: 'Te escriben', d: '¿Escribir o agendar es un solo paso, sin vueltas?' },
+    {
+      t: 'Te encuentran',
+      h: 'Cuando alguien busca tu servicio, ¿qué encuentra?',
+      d: 'Preparamos el contenido y la estructura técnica para que tu sitio pueda ser descubierto y leído por buscadores. Revisamos también que los datos de tu negocio sean coherentes donde corresponda: sitio, contacto y Perfil de Empresa en Google, si aplica.',
+    },
+    {
+      t: 'Te entienden',
+      h: 'Que tu trabajo se entienda desde la primera visita.',
+      d: 'Ordenamos tus servicios, la información que más preguntan tus clientes y la evidencia real que puedes mostrar. El diseño, los textos y la navegación responden lo importante sin que la persona tenga que adivinarlo.',
+    },
+    {
+      t: 'Te escriben',
+      h: 'Del interés al mensaje, con un camino claro.',
+      d: 'El contacto está donde la persona lo necesita. Configuramos los enlaces y mensajes iniciales acordados, y comprobamos que funcionen desde el celular.',
+    },
+    {
+      t: 'Agendan',
+      h: 'El siguiente paso, a la vista.',
+      d: CLAIMS.calendar.published,
+    },
   ],
 };
 
 export const SERVICE = {
-  title: 'Un sistema, de la búsqueda al mensaje.',
+  title: 'Tu presencia digital, lista para presentarte y recibir consultas.',
+  intro: 'Trabajamos sobre tu servicio principal y el recorrido que hará una persona antes de contactarte. El proyecto incluye las piezas, conexiones y pruebas descritas en tu propuesta.',
   items: [
-    { n: '01', t: 'Tu sitio web', d: 'Un sitio con identidad propia, a la medida de tu negocio y pensado primero para el celular, con tus textos explicados con claridad y en tu tono.' },
-    { n: '02', t: 'Página de tu servicio principal', d: 'Una página aparte, en su propio subdominio, para el servicio que elijas, lista para compartir en tus redes y llevar a quien te busca justo a eso.' },
-    { n: '03', t: 'Google coherente', d: 'Tu ficha de Google y tu contacto directo, alineados con tu sitio desde el primer vistazo.' },
-    { n: '04', t: 'WhatsApp y agenda listos', d: 'Un botón y un mensaje inicial que ordenan la conversación, y un calendario conectado con confirmación de la cita.' },
-    { n: '05', t: 'Tu dirección web, hospedaje y correo', d: 'Tu dominio, el hospedaje administrado por LSS y tu correo profesional, para que todo funcione desde el primer día.' },
+    { n: '01', t: 'Tu sitio y tus servicios', d: 'Diseño con identidad propia, textos claros y una experiencia cuidada en celular. Organizamos lo que haces, dónde atiendes y cómo pueden solicitar información.' },
+    { n: '02', t: 'Preparación para buscadores', d: 'Estructura y configuración técnica inicial para que los buscadores puedan interpretar el sitio. La verificación de Search Console y el seguimiento de indexación se incluyen cuando lo acuerda el proyecto.' },
+    { n: '03', t: 'Información coherente en Google', d: 'Cuando tu negocio tiene un Perfil de Empresa elegible y cuentas con el acceso necesario, revisamos que sus datos principales correspondan con los del sitio y el canal de contacto.' },
+    { n: '04', t: 'Contacto que funciona', d: 'WhatsApp y los demás canales incluidos, enlazados al destino correcto y probados desde un teléfono. La agenda se conecta o implementa conforme al alcance contratado.' },
+    { n: '05', t: 'Publicación y entrega', d: 'Dominio, hospedaje, correo y accesos según la propuesta. Revisamos contigo la publicación, el funcionamiento y las condiciones de vigencia o renovación.' },
   ],
-  note: 'Una landing de una página o un sitio de varias, según lo que tu negocio necesite. Alcance, inversión, vigencia y renovación van por escrito en tu propuesta.',
+  note: 'Antes de comenzar sabrás qué vamos a construir, qué herramientas configuraremos y cómo comprobaremos la entrega. El alcance, la inversión y las condiciones de continuidad quedan por escrito.',
   cta: 'Pedir mi diagnóstico',
   rowCta: 'Pedir diagnóstico',
 };
 
 export const PROCESS = {
-  title: 'Cuatro pasos, sin juntas largas.',
+  title: 'Cuatro pasos, de la primera revisión a la entrega.',
   steps: [
-    { title: 'Pides tu diagnóstico', text: 'Escribes DIAGNÓSTICO por WhatsApp y nos cuentas de tu negocio. Te enviamos tres hallazgos sobre cómo te encuentran, te entienden y te contactan.' },
-    { title: 'Te enviamos una propuesta', text: 'Qué incluye, cuánto cuesta y en qué tiempos, por escrito.' },
-    { title: 'Lo construimos y lo ves', text: 'Revisas tu sitio en un enlace privado y nos mandas tus ajustes en una sola ronda.' },
-    { title: 'Lo entregamos', text: 'Lo abres en tu teléfono, pruebas el camino completo —buscar, escribir, agendar— y recibes todo a tu nombre.' },
+    { title: 'Pides tu diagnóstico', text: 'Escribes DIAGNÓSTICO por WhatsApp y nos cuentas de tu negocio. Revisamos tu información pública y el camino de contacto que nos compartas, y te enviamos tres observaciones concretas y una recomendación sobre qué conviene resolver primero.' },
+    { title: 'Recibes una propuesta', text: 'Por escrito y antes de empezar: qué construimos, qué herramientas se incluyen, qué permisos necesitamos, la inversión, los tiempos y las condiciones de continuidad.' },
+    { title: 'Lo construimos y lo revisas', text: 'Diseñamos el sitio, preparamos la base técnica y conectamos el contacto acordado. Lo revisas antes de publicarlo.' },
+    { title: 'Lo probamos y lo entregamos', text: 'Comprobamos contigo desde tu celular los enlaces, el contacto y la publicación. Recibes los accesos, la titularidad documentada y las condiciones de actualización y renovación.' },
   ],
   assurances: [
-    'Tu dominio y tus cuentas quedan a tu nombre.',
-    'Nada se publica sin tu aprobación.',
-    'Pagas el saldo cuando ves tu sitio funcionando.',
+    'Dominio y cuentas con titularidad tuya, y accesos documentados.',
+    'Nada se publica sin tu revisión y aceptación.',
+    'Las condiciones de pago se establecen por escrito en tu propuesta.',
   ],
 };
 
 export const CTA_SECTION = {
-  title: 'Pide tu diagnóstico.',
-  description: 'Escribe DIAGNÓSTICO por WhatsApp y respóndenos tres preguntas. Te enviamos tres hallazgos sobre cómo te encuentran, te entienden y te contactan, sin costo.',
+  title: 'Que el primer contacto esté a la altura de tu trabajo.',
+  description: 'Cuéntanos qué servicio quieres presentar mejor. Revisaremos tu punto de partida y, si el proyecto encaja, recibirás una propuesta con el trabajo, las pruebas de entrega y la inversión definidos.',
   submit: 'Pedir mi diagnóstico',
-  micro: 'WhatsApp abre una conversación con LSS; respondemos personalmente. Hacemos hasta 10 diagnósticos por semana.',
+  micro: ['Por WhatsApp. Sin costo y sin compromiso de contratación.', CLAIMS.quota.published].filter(Boolean).join(' '),
 };
 
 export const FAQ_ITEMS: FaqItem[] = [
-  { question: '¿Esto me trae pacientes nuevos?', answer: 'No compramos ni prometemos tráfico. Dejamos listo lo que hace que, cuando alguien que no te conoce te busca, te encuentre, entienda qué haces y pueda escribirte o agendar. Lo demás depende de tu oferta, tu reputación y tu mercado.' },
-  { question: '¿Qué recibo en el diagnóstico?', answer: 'Tres hallazgos por escrito sobre cómo te encuentran, cómo te entienden y cómo te contactan, con el principal freno y un siguiente paso sugerido. Revisamos información pública y lo que nos compartas; es sin costo y no obliga a nada.' },
-  { question: '¿Qué incluye y cuánto cuesta?', answer: 'Tu sitio, una página para tu servicio principal, tu ficha de Google, WhatsApp y agenda listos, y tu dirección web, hospedaje y correo. El precio, los tiempos, la vigencia y la renovación llegan por escrito en tu propuesta, antes de pagar nada. Tu dominio y tus cuentas quedan a tu nombre.' },
-  { question: '¿Y si ya tengo página o uso una agenda?', answer: 'Trabajamos con lo que tienes. Si tu página sirve, te decimos qué corregir en lugar de rehacerla. Si usas una agenda, tu sitio lleva un botón hacia ella.' },
-  { question: '¿Qué tengo que hacer yo y cuánto tarda?', answer: 'Contarnos de tu negocio, enviarnos fotos, servicios y horarios, autorizar el acceso a tu ficha de Google y juntar tus ajustes en una sola ronda. El calendario va en tu propuesta y empieza a contar cuando recibimos tu anticipo y tu material completo.' },
+  { question: '¿También trabajan con Google?', answer: 'Sí. Preparamos la base técnica de tu sitio para buscadores y, según lo contratado, configuramos Search Console y revisamos tu Perfil de Empresa si es elegible. Son tareas distintas, y la posición e indexación dependen de Google.' },
+  { question: '¿Incluye estadísticas?', answer: 'Podemos configurar herramientas de medición para saber qué páginas visitan y qué enlaces pulsan las personas, cuando están incluidas y se cuenta con las autorizaciones necesarias. Un clic no equivale a una conversación o una venta.' },
+  { question: '¿Puedo agendar desde la web?', answer: 'Podemos conectar tu agenda existente o definir una implementación nueva en tu propuesta. La forma de reservar y confirmar depende de la plataforma contratada.' },
+  { question: '¿Y si ya tengo sitio?', answer: 'Primero revisamos lo que tienes. La propuesta puede centrarse en mejorar su contenido, funcionamiento o contacto, si eso es lo que hace falta.' },
+  { question: '¿Qué recibo en el diagnóstico?', answer: 'Tres observaciones concretas y una recomendación sobre qué conviene resolver primero. Revisamos tu información pública, tu sitio y el camino de contacto que nos compartas. Es sin costo y no obliga a contratar.' },
+  { question: '¿Qué precio tiene?', answer: 'Después de revisar tu negocio te presentamos el alcance, el costo, los tiempos y las condiciones por escrito, antes de comenzar.' },
+  { question: '¿Me garantizan clientes o un lugar en Google?', answer: 'No. Diseñamos y comprobamos contigo el recorrido para que una persona entienda qué haces y pueda escribirte o solicitar una cita. Los resultados dependen también de tu oferta, tu reputación, tu mercado y de Google.' },
 ];
 
 export const FOOTER = {
-  blurb: 'LSS — Local Systems Studio. Sitio, ficha de Google, WhatsApp y agenda para clínicas y negocios que atienden por cita. Trabajamos a distancia.',
+  blurb: 'LSS — Local Systems Studio. Diseñamos y ponemos en marcha la presencia digital de negocios de servicios: sitio, base técnica para buscadores y contacto. Trabajamos a distancia.',
   trust: 'Trabajamos con información auténtica y permisos del titular. Las funciones y proveedores se definen por escrito en cada proyecto.',
 };

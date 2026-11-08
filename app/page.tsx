@@ -1,4 +1,5 @@
 import WhatsAppFloat from '@/components/ui/WhatsAppFloat';
+import VisorStage from '@/components/ui/VisorStage';
 import { faqSchema } from '@/lib/schema';
 import Footer from '@/components/sections/Footer';
 import Hero from '@/components/sections/Hero';
@@ -12,12 +13,13 @@ import ProcessSection from '@/components/sections/ProcessSection';
 export default function Page() {
   return (
     <>
-      <a className="skip-link" href="#contenido">Saltar al contenido</a>
-      <div className="progress" aria-hidden="true" />
-      <Nav />
+      <Nav home />
+      <VisorStage />
       <main id="contenido">
-        <Hero />
-        <StatementSection />
+        <div className="film" data-kf-zone>
+          <Hero />
+          <StatementSection />
+        </div>
         <ServiceSection />
         <ProcessSection />
         <FaqSection />
