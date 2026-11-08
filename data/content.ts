@@ -1,4 +1,5 @@
 import type { ContactInfo, FaqItem, NavLink } from '@/types';
+import { CLAIMS } from '@/data/claims';
 
 /* Copy de la landing de LSS: «Primera Cita Resuelta» para clínicas y negocios que atienden por cita.
    Embudo de aplicación corta: atracción → problema (Google, WhatsApp, agenda) → qué incluye → proceso → diagnóstico por WhatsApp → propuesta por escrito.
@@ -72,7 +73,7 @@ export const SERVICE = {
     { n: '01', t: 'Tu sitio web', d: 'Un sitio con identidad propia, a la medida de tu negocio y pensado primero para el celular, con tus textos explicados con claridad y en tu tono.' },
     { n: '02', t: 'Página de tu servicio principal', d: 'Una página aparte, en su propio subdominio, para el servicio que elijas, lista para compartir en tus redes y llevar a quien te busca justo a eso.' },
     { n: '03', t: 'Google coherente', d: 'Tu ficha de Google y tu contacto directo, alineados con tu sitio desde el primer vistazo.' },
-    { n: '04', t: 'WhatsApp y agenda listos', d: 'Un botón y un mensaje inicial que ordenan la conversación, y un calendario conectado con confirmación de la cita.' },
+    { n: '04', t: 'WhatsApp y agenda listos', d: CLAIMS.calendar.published },
     { n: '05', t: 'Tu dirección web, hospedaje y correo', d: 'Tu dominio, el hospedaje administrado por LSS y tu correo profesional, para que todo funcione desde el primer día.' },
   ],
   note: 'Una landing de una página o un sitio de varias, según lo que tu negocio necesite. Alcance, inversión, vigencia y renovación van por escrito en tu propuesta.',
@@ -99,7 +100,7 @@ export const CTA_SECTION = {
   title: 'Pide tu diagnóstico.',
   description: 'Escribe DIAGNÓSTICO por WhatsApp y respóndenos tres preguntas. Te enviamos tres hallazgos sobre cómo te encuentran, te entienden y te contactan, sin costo.',
   submit: 'Pedir mi diagnóstico',
-  micro: 'WhatsApp abre una conversación con LSS; respondemos personalmente. Hacemos hasta 10 diagnósticos por semana.',
+  micro: ['WhatsApp abre una conversación con LSS; respondemos personalmente.', CLAIMS.quota.published].filter(Boolean).join(' '),
 };
 
 export const FAQ_ITEMS: FaqItem[] = [

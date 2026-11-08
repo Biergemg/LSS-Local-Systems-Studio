@@ -1,25 +1,21 @@
+# Dependencias y salidas de compilacion
 node_modules/
 .next/
 out/
 build/
+
+# Variables de entorno: nunca en el repositorio
 .env
-.env.local
-.env*.local
+.env.*
+!.env.example
+
+# Generados por Next.js
+next-env.d.ts
+*.tsbuildinfo
+
+# Sistema y editor
 .DS_Store
 Thumbs.db
 *.swp
-*.swo
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Información comercial y estratégica privada: nunca en el repositorio público
-.offer-os/
-docs/estrategia/
-sistema-web-captacion-local.md
-arquitectura-operativa-waas.md
-_privado*/
-*.private.md
-*.confidential.md
-.env.*
-!.env.example
+*.log
+.vercel

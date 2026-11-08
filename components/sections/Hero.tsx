@@ -1,30 +1,25 @@
-import { HERO, CONTACT } from '@/data/content';
-import HeroTitle from '@/components/ui/HeroTitle';
-import Ticker from '@/components/ui/Ticker';
-import { ChatMock, Phone } from '@/components/ui/Mocks';
+import { CONTACT, HERO } from '@/data/content';
+import Fig from '@/components/ui/Fig';
 
+/* Toma 0 · apertura. Fotograma clave 0 del Visor. */
 export default function Hero() {
   return (
-    <section id="inicio" className="hx" aria-labelledby="h1">
-      <div className="container hx-inner">
-        <HeroTitle pre={HERO.pre} em={HERO.em} post={HERO.post} />
-        <div className="hx-row">
-          <p className="hx-lede">{HERO.body}</p>
-          <div className="hx-act">
-            <div className="hx-cta">
-              <a className="btn btn-primary btn-lg" data-hide-wa href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer">{HERO.ctaPrimary}</a>
-              <a className="link-line" href="#proceso">{HERO.ctaSecondary}</a>
+    <section className="beat beat-hero" data-kf="0" aria-labelledby="h-hero">
+      <div className="beat-in">
+        <div className="wrap">
+          <Fig k={0} />
+          <div className="beat-copy">
+            <h1 id="h-hero" className="t-hero">{HERO.pre} <em>{HERO.em}</em> {HERO.post}</h1>
+            <p className="lede">{HERO.body}</p>
+            <div className="actions" data-hide-wa>
+              <a className="btn btn-primary" href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer">{HERO.ctaPrimary}</a>
+              <a className="btn btn-ghost" href="#proceso">{HERO.ctaSecondary}</a>
             </div>
-            <ul className="hx-ticks">
-              {HERO.ticks.map((t) => (<li key={t}>{t}</li>))}
-            </ul>
+            <ul className="ticks">{HERO.ticks.map((t) => (<li key={t}>{t}</li>))}</ul>
+            <p className="hint" aria-hidden="true">Desplaza: la cámara entra</p>
           </div>
         </div>
-        <div className="hx-visual">
-          <Phone caption="Ejemplo ilustrativo: una conversación de WhatsApp guiada."><ChatMock /></Phone>
-        </div>
       </div>
-      <Ticker words={HERO.ticker} />
     </section>
   );
 }

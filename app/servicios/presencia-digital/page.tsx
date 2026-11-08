@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import Logo from '@/components/ui/Logo';
+import Nav from '@/components/sections/Nav';
 import Footer from '@/components/sections/Footer';
 import { CONTACT, SITE } from '@/data/content';
 
@@ -64,13 +64,7 @@ const breadcrumbsJsonLd = {
 export default function DigitalPresencePage() {
   return (
     <>
-      <a className="skip-link" href="#contenido">Saltar al contenido</a>
-      <header className="nav">
-        <nav className="container nav-inner" aria-label="Navegación del servicio">
-          <Logo />
-          <a href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary nav-cta">Pedir diagnóstico</a>
-        </nav>
-      </header>
+      <Nav />
       <main id="contenido" className="service-page">
         <section className="section service-intro" aria-labelledby="service-heading">
           <div className="container">

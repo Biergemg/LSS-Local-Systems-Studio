@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Motor Visor autoalojado (three.js + engine.js): codigo de terceros o generado; no se lintea.
+    "public/visor/**",
   ]),
 ]);
 
